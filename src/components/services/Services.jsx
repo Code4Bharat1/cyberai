@@ -90,7 +90,7 @@ export default function ServicesPage() {
     {
       icon: MdMonitor,
       title: "AI Monitoring",
-      desc: "Continuous improvement and monitoring of deployed AI models.",
+      desc: "Continuous performance tracking and improvement of deployed AI models.",
       gradient: "from-cyan-500 to-cyan-600"
     }
   ];
@@ -118,7 +118,7 @@ export default function ServicesPage() {
     {
       step: "03",
       title: "Analyse",
-      desc: "Vulnerabilities, hallucinations, bias and robustness"
+      desc: "Vulnerabilities, bias, hallucinations, and robustness"
     },
     {
       step: "04",
@@ -128,13 +128,13 @@ export default function ServicesPage() {
   ];
 
   const capabilities = [
-    "Cloud security config reviews",
+    "Cloud security configuration reviews",
     "Cloud architecture reviews",
-    "Cloud pentesting for AI"
+    "Cloud pentesting for AI environments"
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white mt-10">
       {/* Navigation */}
       <Navbar />
 
@@ -168,9 +168,6 @@ export default function ServicesPage() {
           <FaShieldAlt className="absolute w-10 h-10 text-orange-500/20 animate-float" style={{top: '60%', right: '15%', animationDelay: '1s'}} />
           <FaRobot className="absolute w-14 h-14 text-blue-400/20 animate-float" style={{bottom: '20%', left: '20%', animationDelay: '2s'}} />
         </div>
-
-        {/* Scroll Down Indicator */}
-       
       </section>
 
       {/* AI Strategy & Adoption Section */}
@@ -190,7 +187,7 @@ export default function ServicesPage() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-3 gap-10">
             {services.map((service, i) => (
               <div 
                 key={i} 

@@ -10,7 +10,7 @@ import {
   MdLocationCity,
   MdSend
 } from 'react-icons/md';
-import { FaArrowRight, FaCheckCircle } from 'react-icons/fa';
+import { FaArrowRight, FaCheckCircle, FaWhatsapp } from 'react-icons/fa';
 import Navbar from '../navbar/Navbar';
 import Footer from '../Footer/Footer';
 
@@ -48,21 +48,48 @@ export default function ContactPage() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle form submission
-    console.log('Form submitted:', formData);
+    
+    // Create WhatsApp message with form data
+    const whatsappMessage = `
+*New Contact Form Submission*
+
+*Name:* ${formData.fullName}
+*Company:* ${formData.companyName}
+*Email:* ${formData.email}
+*Phone:* ${formData.phone}
+
+*Message:*
+${formData.message}
+    `.trim();
+
+    // Encode the message for URL
+    const encodedMessage = encodeURIComponent(whatsappMessage);
+    
+    // WhatsApp number (replace with your actual WhatsApp number)
+    const whatsappNumber = '447554898543'; // Format: country code + number (no + or spaces)
+    
+    // Create WhatsApp URL
+    const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+    
+    // Show success message
     setIsSubmitted(true);
     
-    // Reset form after 3 seconds
+    // Redirect to WhatsApp after 2 seconds
     setTimeout(() => {
-      setIsSubmitted(false);
-      setFormData({
-        fullName: '',
-        companyName: '',
-        email: '',
-        phone: '',
-        message: ''
-      });
-    }, 3000);
+      window.open(whatsappURL, '_blank');
+      
+      // Reset form after redirect
+      setTimeout(() => {
+        setIsSubmitted(false);
+        setFormData({
+          fullName: '',
+          companyName: '',
+          email: '',
+          phone: '',
+          message: ''
+        });
+      }, 1000);
+    }, 2000);
   };
 
   const contactInfo = [
@@ -82,64 +109,63 @@ export default function ContactPage() {
       icon: MdPhone,
       title: "Phone",
       details: "+44 7554898543",
-      gradient: "from-purple-500 to-purple-600"
+      gradient: "from-purple-500 to-purple-600",
+      link: "tel:+447554898543"
     },
     {
       icon: MdEmail,
       title: "Email",
       details: "ddattawala@cyberaitechs.com",
-      gradient: "from-green-500 to-green-600"
+      gradient: "from-green-500 to-green-600",
+      link: "mailto:ddattawala@cyberaitechs.com"
     },
     {
       icon: MdLanguage,
       title: "Website",
       details: "www.cyberaitechs.com",
-      gradient: "from-pink-500 to-pink-600"
+      gradient: "from-pink-500 to-pink-600",
+      link: "https://www.cyberaitechs.com"
     }
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white mt-10">
       {/* Navigation */}
       <Navbar />
 
       {/* Hero Section */}
-      <section id="hero" className="relative bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white py-32 px-4 overflow-hidden">
+      <section id="hero" className="relative bg-gradient-to-br from-blue-600 via-blue-700 to-indigo-800 text-white py-24 px-4 overflow-hidden">
         {/* Animated Background Elements */}
         <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute w-96 h-96 bg-blue-500/10 rounded-full blur-3xl -top-48 -left-48 animate-pulse"></div>
-          <div className="absolute w-96 h-96 bg-orange-500/10 rounded-full blur-3xl -bottom-48 -right-48 animate-pulse" style={{animationDelay: '1s'}}></div>
+          <div className="absolute w-96 h-96 bg-orange-500/10 rounded-full blur-3xl -top-48 -left-48 animate-pulse"></div>
+          <div className="absolute w-96 h-96 bg-blue-400/10 rounded-full blur-3xl -bottom-48 -right-48 animate-pulse" style={{animationDelay: '1s'}}></div>
         </div>
 
         <div className="max-w-6xl mx-auto relative z-10">
-          <div className="inline-block mb-6 animate-fade-in-down">
-            <span className="bg-orange-500/20 text-orange-300 px-4 py-2 rounded-full text-sm font-semibold border border-orange-500/30">
-              Get In Touch
-            </span>
+          <div className="inline-flex items-center gap-3 bg-orange-500/20 px-6 py-3 rounded-full mb-6 border border-orange-500/30 animate-fade-in-down">
+            <MdEmail className="w-5 h-5 text-orange-300" />
+            <span className="text-orange-300 font-semibold">Get In Touch</span>
           </div>
 
           <h1 className="text-6xl md:text-7xl font-black mb-6 leading-tight animate-fade-in-up">
             Contact <span className="bg-gradient-to-r from-orange-400 to-orange-600 bg-clip-text text-transparent">CyberAI</span>
           </h1>
           
-          <p className="text-xl md:text-2xl text-blue-200 max-w-3xl animate-fade-in font-light leading-relaxed">
+          <p className="text-xl md:text-2xl text-blue-100 max-w-3xl animate-fade-in font-light leading-relaxed">
             Let's work together to secure your enterprise AI future
           </p>
         </div>
 
         {/* Floating Icons Animation */}
         <div className="absolute inset-0 pointer-events-none">
-          <MdEmail className="absolute w-12 h-12 text-blue-500/20 animate-float" style={{top: '20%', left: '10%', animationDelay: '0s'}} />
-          <MdPhone className="absolute w-10 h-10 text-orange-500/20 animate-float" style={{top: '60%', right: '15%', animationDelay: '1s'}} />
-          <MdBusiness className="absolute w-14 h-14 text-blue-400/20 animate-float" style={{bottom: '20%', left: '20%', animationDelay: '2s'}} />
+          <MdEmail className="absolute w-12 h-12 text-blue-300/20 animate-float" style={{top: '20%', left: '10%', animationDelay: '0s'}} />
+          <MdPhone className="absolute w-10 h-10 text-orange-400/20 animate-float" style={{top: '60%', right: '15%', animationDelay: '1s'}} />
+          <MdBusiness className="absolute w-14 h-14 text-cyan-300/20 animate-float" style={{bottom: '20%', left: '20%', animationDelay: '2s'}} />
         </div>
-
-        {/* Scroll Down Indicator */}
-        
       </section>
 
       {/* Main Contact Section */}
-      <section id="contact-info" className="py-24 px-4 bg-white scroll-mt-20">
+      <section id="contact-info" className="py-20 px-4 bg-white scroll-mt-20 text-black">
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 gap-16">
             {/* Left Column - Contact Information */}
@@ -160,9 +186,12 @@ export default function ContactPage() {
 
               <div className="space-y-6">
                 {contactInfo.map((info, i) => (
-                  <div 
-                    key={i} 
-                    className="group flex items-start space-x-5 p-6 rounded-2xl bg-gradient-to-r from-gray-50 to-white hover:shadow-xl transition-all duration-500 border-2 border-gray-100 hover:border-transparent animate-fade-in-up"
+                  <a
+                    key={i}
+                    href={info.link || '#'}
+                    target={info.link && info.link.startsWith('http') ? '_blank' : '_self'}
+                    rel={info.link && info.link.startsWith('http') ? 'noopener noreferrer' : ''}
+                    className={`group flex items-start space-x-5 p-6 rounded-2xl bg-gradient-to-r from-gray-50 to-white hover:shadow-xl transition-all duration-500 border-2 border-gray-100 hover:border-transparent animate-fade-in-up block ${info.link ? 'cursor-pointer' : 'cursor-default'}`}
                     style={{animationDelay: `${i * 0.1}s`}}
                   >
                     <div className={`bg-gradient-to-br ${info.gradient} rounded-xl p-4 flex-shrink-0 group-hover:scale-110 transition-transform shadow-lg`}>
@@ -170,10 +199,24 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <h3 className="font-bold text-blue-900 mb-2 text-lg">{info.title}</h3>
-                      <p className="text-gray-600 whitespace-pre-line font-medium">{info.details}</p>
+                      <p className="text-gray-600 whitespace-pre-line font-medium group-hover:text-blue-600 transition-colors">{info.details}</p>
                     </div>
-                  </div>
+                  </a>
                 ))}
+              </div>
+
+              {/* WhatsApp Direct Button */}
+              <div className="pt-4">
+                <a
+                  href="https://wa.me/447554898543"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group flex items-center justify-center gap-3 bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all transform hover:scale-105 shadow-xl hover:shadow-2xl hover:shadow-green-500/50"
+                >
+                  <FaWhatsapp className="w-6 h-6" />
+                  Chat on WhatsApp
+                  <FaArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                </a>
               </div>
             </div>
 
@@ -182,7 +225,7 @@ export default function ContactPage() {
               <div className="bg-gradient-to-br from-gray-50 to-white rounded-3xl p-10 shadow-2xl border-2 border-gray-100">
                 <div className="flex items-center gap-3 mb-8">
                   <div className="bg-gradient-to-br from-orange-500 to-orange-600 p-3 rounded-xl shadow-lg">
-                    <MdSend className="w-7 h-7 text-white" />
+                    <MdSend className="w-7 h-7 text-black" />
                   </div>
                   <h2 className="text-3xl font-black text-blue-900">Send us a message</h2>
                 </div>
@@ -190,10 +233,14 @@ export default function ContactPage() {
                 {isSubmitted ? (
                   <div className="bg-gradient-to-br from-green-50 to-green-100 rounded-2xl p-12 text-center animate-fade-in">
                     <div className="bg-green-500 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 animate-bounce">
-                      <FaCheckCircle className="w-10 h-10 text-white" />
+                      <FaCheckCircle className="w-10 h-10 text-black" />
                     </div>
-                    <h3 className="text-2xl font-black text-green-800 mb-3">Message Sent!</h3>
-                    <p className="text-green-700 font-medium">We'll get back to you shortly.</p>
+                    <h3 className="text-2xl font-black text-green-800 mb-3">Message Received!</h3>
+                    <p className="text-green-700 font-medium mb-4">Redirecting to WhatsApp...</p>
+                    <div className="flex items-center justify-center gap-2 text-green-600">
+                      <FaWhatsapp className="w-6 h-6 animate-pulse" />
+                      <span className="font-semibold">Opening WhatsApp</span>
+                    </div>
                   </div>
                 ) : (
                   <form onSubmit={handleSubmit} className="space-y-6">
@@ -288,9 +335,13 @@ export default function ContactPage() {
                       className="group w-full bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-bold py-5 rounded-xl transition-all transform hover:scale-[1.02] active:scale-[0.98] shadow-xl hover:shadow-2xl hover:shadow-orange-500/50 flex items-center justify-center gap-3 text-lg animate-fade-in-up"
                       style={{animationDelay: '0.6s'}}
                     >
-                      Send Message
-                      <MdSend className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                      Send via WhatsApp
+                      <FaWhatsapp className="w-5 h-5 group-hover:scale-110 transition-transform" />
                     </button>
+
+                    <p className="text-center text-sm text-gray-500 italic">
+                      Your message will be sent directly to our WhatsApp
+                    </p>
                   </form>
                 )}
               </div>
@@ -300,7 +351,7 @@ export default function ContactPage() {
       </section>
 
       {/* CTA Section with Background */}
-      <section className="relative py-24 px-4 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white overflow-hidden">
+      <section className="relative py-20 px-4 bg-gradient-to-br from-blue-900 via-blue-800 to-slate-900 text-white overflow-hidden">
         {/* Animated Background */}
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute w-96 h-96 bg-orange-500/10 rounded-full blur-3xl top-0 right-0 animate-pulse"></div>

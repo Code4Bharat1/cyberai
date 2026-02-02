@@ -24,7 +24,7 @@ export default function AboutPage() {
   };
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white mt-10">
       {/* Navigation */}
       <Navbar />
 
@@ -60,14 +60,7 @@ export default function AboutPage() {
         </div>
 
         {/* Scroll Down Indicator */}
-        <button 
-          onClick={() => scrollToSection('overview')}
-          className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce cursor-pointer"
-        >
-          <div className="w-6 h-10 border-2 border-white/50 rounded-full flex justify-center p-2">
-            <div className="w-1 h-3 bg-white rounded-full"></div>
-          </div>
-        </button>
+        
       </section>
 
       {/* Company Overview Section */}
@@ -150,7 +143,7 @@ export default function AboutPage() {
             We combine cutting-edge agentic AI technologies with globally recognised standards and applicable regulatory landscapes.
           </p>
           
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-3 gap-10 *:shadow-sm">
             {[
               {
                 icon: MdSecurity,

@@ -23,16 +23,13 @@ export default function CyberAILandingPage() {
   };
 
   return (
-    <div className="min-h-screen bg-white overflow-hidden">
-      {/* Navigation */}
-     
-
+    <div className="min-h-screen bg-white overflow-hidden mt-10 ">
       {/* Hero Section with Parallax */}
-      <section id="hero" className="relative bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white py-32 px-4 overflow-hidden pt-40">
+      <section id="hero" className="relative bg-gradient-to-br from-blue-600 via-blue-700 to-indigo-800 text-white py-24 px-4 overflow-hidden">
         {/* Animated Background Elements */}
         <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute w-96 h-96 bg-blue-500/10 rounded-full blur-3xl -top-48 -left-48 animate-pulse"></div>
-          <div className="absolute w-96 h-96 bg-orange-500/10 rounded-full blur-3xl -bottom-48 -right-48 animate-pulse" style={{ animationDelay: '1s' }}></div>
+          <div className="absolute w-96 h-96 bg-orange-500/10 rounded-full blur-3xl -top-48 -left-48 animate-pulse"></div>
+          <div className="absolute w-96 h-96 bg-blue-400/10 rounded-full blur-3xl -bottom-48 -right-48 animate-pulse" style={{ animationDelay: '1s' }}></div>
         </div>
 
         <div className="max-w-6xl mx-auto text-center relative z-10">
@@ -42,12 +39,12 @@ export default function CyberAILandingPage() {
             </span>
           </div>
 
-          <h1 className="text-4xl md:text-7xl font-black mb-6 leading-tight animate-fade-in-up">
-            Making <span className="bg-gradient-to-r from-orange-400 to-orange-600 bg-clip-text text-transparent">Cybersecurity</span> & <span className="bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent">AI</span>
+          <h1 className="text-5xl md:text-7xl font-black mb-6 leading-tight animate-fade-in-up">
+            Making <span className="bg-gradient-to-r from-orange-400 to-orange-600 bg-clip-text text-transparent">Cybersecurity</span> & <span className="bg-gradient-to-r from-cyan-300 to-blue-400 bg-clip-text text-transparent">AI</span>
             <br />Simple and Affordable
           </h1>
 
-          <p className="text-xl md:text-2xl text-blue-200 mb-12 max-w-3xl mx-auto animate-fade-in font-light leading-relaxed">
+          <p className="text-xl md:text-2xl text-blue-100 mb-10 max-w-3xl mx-auto animate-fade-in font-light leading-relaxed">
             Enterprise-grade AI and cybersecurity solutions designed specifically for heavily regulated industries.
           </p>
 
@@ -61,7 +58,7 @@ export default function CyberAILandingPage() {
             </button>
             <button
               onClick={() => scrollToSection('contact')}
-              className="border-2 border-blue-300/50 backdrop-blur-sm hover:bg-white hover:text-blue-900 px-10 py-4 rounded-lg font-bold text-lg transition-all hover:scale-105 hover:shadow-xl"
+              className="border-2 border-white/50 backdrop-blur-sm hover:bg-white hover:text-blue-900 px-10 py-4 rounded-lg font-bold text-lg transition-all hover:scale-105 hover:shadow-xl"
             >
               Start Free Trial
             </button>
@@ -70,17 +67,14 @@ export default function CyberAILandingPage() {
 
         {/* Floating Icons Animation */}
         <div className="absolute inset-0 pointer-events-none">
-          <Shield className="absolute w-12 h-12 text-blue-500/20 animate-float" style={{ top: '20%', left: '10%', animationDelay: '0s' }} />
-          <Lock className="absolute w-10 h-10 text-orange-500/20 animate-float" style={{ top: '60%', right: '15%', animationDelay: '1s' }} />
-          <Brain className="absolute w-14 h-14 text-blue-400/20 animate-float" style={{ bottom: '20%', left: '20%', animationDelay: '2s' }} />
+          <Shield className="absolute w-12 h-12 text-blue-300/20 animate-float" style={{ top: '20%', left: '10%', animationDelay: '0s' }} />
+          <Lock className="absolute w-10 h-10 text-orange-400/20 animate-float" style={{ top: '60%', right: '15%', animationDelay: '1s' }} />
+          <Brain className="absolute w-14 h-14 text-cyan-300/20 animate-float" style={{ bottom: '20%', left: '20%', animationDelay: '2s' }} />
         </div>
-
-        {/* Scroll Down Indicator */}
-        
       </section>
 
       {/* Enterprise AI Section */}
-      <section id="about" className="py-24 px-4 relative scroll-mt-20">
+      <section id="about" className="py-20 px-4 relative scroll-mt-20">
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center">
           <div className="space-y-6 animate-slide-in-left">
             <div className="inline-block">
@@ -132,7 +126,7 @@ export default function CyberAILandingPage() {
       </section>
 
       {/* Strategic Focus Areas */}
-      <section id="solutions" className="bg-gradient-to-b from-gray-50 to-white py-24 px-4 scroll-mt-20">
+      <section id="solutions" className="bg-gradient-to-b from-gray-50 to-white py-20 px-4 scroll-mt-20">
         <div className="max-w-6xl mx-auto text-center">
           <div className="mb-4 animate-fade-in">
             <span className="text-orange-500 font-bold text-sm tracking-widest uppercase">Our Focus</span>
@@ -142,11 +136,11 @@ export default function CyberAILandingPage() {
           <h2 className="text-5xl md:text-6xl font-black text-blue-900 mb-6 animate-fade-in-up">
             Strategic Focus Areas
           </h2>
-          <p className="text-gray-600 text-lg mb-16 max-w-2xl mx-auto animate-fade-in">
+          <p className="text-gray-600 text-lg mb-12 max-w-2xl mx-auto animate-fade-in">
             Bridging the gap between cutting-edge AI capabilities and the skills needed across all target markets.
           </p>
 
-          <div className="grid md:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-4 gap-10 *:shadow-sm">
             {[
               { icon: Shield, title: "Privatised LLMs", desc: "Enterprise-class secure AI for highly sensitive data on your own infrastructure", color: "from-blue-500 to-blue-600", link: 'privatised-llms' },
               { icon: Lock, title: "Secure DevAI", desc: "Streamlined development with best-in-class industrial-grade security measures", color: "from-orange-500 to-orange-600", link: 'process' },
@@ -175,9 +169,9 @@ export default function CyberAILandingPage() {
       </section>
 
       {/* Why Privatised LLMs */}
-      <section id="privatised-llms" className="py-24 px-4 scroll-mt-20">
+      <section id="privatised-llms" className="py-20 px-4 scroll-mt-20">
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-16">
-          <div className="space-y-8 animate-slide-in-left">
+          <div className="space-y-6 animate-slide-in-left">
             <div>
               <span className="text-orange-500 font-bold text-sm tracking-widest uppercase">Our Solution</span>
               <div className="h-1 w-20 bg-gradient-to-r from-orange-500 to-transparent mt-2"></div>
@@ -223,26 +217,26 @@ export default function CyberAILandingPage() {
             </button>
           </div>
 
-          <div className="bg-gradient-to-br from-blue-50 to-orange-50 p-10 rounded-3xl animate-slide-in-right shadow-xl">
+          <div className=" p-10 rounded-3xl animate-slide-in-right ">
             <h3 className="text-3xl font-black text-blue-900 mb-8">Public vs Privatised</h3>
 
             <div className="space-y-6">
-              <div className="bg-white p-8 rounded-2xl border-l-4 border-red-500 shadow-lg hover:shadow-xl transition-shadow group">
+              <div className="bg-white p-6 rounded-2xl border-l-4 border-red-500 shadow-lg hover:shadow-xl transition-shadow group">
                 <div className="flex items-center gap-3 mb-3">
                   <div className="w-3 h-3 bg-red-500 rounded-full group-hover:scale-125 transition-transform"></div>
-                  <h4 className="font-bold text-red-700 text-xl">Public LLMs</h4>
+                  <h4 className="font-bold text-red-700 text-lg">Public LLMs</h4>
                 </div>
-                <p className="text-gray-700 leading-relaxed">
+                <p className="text-gray-700 text-sm leading-relaxed">
                   Limited control over data security with significant compliance risks around sensitive information handling.
                 </p>
               </div>
 
-              <div className="bg-white p-8 rounded-2xl border-l-4 border-green-500 shadow-lg hover:shadow-xl transition-shadow group">
+              <div className="bg-white p-6 rounded-2xl border-l-4 border-green-500 shadow-lg hover:shadow-xl transition-shadow group">
                 <div className="flex items-center gap-3 mb-3">
                   <div className="w-3 h-3 bg-green-500 rounded-full group-hover:scale-125 transition-transform"></div>
-                  <h4 className="font-bold text-green-700 text-xl">Privatised LLMs</h4>
+                  <h4 className="font-bold text-green-700 text-lg">Privatised LLMs</h4>
                 </div>
-                <p className="text-gray-700 leading-relaxed">
+                <p className="text-gray-700 text-sm leading-relaxed">
                   Secure deployment with complete data control and industry-specific domain expertise built in.
                 </p>
               </div>
@@ -252,18 +246,18 @@ export default function CyberAILandingPage() {
       </section>
 
       {/* Developing Private AI - Timeline Style */}
-      <section id="process" className="bg-gradient-to-b from-gray-50 to-white py-24 px-4 scroll-mt-20">
+      <section id="process" className="bg-gradient-to-b from-gray-50 to-white py-20 px-4 scroll-mt-20">
         <div className="max-w-6xl mx-auto text-center">
           <div className="mb-4">
             <span className="text-orange-500 font-bold text-sm tracking-widest uppercase">Our Process</span>
             <div className="h-1 w-20 bg-gradient-to-r from-orange-500 to-transparent mx-auto mt-2"></div>
           </div>
 
-          <h2 className="text-5xl md:text-6xl font-black text-blue-900 mb-20">
+          <h2 className="text-5xl md:text-6xl font-black text-blue-900 mb-12">
             Developing Your Private AI
           </h2>
 
-          <div className="grid md:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-4 gap-10 *:shadow-sm">
             {[
               { icon: Database, title: "Foundation Model", desc: "Choose the best pre-built open-source model", step: "01" },
               { icon: Target, title: "Fine-Tuning", desc: "Trained on your security and industry norms", step: "02" },
@@ -296,18 +290,18 @@ export default function CyberAILandingPage() {
       </section>
 
       {/* Services Grid - Masonry Style */}
-      <section id="services" className="py-24 px-4 scroll-mt-20">
+      <section id="services" className="py-20 px-4 scroll-mt-20">
         <div className="max-w-6xl mx-auto text-center">
           <div className="mb-4">
             <span className="text-orange-500 font-bold text-sm tracking-widest uppercase">Our Services</span>
             <div className="h-1 w-20 bg-gradient-to-r from-orange-500 to-transparent mx-auto mt-2"></div>
           </div>
 
-          <h2 className="text-5xl md:text-6xl font-black text-blue-900 mb-20">
+          <h2 className="text-5xl md:text-6xl font-black text-blue-900 mb-12">
             End-to-End Solutions
           </h2>
 
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-3 gap-10 *:shadow-sm">
             {[
               { title: "AI Strategy & Adoption", desc: "Complete AI roadmap and business case development", icon: Target },
               { title: "AI Governance", desc: "Ethics frameworks and regulatory compliance", icon: Shield },
@@ -342,7 +336,7 @@ export default function CyberAILandingPage() {
       </section>
 
       {/* Team Section */}
-      <section id="team" className="bg-gradient-to-b from-gray-50 to-white py-24 px-4 scroll-mt-20">
+      <section id="team" className="bg-gradient-to-b from-gray-50 to-white py-20 px-4 scroll-mt-20">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-4">
             <span className="text-orange-500 font-bold text-sm tracking-widest uppercase">Our Team</span>
@@ -386,16 +380,16 @@ export default function CyberAILandingPage() {
       </section>
 
       {/* Industries Section */}
-      <section id="industries" className="py-24 px-4 scroll-mt-20">
+      <section id="industries" className="py-20 px-4 scroll-mt-20">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-5xl md:text-6xl font-black text-blue-900 mb-6 text-center">
             Industries We Serve
           </h2>
-          <p className="text-gray-600 text-lg mb-16 text-center max-w-3xl mx-auto">
+          <p className="text-gray-600 text-lg mb-12 text-center max-w-3xl mx-auto">
             Delivering transformative AI solutions for heavily regulated industries where privacy and compliance are paramount.
           </p>
 
-          <div className="grid md:grid-cols-3 gap-8 mb-20">
+          <div className="grid md:grid-cols-3 gap-8 mb-16">
             {[
               { icon: Building2, title: "Banking & Finance", gradient: "from-blue-500 to-blue-600" },
               { icon: Cpu, title: "Healthcare", gradient: "from-orange-500 to-orange-600" },
@@ -436,9 +430,6 @@ export default function CyberAILandingPage() {
           </div>
         </div>
       </section>
-
-      {/* Footer */}
-
 
       <style jsx>{`
         @keyframes fade-in {

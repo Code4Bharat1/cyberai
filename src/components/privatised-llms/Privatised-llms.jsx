@@ -122,7 +122,7 @@ export default function PrivatisedLLMsPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white mt-10">
       {/* Navigation */}
       <Navbar />
 
@@ -240,7 +240,7 @@ export default function PrivatisedLLMsPage() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-10">
+          <div className="grid md:grid-cols-2 gap-10 *:shadow-sm">
             {/* Public LLM */}
             <div className="bg-white rounded-3xl p-10 border-2 border-gray-200 hover:shadow-xl transition-all duration-500 animate-slide-in-left">
               <div className="text-center mb-8">
@@ -334,7 +334,7 @@ export default function PrivatisedLLMsPage() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-4 gap-10 *:shadow-sm">
             {keyBenefits.map((benefit, i) => (
               <div 
                 key={i} 
@@ -385,7 +385,7 @@ export default function PrivatisedLLMsPage() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-4 gap-10 *:shadow-sm">
             {developmentProcess.map((step, i) => (
               <div 
                 key={i} 

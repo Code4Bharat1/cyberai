@@ -3,8 +3,8 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { 
-  MdBusiness, 
+import {
+  MdBusiness,
   MdLocationOn,
   MdWorkspacePremium,
   MdEmojiEvents,
@@ -73,7 +73,7 @@ export default function LeadershipPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white mt-10 ">
       {/* Navigation */}
       <Navbar />
 
@@ -82,7 +82,7 @@ export default function LeadershipPage() {
         {/* Animated Background Elements */}
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute w-96 h-96 bg-blue-500/10 rounded-full blur-3xl -top-48 -left-48 animate-pulse"></div>
-          <div className="absolute w-96 h-96 bg-orange-500/10 rounded-full blur-3xl -bottom-48 -right-48 animate-pulse" style={{animationDelay: '1s'}}></div>
+          <div className="absolute w-96 h-96 bg-orange-500/10 rounded-full blur-3xl -bottom-48 -right-48 animate-pulse" style={{ animationDelay: '1s' }}></div>
         </div>
 
         <div className="max-w-6xl mx-auto text-center relative z-10">
@@ -95,7 +95,7 @@ export default function LeadershipPage() {
           <h1 className="text-6xl md:text-7xl font-black mb-6 leading-tight animate-fade-in-up">
             <span className="bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent">Leadership</span>
           </h1>
-          
+
           <p className="text-xl md:text-2xl text-blue-200 max-w-3xl mx-auto animate-fade-in font-light leading-relaxed">
             Experience-led AI and cybersecurity leadership with global expertise
           </p>
@@ -103,13 +103,13 @@ export default function LeadershipPage() {
 
         {/* Floating Icons Animation */}
         <div className="absolute inset-0 pointer-events-none">
-          <FaTrophy className="absolute w-12 h-12 text-yellow-500/20 animate-float" style={{top: '20%', left: '10%', animationDelay: '0s'}} />
-          <FaMedal className="absolute w-10 h-10 text-orange-500/20 animate-float" style={{top: '60%', right: '15%', animationDelay: '1s'}} />
-          <MdWorkspacePremium className="absolute w-14 h-14 text-blue-400/20 animate-float" style={{bottom: '20%', left: '20%', animationDelay: '2s'}} />
+          <FaTrophy className="absolute w-12 h-12 text-yellow-500/20 animate-float" style={{ top: '20%', left: '10%', animationDelay: '0s' }} />
+          <FaMedal className="absolute w-10 h-10 text-orange-500/20 animate-float" style={{ top: '60%', right: '15%', animationDelay: '1s' }} />
+          <MdWorkspacePremium className="absolute w-14 h-14 text-blue-400/20 animate-float" style={{ bottom: '20%', left: '20%', animationDelay: '2s' }} />
         </div>
 
         {/* Scroll Down Indicator */}
-       
+
       </section>
 
       {/* Main Content Section */}
@@ -121,8 +121,8 @@ export default function LeadershipPage() {
               <div className="bg-white rounded-3xl shadow-2xl overflow-hidden sticky top-8 border-2 border-gray-100 hover:shadow-3xl transition-shadow duration-500">
                 <div className="relative bg-gray-200 h-96 flex items-center justify-center overflow-hidden group">
                   <div className="absolute inset-0 bg-gradient-to-t from-blue-900/50 to-transparent z-10"></div>
-                  <img 
-                    src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&h=400&fit=crop" 
+                  <img
+                    src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&h=400&fit=crop"
                     alt="Dr. Davar Dattawala"
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
@@ -134,12 +134,19 @@ export default function LeadershipPage() {
                     <MdLocationOn className="w-5 h-5 mr-2 text-orange-500" />
                     <span className="font-medium">London, United Kingdom</span>
                   </div>
-                  
+
                   <div className="pt-6 border-t border-gray-200">
-                    <div className="flex items-center gap-3 text-blue-600 hover:text-blue-700 cursor-pointer group">
+                    <Link
+                      href="https://www.linkedin.com/in/your-profile"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-3 text-blue-600 hover:text-blue-700 cursor-pointer group"
+                    >
                       <FaLinkedin className="w-6 h-6" />
-                      <span className="font-semibold group-hover:underline">Connect on LinkedIn</span>
-                    </div>
+                      <span className="font-semibold group-hover:underline">
+                        Connect on LinkedIn
+                      </span>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -167,10 +174,10 @@ export default function LeadershipPage() {
                 <h3 className="text-3xl font-black text-blue-900 mb-6">Core Expertise</h3>
                 <div className="flex flex-wrap gap-3">
                   {coreExpertise.map((skill, i) => (
-                    <span 
+                    <span
                       key={i}
                       className="bg-gradient-to-r from-blue-50 to-blue-100 text-blue-700 px-5 py-3 rounded-xl text-sm font-bold border-2 border-blue-200 hover:border-blue-500 hover:shadow-lg transition-all duration-300 hover:scale-105 animate-fade-in-up"
-                      style={{animationDelay: `${i * 0.05}s`}}
+                      style={{ animationDelay: `${i * 0.05}s` }}
                     >
                       {skill}
                     </span>
@@ -183,10 +190,10 @@ export default function LeadershipPage() {
                 <h3 className="text-3xl font-black text-blue-900 mb-6">Recognition & Achievements</h3>
                 <div className="grid md:grid-cols-3 gap-6">
                   {achievements.map((achievement, i) => (
-                    <div 
-                      key={i} 
+                    <div
+                      key={i}
                       className="group bg-white border-2 border-gray-100 rounded-3xl p-6 text-center hover:shadow-2xl hover:border-transparent transition-all duration-500 hover:-translate-y-2 animate-fade-in-up"
-                      style={{animationDelay: `${i * 0.1}s`}}
+                      style={{ animationDelay: `${i * 0.1}s` }}
                     >
                       <div className={`bg-gradient-to-br ${achievement.gradient} w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-500 shadow-lg`}>
                         <achievement.icon className="w-8 h-8 text-white" />
@@ -201,7 +208,7 @@ export default function LeadershipPage() {
               {/* Research & Thought Leadership */}
               <div>
                 <h3 className="text-3xl font-black text-blue-900 mb-6">Research & Thought Leadership</h3>
-                
+
                 <div className="bg-gradient-to-br from-blue-50 to-blue-100/50 border-l-4 border-blue-500 rounded-r-3xl p-8 mb-6 shadow-lg hover:shadow-xl transition-shadow duration-500 group animate-fade-in-up">
                   <div className="flex items-start space-x-6">
                     <div className="bg-blue-500 rounded-xl p-4 flex-shrink-0 group-hover:scale-110 transition-transform shadow-md">
@@ -222,7 +229,7 @@ export default function LeadershipPage() {
                   </div>
                 </div>
 
-                <div className="bg-gradient-to-br from-orange-50 to-orange-100/50 border-l-4 border-orange-500 rounded-r-3xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-500 group animate-fade-in-up" style={{animationDelay: '0.1s'}}>
+                <div className="bg-gradient-to-br from-orange-50 to-orange-100/50 border-l-4 border-orange-500 rounded-r-3xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-500 group animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
                   <div className="flex items-start space-x-6">
                     <div className="bg-orange-500 rounded-xl p-4 flex-shrink-0 group-hover:scale-110 transition-transform shadow-md">
                       <MdMic className="w-8 h-8 text-white" />
@@ -237,7 +244,7 @@ export default function LeadershipPage() {
                 </div>
               </div>
 
-              <button 
+              <button
                 onClick={() => scrollToSection('experience')}
                 className="group flex items-center gap-2 text-orange-500 font-semibold hover:gap-4 transition-all"
               >
@@ -263,12 +270,12 @@ export default function LeadershipPage() {
               </p>
             </div>
 
-            <div className="grid md:grid-cols-3 gap-6">
+            <div className="grid md:grid-cols-3 gap-8 *:shadow-sm">
               {companies.map((company, i) => (
-                <div 
-                  key={i} 
+                <div
+                  key={i}
                   className="group bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-8 flex items-center space-x-5 hover:shadow-2xl transition-all duration-500 border-2 border-blue-100 hover:border-blue-500 hover:-translate-y-1 animate-fade-in-up"
-                  style={{animationDelay: `${i * 0.05}s`}}
+                  style={{ animationDelay: `${i * 0.05}s` }}
                 >
                   <div className="bg-gradient-to-br from-blue-600 to-blue-700 rounded-xl p-4 group-hover:scale-110 transition-transform shadow-lg">
                     <company.icon className="w-8 h-8 text-white" />
@@ -279,7 +286,7 @@ export default function LeadershipPage() {
             </div>
 
             <div className="text-center mt-12">
-              <button 
+              <button
                 onClick={() => scrollToSection('cta')}
                 className="group flex items-center gap-2 text-orange-500 font-semibold hover:gap-4 transition-all mx-auto text-lg"
               >
@@ -298,7 +305,7 @@ export default function LeadershipPage() {
             {/* Animated Background */}
             <div className="absolute inset-0 overflow-hidden">
               <div className="absolute w-96 h-96 bg-orange-500/10 rounded-full blur-3xl top-0 right-0 animate-pulse"></div>
-              <div className="absolute w-96 h-96 bg-blue-500/10 rounded-full blur-3xl bottom-0 left-0 animate-pulse" style={{animationDelay: '1s'}}></div>
+              <div className="absolute w-96 h-96 bg-blue-500/10 rounded-full blur-3xl bottom-0 left-0 animate-pulse" style={{ animationDelay: '1s' }}></div>
             </div>
 
             <div className="relative z-10">
