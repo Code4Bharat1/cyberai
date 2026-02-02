@@ -48,11 +48,11 @@ export default function Navbar() {
             <div className="relative">
               <div className="absolute inset-0 bg-gradient-to-br from-orange-500/20 to-blue-500/20 rounded-xl blur-md group-hover:blur-lg transition-all"></div>
                 <Image 
-                  src="/logo.jpg" 
+                  src="/logo.png" 
                   alt="CyberAI Logo" 
-                  width={32} 
-                  height={32}
-                  className="w-8 h-8 relative z-10 rounded-lg"
+                  width={40} 
+                  height={40}
+                  className="w-15 h-15 relative z-10 rounded-lg"
                 />
             </div>
             <span className="text-2xl font-black bg-gradient-to-r from-blue-900 to-blue-700 bg-clip-text text-transparent group-hover:from-orange-500 group-hover:to-orange-600 transition-all duration-300">

@@ -1,8 +1,8 @@
 "use client";
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { MdSecurity, MdVisibility, MdDescription, MdShield, MdBusiness, MdAccountBalance, MdLayers } from 'react-icons/md';
-import { FaCheck, FaTimes, FaArrowRight } from 'react-icons/fa';
+import { MdSecurity, MdVisibility, MdDescription, MdShield, MdBusiness, MdAccountBalance, MdLayers, MdTrendingUp, MdSpeed } from 'react-icons/md';
+import { FaCheck, FaTimes, FaArrowRight, FaGlobe, FaChartLine } from 'react-icons/fa';
 import { BiBuildings } from 'react-icons/bi';
 import Navbar from '../navbar/Navbar';
 import Footer from '../Footer/Footer';
@@ -48,7 +48,7 @@ export default function AboutPage() {
           </h1>
           
           <p className="text-xl md:text-2xl text-blue-200 max-w-3xl mx-auto animate-fade-in font-light leading-relaxed">
-            Enterprise-grade AI and cybersecurity solutions for regulated industries
+            Built by cybersecurity leaders solving AI's biggest trust gap
           </p>
         </div>
 
@@ -58,9 +58,6 @@ export default function AboutPage() {
           <MdSecurity className="absolute w-10 h-10 text-orange-500/20 animate-float" style={{top: '60%', right: '15%', animationDelay: '1s'}} />
           <MdBusiness className="absolute w-14 h-14 text-blue-400/20 animate-float" style={{bottom: '20%', left: '20%', animationDelay: '2s'}} />
         </div>
-
-        {/* Scroll Down Indicator */}
-        
       </section>
 
       {/* Company Overview Section */}
@@ -101,10 +98,10 @@ export default function AboutPage() {
               </div>
 
               <button 
-                onClick={() => scrollToSection('approach')}
+                onClick={() => scrollToSection('market')}
                 className="group flex items-center gap-2 text-orange-500 font-semibold hover:gap-4 transition-all mt-6"
               >
-                Learn About Our Approach
+                Explore Market Opportunity
                 <FaArrowRight className="w-4 h-4" />
               </button>
             </div>
@@ -127,8 +124,328 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* Market Opportunity Section - NEW */}
+      <section id="market" className="bg-gradient-to-b from-gray-50 to-white py-24 px-4 scroll-mt-20">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-16">
+            <div className="mb-4">
+              <span className="text-orange-500 font-bold text-sm tracking-widest uppercase">Market Landscape</span>
+              <div className="h-1 w-20 bg-gradient-to-r from-orange-500 to-transparent mx-auto mt-2"></div>
+            </div>
+            <h2 className="text-5xl md:text-6xl font-black text-blue-900 mb-6">
+              The Global AI Market
+            </h2>
+            <p className="text-gray-600 text-lg max-w-3xl mx-auto">
+              Enterprise AI adoption is accelerating across regulated industries worldwide, creating unprecedented demand for secure, compliant solutions.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8 mb-16">
+            <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all border border-gray-100 text-center">
+              <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center mx-auto mb-6">
+                <FaGlobe className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-2xl font-bold text-blue-900 mb-3">Global Reach</h3>
+              <p className="text-gray-600">
+                Regulatory requirements span banking, healthcare, and government sectors across all major markets
+              </p>
+            </div>
+
+            <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all border border-gray-100 text-center">
+              <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-orange-600 rounded-xl flex items-center justify-center mx-auto mb-6">
+                <FaChartLine className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-2xl font-bold text-blue-900 mb-3">Proven Technology</h3>
+              <p className="text-gray-600">
+                Enterprise AI is no longer experimental—it's an established market with clear compliance needs
+              </p>
+            </div>
+
+            <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all border border-gray-100 text-center">
+              <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl flex items-center justify-center mx-auto mb-6">
+                <MdTrendingUp className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-2xl font-bold text-blue-900 mb-3">Growing Demand</h3>
+              <p className="text-gray-600">
+                Increasing recognition that public AI models cannot meet enterprise security and privacy requirements
+              </p>
+            </div>
+          </div>
+
+          <div className="bg-gradient-to-br from-blue-50 to-blue-100/50 border-l-4 border-blue-500 p-10 rounded-r-2xl">
+            <h3 className="text-2xl font-bold text-blue-900 mb-4">Why This Matters</h3>
+            <p className="text-gray-700 text-lg leading-relaxed mb-4">
+              Organizations investing in CyberAI solutions aren't gambling on emerging technology—they're adopting proven infrastructure that addresses real compliance gaps in an established market.
+            </p>
+            <p className="text-gray-700 text-lg leading-relaxed">
+              The total addressable market for secure, private AI in regulated industries represents a significant opportunity as enterprises recognize the limitations of public AI models for sensitive data.
+            </p>
+          </div>
+
+          <div className="text-center mt-12">
+            <button 
+              onClick={() => scrollToSection('risks')}
+              className="group flex items-center gap-2 text-orange-500 font-semibold hover:gap-4 transition-all mx-auto"
+            >
+              Learn About AI Risks We Mitigate
+              <FaArrowRight className="w-4 h-4" />
+            </button>
+          </div>
+        </div>
+      </section>
+
+      {/* AI Risks Section - NEW */}
+      <section id="risks" className="py-24 px-4 scroll-mt-20">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-16">
+            <div className="mb-4">
+              <span className="text-orange-500 font-bold text-sm tracking-widest uppercase">Risk Management</span>
+              <div className="h-1 w-20 bg-gradient-to-r from-orange-500 to-transparent mx-auto mt-2"></div>
+            </div>
+            <h2 className="text-5xl md:text-6xl font-black text-blue-900 mb-6">
+              AI Risks Beyond the Obvious
+            </h2>
+            <p className="text-gray-600 text-lg max-w-3xl mx-auto">
+              While hallucinations and bias dominate headlines, enterprise AI faces deeper challenges. Drawing from the MIT AI Risk Repository, we address the full spectrum of AI risks.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-10 mb-16">
+            {/* Common Concerns */}
+            <div className="bg-gradient-to-br from-red-50 to-red-100/50 border-2 border-red-200 rounded-2xl p-8">
+              <h3 className="text-2xl font-bold text-red-700 mb-6">Common AI Risks</h3>
+              <div className="space-y-4">
+                {[
+                  "Hallucinations and factual inaccuracies",
+                  "Bias in training data and outputs",
+                  "Prompt injection attacks",
+                  "Data leakage through APIs"
+                ].map((item, i) => (
+                  <div key={i} className="flex items-start space-x-3 bg-white/70 p-4 rounded-xl">
+                    <FaTimes className="w-5 h-5 text-red-600 mt-1 flex-shrink-0" />
+                    <span className="text-gray-700 font-medium">{item}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Deeper Risks */}
+            <div className="bg-gradient-to-br from-orange-50 to-orange-100/50 border-2 border-orange-200 rounded-2xl p-8">
+              <h3 className="text-2xl font-bold text-orange-700 mb-6">Enterprise-Critical Risks</h3>
+              <div className="space-y-4">
+                {[
+                  "Model weight theft and IP loss",
+                  "Adversarial attacks on production systems",
+                  "Regulatory non-compliance exposure",
+                  "Supply chain vulnerabilities"
+                ].map((item, i) => (
+                  <div key={i} className="flex items-start space-x-3 bg-white/70 p-4 rounded-xl">
+                    <MdShield className="w-5 h-5 text-orange-600 mt-1 flex-shrink-0" />
+                    <span className="text-gray-700 font-medium">{item}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          {/* How We Mitigate */}
+          <div className="bg-gradient-to-br from-blue-900 to-slate-900 text-white p-12 rounded-3xl">
+            <h3 className="text-3xl font-bold mb-8 text-center">How CyberAI Private Models Mitigate These Risks</h3>
+            
+            <div className="grid md:grid-cols-2 gap-8">
+              <div className="space-y-6">
+                <div className="flex items-start space-x-4">
+                  <div className="bg-orange-500 rounded-full p-3 mt-1 flex-shrink-0">
+                    <FaCheck className="w-5 h-5 text-white" />
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-xl mb-2">Built Inside Your Environment</h4>
+                    <p className="text-blue-200">
+                      Models deployed on-premises or in your private cloud—never exposed to public APIs or third-party access
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-start space-x-4">
+                  <div className="bg-orange-500 rounded-full p-3 mt-1 flex-shrink-0">
+                    <FaCheck className="w-5 h-5 text-white" />
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-xl mb-2">Trained Only on Your Data</h4>
+                    <p className="text-blue-200">
+                      Limited parameter models (1B parameters) trained exclusively on your domain data—dramatically reducing hallucinations
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="space-y-6">
+                <div className="flex items-start space-x-4">
+                  <div className="bg-orange-500 rounded-full p-3 mt-1 flex-shrink-0">
+                    <FaCheck className="w-5 h-5 text-white" />
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-xl mb-2">Faster, More Accurate Responses</h4>
+                    <p className="text-blue-200">
+                      Focused models deliver higher accuracy for your specific use cases versus broad-purpose public LLMs
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-start space-x-4">
+                  <div className="bg-orange-500 rounded-full p-3 mt-1 flex-shrink-0">
+                    <FaCheck className="w-5 h-5 text-white" />
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-xl mb-2">Complete Auditability</h4>
+                    <p className="text-blue-200">
+                      Full transparency into model behavior, training data, and decision-making processes for compliance
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="mt-10 p-6 bg-white/10 rounded-xl border border-white/20">
+              <p className="text-blue-100 text-center text-lg">
+                <span className="font-bold text-white">Key Advantage:</span> Our 1-billion parameter models trained on your specific data vastly outperform ChatGPT's broader models for your use cases—with significantly reduced risk of hallucination and bias.
+              </p>
+            </div>
+          </div>
+
+          <div className="text-center mt-12">
+            <button 
+              onClick={() => scrollToSection('journey')}
+              className="group flex items-center gap-2 text-orange-500 font-semibold hover:gap-4 transition-all mx-auto"
+            >
+              See Our Customer Journey
+              <FaArrowRight className="w-4 h-4" />
+            </button>
+          </div>
+        </div>
+      </section>
+
+      {/* Customer Journey Section - NEW */}
+      <section id="journey" className="bg-gradient-to-b from-gray-50 to-white py-24 px-4 scroll-mt-20">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-16">
+            <div className="mb-4">
+              <span className="text-orange-500 font-bold text-sm tracking-widest uppercase">How We Work</span>
+              <div className="h-1 w-20 bg-gradient-to-r from-orange-500 to-transparent mx-auto mt-2"></div>
+            </div>
+            <h2 className="text-5xl md:text-6xl font-black text-blue-900 mb-6">
+              Quick AI Model Development<br/>For Your Business
+            </h2>
+            <p className="text-gray-600 text-lg max-w-3xl mx-auto">
+              From initial consultation to production deployment, our streamlined process delivers custom AI solutions in 4-12 weeks.
+            </p>
+          </div>
+
+          {/* Visual Journey Timeline */}
+          <div className="relative">
+            {/* Connection Line */}
+            <div className="hidden md:block absolute top-24 left-0 right-0 h-1 bg-gradient-to-r from-orange-200 via-orange-400 to-orange-600 z-0"></div>
+            
+            <div className="grid md:grid-cols-6 gap-6 relative z-10">
+              {[
+                {
+                  phase: "Phase 1",
+                  title: "Discovery",
+                  desc: "Business case & requirements",
+                  icon: MdDescription,
+                  time: "Week 1"
+                },
+                {
+                  phase: "Phase 2",
+                  title: "Development",
+                  desc: "Model training & fine-tuning",
+                  icon: MdLayers,
+                  time: "4-12 weeks"
+                },
+                {
+                  phase: "Phase 3",
+                  title: "Deployment",
+                  desc: "Install in your environment",
+                  icon: MdShield,
+                  time: "Week 1"
+                },
+                {
+                  phase: "Phase 4",
+                  title: "Testing",
+                  desc: "Validation within your infrastructure",
+                  icon: MdVisibility,
+                  time: "2-4 weeks"
+                },
+                {
+                  phase: "Phase 5",
+                  title: "Go-Live",
+                  desc: "Production deployment",
+                  icon: MdSpeed,
+                  time: "Week 1"
+                },
+                {
+                  phase: "Phase 6",
+                  title: "Support",
+                  desc: "Ongoing maintenance & updates",
+                  icon: MdSecurity,
+                  time: "Continuous"
+                }
+              ].map((item, i) => (
+                <div key={i} className="text-center group">
+                  <div className="relative mb-6">
+                    <div className="w-20 h-20 bg-gradient-to-br from-orange-500 to-orange-600 rounded-full flex items-center justify-center mx-auto shadow-xl group-hover:scale-110 transition-transform duration-500">
+                      <item.icon className="w-10 h-10 text-white" />
+                    </div>
+                    <div className="absolute -top-3 -right-3 bg-blue-900 text-white text-xs font-bold px-2 py-1 rounded-full">
+                      {i + 1}
+                    </div>
+                  </div>
+                  <div className="bg-white p-4 rounded-xl shadow-md hover:shadow-xl transition-shadow border border-gray-100">
+                    <div className="text-orange-500 font-bold text-xs uppercase mb-2">{item.phase}</div>
+                    <h3 className="text-lg font-bold text-blue-900 mb-2">{item.title}</h3>
+                    <p className="text-gray-600 text-sm mb-3">{item.desc}</p>
+                    <div className="text-orange-600 font-semibold text-xs">{item.time}</div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="mt-16 bg-gradient-to-br from-orange-50 to-orange-100/50 border-l-4 border-orange-500 p-10 rounded-r-2xl">
+            <h3 className="text-2xl font-bold text-blue-900 mb-4 flex items-center gap-3">
+              <MdSpeed className="w-8 h-8 text-orange-500" />
+              Speed & Customization Advantage
+            </h3>
+            <div className="grid md:grid-cols-2 gap-6">
+              <div>
+                <h4 className="font-bold text-blue-900 mb-2">Fast Time to Value</h4>
+                <p className="text-gray-700">
+                  Most projects move from concept to production in 4-12 weeks—dramatically faster than traditional enterprise software implementations.
+                </p>
+              </div>
+              <div>
+                <h4 className="font-bold text-blue-900 mb-2">Built for Your Business</h4>
+                <p className="text-gray-700">
+                  Every model is custom-trained on your data, workflows, and requirements—not a generic solution adapted to your needs.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div className="text-center mt-12">
+            <button 
+              onClick={() => scrollToSection('approach')}
+              className="group flex items-center gap-2 text-orange-500 font-semibold hover:gap-4 transition-all mx-auto"
+            >
+              Learn About Our Approach
+              <FaArrowRight className="w-4 h-4" />
+            </button>
+          </div>
+        </div>
+      </section>
+
       {/* Our Approach Section */}
-      <section id="approach" className="bg-gradient-to-b from-gray-50 to-white py-24 px-4 scroll-mt-20">
+      <section id="approach" className="py-24 px-4 scroll-mt-20">
         <div className="max-w-6xl mx-auto text-center">
           <div className="mb-4 animate-fade-in">
             <span className="text-orange-500 font-bold text-sm tracking-widest uppercase">Our Philosophy</span>
@@ -189,7 +506,7 @@ export default function AboutPage() {
       </section>
 
       {/* Problem vs Solution Section */}
-      <section id="problem-solution" className="py-24 px-4 scroll-mt-20">
+      <section id="problem-solution" className="bg-gradient-to-b from-gray-50 to-white py-24 px-4 scroll-mt-20">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <div className="mb-4">

@@ -1,6 +1,6 @@
 "use client";
 import React, { useState, useEffect } from 'react';
-import { Shield, Lock, Eye, Users, Brain, Code, Target, Zap, Database, UserCheck, Building2, Cpu, Globe, CheckCircle, ArrowRight, Menu, X } from 'lucide-react';
+import { Shield, Lock, Eye, Users, Brain, Code, Target, Zap, Database, UserCheck, Building2, Cpu, Globe, CheckCircle, ArrowRight, Menu, X, TrendingUp, Clock, DollarSign } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
 
@@ -40,28 +40,43 @@ export default function CyberAILandingPage() {
           </div>
 
           <h1 className="text-5xl md:text-7xl font-black mb-6 leading-tight animate-fade-in-up">
-            Making <span className="bg-gradient-to-r from-orange-400 to-orange-600 bg-clip-text text-transparent">Cybersecurity</span> & <span className="bg-gradient-to-r from-cyan-300 to-blue-400 bg-clip-text text-transparent">AI</span>
-            <br />Simple and Affordable
+            Resolving AI's Biggest <span className="bg-gradient-to-r from-orange-400 to-orange-600 bg-clip-text text-transparent">Trust Gap</span>
           </h1>
 
           <p className="text-xl md:text-2xl text-blue-100 mb-10 max-w-3xl mx-auto animate-fade-in font-light leading-relaxed">
-            Enterprise-grade AI and cybersecurity solutions designed specifically for heavily regulated industries.
+            Enterprise-grade AI and cybersecurity solutions designed specifically for heavily regulated industries. From idea to value in 90 days with exceptional ROI.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
+          {/* <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
             <button
-              onClick={() => scrollToSection('about')}
+              onClick={() => scrollToSection('contact')}
               className="group bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 px-10 py-4 rounded-lg font-bold text-lg transition-all transform hover:scale-105 hover:shadow-2xl hover:shadow-orange-500/50 flex items-center justify-center gap-2"
             >
-              Learn More
+              Schedule Consultation
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </button>
             <button
-              onClick={() => scrollToSection('contact')}
+              onClick={() => scrollToSection('about')}
               className="border-2 border-white/50 backdrop-blur-sm hover:bg-white hover:text-blue-900 px-10 py-4 rounded-lg font-bold text-lg transition-all hover:scale-105 hover:shadow-xl"
             >
-              Start Free Trial
+              Learn More
             </button>
+          </div> */}
+
+          {/* Key Stats - NEW */}
+          <div className="grid grid-cols-3 gap-6 mt-16 max-w-3xl mx-auto">
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+              <div className="text-2xl font-black text-orange-400 mb-2">90</div>
+              <div className="text-sm text-blue-100 font-medium">Days to Value</div>
+            </div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+              <div className="text-2xl font-black text-orange-400 mb-2">10x</div>
+              <div className="text-sm text-blue-100 font-medium">Productivity Gain</div>
+            </div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+              <div className="text-2xl font-black text-orange-400 mb-2">100%</div>
+              <div className="text-sm text-blue-100 font-medium">Compliance</div>
+            </div>
           </div>
         </div>
 
@@ -245,8 +260,89 @@ export default function CyberAILandingPage() {
         </div>
       </section>
 
+      {/* Case Studies Section - NEW */}
+      <section id="case-studies" className="bg-gradient-to-b from-gray-50 to-white py-20 px-4 scroll-mt-20">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-16">
+            <span className="text-orange-500 font-bold text-sm tracking-widest uppercase">Proven Results</span>
+            <div className="h-1 w-20 bg-gradient-to-r from-orange-500 to-transparent mx-auto mt-2"></div>
+            <h2 className="text-5xl md:text-6xl font-black text-blue-900 mt-6 mb-4">
+              Real-World Impact
+            </h2>
+            <p className="text-gray-600 text-lg max-w-3xl mx-auto">
+              Industry-specific case studies demonstrating measurable results for enterprise leaders
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {[
+              {
+                industry: "Banking & Finance",
+                company: "Global Investment Bank",
+                challenge: "Regulatory compliance for AI-driven trading analysis",
+                solution: "Private LLM with real-time risk assessment",
+                results: ["40% faster compliance reviews", "Zero data breaches", "15% cost reduction"],
+                icon: Building2,
+                gradient: "from-blue-500 to-blue-600"
+              },
+              {
+                industry: "Healthcare",
+                company: "Regional Hospital Network",
+                challenge: "Patient data privacy in diagnostic AI",
+                solution: "HIPAA-compliant private AI deployment",
+                results: ["30% faster diagnoses", "100% HIPAA compliance", "Improved patient outcomes"],
+                icon: Cpu,
+                gradient: "from-orange-500 to-orange-600"
+              },
+              {
+                industry: "Government",
+                company: "Federal Agency",
+                challenge: "Secure document processing at scale",
+                solution: "Air-gapped AI system with custom training",
+                results: ["60% efficiency gain", "Enhanced security", "Cost savings of $2M/year"],
+                icon: Globe,
+                gradient: "from-purple-500 to-purple-600"
+              }
+            ].map((study, i) => (
+              <div key={i} className="bg-white rounded-2xl shadow-xl p-8 hover:shadow-2xl transition-all border border-gray-100 animate-fade-in-up" style={{ animationDelay: `${i * 0.1}s` }}>
+                <div className={`w-12 h-12 bg-gradient-to-br ${study.gradient} rounded-lg flex items-center justify-center mb-6`}>
+                  <study.icon className="w-6 h-6 text-white" />
+                </div>
+                <div className="mb-4">
+                  <span className="text-sm font-semibold text-orange-500 uppercase tracking-wide">{study.industry}</span>
+                  <h3 className="text-2xl font-bold text-blue-900 mt-2 mb-3">{study.company}</h3>
+                </div>
+                
+                <div className="space-y-4 mb-6">
+                  <div>
+                    <h4 className="font-bold text-gray-900 mb-1">Challenge</h4>
+                    <p className="text-gray-600 text-sm">{study.challenge}</p>
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-gray-900 mb-1">Solution</h4>
+                    <p className="text-gray-600 text-sm">{study.solution}</p>
+                  </div>
+                </div>
+
+                <div className="border-t border-gray-200 pt-4">
+                  <h4 className="font-bold text-gray-900 mb-3">Results</h4>
+                  <ul className="space-y-2">
+                    {study.results.map((result, idx) => (
+                      <li key={idx} className="flex items-start gap-2 text-sm text-gray-700">
+                        <CheckCircle className="w-4 h-4 text-green-600 mt-0.5 flex-shrink-0" />
+                        <span>{result}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Developing Private AI - Timeline Style */}
-      <section id="process" className="bg-gradient-to-b from-gray-50 to-white py-20 px-4 scroll-mt-20">
+      <section id="process" className="py-20 px-4 scroll-mt-20">
         <div className="max-w-6xl mx-auto text-center">
           <div className="mb-4">
             <span className="text-orange-500 font-bold text-sm tracking-widest uppercase">Our Process</span>
@@ -290,7 +386,7 @@ export default function CyberAILandingPage() {
       </section>
 
       {/* Services Grid - Masonry Style */}
-      <section id="services" className="py-20 px-4 scroll-mt-20">
+      <section id="services" className="bg-gradient-to-b from-gray-50 to-white py-20 px-4 scroll-mt-20">
         <div className="max-w-6xl mx-auto text-center">
           <div className="mb-4">
             <span className="text-orange-500 font-bold text-sm tracking-widest uppercase">Our Services</span>
@@ -324,58 +420,6 @@ export default function CyberAILandingPage() {
               </div>
             ))}
           </div>
-
-          <button
-            onClick={() => scrollToSection('team')}
-            className="group mt-12 flex items-center gap-2 text-orange-500 font-semibold hover:gap-4 transition-all mx-auto"
-          >
-            Meet Our Team
-            <ArrowRight className="w-5 h-5" />
-          </button>
-        </div>
-      </section>
-
-      {/* Team Section */}
-      <section id="team" className="bg-gradient-to-b from-gray-50 to-white py-20 px-4 scroll-mt-20">
-        <div className="max-w-5xl mx-auto">
-          <div className="text-center mb-4">
-            <span className="text-orange-500 font-bold text-sm tracking-widest uppercase">Our Team</span>
-            <div className="h-1 w-20 bg-gradient-to-r from-orange-500 to-transparent mx-auto mt-2"></div>
-          </div>
-
-          <div className="bg-white rounded-3xl shadow-2xl p-12 md:p-16 animate-fade-in-up hover:shadow-3xl transition-shadow duration-500">
-            <div className="grid md:grid-cols-3 gap-12 items-center">
-              <div className="md:col-span-1">
-                <div className="relative group">
-                  <div className="absolute inset-0 bg-gradient-to-br from-orange-500 to-blue-500 rounded-2xl blur-xl opacity-50 group-hover:opacity-75 transition-opacity"></div>
-                  <img
-                    src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop"
-                    alt="Dr. Devar Dattawala"
-                    className="rounded-2xl w-full shadow-xl relative z-10 group-hover:scale-105 transition-transform duration-500"
-                  />
-                </div>
-              </div>
-
-              <div className="md:col-span-2">
-                <h3 className="text-4xl font-black text-blue-900 mb-2">Dr. Devar Dattawala</h3>
-                <p className="text-orange-500 font-bold mb-6 text-lg">CEO, CyberAI Technologies</p>
-                <p className="text-gray-700 mb-6 leading-relaxed text-lg">
-                  Dr. Devar brings 25+ years of global cybersecurity leadership, with extensive experience across the UK, USA, Australia, and the Middle East.
-                </p>
-                <p className="text-gray-700 leading-relaxed text-lg">
-                  His expertise spans AI, Threat Intelligence, Cybersecurity Governance, Digital Security, and CISO leadership. A recognized thought leader with global impact.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <button
-            onClick={() => scrollToSection('industries')}
-            className="group mt-12 flex items-center gap-2 text-orange-500 font-semibold hover:gap-4 transition-all mx-auto"
-          >
-            See Industries We Serve
-            <ArrowRight className="w-5 h-5" />
-          </button>
         </div>
       </section>
 
