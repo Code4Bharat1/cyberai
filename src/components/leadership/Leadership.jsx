@@ -272,7 +272,7 @@ export default function LeadershipPage() {
                 <div className="relative bg-gray-200 h-96 flex items-center justify-center overflow-hidden group">
                   <div className="absolute inset-0 bg-gradient-to-t from-blue-900/50 to-transparent z-10"></div>
                   <img
-                    src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&h=400&fit=crop"
+                    src="/dr.jpg"
                     alt="Dr. Davar Dattawala"
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
@@ -302,7 +302,7 @@ export default function LeadershipPage() {
 
                   <div className="pt-6 border-t border-gray-200">
                     <Link
-                      href="https://www.linkedin.com/in/your-profile"
+                      href="https://www.linkedin.com/in/davar-dattawala-ai-specialist/"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="flex items-center gap-3 text-blue-600 hover:text-blue-700 cursor-pointer group"
