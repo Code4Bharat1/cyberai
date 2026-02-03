@@ -8,9 +8,23 @@ import {
   MdEmail, 
   MdLanguage,
   MdLocationCity,
-  MdSend
+  MdSend,
+  MdSchedule,
+  MdChat,
+  MdVideoCall,
+  MdPerson,
+  MdAssignment
 } from 'react-icons/md';
-import { FaArrowRight, FaCheckCircle, FaWhatsapp } from 'react-icons/fa';
+import { 
+  FaArrowRight, 
+  FaCheckCircle, 
+  FaWhatsapp, 
+  FaLinkedin,
+  FaCalendar,
+  FaShieldAlt,
+  FaClock,
+  FaGlobe
+} from 'react-icons/fa';
 import Navbar from '../navbar/Navbar';
 import Footer from '../Footer/Footer';
 
@@ -21,6 +35,8 @@ export default function ContactPage() {
     companyName: '',
     email: '',
     phone: '',
+    industry: '',
+    inquiryType: '',
     message: ''
   });
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -57,6 +73,8 @@ export default function ContactPage() {
 *Company:* ${formData.companyName}
 *Email:* ${formData.email}
 *Phone:* ${formData.phone}
+*Industry:* ${formData.industry}
+*Inquiry Type:* ${formData.inquiryType}
 
 *Message:*
 ${formData.message}
@@ -65,8 +83,8 @@ ${formData.message}
     // Encode the message for URL
     const encodedMessage = encodeURIComponent(whatsappMessage);
     
-    // WhatsApp number (replace with your actual WhatsApp number)
-    const whatsappNumber = '447554898543'; // Format: country code + number (no + or spaces)
+    // WhatsApp number
+    const whatsappNumber = '447554898543';
     
     // Create WhatsApp URL
     const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
@@ -86,6 +104,8 @@ ${formData.message}
           companyName: '',
           email: '',
           phone: '',
+          industry: '',
+          inquiryType: '',
           message: ''
         });
       }, 1000);
@@ -96,7 +116,7 @@ ${formData.message}
     {
       icon: MdBusiness,
       title: "Company Name",
-      details: "CyberAI Technologies Ltd",
+      details: "Cyberai Technologies Ltd",
       gradient: "from-blue-500 to-blue-600"
     },
     {
@@ -108,7 +128,7 @@ ${formData.message}
     {
       icon: MdPhone,
       title: "Phone",
-      details: "+44 7554898543",
+      details: "+44 7554 898543",
       gradient: "from-purple-500 to-purple-600",
       link: "tel:+447554898543"
     },
@@ -128,13 +148,88 @@ ${formData.message}
     }
   ];
 
+  const contactMethods = [
+    {
+      icon: FaWhatsapp,
+      title: "WhatsApp Chat",
+      description: "Get instant responses via WhatsApp",
+      action: "Chat Now",
+      link: "https://wa.me/447554898543",
+      gradient: "from-green-500 to-green-600",
+      featured: true
+    },
+    {
+      icon: MdVideoCall,
+      title: "Video Consultation",
+      description: "Schedule a video call with our team",
+      action: "Book Call",
+      link: "#contact-form",
+      gradient: "from-blue-500 to-blue-600"
+    },
+    {
+      icon: MdEmail,
+      title: "Email Us",
+      description: "Send us a detailed inquiry",
+      action: "Send Email",
+      link: "mailto:ddattawala@cyberaitechs.com",
+      gradient: "from-purple-500 to-purple-600"
+    },
+    {
+      icon: FaLinkedin,
+      title: "LinkedIn",
+      description: "Connect with us professionally",
+      action: "Connect",
+      link: "https://www.linkedin.com/company/cyberai-tech",
+      gradient: "from-indigo-500 to-indigo-600"
+    }
+  ];
+
+  const industries = [
+    "Banking & Financial Services",
+    "Healthcare & Life Sciences",
+    "Government & Public Sector",
+    "Insurance",
+    "Oil & Gas",
+    "Logistics & Supply Chain",
+    "Other"
+  ];
+
+  const inquiryTypes = [
+    "AI Readiness Assessment",
+    "Custom AI Development",
+    "AI Security & Governance",
+    "General Inquiry",
+    "Partnership Opportunity"
+  ];
+
+  const responseTime = [
+    {
+      icon: FaClock,
+      title: "Response Time",
+      value: "< 24 Hours",
+      description: "We respond to all inquiries within one business day"
+    },
+    {
+      icon: FaGlobe,
+      title: "Global Coverage",
+      value: "6 Regions",
+      description: "Supporting clients across UK, Europe, Americas, Middle East, and Asia"
+    },
+    {
+      icon: FaShieldAlt,
+      title: "Confidential",
+      value: "100% Secure",
+      description: "All communications are encrypted and confidential"
+    }
+  ];
+
   return (
     <div className="min-h-screen bg-white mt-10">
       {/* Navigation */}
       <Navbar />
 
       {/* Hero Section */}
-      <section id="hero" className="relative bg-gradient-to-br from-blue-600 via-blue-700 to-indigo-800 text-white py-24 px-4 overflow-hidden">
+      <section id="hero" className="relative bg-gradient-to-br from-blue-600 via-blue-700 to-indigo-800 text-white py-32 px-4 overflow-hidden">
         {/* Animated Background Elements */}
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute w-96 h-96 bg-orange-500/10 rounded-full blur-3xl -top-48 -left-48 animate-pulse"></div>
@@ -142,18 +237,31 @@ ${formData.message}
         </div>
 
         <div className="max-w-6xl mx-auto relative z-10">
-          <div className="inline-flex items-center gap-3 bg-orange-500/20 px-6 py-3 rounded-full mb-6 border border-orange-500/30 animate-fade-in-down">
-            <MdEmail className="w-5 h-5 text-orange-300" />
-            <span className="text-orange-300 font-semibold">Get In Touch</span>
-          </div>
+          <div className="text-center">
+            <div className="inline-flex items-center gap-3 bg-orange-500/20 px-6 py-3 rounded-full mb-6 border border-orange-500/30 animate-fade-in-down">
+              <MdEmail className="w-5 h-5 text-orange-300" />
+              <span className="text-orange-300 font-semibold">Get In Touch</span>
+            </div>
 
-          <h1 className="text-6xl md:text-7xl font-black mb-6 leading-tight animate-fade-in-up">
-            Contact <span className="bg-gradient-to-r from-orange-400 to-orange-600 bg-clip-text text-transparent">CyberAI</span>
-          </h1>
-          
-          <p className="text-xl md:text-2xl text-blue-100 max-w-3xl animate-fade-in font-light leading-relaxed">
-            Let's work together to secure your enterprise AI future
-          </p>
+            <h1 className="text-6xl md:text-7xl font-black mb-6 leading-tight animate-fade-in-up">
+              Contact <span className="bg-gradient-to-r from-orange-400 to-orange-600 bg-clip-text text-transparent">Cyberai</span>
+            </h1>
+            
+            <p className="text-xl md:text-2xl text-blue-100 max-w-3xl mx-auto mb-10 animate-fade-in font-light leading-relaxed">
+              Let's work together to secure your enterprise AI future
+            </p>
+
+            <div className="grid md:grid-cols-3 gap-6 max-w-3xl mx-auto">
+              {responseTime.map((item, i) => (
+                <div key={i} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all">
+                  <item.icon className="w-8 h-8 text-orange-400 mx-auto mb-3" />
+                  <div className="text-2xl font-black text-white mb-1">{item.value}</div>
+                  <div className="text-sm text-blue-100 font-medium mb-2">{item.title}</div>
+                  <div className="text-xs text-blue-200">{item.description}</div>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
 
         {/* Floating Icons Animation */}
@@ -164,8 +272,66 @@ ${formData.message}
         </div>
       </section>
 
+      {/* Contact Methods Section */}
+      <section className="py-20 px-4 bg-gradient-to-b from-white to-gray-50">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-12">
+            <div className="inline-block mb-4">
+              <span className="text-orange-500 font-bold text-sm tracking-widest uppercase">How to Reach Us</span>
+              <div className="h-1 w-20 bg-gradient-to-r from-orange-500 to-transparent mx-auto mt-2"></div>
+            </div>
+            <h2 className="text-4xl md:text-5xl font-black text-blue-900 mb-4">
+              Choose Your Preferred Method
+            </h2>
+            <p className="text-gray-600 text-lg max-w-2xl mx-auto">
+              We offer multiple ways to connect with our team
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {contactMethods.map((method, i) => (
+              <a
+                key={i}
+                href={method.link}
+                target={method.link.startsWith('http') ? '_blank' : '_self'}
+                rel={method.link.startsWith('http') ? 'noopener noreferrer' : ''}
+                onClick={(e) => {
+                  if (method.link === '#contact-form') {
+                    e.preventDefault();
+                    scrollToSection('contact-form');
+                  }
+                }}
+                className={`group bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 border-2 ${method.featured ? 'border-green-200 bg-gradient-to-br from-green-50 to-white' : 'border-gray-100'} hover:border-transparent hover:-translate-y-2 animate-fade-in-up cursor-pointer`}
+                style={{animationDelay: `${i * 0.1}s`}}
+              >
+                <div className={`bg-gradient-to-br ${method.gradient} w-16 h-16 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform shadow-lg mx-auto`}>
+                  <method.icon className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-blue-900 mb-2 text-center group-hover:text-orange-500 transition-colors">
+                  {method.title}
+                </h3>
+                <p className="text-gray-600 text-sm mb-4 text-center">
+                  {method.description}
+                </p>
+                <div className="flex items-center justify-center gap-2 text-orange-500 font-semibold text-sm group-hover:gap-3 transition-all">
+                  {method.action}
+                  <FaArrowRight className="w-3 h-3" />
+                </div>
+                {method.featured && (
+                  <div className="mt-4 text-center">
+                    <span className="bg-green-100 text-green-700 text-xs font-bold px-3 py-1 rounded-full border border-green-300">
+                      Recommended
+                    </span>
+                  </div>
+                )}
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Main Contact Section */}
-      <section id="contact-info" className="py-20 px-4 bg-white scroll-mt-20 text-black">
+      <section id="contact-form" className="py-20 px-4 bg-white scroll-mt-20">
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 gap-16">
             {/* Left Column - Contact Information */}
@@ -180,11 +346,12 @@ ${formData.message}
                   Get In Touch
                 </h2>
                 <p className="text-gray-600 text-lg leading-relaxed mb-8">
-                  Ready to transform your enterprise with secure AI? We're here to help you navigate your journey.
+                  Ready to transform your enterprise with secure AI? We're here to help you navigate your journey 
+                  from assessment to deployment.
                 </p>
               </div>
 
-              <div className="space-y-6">
+              <div className="space-y-4">
                 {contactInfo.map((info, i) => (
                   <a
                     key={i}
@@ -205,8 +372,8 @@ ${formData.message}
                 ))}
               </div>
 
-              {/* WhatsApp Direct Button */}
-              <div className="pt-4">
+              {/* Quick Actions */}
+              <div className="space-y-4 pt-4">
                 <a
                   href="https://wa.me/447554898543"
                   target="_blank"
@@ -217,23 +384,35 @@ ${formData.message}
                   Chat on WhatsApp
                   <FaArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </a>
+
+                <a
+                  href="mailto:ddattawala@cyberaitechs.com"
+                  className="group flex items-center justify-center gap-3 bg-white border-2 border-blue-200 hover:border-blue-500 text-blue-900 px-8 py-4 rounded-xl font-bold text-lg transition-all transform hover:scale-105 shadow-lg hover:shadow-xl"
+                >
+                  <MdEmail className="w-6 h-6" />
+                  Send Email
+                  <FaArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                </a>
               </div>
             </div>
 
             {/* Right Column - Contact Form */}
-            <div className="animate-slide-in-right">
+            <div className="animate-slide-in-right text-black">
               <div className="bg-gradient-to-br from-gray-50 to-white rounded-3xl p-10 shadow-2xl border-2 border-gray-100">
                 <div className="flex items-center gap-3 mb-8">
                   <div className="bg-gradient-to-br from-orange-500 to-orange-600 p-3 rounded-xl shadow-lg">
-                    <MdSend className="w-7 h-7 text-black" />
+                    <MdSend className="w-7 h-7 text-white" />
                   </div>
-                  <h2 className="text-3xl font-black text-blue-900">Send us a message</h2>
+                  <div>
+                    <h2 className="text-3xl font-black text-blue-900">Send Message</h2>
+                    <p className="text-gray-600 text-sm">We'll respond within 24 hours</p>
+                  </div>
                 </div>
                 
                 {isSubmitted ? (
                   <div className="bg-gradient-to-br from-green-50 to-green-100 rounded-2xl p-12 text-center animate-fade-in">
                     <div className="bg-green-500 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 animate-bounce">
-                      <FaCheckCircle className="w-10 h-10 text-black" />
+                      <FaCheckCircle className="w-10 h-10 text-white" />
                     </div>
                     <h3 className="text-2xl font-black text-green-800 mb-3">Message Received!</h3>
                     <p className="text-green-700 font-medium mb-4">Redirecting to WhatsApp...</p>
@@ -243,7 +422,7 @@ ${formData.message}
                     </div>
                   </div>
                 ) : (
-                  <form onSubmit={handleSubmit} className="space-y-6">
+                  <form onSubmit={handleSubmit} className="space-y-5">
                     {/* Full Name */}
                     <div className="animate-fade-in-up" style={{animationDelay: '0.1s'}}>
                       <label htmlFor="fullName" className="block text-sm font-bold text-blue-900 mb-2">
@@ -262,7 +441,7 @@ ${formData.message}
                     </div>
 
                     {/* Company Name */}
-                    <div className="animate-fade-in-up" style={{animationDelay: '0.2s'}}>
+                    <div className="animate-fade-in-up" style={{animationDelay: '0.15s'}}>
                       <label htmlFor="companyName" className="block text-sm font-bold text-blue-900 mb-2">
                         Company Name *
                       </label>
@@ -280,7 +459,7 @@ ${formData.message}
 
                     {/* Email and Phone */}
                     <div className="grid md:grid-cols-2 gap-4">
-                      <div className="animate-fade-in-up" style={{animationDelay: '0.3s'}}>
+                      <div className="animate-fade-in-up" style={{animationDelay: '0.2s'}}>
                         <label htmlFor="email" className="block text-sm font-bold text-blue-900 mb-2">
                           Email Address *
                         </label>
@@ -295,7 +474,7 @@ ${formData.message}
                           required
                         />
                       </div>
-                      <div className="animate-fade-in-up" style={{animationDelay: '0.4s'}}>
+                      <div className="animate-fade-in-up" style={{animationDelay: '0.25s'}}>
                         <label htmlFor="phone" className="block text-sm font-bold text-blue-900 mb-2">
                           Phone Number *
                         </label>
@@ -312,8 +491,48 @@ ${formData.message}
                       </div>
                     </div>
 
+                    {/* Industry and Inquiry Type */}
+                    <div className="grid md:grid-cols-2 gap-4">
+                      <div className="animate-fade-in-up" style={{animationDelay: '0.3s'}}>
+                        <label htmlFor="industry" className="block text-sm font-bold text-blue-900 mb-2">
+                          Industry *
+                        </label>
+                        <select
+                          id="industry"
+                          name="industry"
+                          value={formData.industry}
+                          onChange={handleChange}
+                          className="w-full px-5 py-4 rounded-xl border-2 border-gray-200 focus:border-orange-500 focus:ring-4 focus:ring-orange-100 outline-none transition-all font-medium bg-white"
+                          required
+                        >
+                          <option value="">Select Industry</option>
+                          {industries.map((ind, i) => (
+                            <option key={i} value={ind}>{ind}</option>
+                          ))}
+                        </select>
+                      </div>
+                      <div className="animate-fade-in-up" style={{animationDelay: '0.35s'}}>
+                        <label htmlFor="inquiryType" className="block text-sm font-bold text-blue-900 mb-2">
+                          Inquiry Type *
+                        </label>
+                        <select
+                          id="inquiryType"
+                          name="inquiryType"
+                          value={formData.inquiryType}
+                          onChange={handleChange}
+                          className="w-full px-5 py-4 rounded-xl border-2 border-gray-200 focus:border-orange-500 focus:ring-4 focus:ring-orange-100 outline-none transition-all font-medium bg-white"
+                          required
+                        >
+                          <option value="">Select Type</option>
+                          {inquiryTypes.map((type, i) => (
+                            <option key={i} value={type}>{type}</option>
+                          ))}
+                        </select>
+                      </div>
+                    </div>
+
                     {/* Message */}
-                    <div className="animate-fade-in-up" style={{animationDelay: '0.5s'}}>
+                    <div className="animate-fade-in-up" style={{animationDelay: '0.4s'}}>
                       <label htmlFor="message" className="block text-sm font-bold text-blue-900 mb-2">
                         Message *
                       </label>
@@ -322,8 +541,8 @@ ${formData.message}
                         name="message"
                         value={formData.message}
                         onChange={handleChange}
-                        placeholder="Tell us about your AI security needs..."
-                        rows="5"
+                        placeholder="Tell us about your AI security needs and challenges..."
+                        rows="4"
                         className="w-full px-5 py-4 rounded-xl border-2 border-gray-200 focus:border-orange-500 focus:ring-4 focus:ring-orange-100 outline-none transition-all resize-none font-medium"
                         required
                       ></textarea>
@@ -333,14 +552,14 @@ ${formData.message}
                     <button
                       type="submit"
                       className="group w-full bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-bold py-5 rounded-xl transition-all transform hover:scale-[1.02] active:scale-[0.98] shadow-xl hover:shadow-2xl hover:shadow-orange-500/50 flex items-center justify-center gap-3 text-lg animate-fade-in-up"
-                      style={{animationDelay: '0.6s'}}
+                      style={{animationDelay: '0.45s'}}
                     >
                       Send via WhatsApp
                       <FaWhatsapp className="w-5 h-5 group-hover:scale-110 transition-transform" />
                     </button>
 
                     <p className="text-center text-sm text-gray-500 italic">
-                      Your message will be sent directly to our WhatsApp
+                      Your message will be sent directly to our WhatsApp for immediate attention
                     </p>
                   </form>
                 )}
@@ -350,7 +569,73 @@ ${formData.message}
         </div>
       </section>
 
-      {/* CTA Section with Background */}
+      {/* What to Expect Section */}
+      <section className="py-20 px-4 bg-gradient-to-b from-gray-50 to-white">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-12">
+            <div className="inline-block mb-4">
+              <span className="text-orange-500 font-bold text-sm tracking-widest uppercase">Our Process</span>
+              <div className="h-1 w-20 bg-gradient-to-r from-orange-500 to-transparent mx-auto mt-2"></div>
+            </div>
+            <h2 className="text-4xl md:text-5xl font-black text-blue-900 mb-4">
+              What Happens Next?
+            </h2>
+            <p className="text-gray-600 text-lg max-w-2xl mx-auto">
+              Here's what you can expect after reaching out
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-4 gap-6">
+            {[
+              {
+                step: "01",
+                title: "Initial Response",
+                desc: "We'll respond within 24 hours to acknowledge your inquiry",
+                icon: MdChat,
+                gradient: "from-blue-500 to-blue-600"
+              },
+              {
+                step: "02",
+                title: "Discovery Call",
+                desc: "Schedule a consultation to discuss your needs and challenges",
+                icon: MdVideoCall,
+                gradient: "from-orange-500 to-orange-600"
+              },
+              {
+                step: "03",
+                title: "Solution Design",
+                desc: "We'll create a tailored proposal for your organization",
+                icon: MdAssignment,
+                gradient: "from-purple-500 to-purple-600"
+              },
+              {
+                step: "04",
+                title: "Partnership",
+                desc: "Begin your secure AI journey with expert guidance",
+                icon: FaShieldAlt,
+                gradient: "from-green-500 to-green-600"
+              }
+            ].map((item, i) => (
+              <div 
+                key={i}
+                className="group bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 border-2 border-gray-100 hover:border-transparent hover:-translate-y-2 animate-fade-in-up relative"
+                style={{animationDelay: `${i * 0.1}s`}}
+              >
+                <div className="absolute -top-4 -left-4 bg-gradient-to-br from-orange-500 to-orange-600 text-white font-black text-xl w-12 h-12 rounded-xl flex items-center justify-center shadow-lg">
+                  {item.step}
+                </div>
+                <div className={`bg-gradient-to-br ${item.gradient} w-14 h-14 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform shadow-md mx-auto mt-4`}>
+                  <item.icon className="w-7 h-7 text-white" />
+                </div>
+                <h3 className="text-lg font-bold text-blue-900 mb-2 text-center">{item.title}</h3>
+                <p className="text-gray-600 text-sm text-center">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
       <section className="relative py-20 px-4 bg-gradient-to-br from-blue-900 via-blue-800 to-slate-900 text-white overflow-hidden">
         {/* Animated Background */}
         <div className="absolute inset-0 overflow-hidden">
@@ -362,9 +647,28 @@ ${formData.message}
           <h2 className="text-4xl md:text-5xl font-black mb-6 leading-tight">
             Let's Build Secure and Compliant AI Together
           </h2>
-          <p className="text-blue-200 text-xl leading-relaxed">
+          <p className="text-blue-200 text-xl mb-8 leading-relaxed">
             Ready to deploy enterprise-grade AI inside your secure environment?
           </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="https://wa.me/447554898543"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 px-10 py-4 rounded-xl font-bold text-lg transition-all transform hover:scale-105 shadow-2xl hover:shadow-green-500/50 inline-flex items-center justify-center gap-3"
+            >
+              <FaWhatsapp className="w-6 h-6" />
+              Start WhatsApp Chat
+              <FaArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            </a>
+            <button
+              onClick={() => scrollToSection('contact-form')}
+              className="group bg-white text-blue-900 px-10 py-4 rounded-xl font-bold text-lg transition-all transform hover:scale-105 shadow-2xl hover:shadow-white/20 inline-flex items-center justify-center gap-3"
+            >
+              <MdEmail className="w-6 h-6" />
+              Send Message
+            </button>
+          </div>
         </div>
       </section>
 
@@ -393,6 +697,12 @@ ${formData.message}
                 <p className="text-gray-600 font-medium text-lg">60 Tottenham Court Road</p>
                 <p className="text-gray-500 font-medium">London W1T 2EW</p>
                 <p className="text-gray-500 font-medium">United Kingdom</p>
+                <div className="mt-4 pt-4 border-t border-gray-200">
+                  <p className="text-sm text-gray-600">
+                    <span className="font-bold text-blue-900">Business Hours:</span><br/>
+                    Monday - Friday: 9:00 AM - 6:00 PM GMT
+                  </p>
+                </div>
               </div>
             </div>
           </div>

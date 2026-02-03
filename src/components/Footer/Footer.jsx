@@ -1,223 +1,246 @@
-  'use client';
+'use client';
 
-  import React from 'react';
-  import Link from 'next/link';
-  import { MdSecurity, MdLocationOn, MdPhone, MdEmail, MdLanguage, MdArrowForward } from 'react-icons/md';
-  import { FaLinkedin, FaTwitter, FaGithub } from 'react-icons/fa';
-  import Image from 'next/image';
+import React from 'react';
+import Link from 'next/link';
+import { MdSecurity, MdLocationOn, MdPhone, MdEmail, MdLanguage } from 'react-icons/md';
+import { FaLinkedin, FaTwitter, FaGithub } from 'react-icons/fa';
+import Image from 'next/image';
 
-  export default function Footer() {
-    const currentYear = new Date().getFullYear();
+export default function Footer() {
+  const currentYear = new Date().getFullYear();
 
-    return (
-      <footer className="bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white py-16 px-4 relative overflow-hidden">
-        {/* Animated Background */}
-        <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute w-96 h-96 bg-blue-500/5 rounded-full blur-3xl -top-48 -left-48 animate-pulse"></div>
-          <div className="absolute w-96 h-96 bg-orange-500/5 rounded-full blur-3xl -bottom-48 -right-48 animate-pulse" style={{animationDelay: '1s'}}></div>
-        </div>
+  return (
+    <footer className="bg-gradient-to-br from-[#0a1628] via-[#152a4a] to-[#0a1628] text-white relative overflow-hidden">
+      {/* Animated Background Elements */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none opacity-30">
+        <div className="absolute w-96 h-96 bg-orange-500/10 rounded-full blur-3xl -top-48 -left-48 animate-pulse"></div>
+        <div className="absolute w-96 h-96 bg-blue-500/10 rounded-full blur-3xl -bottom-48 -right-48 animate-pulse" style={{animationDelay: '1s'}}></div>
+      </div>
 
-        <div className="max-w-7xl mx-auto relative z-10">
-          <div className="grid md:grid-cols-4 gap-12 mb-12">
-            {/* Column 1 - Company Info */}
-            <div className="animate-fade-in-up">
-              <div className="flex items-center space-x-3 mb-6 group">
+      <div className="max-w-7xl mx-auto px-6 py-12 relative z-10">
+        <div className="grid md:grid-cols-4 gap-8 pb-8 border-b border-white/10">
+          
+          {/* Column 1 - Company Info */}
+          <div className="md:col-span-1">
+            <Link href="/" className="inline-block mb-4">
+              <div className="flex items-center space-x-3 group">
                 <div className="relative">
-                  <div className="absolute inset-0 bg-orange-500/20 rounded-xl blur-md group-hover:blur-lg transition-all"></div>
                   <Image
-                    src="/logo.jpg"
+                    src="/12.png"
                     alt="CyberAI Logo"
                     width={48}
                     height={48}
-                    className="w-12 h-12 relative z-10 rounded-lg"
+                    className="rounded-lg"
                   />
                 </div>
-                <span className="text-xl font-black">CyberAI</span>
-              </div>
-              
-              <h3 className="text-orange-400 font-bold text-lg mb-4 leading-tight">
-                Making Cybersecurity & AI Simple and Affordable
-              </h3>
-              
-              <p className="text-blue-200 leading-relaxed mb-6">
-                Enterprise-grade AI and cybersecurity solutions for regulated industries.
-              </p>
-
-              {/* Social Links */}
-            
-
-  <div className="flex space-x-3">
-    {[
-      {
-        icon: FaLinkedin,
-        href: "https://www.linkedin.com/in/your-profile",
-        label: "LinkedIn",
-      },
-      {
-        icon: FaTwitter,
-        href: "https://twitter.com/your-handle",
-        label: "Twitter",
-      },
-      {
-        icon: FaGithub,
-        href: "https://github.com/your-username",
-        label: "GitHub",
-      },
-    ].map((social, i) => (
-      <Link
-        key={i}
-        href={social.href}
-        aria-label={social.label}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="bg-blue-800/50 hover:bg-orange-500 p-3 rounded-lg transition-all duration-300 hover:scale-110 group"
-      >
-        <social.icon className="w-5 h-5 text-blue-200 group-hover:text-white transition-colors" />
-      </Link>
-    ))}
-  </div>
-
-            </div>
-
-            {/* Column 2 - Quick Links */}
-            <div className="animate-fade-in-up" style={{animationDelay: '0.1s'}}>
-              <h4 className="font-black text-lg mb-6 text-orange-400">Quick Links</h4>
-              <ul className="space-y-3">
-                {[
-                  { name: 'Home', href: '/' },
-                  { name: 'About', href: '/about' },
-                  { name: 'Privatised LLMs', href: '/privatised-llms' },
-                  { name: 'Services', href: '/services' },
-                  { name: 'Leadership', href: '/leadership' },
-                  { name: 'Contact', href: '/contact' }
-                ].map((link, i) => (
-                  <li key={i}>
-                    <Link 
-                      href={link.href} 
-                      className="group flex items-center space-x-2 text-blue-200 hover:text-orange-400 transition-all duration-300"
-                    >
-                      <MdArrowForward className="w-4 h-4 opacity-0 -ml-6 group-hover:opacity-100 group-hover:ml-0 transition-all duration-300" />
-                      <span className="font-medium">{link.name}</span>
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            {/* Column 3 - Contact Us */}
-            <div className="animate-fade-in-up" style={{animationDelay: '0.2s'}}>
-              <h4 className="font-black text-lg mb-6 text-orange-400">Contact Us</h4>
-              <div className="space-y-4">
-                <div className="group flex items-start space-x-3 hover:translate-x-1 transition-transform duration-300">
-                  <div className="bg-orange-500/20 p-2 rounded-lg group-hover:bg-orange-500 transition-colors">
-                    <MdLocationOn className="w-5 h-5 text-orange-400 group-hover:text-white flex-shrink-0 transition-colors" />
-                  </div>
-                  <div className="text-blue-200">
-                    <p className="font-medium">60 Tottenham Court Road,</p>
-                    <p className="font-medium">London W1T 2EW</p>
-                  </div>
+                <div className="flex flex-col">
+                  <span className="text-xl font-bold text-white">
+                    CyberAI
+                  </span>
+                  <span className="text-xs text-gray-400">
+                    Technologies Ltd
+                  </span>
                 </div>
-
-                <a 
-                  href="tel:+447554898543" 
-                  className="group flex items-center space-x-3 hover:translate-x-1 transition-transform duration-300"
-                >
-                  <div className="bg-orange-500/20 p-2 rounded-lg group-hover:bg-orange-500 transition-colors">
-                    <MdPhone className="w-5 h-5 text-orange-400 group-hover:text-white flex-shrink-0 transition-colors" />
-                  </div>
-                  <span className="text-blue-200 hover:text-orange-400 transition-colors font-medium">
-                    +44 7554898543
-                  </span>
-                </a>
-
-                <a 
-                  href="mailto:ddattawala@cyberaitechs.com" 
-                  className="group flex items-center space-x-3 hover:translate-x-1 transition-transform duration-300"
-                >
-                  <div className="bg-orange-500/20 p-2 rounded-lg group-hover:bg-orange-500 transition-colors">
-                    <MdEmail className="w-5 h-5 text-orange-400 group-hover:text-white flex-shrink-0 transition-colors" />
-                  </div>
-                  <span className="text-blue-200 hover:text-orange-400 transition-colors break-all font-medium">
-                    ddattawala@cyberaitechs.com
-                  </span>
-                </a>
-
-                <a 
-                  href="https://www.cyberaitechs.com" 
-                  target="_blank" 
-                  rel="noopener noreferrer" 
-                  className="group flex items-center space-x-3 hover:translate-x-1 transition-transform duration-300"
-                >
-                  <div className="bg-orange-500/20 p-2 rounded-lg group-hover:bg-orange-500 transition-colors">
-                    <MdLanguage className="w-5 h-5 text-orange-400 group-hover:text-white flex-shrink-0 transition-colors" />
-                  </div>
-                  <span className="text-blue-200 hover:text-orange-400 transition-colors font-medium">
-                    www.cyberaitechs.com
-                  </span>
-                </a>
               </div>
-            </div>
-
-            {/* Column 4 - Newsletter & Legal */}
-            <div className="animate-fade-in-up" style={{animationDelay: '0.3s'}}>
+            </Link>
             
-              <div>
-                <h4 className="font-black text-lg mb-6 text-orange-400">Legal</h4>
-                <ul className="space-y-2">
-                  {[
-                    { name: 'Privacy Policy', href: '/privacy-policy' },
-                    { name: 'Terms of Use', href: '/terms-of-use' }
-                  ].map((link, i) => (
-                    <li key={i}>
-                      <Link 
-                        href={link.href} 
-                        className="text-blue-300 hover:text-orange-400 transition-colors text-sm font-medium inline-flex items-center group"
-                      >
-                        <span>{link.name}</span>
-                        <MdArrowForward className="w-3 h-3 ml-1 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all" />
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
+            <h3 className="text-orange-400 font-semibold text-sm mb-3 leading-snug">
+              Making Cybersecurity & AI<br />Simple and Affordable
+            </h3>
+            
+            <p className="text-gray-400 text-sm leading-relaxed mb-6">
+              Enterprise-grade AI and cybersecurity solutions for regulated industries.
+            </p>
+
+            {/* Social Links */}
+            <div className="flex space-x-2">
+              {[
+                { icon: FaLinkedin, href: "https://www.linkedin.com/company/cyberaitechs", label: "LinkedIn" },
+                { icon: FaTwitter, href: "https://twitter.com/cyberaitechs", label: "Twitter" },
+                { icon: FaGithub, href: "https://github.com/cyberaitechs", label: "GitHub" },
+              ].map((social, i) => (
+                <Link
+                  key={i}
+                  href={social.href}
+                  aria-label={social.label}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-white/5 hover:bg-orange-500 p-2.5 rounded-lg transition-all duration-300 hover:scale-110 group"
+                >
+                  <social.icon className="w-4 h-4 text-gray-400 group-hover:text-white transition-colors" />
+                </Link>
+              ))}
             </div>
           </div>
 
-          {/* Bottom Bar */}
-          <div className="pt-8 border-t border-blue-800/50">
-            <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-              <div className="text-blue-300 text-sm font-medium">
-                © {currentYear} CyberAI Technologies Ltd. All rights reserved.
+          {/* Column 2 - Quick Links */}
+          <div>
+            <h4 className="font-bold text-sm mb-4 text-orange-400">Quick Links</h4>
+            <ul className="space-y-2.5">
+              {[
+                { name: 'Home', href: '/' },
+                { name: 'About', href: '/about' },
+                { name: 'Privatised LLMs', href: '/privatised-llms' },
+                { name: 'Services', href: '/services' },
+                { name: 'Leadership', href: '/leadership' },
+                { name: 'Contact', href: '/contact' }
+              ].map((link, i) => (
+                <li key={i}>
+                  <Link 
+                    href={link.href} 
+                    className="text-gray-400 hover:text-orange-400 transition-colors duration-200 text-sm inline-block"
+                  >
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Column 3 - Contact Us */}
+          <div>
+            <h4 className="font-bold text-sm mb-4 text-orange-400">Contact Us</h4>
+            <div className="space-y-3">
+              <div className="flex items-start space-x-3">
+                <div className="bg-orange-500/20 p-2 rounded-md mt-0.5">
+                  <MdLocationOn className="w-4 h-4 text-orange-400 flex-shrink-0" />
+                </div>
+                <div className="text-gray-400 text-sm">
+                  <p>60 Tottenham Court Road,</p>
+                  <p>London W1T 2EW</p>
+                </div>
               </div>
-              
-              <div className="flex items-center space-x-6 text-blue-300 text-sm">
-                <span className="flex items-center space-x-2">
-                  <MdSecurity className="w-4 h-4 text-orange-400" />
-                  <span className="font-medium">Secure by Design</span>
+
+              <a 
+                href="tel:+447554898543" 
+                className="flex items-center space-x-3 group"
+              >
+                <div className="bg-orange-500/20 p-2 rounded-md group-hover:bg-orange-500 transition-colors">
+                  <MdPhone className="w-4 h-4 text-orange-400 group-hover:text-white flex-shrink-0 transition-colors" />
+                </div>
+                <span className="text-gray-400 hover:text-orange-400 transition-colors text-sm">
+                  +44 7554898543
                 </span>
-                <span className="hidden md:block">•</span>
-                <span className="font-medium">ISO 27001 Compliant</span>
+              </a>
+
+              <a 
+                href="mailto:ddattawala@cyberaitechs.com" 
+                className="flex items-center space-x-3 group"
+              >
+                <div className="bg-orange-500/20 p-2 rounded-md group-hover:bg-orange-500 transition-colors">
+                  <MdEmail className="w-4 h-4 text-orange-400 group-hover:text-white flex-shrink-0 transition-colors" />
+                </div>
+                <span className="text-gray-400 hover:text-orange-400 transition-colors break-all text-sm">
+                  ddattawala@cyberaitechs.com
+                </span>
+              </a>
+
+              <a 
+                href="https://www.cyberaitechs.com" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="flex items-center space-x-3 group"
+              >
+                <div className="bg-orange-500/20 p-2 rounded-md group-hover:bg-orange-500 transition-colors">
+                  <MdLanguage className="w-4 h-4 text-orange-400 group-hover:text-white flex-shrink-0 transition-colors" />
+                </div>
+                <span className="text-gray-400 hover:text-orange-400 transition-colors text-sm">
+                  www.cyberaitechs.com
+                </span>
+              </a>
+            </div>
+          </div>
+
+          {/* Column 4 - Legal */}
+          <div>
+            <h4 className="font-bold text-sm mb-4 text-orange-400">Legal</h4>
+            <ul className="space-y-2.5">
+              {[
+                { name: 'Privacy Policy', href: '/privacy-policy' },
+                { name: 'Terms of Use', href: '/terms-of-use' }
+              ].map((link, i) => (
+                <li key={i}>
+                  <Link 
+                    href={link.href} 
+                    className="text-gray-400 hover:text-orange-400 transition-colors text-sm inline-block"
+                  >
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+
+        {/* Disclaimer Section */}
+        <div className="py-6 border-b border-white/10">
+          <p className="text-xs text-gray-500 leading-relaxed">
+            <span className="font-semibold text-gray-400">* Disclaimer:</span> The content on this website is for informational purposes only and does not constitute professional advice. CyberAI Technologies Ltd makes no guarantees regarding the accuracy or completeness of any information provided. AI outcomes may vary depending on use case and context. We are not liable for any losses resulting from the use of our services or website. Use of this site implies acceptance of our terms and privacy policy.
+          </p>
+        </div>
+
+        {/* Bottom Bar */}
+        <div className="pt-6">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+            {/* Copyright */}
+            <div className="text-gray-400 text-xs text-center md:text-left">
+              © {currentYear} CyberAI Technologies Ltd. All Rights Reserved.
+            </div>
+            
+            {/* Compliance Badges */}
+            <div className="flex items-center gap-6">
+              {/* Security Badge */}
+              <div className="flex items-center gap-2">
+                <div className="bg-orange-500/20 p-1.5 rounded">
+                  <MdSecurity className="w-3.5 h-3.5 text-orange-400" />
+                </div>
+                <span className="text-xs text-gray-400">Secure by Design</span>
+              </div>
+
+              {/* Certification Badges */}
+              <div className="flex items-center gap-3">
+                {/* GDPR Badge */}
+                <div className="relative group">
+                  <div className="w-10 h-10 rounded-full bg-blue-600 flex items-center justify-center border-2 border-blue-400">
+                    <span className="text-[9px] font-bold text-white text-center leading-tight">
+                      GDPR<br />READY
+                    </span>
+                  </div>
+                </div>
+
+                {/* ISO 27001 Badge */}
+                <div className="relative group">
+                  <div className="w-10 h-10 rounded-full bg-blue-600 flex items-center justify-center border-2 border-blue-400">
+                    <span className="text-[8px] font-bold text-white text-center leading-tight">
+                      ISO<br />27001
+                    </span>
+                  </div>
+                </div>
+
+                {/* SOC 2 Badge */}
+                <div className="relative group">
+                  <div className="w-10 h-10 rounded-full bg-blue-600 flex items-center justify-center border-2 border-blue-400">
+                    <span className="text-[9px] font-bold text-white text-center leading-tight">
+                      SOC 2<br />TYPE II
+                    </span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
+      </div>
 
-        <style jsx>{`
-          @keyframes fade-in-up {
-            from {
-              opacity: 0;
-              transform: translateY(20px);
-            }
-            to {
-              opacity: 1;
-              transform: translateY(0);
-            }
+      <style jsx>{`
+        @keyframes pulse {
+          0%, 100% {
+            opacity: 0.3;
           }
-          
-          .animate-fade-in-up {
-            animation: fade-in-up 0.8s ease-out;
+          50% {
+            opacity: 0.5;
           }
-        `}</style>
-      </footer>
-    );
-  }
+        }
+      `}</style>
+    </footer>
+  );
+}

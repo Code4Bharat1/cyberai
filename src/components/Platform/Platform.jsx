@@ -16,9 +16,13 @@ import {
   MdAccountBalance,
   MdLocalShipping,
   MdOilBarrel,
-  MdFactory
+  MdFactory,
+  MdVerifiedUser,
+  MdTrendingUp,
+  MdDeviceHub,
+  MdIntegrationInstructions
 } from 'react-icons/md';
-import { FaArrowRight, FaShieldAlt, FaChevronRight } from 'react-icons/fa';
+import { FaArrowRight, FaShieldAlt, FaChevronRight, FaCheck, FaNetworkWired } from 'react-icons/fa';
 import Navbar from '../navbar/Navbar';
 import Footer from '../Footer/Footer';
 
@@ -40,40 +44,46 @@ export default function PlatformPage() {
 
   const coreCapabilities = [
     {
+      icon: MdCloud,
+      title: "Build Your Own AI Operating System",
+      desc: "Install a complete AI OS in your environment that grows organically—enabling agent workflows and automation on top of your base system.",
+      gradient: "from-blue-500 to-blue-600",
+      link: "ai-os"
+    },
+    {
       icon: MdLock,
-      title: "Privatised LLMs",
-      desc: "Company-specific AI models deployed securely in your private cloud or on-premise environment.",
-      gradient: "from-blue-500 to-blue-600"
+      title: "Data Under Your Control",
+      desc: "End-to-end data sovereignty with complete auditability and transparency—your data never leaves your infrastructure.",
+      gradient: "from-orange-500 to-orange-600",
+      link: "data-sovereignty"
     },
     {
       icon: MdAutorenew,
-      title: "Agentic AI Automation",
-      desc: "Intelligent AI agents for compliance checks, fraud detection, and complex workflow automation.",
-      gradient: "from-orange-500 to-orange-600"
+      title: "Continuous AI Improvement",
+      desc: "Free baseline updates as AI technology matures—ensuring your models remain competitive over 3+ year timeframes.",
+      gradient: "from-purple-500 to-purple-600",
+      link: "continuous-improvement"
+    },
+    {
+      icon: MdDeviceHub,
+      title: "MCP Servers & A2A Framework",
+      desc: "Agent-to-Agent communication framework for coordinating multiple AI systems—single unified output from diverse tools.",
+      gradient: "from-green-500 to-green-600",
+      link: "integration"
     },
     {
       icon: MdShield,
-      title: "AI Governance & Risk",
+      title: "AI Governance & Risk Management",
       desc: "Comprehensive governance frameworks aligned with ISO 42001, GDPR, and sector-specific regulations.",
-      gradient: "from-purple-500 to-purple-600"
+      gradient: "from-pink-500 to-pink-600",
+      link: "governance"
     },
     {
       icon: MdSecurity,
       title: "Security by Design",
-      desc: "Built-in cybersecurity controls embedded across the entire AI lifecycle, from data to deployment.",
-      gradient: "from-green-500 to-green-600"
-    },
-    {
-      icon: MdStorage,
-      title: "Data Privacy & Control",
-      desc: "Maintain full sovereignty and control over your data, models, and AI outputs at all times.",
-      gradient: "from-pink-500 to-pink-600"
-    },
-    {
-      icon: MdCloud,
-      title: "Flexible Deployment",
-      desc: "Deploy seamlessly across on-premise, private cloud, or secure hybrid infrastructure environments.",
-      gradient: "from-indigo-500 to-indigo-600"
+      desc: "Built-in cybersecurity controls embedded across the entire AI lifecycle, from data ingestion to deployment.",
+      gradient: "from-indigo-500 to-indigo-600",
+      link: "security"
     }
   ];
 
@@ -139,29 +149,6 @@ export default function PlatformPage() {
       name: "Logistics & Supply Chain",
       icon: MdLocalShipping,
       color: "from-orange-500 to-orange-700"
-    }
-  ];
-
-  const whyPlatform = [
-    {
-      icon: MdSecurity,
-      title: "Security-first AI Engineering",
-      desc: "Every model is built with security as a foundational layer, not an afterthought."
-    },
-    {
-      icon: MdSettings,
-      title: "Industry & Vendor Agnostic",
-      desc: "We work with any underlying technology stack that fits your specific needs."
-    },
-    {
-      icon: MdLock,
-      title: "Designed for Regulated Data",
-      desc: "AI solutions specifically tackle PII, PHI, and sensitive financial data."
-    },
-    {
-      icon: MdAutorenew,
-      title: "End-to-End AI Lifecycle",
-      desc: "From initial strategy and training to deployment, monitoring, and fine tuning."
     }
   ];
 
@@ -257,7 +244,8 @@ export default function PlatformPage() {
             {coreCapabilities.map((capability, i) => (
               <div 
                 key={i}
-                className="group bg-white p-10 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 border-2 border-gray-100 hover:border-transparent hover:-translate-y-2 animate-fade-in-up"
+                onClick={() => scrollToSection(capability.link)}
+                className="group bg-white p-10 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 border-2 border-gray-100 hover:border-transparent hover:-translate-y-2 animate-fade-in-up cursor-pointer"
                 style={{animationDelay: `${i * 0.1}s`}}
               >
                 <div className={`bg-gradient-to-br ${capability.gradient} w-20 h-20 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500 shadow-lg`}>
@@ -266,9 +254,387 @@ export default function PlatformPage() {
                 <h3 className="text-2xl font-bold text-blue-900 mb-4 group-hover:text-orange-500 transition-colors">
                   {capability.title}
                 </h3>
-                <p className="text-gray-600 leading-relaxed text-lg">
+                <p className="text-gray-600 leading-relaxed text-lg mb-4">
                   {capability.desc}
                 </p>
+                <div className="flex items-center gap-2 text-orange-500 font-semibold opacity-0 group-hover:opacity-100 transition-opacity">
+                  Learn More
+                  <FaArrowRight className="w-4 h-4" />
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Build Your Own AI OS - NEW DETAILED SECTION */}
+      <section id="ai-os" className="py-24 px-4 bg-white scroll-mt-20">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-16">
+            <div className="inline-block mb-4">
+              <span className="text-orange-500 font-bold text-sm tracking-widest uppercase">Core Capability</span>
+              <div className="h-1 w-20 bg-gradient-to-r from-orange-500 to-transparent mx-auto mt-2"></div>
+            </div>
+            <h2 className="text-5xl md:text-6xl font-black text-blue-900 mb-6">
+              Build Your Own AI Operating System
+            </h2>
+            <p className="text-gray-600 text-xl max-w-3xl mx-auto">
+              Take control of your AI infrastructure—no dependency on OpenAI, Meta, or other external platforms
+            </p>
+          </div>
+
+          {/* Visual Diagram */}
+          <div className="bg-gradient-to-br from-blue-50 to-blue-100/50 rounded-3xl p-12 mb-12 border-2 border-blue-200">
+            <div className="grid md:grid-cols-3 gap-8 mb-8">
+              <div className="text-center">
+                <div className="bg-white rounded-2xl p-6 shadow-lg mb-4">
+                  <MdCloud className="w-16 h-16 text-blue-600 mx-auto mb-4" />
+                  <h4 className="font-bold text-blue-900 text-lg">Base AI OS</h4>
+                  <p className="text-gray-600 text-sm mt-2">Installed in your environment</p>
+                </div>
+                <div className="text-blue-600 font-semibold">↓</div>
+              </div>
+
+              <div className="text-center">
+                <div className="bg-white rounded-2xl p-6 shadow-lg mb-4">
+                  <MdAutorenew className="w-16 h-16 text-orange-600 mx-auto mb-4" />
+                  <h4 className="font-bold text-blue-900 text-lg">Organic Growth</h4>
+                  <p className="text-gray-600 text-sm mt-2">Learns from your data</p>
+                </div>
+                <div className="text-orange-600 font-semibold">↓</div>
+              </div>
+
+              <div className="text-center">
+                <div className="bg-white rounded-2xl p-6 shadow-lg mb-4">
+                  <MdDeviceHub className="w-16 h-16 text-green-600 mx-auto mb-4" />
+                  <h4 className="font-bold text-blue-900 text-lg">Agent Workflows</h4>
+                  <p className="text-gray-600 text-sm mt-2">Automation on top</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-white rounded-2xl p-8 shadow-lg">
+              <h4 className="font-bold text-blue-900 text-xl mb-4">Key Advantages</h4>
+              <div className="grid md:grid-cols-2 gap-6">
+                <div className="flex items-start gap-3">
+                  <FaCheck className="w-5 h-5 text-green-600 mt-1 flex-shrink-0" />
+                  <div>
+                    <span className="font-semibold text-gray-900">Complete Ownership</span>
+                    <p className="text-gray-600 text-sm">Full control over your AI infrastructure—no vendor lock-in</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <FaCheck className="w-5 h-5 text-green-600 mt-1 flex-shrink-0" />
+                  <div>
+                    <span className="font-semibold text-gray-900">Scalable Architecture</span>
+                    <p className="text-gray-600 text-sm">Grows with your business needs and data volume</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <FaCheck className="w-5 h-5 text-green-600 mt-1 flex-shrink-0" />
+                  <div>
+                    <span className="font-semibold text-gray-900">Custom Workflows</span>
+                    <p className="text-gray-600 text-sm">Build agents tailored to your specific processes</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <FaCheck className="w-5 h-5 text-green-600 mt-1 flex-shrink-0" />
+                  <div>
+                    <span className="font-semibold text-gray-900">Independent Evolution</span>
+                    <p className="text-gray-600 text-sm">Not dependent on external model updates or API changes</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="text-center">
+            <button 
+              onClick={() => scrollToSection('data-sovereignty')}
+              className="group flex items-center gap-2 text-orange-500 font-semibold hover:gap-4 transition-all mx-auto"
+            >
+              Learn About Data Sovereignty
+              <FaArrowRight className="w-4 h-4" />
+            </button>
+          </div>
+        </div>
+      </section>
+
+      {/* Data Sovereignty - NEW DETAILED SECTION */}
+      <section id="data-sovereignty" className="py-24 px-4 bg-gradient-to-b from-gray-50 to-white scroll-mt-20">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-16">
+            <div className="inline-block mb-4">
+              <span className="text-orange-500 font-bold text-sm tracking-widest uppercase">Data Control</span>
+              <div className="h-1 w-20 bg-gradient-to-r from-orange-500 to-transparent mx-auto mt-2"></div>
+            </div>
+            <h2 className="text-5xl md:text-6xl font-black text-blue-900 mb-6">
+              Data Under Your Control
+            </h2>
+            <p className="text-gray-600 text-xl max-w-3xl mx-auto">
+              Addressing the industry's #1 concern: complete data sovereignty with end-to-end auditability
+            </p>
+          </div>
+
+          {/* Visual Flow Diagram */}
+          <div className="bg-gradient-to-br from-orange-50 to-orange-100/50 rounded-3xl p-12 mb-12 border-2 border-orange-200">
+            <div className="grid md:grid-cols-4 gap-6 mb-8">
+              {[
+                { icon: MdStorage, title: "Your Data", desc: "Stays in your infrastructure" },
+                { icon: MdLock, title: "Your Models", desc: "Trained exclusively on your data" },
+                { icon: MdVerifiedUser, title: "Your Control", desc: "Full audit trails & transparency" },
+                { icon: MdShield, title: "Your Compliance", desc: "Meet all regulatory requirements" }
+              ].map((item, i) => (
+                <div key={i} className="bg-white rounded-2xl p-6 shadow-lg text-center">
+                  <item.icon className="w-12 h-12 text-orange-600 mx-auto mb-3" />
+                  <h4 className="font-bold text-blue-900 mb-2">{item.title}</h4>
+                  <p className="text-gray-600 text-sm">{item.desc}</p>
+                </div>
+              ))}
+            </div>
+
+            <div className="bg-white rounded-2xl p-8 shadow-lg">
+              <h4 className="font-bold text-blue-900 text-xl mb-6 text-center">What This Means For You</h4>
+              <div className="space-y-4">
+                <div className="flex items-start gap-4 p-4 bg-orange-50 rounded-xl">
+                  <MdCheckCircle className="w-6 h-6 text-orange-600 mt-1 flex-shrink-0" />
+                  <div>
+                    <h5 className="font-bold text-gray-900 mb-1">Never Leaves Your Environment</h5>
+                    <p className="text-gray-700">Your sensitive data is never transmitted to external APIs or third-party servers. Models are trained and deployed entirely within your infrastructure—on-premises or in your private cloud.</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-4 p-4 bg-orange-50 rounded-xl">
+                  <MdCheckCircle className="w-6 h-6 text-orange-600 mt-1 flex-shrink-0" />
+                  <div>
+                    <h5 className="font-bold text-gray-900 mb-1">Complete Transparency</h5>
+                    <p className="text-gray-700">Every data point, every training decision, every model output is fully auditable. You can trace exactly how your AI arrived at any conclusion—critical for compliance and regulatory requirements.</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-4 p-4 bg-orange-50 rounded-xl">
+                  <MdCheckCircle className="w-6 h-6 text-orange-600 mt-1 flex-shrink-0" />
+                  <div>
+                    <h5 className="font-bold text-gray-900 mb-1">Regulatory Compliance Built-In</h5>
+                    <p className="text-gray-700">Meet GDPR, HIPAA, SOC 2, and industry-specific requirements by design. Your data governance policies are enforced at the infrastructure level—not as an afterthought.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="text-center">
+            <button 
+              onClick={() => scrollToSection('continuous-improvement')}
+              className="group flex items-center gap-2 text-orange-500 font-semibold hover:gap-4 transition-all mx-auto"
+            >
+              Discover Continuous Improvement
+              <FaArrowRight className="w-4 h-4" />
+            </button>
+          </div>
+        </div>
+      </section>
+
+      {/* Continuous Improvement - NEW DETAILED SECTION */}
+      <section id="continuous-improvement" className="py-24 px-4 bg-white scroll-mt-20">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-16">
+            <div className="inline-block mb-4">
+              <span className="text-orange-500 font-bold text-sm tracking-widest uppercase">Long-Term Value</span>
+              <div className="h-1 w-20 bg-gradient-to-r from-orange-500 to-transparent mx-auto mt-2"></div>
+            </div>
+            <h2 className="text-5xl md:text-6xl font-black text-blue-900 mb-6">
+              Continuous AI Improvement
+            </h2>
+            <p className="text-gray-600 text-xl max-w-3xl mx-auto">
+              AI technology evolves rapidly—your models should too. Free baseline updates keep you competitive over 3+ years.
+            </p>
+          </div>
+
+          {/* Timeline Diagram */}
+          <div className="bg-gradient-to-br from-purple-50 to-purple-100/50 rounded-3xl p-12 mb-12 border-2 border-purple-200">
+            <div className="relative">
+              {/* Timeline Line */}
+              <div className="hidden md:block absolute top-16 left-0 right-0 h-1 bg-purple-300 z-0"></div>
+              
+              <div className="grid md:grid-cols-3 gap-8 relative z-10">
+                {[
+                  {
+                    icon: MdSettings,
+                    title: "Initial Deployment",
+                    desc: "Custom model trained for your business",
+                    period: "Month 1"
+                  },
+                  {
+                    icon: MdAutorenew,
+                    title: "Baseline Updates",
+                    desc: "Free updates as AI technology advances",
+                    period: "Ongoing",
+                    highlighted: true
+                  },
+                  {
+                    icon: MdTrendingUp,
+                    title: "Competitive Edge",
+                    desc: "Models remain state-of-the-art over 3+ years",
+                    period: "Year 3+"
+                  }
+                ].map((item, i) => (
+                  <div key={i} className="text-center">
+                    <div className={`${item.highlighted ? 'bg-gradient-to-br from-purple-500 to-purple-600 text-white' : 'bg-white'} rounded-2xl p-6 shadow-xl mb-4`}>
+                      <div className={`w-16 h-16 ${item.highlighted ? 'bg-white/20' : 'bg-purple-100'} rounded-full flex items-center justify-center mx-auto mb-4`}>
+                        <item.icon className={`w-8 h-8 ${item.highlighted ? 'text-white' : 'text-purple-600'}`} />
+                      </div>
+                      <h4 className={`font-bold text-lg mb-2 ${item.highlighted ? 'text-white' : 'text-blue-900'}`}>{item.title}</h4>
+                      <p className={`text-sm mb-3 ${item.highlighted ? 'text-white/90' : 'text-gray-600'}`}>{item.desc}</p>
+                      <div className={`text-xs font-semibold ${item.highlighted ? 'text-white/80' : 'text-purple-600'}`}>{item.period}</div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="mt-8 bg-white rounded-2xl p-8 shadow-lg">
+              <h4 className="font-bold text-blue-900 text-xl mb-6">What's Included in Maintenance Contracts</h4>
+              <div className="grid md:grid-cols-2 gap-6">
+                <div className="flex items-start gap-3">
+                  <FaCheck className="w-5 h-5 text-purple-600 mt-1 flex-shrink-0" />
+                  <div>
+                    <span className="font-semibold text-gray-900">Model Architecture Updates</span>
+                    <p className="text-gray-600 text-sm">As foundation model technology improves, we upgrade your base architecture</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <FaCheck className="w-5 h-5 text-purple-600 mt-1 flex-shrink-0" />
+                  <div>
+                    <span className="font-semibold text-gray-900">Security Patches</span>
+                    <p className="text-gray-600 text-sm">Proactive updates to address emerging AI security vulnerabilities</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <FaCheck className="w-5 h-5 text-purple-600 mt-1 flex-shrink-0" />
+                  <div>
+                    <span className="font-semibold text-gray-900">Performance Optimization</span>
+                    <p className="text-gray-600 text-sm">Ongoing improvements to speed, accuracy, and resource efficiency</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <FaCheck className="w-5 h-5 text-purple-600 mt-1 flex-shrink-0" />
+                  <div>
+                    <span className="font-semibold text-gray-900">Regulatory Updates</span>
+                    <p className="text-gray-600 text-sm">Ensure compliance as regulations evolve (GDPR, AI Act, etc.)</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="bg-blue-900 text-white p-8 rounded-2xl text-center">
+            <h4 className="text-2xl font-bold mb-3">Long-Term Investment Protection</h4>
+            <p className="text-blue-100 text-lg max-w-2xl mx-auto">
+              Your AI models remain competitive and secure for 3+ years—protecting your investment as the technology landscape evolves.
+            </p>
+          </div>
+
+          <div className="text-center mt-12">
+            <button 
+              onClick={() => scrollToSection('integration')}
+              className="group flex items-center gap-2 text-orange-500 font-semibold hover:gap-4 transition-all mx-auto"
+            >
+              Learn About Integration & A2A
+              <FaArrowRight className="w-4 h-4" />
+            </button>
+          </div>
+        </div>
+      </section>
+
+      {/* MCP Servers & A2A Framework - NEW DETAILED SECTION */}
+      <section id="integration" className="py-24 px-4 bg-gradient-to-b from-gray-50 to-white scroll-mt-20">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-16">
+            <div className="inline-block mb-4">
+              <span className="text-orange-500 font-bold text-sm tracking-widest uppercase">Secured Integration</span>
+              <div className="h-1 w-20 bg-gradient-to-r from-orange-500 to-transparent mx-auto mt-2"></div>
+            </div>
+            <h2 className="text-5xl md:text-6xl font-black text-blue-900 mb-6">
+              MCP Servers & A2A Framework
+            </h2>
+            <p className="text-gray-600 text-xl max-w-3xl mx-auto">
+              Coordinate multiple AI systems—single unified output from diverse tools through Agent-to-Agent communication
+            </p>
+          </div>
+
+          {/* Integration Diagram */}
+          <div className="bg-gradient-to-br from-green-50 to-green-100/50 rounded-3xl p-12 mb-12 border-2 border-green-200">
+            <div className="grid md:grid-cols-3 gap-8 mb-10">
+              {/* Multiple AI Tools */}
+              <div className="bg-white rounded-2xl p-8 shadow-lg">
+                <h4 className="font-bold text-blue-900 text-lg mb-4 text-center">Your AI Ecosystem</h4>
+                <div className="space-y-3">
+                  {["Document AI", "Compliance AI", "Risk AI", "Analytics AI", "Customer AI", "Operations AI"].map((tool, i) => (
+                    <div key={i} className="flex items-center gap-3 p-3 bg-green-50 rounded-lg">
+                      <MdDeviceHub className="w-5 h-5 text-green-600 flex-shrink-0" />
+                      <span className="text-gray-700 text-sm font-medium">{tool}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* A2A Framework */}
+              <div className="bg-gradient-to-br from-green-500 to-green-600 text-white rounded-2xl p-8 shadow-2xl flex flex-col items-center justify-center">
+                <FaNetworkWired className="w-20 h-20 mb-6" />
+                <h4 className="font-bold text-2xl mb-4 text-center">A2A Framework</h4>
+                <p className="text-green-100 text-center text-sm">Agent-to-Agent Communication Layer</p>
+              </div>
+
+              {/* Unified Output */}
+              <div className="bg-white rounded-2xl p-8 shadow-lg flex flex-col items-center justify-center">
+                <MdIntegrationInstructions className="w-16 h-16 text-blue-600 mb-4" />
+                <h4 className="font-bold text-blue-900 text-lg mb-3 text-center">Unified Output</h4>
+                <p className="text-gray-600 text-center">Single coherent response synthesized from all AI systems</p>
+              </div>
+            </div>
+
+            <div className="bg-white rounded-2xl p-8 shadow-lg">
+              <h4 className="font-bold text-blue-900 text-xl mb-6 text-center">Why This Matters</h4>
+              <div className="grid md:grid-cols-2 gap-6">
+                <div className="p-4 bg-green-50 rounded-xl">
+                  <h5 className="font-bold text-gray-900 mb-2">The Challenge</h5>
+                  <p className="text-gray-700 text-sm">
+                    Most companies will have 5-6 specialized AI tools. Without coordination, you get conflicting answers, duplicated work, and integration chaos.
+                  </p>
+                </div>
+                <div className="p-4 bg-green-50 rounded-xl">
+                  <h5 className="font-bold text-gray-900 mb-2">Our Solution</h5>
+                  <p className="text-gray-700 text-sm">
+                    A2A framework enables your AI agents to communicate, coordinate, and deliver a single unified response—eliminating conflicts and maximizing value.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-6">
+            {[
+              {
+                icon: MdCheckCircle,
+                title: "MCP Server Integration",
+                desc: "Secure Model Context Protocol servers for tool coordination and data sharing across your AI ecosystem"
+              },
+              {
+                icon: MdDeviceHub,
+                title: "Cross-Agent Orchestration",
+                desc: "Intelligent routing and coordination between specialized AI agents for complex workflows"
+              },
+              {
+                icon: MdShield,
+                title: "Secure by Design",
+                desc: "All agent communication happens within your infrastructure with full encryption and audit trails"
+              }
+            ].map((item, i) => (
+              <div key={i} className="bg-white p-6 rounded-2xl shadow-lg border border-gray-100">
+                <item.icon className="w-12 h-12 text-green-600 mb-4" />
+                <h4 className="font-bold text-blue-900 mb-2">{item.title}</h4>
+                <p className="text-gray-600 text-sm">{item.desc}</p>
               </div>
             ))}
           </div>
@@ -371,47 +737,6 @@ export default function PlatformPage() {
                 <p className="text-gray-600 leading-relaxed">
                   Secure AI solutions compliant with industry-specific regulations and data privacy requirements.
                 </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Why CyberAI Platform */}
-      <section className="py-20 px-4 bg-white scroll-mt-20">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
-            <div className="inline-block mb-4">
-              <span className="text-orange-500 font-bold text-sm tracking-widest uppercase">Why Choose Us</span>
-              <div className="h-1 w-20 bg-gradient-to-r from-orange-500 to-transparent mx-auto mt-2"></div>
-            </div>
-
-            <h2 className="text-5xl md:text-6xl font-black text-blue-900 mb-6 animate-fade-in-up">
-              Why CyberAI Platform?
-            </h2>
-            <p className="text-gray-600 text-xl max-w-2xl mx-auto animate-fade-in">
-              Differentiators that set us apart in enterprise AI security
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-8">
-            {whyPlatform.map((item, i) => (
-              <div 
-                key={i}
-                className="group flex gap-6 items-start bg-gradient-to-br from-gray-50 to-white p-10 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 border-2 border-gray-100 hover:border-transparent hover:-translate-y-2 animate-fade-in-up"
-                style={{animationDelay: `${i * 0.1}s`}}
-              >
-                <div className="bg-gradient-to-br from-orange-500 to-orange-600 w-16 h-16 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform shadow-lg flex-shrink-0">
-                  <item.icon className="w-8 h-8 text-white" />
-                </div>
-                <div>
-                  <h3 className="text-2xl font-bold text-blue-900 mb-4 group-hover:text-orange-500 transition-colors">
-                    {item.title}
-                  </h3>
-                  <p className="text-gray-600 text-lg leading-relaxed">
-                    {item.desc}
-                  </p>
-                </div>
               </div>
             ))}
           </div>

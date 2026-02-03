@@ -23,7 +23,7 @@ export default function CyberAILandingPage() {
   };
 
   return (
-    <div className="min-h-screen bg-white overflow-hidden mt-10 ">
+    <div className="min-h-screen bg-white overflow-hidden mt-20 ">
       {/* Hero Section with Parallax */}
       <section id="hero" className="relative bg-gradient-to-br from-blue-600 via-blue-700 to-indigo-800 text-white py-24 px-4 overflow-hidden">
         {/* Animated Background Elements */}

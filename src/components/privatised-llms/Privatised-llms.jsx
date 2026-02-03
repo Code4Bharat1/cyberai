@@ -13,9 +13,11 @@ import {
   MdBusiness,
   MdHealthAndSafety,
   MdGavel,
-  MdTune
+  MdTune,
+  MdTrendingUp,
+  MdLock
 } from 'react-icons/md';
-import { FaLock, FaServer, FaRobot, FaArrowRight } from 'react-icons/fa';
+import { FaLock, FaServer, FaRobot, FaArrowRight, FaCheck as FaCheckIcon, FaTimes } from 'react-icons/fa';
 import Navbar from '../navbar/Navbar';
 import Footer from '../Footer/Footer';
 
@@ -145,9 +147,24 @@ export default function PrivatisedLLMsPage() {
             <span className="bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent">Privatised</span> LLMs
           </h1>
           
-          <p className="text-xl md:text-2xl text-blue-200 max-w-3xl mx-auto animate-fade-in font-light leading-relaxed">
+          <p className="text-xl md:text-2xl text-blue-200 max-w-3xl mx-auto mb-8 animate-fade-in font-light leading-relaxed">
             Private, secure and compliant AI built inside your environment
           </p>
+
+          <div className="grid grid-cols-3 gap-6 max-w-2xl mx-auto mt-12">
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20">
+              <div className="text-3xl font-black text-orange-400 mb-1">1B</div>
+              <div className="text-xs text-blue-100">Parameters</div>
+            </div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20">
+              <div className="text-3xl font-black text-orange-400 mb-1">100%</div>
+              <div className="text-xs text-blue-100">Data Control</div>
+            </div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20">
+              <div className="text-3xl font-black text-orange-400 mb-1">0</div>
+              <div className="text-xs text-blue-100">Data Leakage</div>
+            </div>
+          </div>
         </div>
 
         {/* Floating Icons Animation */}
@@ -156,9 +173,6 @@ export default function PrivatisedLLMsPage() {
           <FaLock className="absolute w-10 h-10 text-orange-500/20 animate-float" style={{top: '60%', right: '15%', animationDelay: '1s'}} />
           <FaServer className="absolute w-14 h-14 text-blue-400/20 animate-float" style={{bottom: '20%', left: '20%', animationDelay: '2s'}} />
         </div>
-
-        {/* Scroll Down Indicator */}
-        
       </section>
 
       {/* What is a Privatised LLM Section */}
@@ -202,10 +216,10 @@ export default function PrivatisedLLMsPage() {
               </div>
 
               <button 
-                onClick={() => scrollToSection('comparison')}
+                onClick={() => scrollToSection('why-private')}
                 className="group flex items-center gap-2 text-orange-500 font-semibold hover:gap-4 transition-all mt-6"
               >
-                Compare with Public LLMs
+                Why Choose Private AI
                 <FaArrowRight className="w-4 h-4" />
               </button>
             </div>
@@ -223,8 +237,103 @@ export default function PrivatisedLLMsPage() {
         </div>
       </section>
 
+      {/* Why Private AI - NEW SECTION */}
+      <section id="why-private" className="py-24 px-4 bg-gradient-to-b from-gray-50 to-white scroll-mt-20">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-16">
+            <div className="mb-4">
+              <span className="text-orange-500 font-bold text-sm tracking-widest uppercase">Risk Mitigation</span>
+              <div className="h-1 w-20 bg-gradient-to-r from-orange-500 to-transparent mx-auto mt-2"></div>
+            </div>
+            <h2 className="text-5xl md:text-6xl font-black text-blue-900 mb-6">
+              Why Private AI Matters
+            </h2>
+            <p className="text-gray-600 text-xl max-w-3xl mx-auto">
+              1 billion parameter models trained on your data dramatically reduce hallucinations and deliver faster, more accurate results than broad-purpose public LLMs
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8 mb-12">
+            <div className="bg-white p-8 rounded-2xl shadow-lg border border-gray-100">
+              <div className="w-16 h-16 bg-gradient-to-br from-red-500 to-red-600 rounded-xl flex items-center justify-center mb-6">
+                <FaTimes className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-2xl font-bold text-blue-900 mb-4">Public LLM Risk</h3>
+              <div className="space-y-3">
+                <div className="flex items-start gap-2">
+                  <FaTimes className="w-4 h-4 text-red-600 mt-1 flex-shrink-0" />
+                  <span className="text-gray-700 text-sm">Trained on billions of parameters from public internet</span>
+                </div>
+                <div className="flex items-start gap-2">
+                  <FaTimes className="w-4 h-4 text-red-600 mt-1 flex-shrink-0" />
+                  <span className="text-gray-700 text-sm">Higher hallucination rates on specialized tasks</span>
+                </div>
+                <div className="flex items-start gap-2">
+                  <FaTimes className="w-4 h-4 text-red-600 mt-1 flex-shrink-0" />
+                  <span className="text-gray-700 text-sm">Data sent to external APIs</span>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-gradient-to-br from-blue-900 to-slate-900 text-white p-8 rounded-2xl shadow-2xl col-span-1 md:col-span-2">
+              <div className="w-16 h-16 bg-orange-500 rounded-xl flex items-center justify-center mb-6">
+                <FaCheckIcon className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-2xl font-bold mb-4">Private LLM Advantage</h3>
+              <div className="grid md:grid-cols-2 gap-4">
+                <div className="space-y-3">
+                  <div className="flex items-start gap-2">
+                    <FaCheckIcon className="w-4 h-4 text-orange-400 mt-1 flex-shrink-0" />
+                    <span className="text-blue-100 text-sm">1B parameters trained only on your domain data</span>
+                  </div>
+                  <div className="flex items-start gap-2">
+                    <FaCheckIcon className="w-4 h-4 text-orange-400 mt-1 flex-shrink-0" />
+                    <span className="text-blue-100 text-sm">Dramatically reduced hallucination on your use cases</span>
+                  </div>
+                  <div className="flex items-start gap-2">
+                    <FaCheckIcon className="w-4 h-4 text-orange-400 mt-1 flex-shrink-0" />
+                    <span className="text-blue-100 text-sm">Faster response times for specific queries</span>
+                  </div>
+                </div>
+                <div className="space-y-3">
+                  <div className="flex items-start gap-2">
+                    <FaCheckIcon className="w-4 h-4 text-orange-400 mt-1 flex-shrink-0" />
+                    <span className="text-blue-100 text-sm">Higher accuracy for industry-specific tasks</span>
+                  </div>
+                  <div className="flex items-start gap-2">
+                    <FaCheckIcon className="w-4 h-4 text-orange-400 mt-1 flex-shrink-0" />
+                    <span className="text-blue-100 text-sm">Built inside your infrastructure—no API calls</span>
+                  </div>
+                  <div className="flex items-start gap-2">
+                    <FaCheckIcon className="w-4 h-4 text-orange-400 mt-1 flex-shrink-0" />
+                    <span className="text-blue-100 text-sm">Complete auditability and transparency</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="bg-orange-50 border-l-4 border-orange-500 p-8 rounded-r-2xl">
+            <h4 className="text-xl font-bold text-blue-900 mb-3">Key Differentiator</h4>
+            <p className="text-gray-700 text-lg">
+              Our 1-billion parameter models trained exclusively on your data vastly outperform ChatGPT's broader models for your specific use cases—with significantly reduced risk of hallucination, bias, and data leakage.
+            </p>
+          </div>
+
+          <div className="text-center mt-12">
+            <button 
+              onClick={() => scrollToSection('comparison')}
+              className="group flex items-center gap-2 text-orange-500 font-semibold hover:gap-4 transition-all mx-auto"
+            >
+              Compare with Public LLMs
+              <FaArrowRight className="w-4 h-4" />
+            </button>
+          </div>
+        </div>
+      </section>
+
       {/* Public vs Privatised LLM Comparison */}
-      <section id="comparison" className="py-24 px-4 bg-gradient-to-b from-gray-50 to-white scroll-mt-20">
+      <section id="comparison" className="py-24 px-4 bg-white scroll-mt-20">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <div className="mb-4 animate-fade-in">
@@ -318,7 +427,7 @@ export default function PrivatisedLLMsPage() {
       </section>
 
       {/* Key Benefits Section */}
-      <section id="benefits" className="py-24 px-4 bg-white scroll-mt-20">
+      <section id="benefits" className="py-24 px-4 bg-gradient-to-b from-gray-50 to-white scroll-mt-20">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <div className="mb-4">
@@ -338,7 +447,7 @@ export default function PrivatisedLLMsPage() {
             {keyBenefits.map((benefit, i) => (
               <div 
                 key={i} 
-                className="group text-center bg-gradient-to-br from-gray-50 to-white p-8 rounded-3xl border border-gray-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 animate-fade-in-up"
+                className="group text-center bg-white p-8 rounded-3xl border border-gray-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 animate-fade-in-up"
                 style={{animationDelay: `${i * 0.1}s`}}
               >
                 <div className={`bg-gradient-to-br ${benefit.gradient} w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-500 shadow-lg`}>
@@ -363,25 +472,19 @@ export default function PrivatisedLLMsPage() {
       </section>
 
       {/* How We Develop Section */}
-      <section id="process" className="py-24 px-4 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white relative overflow-hidden scroll-mt-20">
-        {/* Animated Background */}
-        <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute w-96 h-96 bg-orange-500/10 rounded-full blur-3xl top-0 right-0 animate-pulse"></div>
-          <div className="absolute w-96 h-96 bg-blue-500/10 rounded-full blur-3xl bottom-0 left-0 animate-pulse" style={{animationDelay: '1s'}}></div>
-        </div>
-
-        <div className="max-w-6xl mx-auto relative z-10">
+      <section id="process" className="py-24 px-4 bg-white scroll-mt-20">
+        <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <div className="mb-4">
-              <span className="text-orange-300 font-bold text-sm tracking-widest uppercase">Our Method</span>
+              <span className="text-orange-500 font-bold text-sm tracking-widest uppercase">Our Method</span>
               <div className="h-1 w-20 bg-gradient-to-r from-orange-500 to-transparent mx-auto mt-2"></div>
             </div>
 
-            <h2 className="text-5xl md:text-6xl font-black mb-6">
+            <h2 className="text-5xl md:text-6xl font-black text-blue-900 mb-6">
               How We Develop Privatised LLMs
             </h2>
-            <p className="text-blue-200 text-lg font-light">
-              Our proven process for delivering secure AI solutions
+            <p className="text-gray-600 text-lg">
+              Our proven process for delivering secure AI solutions in 4-12 weeks
             </p>
           </div>
 
@@ -389,7 +492,7 @@ export default function PrivatisedLLMsPage() {
             {developmentProcess.map((step, i) => (
               <div 
                 key={i} 
-                className="relative bg-white text-gray-900 rounded-2xl p-8 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 group animate-fade-in-up border-t-4 border-orange-500"
+                className="relative bg-white rounded-2xl p-8 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 group animate-fade-in-up border-t-4 border-orange-500"
                 style={{animationDelay: `${i * 0.1}s`}}
               >
                 <div className="absolute -top-6 left-8 bg-gradient-to-br from-orange-500 to-orange-600 text-white font-black text-2xl w-12 h-12 rounded-full flex items-center justify-center shadow-lg">
@@ -404,20 +507,41 @@ export default function PrivatisedLLMsPage() {
             ))}
           </div>
 
+          <div className="mt-16 bg-gradient-to-br from-orange-50 to-orange-100/50 border-l-4 border-orange-500 p-10 rounded-r-2xl">
+            <h3 className="text-2xl font-bold text-blue-900 mb-4 flex items-center gap-3">
+              <MdTrendingUp className="w-8 h-8 text-orange-500" />
+              Fast Time to Value
+            </h3>
+            <div className="grid md:grid-cols-2 gap-6">
+              <div>
+                <h4 className="font-bold text-blue-900 mb-2">4-12 Week Deployment</h4>
+                <p className="text-gray-700">
+                  From initial consultation to production deployment—dramatically faster than traditional enterprise AI implementations.
+                </p>
+              </div>
+              <div>
+                <h4 className="font-bold text-blue-900 mb-2">Custom-Built for You</h4>
+                <p className="text-gray-700">
+                  Every model is trained on your specific data, workflows, and compliance requirements—not a generic solution.
+                </p>
+              </div>
+            </div>
+          </div>
+
           <div className="text-center mt-12">
             <button 
               onClick={() => scrollToSection('target')}
-              className="group flex items-center gap-2 text-orange-300 font-semibold hover:gap-4 transition-all mx-auto text-lg"
+              className="group flex items-center gap-2 text-orange-500 font-semibold hover:gap-4 transition-all mx-auto"
             >
               See Who This Is For
-              <FaArrowRight className="w-5 h-5" />
+              <FaArrowRight className="w-4 h-4" />
             </button>
           </div>
         </div>
       </section>
 
       {/* Who This Is For Section */}
-      <section id="target" className="py-24 px-4 bg-white scroll-mt-20">
+      <section id="target" className="py-24 px-4 bg-gradient-to-b from-gray-50 to-white scroll-mt-20">
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 gap-16 items-center">
             <div className="relative animate-slide-in-left">
@@ -448,7 +572,7 @@ export default function PrivatisedLLMsPage() {
                 {targetAudience.map((item, i) => (
                   <div 
                     key={i} 
-                    className="group flex items-center space-x-4 bg-gradient-to-r from-gray-50 to-white p-6 rounded-2xl hover:shadow-lg transition-all duration-500 border border-gray-100 hover:-translate-y-1 animate-fade-in-up"
+                    className="group flex items-center space-x-4 bg-white p-6 rounded-2xl hover:shadow-lg transition-all duration-500 border border-gray-100 hover:-translate-y-1 animate-fade-in-up"
                     style={{animationDelay: `${i * 0.1}s`}}
                   >
                     <div className={`bg-gradient-to-br ${item.gradient} rounded-xl p-4 group-hover:scale-110 transition-transform shadow-md`}>
@@ -472,7 +596,7 @@ export default function PrivatisedLLMsPage() {
       </section>
 
       {/* Final CTA Section */}
-      <section id="cta" className="py-24 px-4 bg-gradient-to-b from-gray-50 to-white scroll-mt-20">
+      <section id="cta" className="py-24 px-4 bg-white scroll-mt-20">
         <div className="max-w-5xl mx-auto">
           <div className="bg-gradient-to-br from-blue-900 via-blue-800 to-slate-900 text-white p-16 rounded-3xl text-center shadow-2xl relative overflow-hidden animate-fade-in-up">
             {/* Animated Background */}

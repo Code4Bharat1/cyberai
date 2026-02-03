@@ -9,9 +9,29 @@ import {
   MdWorkspacePremium,
   MdEmojiEvents,
   MdMenuBook,
-  MdMic
+  MdMic,
+  MdSchool,
+  MdVerifiedUser,
+  MdSecurity,
+  MdCloud,
+  MdTrendingUp,
+  MdLightbulb,
+  MdGroups
 } from 'react-icons/md';
-import { FaTrophy, FaMedal, FaAward, FaArrowRight, FaLinkedin } from 'react-icons/fa';
+import { 
+  FaTrophy, 
+  FaMedal, 
+  FaAward, 
+  FaArrowRight, 
+  FaLinkedin, 
+  FaGraduationCap,
+  FaGlobe,
+  FaShieldAlt,
+  FaBrain,
+  FaRocket,
+  FaCheckCircle,
+  FaQuoteLeft
+} from 'react-icons/fa';
 import Navbar from '../navbar/Navbar';
 import Footer from '../Footer/Footer';
 
@@ -32,14 +52,14 @@ export default function LeadershipPage() {
   };
 
   const coreExpertise = [
-    "AI Product Development",
-    "Cybersecurity Governance",
-    "Cloud Architecture",
-    "Data Protection",
-    "DevSecOps",
-    "VAPT",
-    "BCP/DR",
-    "AI Governance & Risk"
+    { skill: "AI Product Development", icon: FaBrain },
+    { skill: "Cybersecurity Governance", icon: FaShieldAlt },
+    { skill: "Cloud Architecture", icon: MdCloud },
+    { skill: "Data Protection", icon: MdSecurity },
+    { skill: "DevSecOps", icon: MdTrendingUp },
+    { skill: "VAPT", icon: MdVerifiedUser },
+    { skill: "BCP/DR", icon: MdBusiness },
+    { skill: "AI Governance & Risk", icon: MdLightbulb }
   ];
 
   const achievements = [
@@ -47,33 +67,140 @@ export default function LeadershipPage() {
       icon: FaTrophy,
       title: "Top Cybersecurity Voice",
       subtitle: "LinkedIn, 2024",
+      description: "Recognized as a leading voice in cybersecurity thought leadership",
       gradient: "from-yellow-500 to-yellow-600"
     },
     {
       icon: MdWorkspacePremium,
       title: "Cyber Security Excellence",
       subtitle: "CyberX Global Awards, 2022-24",
+      description: "Three consecutive years of excellence recognition",
       gradient: "from-blue-500 to-blue-600"
     },
     {
       icon: FaMedal,
       title: "Cyber Security Excellence",
       subtitle: "Global CISO Forum, 2024",
+      description: "Recognition for outstanding contributions to the field",
       gradient: "from-orange-500 to-orange-600"
     }
   ];
 
-  const companies = [
-    { name: "KPMG", icon: MdBusiness },
-    { name: "HSBC", icon: MdBusiness },
-    { name: "JP Morgan Chase", icon: MdBusiness },
-    { name: "HDFC Bank", icon: MdBusiness },
-    { name: "VFS Global", icon: MdBusiness },
-    { name: "Ooredoo", icon: MdBusiness }
+  const professionalJourney = [
+    {
+      company: "KPMG",
+      role: "Senior Cybersecurity Consultant",
+      region: "Global",
+      description: "Led enterprise security transformations for Fortune 500 clients",
+      icon: MdBusiness,
+      gradient: "from-blue-500 to-blue-600"
+    },
+    {
+      company: "HSBC",
+      role: "Information Security Lead",
+      region: "Europe & Middle East",
+      description: "Managed security architecture for global banking operations",
+      icon: MdBusiness,
+      gradient: "from-red-500 to-red-600"
+    },
+    {
+      company: "JP Morgan Chase",
+      role: "Regional Cyber Expert",
+      region: "Americas",
+      description: "Drove cybersecurity strategy across North and South American operations",
+      icon: MdBusiness,
+      gradient: "from-indigo-500 to-indigo-600"
+    },
+    {
+      company: "HDFC Bank",
+      role: "Chief Security Architect",
+      region: "Asia Pacific",
+      description: "Architected security frameworks for one of India's largest banks",
+      icon: MdBusiness,
+      gradient: "from-orange-500 to-orange-600"
+    },
+    {
+      company: "VFS Global",
+      role: "Global CISO",
+      region: "Worldwide",
+      description: "Established global security operations across 140+ countries",
+      icon: MdBusiness,
+      gradient: "from-green-500 to-green-600"
+    },
+    {
+      company: "Ooredoo",
+      role: "Cybersecurity Director",
+      region: "Middle East",
+      description: "Led security transformation for telecommunications infrastructure",
+      icon: MdBusiness,
+      gradient: "from-purple-500 to-purple-600"
+    }
+  ];
+
+  const education = [
+    {
+      degree: "Doctor of Philosophy (PhD)",
+      field: "Cloud Security & Information Systems",
+      institution: "Leading International University",
+      year: "2023",
+      icon: FaGraduationCap
+    },
+    {
+      degree: "Master of Science (MSc)",
+      field: "Cybersecurity",
+      institution: "Prestigious European Institution",
+      year: "2018",
+      icon: FaGraduationCap
+    },
+    {
+      degree: "Bachelor of Engineering (BE)",
+      field: "Computer Science",
+      institution: "Top Engineering College",
+      year: "2004",
+      icon: FaGraduationCap
+    }
+  ];
+
+  const certifications = [
+    "CISSP - Certified Information Systems Security Professional",
+    "CISM - Certified Information Security Manager",
+    "CEH - Certified Ethical Hacker",
+    "AWS Certified Solutions Architect",
+    "Azure Security Engineer",
+    "ISO 27001 Lead Auditor",
+    "GDPR Practitioner",
+    "CRISC - Risk & Information Systems Control"
+  ];
+
+  const globalImpact = [
+    {
+      metric: "20+",
+      label: "Years Experience",
+      icon: FaRocket,
+      gradient: "from-blue-500 to-blue-600"
+    },
+    {
+      metric: "6",
+      label: "Global Regions",
+      icon: FaGlobe,
+      gradient: "from-orange-500 to-orange-600"
+    },
+    {
+      metric: "100+",
+      label: "Enterprise Projects",
+      icon: MdBusiness,
+      gradient: "from-green-500 to-green-600"
+    },
+    {
+      metric: "50+",
+      label: "Speaking Engagements",
+      icon: MdMic,
+      gradient: "from-purple-500 to-purple-600"
+    }
   ];
 
   return (
-    <div className="min-h-screen bg-white mt-10 ">
+    <div className="min-h-screen bg-white mt-10">
       {/* Navigation */}
       <Navbar />
 
@@ -96,9 +223,18 @@ export default function LeadershipPage() {
             <span className="bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent">Leadership</span>
           </h1>
 
-          <p className="text-xl md:text-2xl text-blue-200 max-w-3xl mx-auto animate-fade-in font-light leading-relaxed">
+          <p className="text-xl md:text-2xl text-blue-200 max-w-3xl mx-auto mb-10 animate-fade-in font-light leading-relaxed">
             Experience-led AI and cybersecurity leadership with global expertise
           </p>
+
+          <div className="grid grid-cols-4 gap-6 max-w-3xl mx-auto">
+            {globalImpact.map((item, i) => (
+              <div key={i} className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20 hover:bg-white/20 transition-all">
+                <div className="text-3xl font-black text-orange-400 mb-1">{item.metric}</div>
+                <div className="text-xs text-blue-100">{item.label}</div>
+              </div>
+            ))}
+          </div>
         </div>
 
         {/* Floating Icons Animation */}
@@ -107,13 +243,27 @@ export default function LeadershipPage() {
           <FaMedal className="absolute w-10 h-10 text-orange-500/20 animate-float" style={{ top: '60%', right: '15%', animationDelay: '1s' }} />
           <MdWorkspacePremium className="absolute w-14 h-14 text-blue-400/20 animate-float" style={{ bottom: '20%', left: '20%', animationDelay: '2s' }} />
         </div>
+      </section>
 
-        {/* Scroll Down Indicator */}
-
+      {/* Vision & Mission Statement */}
+      <section className="py-20 px-4 bg-gradient-to-b from-white to-gray-50">
+        <div className="max-w-4xl mx-auto">
+          <div className="bg-gradient-to-br from-blue-50 to-blue-100/50 rounded-3xl p-12 border-2 border-blue-200 shadow-xl">
+            <FaQuoteLeft className="w-12 h-12 text-blue-400 mb-6" />
+            <blockquote className="text-2xl md:text-3xl font-bold text-blue-900 leading-relaxed mb-6">
+              "Bridging the trust gap in enterprise AI by putting security and data sovereignty at the core of innovation."
+            </blockquote>
+            <p className="text-gray-700 text-lg leading-relaxed">
+              Founded on the principle that enterprises should not have to choose between AI innovation and data control, 
+              Cyberai was built to solve the fundamental challenge facing regulated industries: how to leverage cutting-edge 
+              AI while maintaining complete sovereignty over sensitive data.
+            </p>
+          </div>
+        </div>
       </section>
 
       {/* Main Content Section */}
-      <section id="profile" className="py-24 px-4 scroll-mt-20">
+      <section id="profile" className="py-24 px-4 scroll-mt-20 bg-white">
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-5 gap-12">
             {/* Left Column - Profile Card */}
@@ -133,6 +283,21 @@ export default function LeadershipPage() {
                   <div className="flex items-center text-gray-600 mb-6">
                     <MdLocationOn className="w-5 h-5 mr-2 text-orange-500" />
                     <span className="font-medium">London, United Kingdom</span>
+                  </div>
+
+                  <div className="space-y-3 mb-6">
+                    <div className="flex items-center gap-3 text-gray-700">
+                      <FaGraduationCap className="w-5 h-5 text-blue-500" />
+                      <span className="font-medium">PhD in Cloud Security</span>
+                    </div>
+                    <div className="flex items-center gap-3 text-gray-700">
+                      <FaGlobe className="w-5 h-5 text-green-500" />
+                      <span className="font-medium">6 Global Regions</span>
+                    </div>
+                    <div className="flex items-center gap-3 text-gray-700">
+                      <FaShieldAlt className="w-5 h-5 text-orange-500" />
+                      <span className="font-medium">CISSP, CISM, CEH</span>
+                    </div>
                   </div>
 
                   <div className="pt-6 border-t border-gray-200">
@@ -164,23 +329,81 @@ export default function LeadershipPage() {
                 <h2 className="text-4xl md:text-5xl font-black text-blue-900 mb-6 leading-tight">
                   About Dr. Dattawala
                 </h2>
-                <p className="text-gray-600 text-lg leading-relaxed">
-                  A seasoned cybersecurity professional with over 20 years of global experience working across the UK, USA (Americas as Regional Cyber Expert), Middle East, and Southeast Asia. Dr. Dattawala brings deep expertise in securing enterprise environments and driving AI innovation.
-                </p>
+                <div className="space-y-4 text-gray-600 text-lg leading-relaxed">
+                  <p>
+                    Dr. Davar Dattawala is a distinguished cybersecurity and AI leader with over 20 years of global 
+                    experience spanning the UK, Americas, Middle East, and Southeast Asia. His career has been defined 
+                    by securing some of the world's most complex enterprise environments across banking, telecommunications, 
+                    and government sectors.
+                  </p>
+                  <p>
+                    As a certified CISSP, CISM, and CEH professional with a PhD in Cloud Security, Dr. Dattawala combines 
+                    deep technical expertise with strategic vision. He has led security transformations for organizations 
+                    including KPMG, HSBC, JP Morgan Chase, and VFS Global, protecting critical infrastructure across 
+                    140+ countries.
+                  </p>
+                  <p>
+                    Recognizing the fundamental trust gap in enterprise AI adoption, Dr. Dattawala founded Cyberai to enable 
+                    organizations to leverage cutting-edge AI capabilities while maintaining complete data sovereignty and 
+                    regulatory compliance. His vision: AI that serves enterprises without compromising their control over 
+                    sensitive data.
+                  </p>
+                </div>
               </div>
 
               {/* Core Expertise */}
               <div>
                 <h3 className="text-3xl font-black text-blue-900 mb-6">Core Expertise</h3>
-                <div className="flex flex-wrap gap-3">
-                  {coreExpertise.map((skill, i) => (
-                    <span
+                <div className="grid md:grid-cols-2 gap-4">
+                  {coreExpertise.map((item, i) => (
+                    <div
                       key={i}
-                      className="bg-gradient-to-r from-blue-50 to-blue-100 text-blue-700 px-5 py-3 rounded-xl text-sm font-bold border-2 border-blue-200 hover:border-blue-500 hover:shadow-lg transition-all duration-300 hover:scale-105 animate-fade-in-up"
+                      className="flex items-center gap-3 bg-gradient-to-r from-blue-50 to-blue-100 text-blue-700 px-5 py-4 rounded-xl border-2 border-blue-200 hover:border-blue-500 hover:shadow-lg transition-all duration-300 hover:scale-105 animate-fade-in-up"
                       style={{ animationDelay: `${i * 0.05}s` }}
                     >
-                      {skill}
-                    </span>
+                      <item.icon className="w-5 h-5 text-blue-600" />
+                      <span className="font-bold">{item.skill}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Education */}
+              <div>
+                <h3 className="text-3xl font-black text-blue-900 mb-6">Education</h3>
+                <div className="space-y-4">
+                  {education.map((edu, i) => (
+                    <div 
+                      key={i} 
+                      className="flex gap-4 items-start bg-white p-6 rounded-2xl shadow-lg border-2 border-gray-100 hover:shadow-xl transition-shadow animate-fade-in-up"
+                      style={{ animationDelay: `${i * 0.1}s` }}
+                    >
+                      <div className="bg-gradient-to-br from-blue-500 to-blue-600 w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0 shadow-md">
+                        <edu.icon className="w-6 h-6 text-white" />
+                      </div>
+                      <div>
+                        <h4 className="font-bold text-blue-900 text-lg mb-1">{edu.degree}</h4>
+                        <p className="text-gray-700 font-medium mb-1">{edu.field}</p>
+                        <p className="text-gray-500 text-sm">{edu.institution} • {edu.year}</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Professional Certifications */}
+              <div>
+                <h3 className="text-3xl font-black text-blue-900 mb-6">Professional Certifications</h3>
+                <div className="grid md:grid-cols-2 gap-3">
+                  {certifications.map((cert, i) => (
+                    <div 
+                      key={i}
+                      className="flex items-center gap-3 p-3 bg-green-50 rounded-xl border border-green-200 hover:bg-green-100 transition-colors animate-fade-in-up"
+                      style={{ animationDelay: `${i * 0.05}s` }}
+                    >
+                      <FaCheckCircle className="w-4 h-4 text-green-600 flex-shrink-0" />
+                      <span className="text-gray-700 text-sm font-medium">{cert}</span>
+                    </div>
                   ))}
                 </div>
               </div>
@@ -188,18 +411,23 @@ export default function LeadershipPage() {
               {/* Recognition & Achievements */}
               <div>
                 <h3 className="text-3xl font-black text-blue-900 mb-6">Recognition & Achievements</h3>
-                <div className="grid md:grid-cols-3 gap-6">
+                <div className="space-y-6">
                   {achievements.map((achievement, i) => (
                     <div
                       key={i}
-                      className="group bg-white border-2 border-gray-100 rounded-3xl p-6 text-center hover:shadow-2xl hover:border-transparent transition-all duration-500 hover:-translate-y-2 animate-fade-in-up"
+                      className="group bg-white border-2 border-gray-100 rounded-3xl p-8 hover:shadow-2xl hover:border-transparent transition-all duration-500 hover:-translate-y-2 animate-fade-in-up"
                       style={{ animationDelay: `${i * 0.1}s` }}
                     >
-                      <div className={`bg-gradient-to-br ${achievement.gradient} w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-500 shadow-lg`}>
-                        <achievement.icon className="w-8 h-8 text-white" />
+                      <div className="flex items-start gap-6">
+                        <div className={`bg-gradient-to-br ${achievement.gradient} w-16 h-16 rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-500 shadow-lg`}>
+                          <achievement.icon className="w-8 h-8 text-white" />
+                        </div>
+                        <div>
+                          <h4 className="font-bold text-blue-900 mb-2 text-xl">{achievement.title}</h4>
+                          <p className="text-orange-600 text-sm font-bold mb-2">{achievement.subtitle}</p>
+                          <p className="text-gray-600">{achievement.description}</p>
+                        </div>
                       </div>
-                      <h4 className="font-bold text-blue-900 mb-2 text-lg">{achievement.title}</h4>
-                      <p className="text-gray-600 text-sm font-medium">{achievement.subtitle}</p>
                     </div>
                   ))}
                 </div>
@@ -223,7 +451,8 @@ export default function LeadershipPage() {
                       </p>
                       <p className="text-gray-500 text-sm mb-4 font-medium">June 27, 2024</p>
                       <p className="text-gray-600 leading-relaxed">
-                        Evaluating Risks and Benefits in modern cloud architectures.
+                        Comprehensive evaluation of risks and benefits in modern cloud architectures, providing frameworks 
+                        for secure cloud adoption in enterprise environments.
                       </p>
                     </div>
                   </div>
@@ -235,64 +464,122 @@ export default function LeadershipPage() {
                       <MdMic className="w-8 h-8 text-white" />
                     </div>
                     <div>
-                      <h4 className="font-bold text-orange-900 mb-2 text-xl">Speaking Engagements</h4>
-                      <p className="text-gray-700 leading-relaxed">
-                        Regular keynote and panel speaker on AI and cybersecurity topics at international conferences and industry events.
+                      <h4 className="font-bold text-orange-900 mb-3 text-xl">Speaking Engagements</h4>
+                      <p className="text-gray-700 leading-relaxed mb-4">
+                        Regular keynote and panel speaker on AI and cybersecurity topics at international conferences 
+                        and industry events, including:
                       </p>
+                      <ul className="space-y-2 text-gray-600">
+                        <li className="flex items-start gap-2">
+                          <FaCheckCircle className="w-4 h-4 text-orange-600 mt-1 flex-shrink-0" />
+                          <span>Global CISO Forum - AI Security Panel</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <FaCheckCircle className="w-4 h-4 text-orange-600 mt-1 flex-shrink-0" />
+                          <span>CyberX Global Conference - Keynote Speaker</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <FaCheckCircle className="w-4 h-4 text-orange-600 mt-1 flex-shrink-0" />
+                          <span>Industry Round Tables - Secure AI Deployment</span>
+                        </li>
+                      </ul>
                     </div>
                   </div>
                 </div>
               </div>
-
-              <button
-                onClick={() => scrollToSection('experience')}
-                className="group flex items-center gap-2 text-orange-500 font-semibold hover:gap-4 transition-all"
-              >
-                View Global Experience
-                <FaArrowRight className="w-4 h-4" />
-              </button>
             </div>
           </div>
+        </div>
+      </section>
 
-          {/* Global Leadership Experience */}
-          <div id="experience" className="mt-24 scroll-mt-20">
-            <div className="text-center mb-12">
-              <div className="mb-4">
-                <span className="text-orange-500 font-bold text-sm tracking-widest uppercase">Career Highlights</span>
-                <div className="h-1 w-20 bg-gradient-to-r from-orange-500 to-transparent mx-auto mt-2"></div>
+      {/* Global Leadership Experience */}
+      <section id="experience" className="py-24 px-4 bg-gradient-to-b from-gray-50 to-white scroll-mt-20">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-16">
+            <div className="mb-4">
+              <span className="text-orange-500 font-bold text-sm tracking-widest uppercase">Career Highlights</span>
+              <div className="h-1 w-20 bg-gradient-to-r from-orange-500 to-transparent mx-auto mt-2"></div>
+            </div>
+
+            <h3 className="text-4xl md:text-5xl font-black text-blue-900 mb-6">
+              Global Leadership Experience
+            </h3>
+            <p className="text-gray-600 text-lg max-w-2xl mx-auto">
+              Trusted by world-leading organizations across multiple continents to secure their most critical operations
+            </p>
+          </div>
+
+          <div className="space-y-6">
+            {professionalJourney.map((experience, i) => (
+              <div
+                key={i}
+                className="group bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 border-2 border-gray-100 hover:border-transparent hover:-translate-y-1 animate-fade-in-up"
+                style={{ animationDelay: `${i * 0.05}s` }}
+              >
+                <div className="flex flex-col md:flex-row gap-6 items-start">
+                  <div className={`bg-gradient-to-br ${experience.gradient} w-16 h-16 rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform shadow-lg`}>
+                    <experience.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <div className="flex-grow">
+                    <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-3">
+                      <h4 className="font-black text-blue-900 text-2xl mb-2 md:mb-0">{experience.company}</h4>
+                      <span className="text-orange-600 font-bold text-sm bg-orange-50 px-4 py-2 rounded-lg border border-orange-200 w-fit">
+                        {experience.region}
+                      </span>
+                    </div>
+                    <p className="text-gray-700 font-bold mb-3 text-lg">{experience.role}</p>
+                    <p className="text-gray-600 leading-relaxed">{experience.description}</p>
+                  </div>
+                </div>
               </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
-              <h3 className="text-4xl md:text-5xl font-black text-blue-900 mb-6">
-                Global Leadership Experience
-              </h3>
-              <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-                Trusted by world-leading organizations across multiple continents
+      {/* Why Cyberai Section */}
+      <section className="py-24 px-4 bg-white">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-16">
+            <div className="mb-4">
+              <span className="text-orange-500 font-bold text-sm tracking-widest uppercase">Our Mission</span>
+              <div className="h-1 w-20 bg-gradient-to-r from-orange-500 to-transparent mx-auto mt-2"></div>
+            </div>
+
+            <h3 className="text-4xl md:text-5xl font-black text-blue-900 mb-6">
+              Why Cyberai Exists
+            </h3>
+            <p className="text-gray-600 text-xl max-w-3xl mx-auto leading-relaxed">
+              Born from decades of experience securing the world's most regulated industries
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8">
+            <div className="bg-gradient-to-br from-blue-50 to-blue-100/50 rounded-3xl p-10 border-2 border-blue-200">
+              <MdLightbulb className="w-16 h-16 text-blue-600 mb-6" />
+              <h4 className="text-2xl font-black text-blue-900 mb-4">The Challenge We Saw</h4>
+              <p className="text-gray-700 leading-relaxed mb-4">
+                After 20 years of securing enterprise environments, one pattern became clear: organizations were being 
+                forced to choose between AI innovation and data sovereignty.
+              </p>
+              <p className="text-gray-700 leading-relaxed">
+                Existing AI solutions required sending sensitive data to external platforms, creating unacceptable risks 
+                for regulated industries. This fundamental trust gap was preventing enterprises from leveraging AI's 
+                transformative potential.
               </p>
             </div>
 
-            <div className="grid md:grid-cols-3 gap-8 *:shadow-sm">
-              {companies.map((company, i) => (
-                <div
-                  key={i}
-                  className="group bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-8 flex items-center space-x-5 hover:shadow-2xl transition-all duration-500 border-2 border-blue-100 hover:border-blue-500 hover:-translate-y-1 animate-fade-in-up"
-                  style={{ animationDelay: `${i * 0.05}s` }}
-                >
-                  <div className="bg-gradient-to-br from-blue-600 to-blue-700 rounded-xl p-4 group-hover:scale-110 transition-transform shadow-lg">
-                    <company.icon className="w-8 h-8 text-white" />
-                  </div>
-                  <span className="font-bold text-blue-900 text-lg">{company.name}</span>
-                </div>
-              ))}
-            </div>
-
-            <div className="text-center mt-12">
-              <button
-                onClick={() => scrollToSection('cta')}
-                className="group flex items-center gap-2 text-orange-500 font-semibold hover:gap-4 transition-all mx-auto text-lg"
-              >
-                Connect With Our Team
-                <FaArrowRight className="w-5 h-5" />
-              </button>
+            <div className="bg-gradient-to-br from-orange-50 to-orange-100/50 rounded-3xl p-10 border-2 border-orange-200">
+              <FaRocket className="w-16 h-16 text-orange-600 mb-6" />
+              <h4 className="text-2xl font-black text-blue-900 mb-4">Our Solution</h4>
+              <p className="text-gray-700 leading-relaxed mb-4">
+                Cyberai was founded to solve this exact problem: enable enterprises to build and deploy AI models entirely 
+                within their own infrastructure, maintaining complete data sovereignty while accessing cutting-edge capabilities.
+              </p>
+              <p className="text-gray-700 leading-relaxed">
+                We don't just understand regulatory compliance—we architect it into the foundation. Every solution is built 
+                security-first, with governance frameworks that meet the strictest global standards.
+              </p>
             </div>
           </div>
         </div>
@@ -318,11 +605,12 @@ export default function LeadershipPage() {
                 Connect with Our Leadership
               </h2>
               <p className="text-blue-200 text-xl mb-10 max-w-2xl mx-auto leading-relaxed">
-                Discuss your enterprise security and AI needs directly with our experts. Get personalized guidance for your organization.
+                Discuss your enterprise security and AI needs directly with our experts. Get personalized guidance 
+                backed by 20+ years of global experience.
               </p>
               <Link href="/contact">
                 <button className="group bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 px-12 py-5 rounded-xl font-bold text-xl transition-all transform hover:scale-105 shadow-2xl hover:shadow-orange-500/50 inline-flex items-center gap-3">
-                  Contact Us
+                  Schedule Consultation
                   <FaArrowRight className="w-5 h-5 group-hover:translate-x-2 transition-transform" />
                 </button>
               </Link>
