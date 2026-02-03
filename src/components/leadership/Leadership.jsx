@@ -269,7 +269,7 @@ export default function LeadershipPage() {
             {/* Left Column - Profile Card */}
             <div className="md:col-span-2 animate-slide-in-left">
               <div className="bg-white rounded-3xl shadow-2xl overflow-hidden sticky top-8 border-2 border-gray-100 hover:shadow-3xl transition-shadow duration-500">
-                <div className="relative bg-gray-200 h-96 flex items-center justify-center overflow-hidden group">
+                <div className="relative mt-15 bg-gray-200 h-92 flex items-center justify-center overflow-hidden group">
                   <div className="absolute inset-0 bg-gradient-to-t from-blue-900/50 to-transparent z-10"></div>
                   <img
                     src="/dr.jpg"
