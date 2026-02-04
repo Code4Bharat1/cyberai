@@ -59,7 +59,7 @@ export default function IndustriesPage() {
       icon: MdAccountBalance,
       title: "Banking & Financial Services",
       shortDesc: "Deploy private, compliant AI for financial institutions operating under strict regulatory, security and audit requirements.",
-      desc: "Financial institutions face unprecedented regulatory scrutiny while needing AI to remain competitive. Our platform enables banks and financial services firms to leverage cutting-edge AI capabilities while maintaining complete data sovereignty and regulatory compliance.",
+      desc: "Financial institutions face unprecedented regulatory scrutiny while needing AI to remain competitive. Our AI platform enables banks and financial services firms to leverage cutting-edge AI capabilities while maintaining complete data sovereignty and regulatory compliance.",
       tags: ["Data Sovereignty", "Regulatory Compliance", "Audit-Ready AI"],
       gradient: "from-blue-500 to-blue-700",
       challenges: [
@@ -88,7 +88,7 @@ export default function IndustriesPage() {
       icon: MdLocalHospital,
       title: "Healthcare & Life Sciences",
       shortDesc: "Enable AI-driven clinical and operational workflows while protecting sensitive health data.",
-      desc: "Healthcare organizations must balance innovation with patient privacy and regulatory compliance. Our platform enables AI-powered healthcare solutions that meet HIPAA, GDPR, and other health data regulations while keeping sensitive patient information secure.",
+      desc: "Healthcare organizations must balance innovation with patient privacy and regulatory compliance. Our AI platform enables AI-powered healthcare solutions that meet HIPAA, GDPR, and other health data regulations while keeping sensitive patient information secure.",
       tags: ["Patient Data Protection", "HIPAA Compliance", "Privacy-First AI"],
       gradient: "from-emerald-500 to-emerald-700",
       challenges: [
@@ -117,7 +117,7 @@ export default function IndustriesPage() {
       icon: MdBusiness,
       title: "Government & Public Sector",
       shortDesc: "Support public sector organizations with on-premise or private AI deployments.",
-      desc: "Government agencies require AI solutions that meet national security requirements, data sovereignty mandates, and public accountability standards. Our platform enables secure AI deployment that keeps citizen data within national borders and maintains full transparency.",
+      desc: "Government agencies require AI solutions that meet national security requirements, data sovereignty mandates, and public accountability standards. Our AI platform enables secure AI deployment that keeps citizen data within national borders and maintains full transparency.",
       tags: ["National Data Sovereignty", "Policy-Aligned Governance", "Secure AI Deployment"],
       gradient: "from-purple-500 to-purple-700",
       challenges: [
@@ -146,7 +146,7 @@ export default function IndustriesPage() {
       icon: MdSecurity,
       title: "Insurance",
       shortDesc: "Apply secure AI across underwriting, claims processing and compliance workflows.",
-      desc: "Insurance companies need AI to modernize operations while navigating complex regulatory requirements and protecting customer data. Our platform enables AI-powered insurance processes that maintain compliance and protect sensitive personal information.",
+      desc: "Insurance companies need AI to modernize operations while navigating complex regulatory requirements and protecting customer data. Our AI platform enables AI-powered insurance processes that maintain compliance and protect sensitive personal information.",
       tags: ["Compliance-Driven Workflows", "Risk Assessment", "Data Privacy Controls"],
       gradient: "from-orange-500 to-orange-700",
       challenges: [
@@ -175,7 +175,7 @@ export default function IndustriesPage() {
       icon: MdFactory,
       title: "Oil & Gas",
       shortDesc: "Enable secure AI adoption across exploration, operations, and asset management.",
-      desc: "Energy companies operate critical infrastructure requiring the highest levels of security while needing AI for operational efficiency. Our platform enables AI deployment that protects operational data and intellectual property while optimizing complex industrial processes.",
+      desc: "Energy companies operate critical infrastructure requiring the highest levels of security while needing AI for operational efficiency. Our AI platform enables AI deployment that protects operational data and intellectual property while optimizing complex industrial processes.",
       tags: ["Critical Infrastructure Security", "Data Privacy & Control", "Risk & Compliance Governance"],
       gradient: "from-red-500 to-red-700",
       challenges: [
@@ -204,7 +204,7 @@ export default function IndustriesPage() {
       icon: MdLocalShipping,
       title: "Logistics & Supply Chain",
       shortDesc: "Deploy privatised AI models to optimise supply chain operations and forecasting.",
-      desc: "Logistics companies need AI to optimize complex supply chains while protecting sensitive customer and operational data. Our platform enables secure AI deployment that improves efficiency without exposing competitive intelligence or customer information.",
+      desc: "Logistics companies need AI to optimize complex supply chains while protecting sensitive customer and operational data. Our AI platform enables secure AI deployment that improves efficiency without exposing competitive intelligence or customer information.",
       tags: ["Secure Workflow Automation", "Data Governance", "Controlled AI Deployment"],
       gradient: "from-indigo-500 to-indigo-700",
       challenges: [
@@ -239,7 +239,7 @@ export default function IndustriesPage() {
     },
     {
       title: "Regulatory Compliance",
-      desc: "Built-in compliance with GDPR, HIPAA, ISO 42001, and sector-specific regulations through governance frameworks",
+      desc: "Built-in compliance with GDPR, HIPAA, ISO 42001, EU AI Act, and sector-specific regulations through governance frameworks",
       icon: MdSecurity,
       gradient: "from-orange-500 to-orange-600"
     },
@@ -293,7 +293,7 @@ export default function IndustriesPage() {
           </h1>
           
           <p className="text-xl md:text-2xl text-blue-100 max-w-3xl mx-auto mb-10 animate-fade-in font-light leading-relaxed">
-            Secure, private and compliant AI solutions for regulated and data-sensitive industries
+            Private AI platform for regulated and data-sensitive industries
           </p>
 
           <div className="grid grid-cols-3 gap-6 max-w-2xl mx-auto mt-12">
@@ -324,7 +324,7 @@ export default function IndustriesPage() {
       <section className="py-20 px-4 bg-white">
         <div className="max-w-4xl mx-auto text-center animate-fade-in-up">
           <div className="inline-block mb-4">
-            <span className="text-orange-500 font-bold text-sm tracking-widest uppercase">Trusted Expertise</span>
+            <span className="text-orange-500 font-bold text-sm tracking-widest uppercase">AI Platform for Regulated Industries</span>
             <div className="h-1 w-20 bg-gradient-to-r from-orange-500 to-transparent mx-auto mt-2"></div>
           </div>
           
@@ -332,7 +332,7 @@ export default function IndustriesPage() {
             Built for Regulated Environments
           </h2>
           <p className="text-gray-600 text-lg leading-relaxed mb-8">
-            We understand the unique challenges faced by heavily regulated industries. Our platform is purpose-built to meet the stringent security, compliance, and data sovereignty requirements of sectors where data protection is paramount.
+            We understand the unique challenges faced by heavily regulated industries. Our AI platform is purpose-built to meet the stringent security, compliance, and data sovereignty requirements of sectors where data protection is paramount. Deploy private LLM and SLM solutions entirely within your infrastructure.
           </p>
 
           <div className="grid md:grid-cols-3 gap-6 mt-12">
@@ -368,7 +368,7 @@ export default function IndustriesPage() {
               Sector-Specific AI Solutions
             </h2>
             <p className="text-gray-600 text-xl max-w-2xl mx-auto">
-              Tailored security and compliance frameworks for your industry
+              Tailored AI governance frameworks for your industry
             </p>
           </div>
 
@@ -541,7 +541,7 @@ export default function IndustriesPage() {
         </div>
       </section>
 
-      {/* Why Cyberai for Regulated Industries */}
+      {/* Why cyberai for Regulated Industries */}
       <section className="py-24 px-4 bg-gradient-to-b from-gray-50 to-white">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
@@ -551,7 +551,7 @@ export default function IndustriesPage() {
             </div>
             
             <h2 className="text-4xl md:text-5xl font-black text-blue-900 mb-6">
-              Why Regulated Industries Choose Cyberai
+              Why Regulated Industries Choose cyberai
             </h2>
           </div>
 
@@ -559,14 +559,14 @@ export default function IndustriesPage() {
             {[
               {
                 icon: FaShieldAlt,
-                title: "Security-First Architecture",
-                desc: "Every component designed with security at its core—models never leave your infrastructure, ensuring complete data sovereignty.",
+                title: "Private AI Platform",
+                desc: "Every component designed with privacy at its core—models never leave your infrastructure, ensuring complete data sovereignty. Deploy our AI operating system entirely on your infrastructure.",
                 gradient: "from-orange-500 to-orange-600"
               },
               {
                 icon: MdVerifiedUser,
                 title: "Regulatory Expertise",
-                desc: "Deep knowledge of GDPR, HIPAA, ISO 42001, Basel III, and sector-specific compliance requirements built into every solution.",
+                desc: "Deep knowledge of GDPR, HIPAA, ISO 42001, EU AI Act, Basel III, and sector-specific compliance requirements built into every solution.",
                 gradient: "from-blue-500 to-blue-600"
               },
               {
@@ -616,10 +616,10 @@ export default function IndustriesPage() {
             </div>
 
             <h2 className="text-4xl md:text-5xl font-black mb-6 leading-tight">
-              Ready to Transform Your Industry with Secure AI?
+              Ready to Transform Your Industry with Private AI?
             </h2>
             <p className="text-blue-200 text-xl mb-10 max-w-2xl mx-auto leading-relaxed">
-              Partner with Cyberai to deploy compliant, private AI solutions tailored to your industry's unique regulatory requirements.
+              Partner with cyberai to deploy compliant, private AI solutions tailored to your industry's unique regulatory requirements.
             </p>
             <Link href="/contact">
               <button className="group bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 px-12 py-5 rounded-xl font-bold text-xl transition-all transform hover:scale-105 shadow-2xl hover:shadow-orange-500/50 inline-flex items-center gap-3">

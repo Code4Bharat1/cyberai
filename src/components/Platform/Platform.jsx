@@ -23,6 +23,7 @@ import {
   MdIntegrationInstructions
 } from 'react-icons/md';
 import { FaArrowRight, FaShieldAlt, FaChevronRight, FaCheck, FaNetworkWired } from 'react-icons/fa';
+import { Scale, FileText, Briefcase, Heart } from 'lucide-react';
 import Navbar from '../navbar/Navbar';
 import Footer from '../Footer/Footer';
 
@@ -46,7 +47,7 @@ export default function PlatformPage() {
     {
       icon: MdCloud,
       title: "Build Your Own AI Operating System",
-      desc: "Install a complete AI OS in your environment that grows organically—enabling agent workflows and automation on top of your base system.",
+      desc: "Deploy a complete AI platform in your environment that grows organically—enabling agent workflows and automation on top of your base system.",
       gradient: "from-blue-500 to-blue-600",
       link: "ai-os"
     },
@@ -60,7 +61,7 @@ export default function PlatformPage() {
     {
       icon: MdAutorenew,
       title: "Continuous AI Improvement",
-      desc: "Free baseline updates as AI technology matures—ensuring your models remain competitive over 3+ year timeframes.",
+      desc: "Baseline updates included as AI technology matures—ensuring your models remain competitive over 3+ year timeframes.",
       gradient: "from-purple-500 to-purple-600",
       link: "continuous-improvement"
     },
@@ -73,15 +74,15 @@ export default function PlatformPage() {
     },
     {
       icon: MdShield,
-      title: "AI Governance & Risk Management",
-      desc: "Comprehensive governance frameworks aligned with ISO 42001, GDPR, and sector-specific regulations.",
+      title: "AI Governance Built-In",
+      desc: "Comprehensive governance frameworks aligned with ISO 42001, EU AI Act, GDPR, and sector-specific regulations.",
       gradient: "from-pink-500 to-pink-600",
       link: "governance"
     },
     {
       icon: MdSecurity,
       title: "Security by Design",
-      desc: "Built-in cybersecurity controls embedded across the entire AI lifecycle, from data ingestion to deployment.",
+      desc: "Governance controls embedded across the entire AI lifecycle, from data ingestion to deployment.",
       gradient: "from-indigo-500 to-indigo-600",
       link: "security"
     }
@@ -105,7 +106,7 @@ export default function PlatformPage() {
     {
       icon: MdShield,
       title: "Secure Deployment",
-      subtitle: "Inside Client Environment",
+      subtitle: "Inside Your Environment",
       desc: "Deploy within your infrastructure with end-to-end encryption and access controls.",
       highlighted: true,
       step: "03"
@@ -123,32 +124,38 @@ export default function PlatformPage() {
     {
       name: "Banking & Financial Services",
       icon: MdAccountBalance,
-      color: "from-blue-500 to-blue-700"
+      color: "from-blue-500 to-blue-700",
+      compliance: "FCA, PRA, MiFID II"
     },
     {
       name: "Healthcare & Life Sciences",
       icon: MdHealthAndSafety,
-      color: "from-emerald-500 to-emerald-700"
+      color: "from-emerald-500 to-emerald-700",
+      compliance: "HIPAA, NHS DSP Toolkit"
     },
     {
       name: "Government & Public Sector",
       icon: MdBusiness,
-      color: "from-purple-500 to-purple-700"
+      color: "from-purple-500 to-purple-700",
+      compliance: "Government Security Classification"
+    },
+    {
+      name: "Legal Services",
+      icon: Scale,
+      color: "from-indigo-500 to-indigo-700",
+      compliance: "SRA, Law Society Standards"
     },
     {
       name: "Insurance",
       icon: MdShield,
-      color: "from-cyan-500 to-cyan-700"
+      color: "from-cyan-500 to-cyan-700",
+      compliance: "FCA, Solvency II"
     },
     {
-      name: "Oil & Gas",
-      icon: MdOilBarrel,
-      color: "from-amber-600 to-amber-800"
-    },
-    {
-      name: "Logistics & Supply Chain",
-      icon: MdLocalShipping,
-      color: "from-orange-500 to-orange-700"
+      name: "Professional Services",
+      icon: Briefcase,
+      color: "from-orange-500 to-orange-700",
+      compliance: "Sector-Specific Standards"
     }
   ];
 
@@ -157,8 +164,8 @@ export default function PlatformPage() {
       {/* Navigation */}
       <Navbar />
 
-      {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-blue-600 via-blue-700 to-indigo-800 text-white py-24 px-4 overflow-hidden">
+      {/* Hero Section - Updated positioning */}
+      <section className="relative bg-gradient-to-br from-[#1e3a8a] via-[#1e40af] to-[#3730a3] text-white py-24 px-4 overflow-hidden">
         {/* Animated Background */}
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute w-96 h-96 bg-orange-500/10 rounded-full blur-3xl -top-48 -left-48 animate-pulse"></div>
@@ -167,8 +174,8 @@ export default function PlatformPage() {
 
         <div className="max-w-6xl mx-auto text-center relative z-10">
           <div className="inline-flex items-center gap-3 bg-orange-500/20 px-6 py-3 rounded-full mb-6 border border-orange-500/30 animate-fade-in-down">
-            <MdSecurity className="w-6 h-6 text-orange-300" />
-            <span className="text-orange-300 font-semibold">Enterprise AI Platform</span>
+            <MdCloud className="w-6 h-6 text-orange-300" />
+            <span className="text-orange-300 font-semibold">Private AI Platform</span>
           </div>
 
           <h1 className="text-6xl md:text-7xl font-black mb-6 leading-tight animate-fade-in-up">
@@ -176,13 +183,13 @@ export default function PlatformPage() {
           </h1>
 
           <p className="text-xl md:text-2xl text-blue-100 max-w-4xl mx-auto mb-10 animate-fade-in font-light leading-relaxed">
-            A secure, private, and compliant AI platform for regulated industries
+            Your AI operating system deployed on your infrastructure—private, secure, and compliant for regulated industries
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-in-up" style={{animationDelay: '0.3s'}}>
             <Link href="/contact">
               <button className="group bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 px-10 py-4 rounded-xl font-bold text-lg transition-all transform hover:scale-105 shadow-2xl hover:shadow-orange-500/50 inline-flex items-center gap-3">
-                Start Secure AI Journey
+                Schedule Consultation
                 <FaArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </button>
             </Link>
@@ -204,7 +211,7 @@ export default function PlatformPage() {
         </div>
       </section>
 
-      {/* Introduction Section */}
+      {/* Introduction Section - Updated */}
       <section className="py-20 px-4 bg-white scroll-mt-20">
         <div className="max-w-4xl mx-auto animate-fade-in-up">
           <div className="text-center">
@@ -214,10 +221,10 @@ export default function PlatformPage() {
             </div>
 
             <h2 className="text-4xl md:text-5xl font-black text-blue-900 mb-6">
-              Enterprise-Grade AI Engineering
+              Private AI Platform Engineering
             </h2>
             <p className="text-gray-600 text-lg md:text-xl leading-relaxed">
-              CyberAI delivers enterprise-grade AI engineering focused on <span className="font-bold text-blue-700">security by design</span>. We specialise in building privatised LLMs, SLMs, and secure GenAI solutions that solve the critical challenges of AI governance and risk. Our platform is industry-agnostic, vendor-agnostic, and purpose-built for heavily regulated sectors.
+              CyberAI delivers an AI platform with <span className="font-bold text-blue-700">governance built-in</span>. We specialize in deploying private LLMs, SLMs, and secure GenAI solutions that address the critical challenges of data sovereignty and regulatory compliance. Our platform is industry-agnostic, vendor-agnostic, and purpose-built for heavily regulated sectors.
             </p>
           </div>
         </div>
@@ -236,7 +243,7 @@ export default function PlatformPage() {
               Core Platform Capabilities
             </h2>
             <p className="text-gray-600 text-xl max-w-3xl mx-auto animate-fade-in">
-              Everything you need to build safe, compliant AI systems
+              Everything you need to deploy compliant AI systems in your environment
             </p>
           </div>
 
@@ -267,7 +274,7 @@ export default function PlatformPage() {
         </div>
       </section>
 
-      {/* Build Your Own AI OS - NEW DETAILED SECTION */}
+      {/* Build Your Own AI OS */}
       <section id="ai-os" className="py-24 px-4 bg-white scroll-mt-20">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
@@ -279,7 +286,7 @@ export default function PlatformPage() {
               Build Your Own AI Operating System
             </h2>
             <p className="text-gray-600 text-xl max-w-3xl mx-auto">
-              Take control of your AI infrastructure—no dependency on OpenAI, Meta, or other external platforms
+              Take control of your AI infrastructure—no dependency on OpenAI, Anthropic, or other external platforms
             </p>
           </div>
 
@@ -289,8 +296,8 @@ export default function PlatformPage() {
               <div className="text-center">
                 <div className="bg-white rounded-2xl p-6 shadow-lg mb-4">
                   <MdCloud className="w-16 h-16 text-blue-600 mx-auto mb-4" />
-                  <h4 className="font-bold text-blue-900 text-lg">Base AI OS</h4>
-                  <p className="text-gray-600 text-sm mt-2">Installed in your environment</p>
+                  <h4 className="font-bold text-blue-900 text-lg">Base AI Platform</h4>
+                  <p className="text-gray-600 text-sm mt-2">Deployed in your environment</p>
                 </div>
                 <div className="text-blue-600 font-semibold">↓</div>
               </div>
@@ -360,7 +367,7 @@ export default function PlatformPage() {
         </div>
       </section>
 
-      {/* Data Sovereignty - NEW DETAILED SECTION */}
+      {/* Data Sovereignty */}
       <section id="data-sovereignty" className="py-24 px-4 bg-gradient-to-b from-gray-50 to-white scroll-mt-20">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
@@ -416,7 +423,7 @@ export default function PlatformPage() {
                   <MdCheckCircle className="w-6 h-6 text-orange-600 mt-1 flex-shrink-0" />
                   <div>
                     <h5 className="font-bold text-gray-900 mb-1">Regulatory Compliance Built-In</h5>
-                    <p className="text-gray-700">Meet GDPR, HIPAA, SOC 2, and industry-specific requirements by design. Your data governance policies are enforced at the infrastructure level—not as an afterthought.</p>
+                    <p className="text-gray-700">Meet GDPR, EU AI Act, ISO 42001, and industry-specific requirements by design. Your data governance policies are enforced at the infrastructure level—not as an afterthought.</p>
                   </div>
                 </div>
               </div>
@@ -435,7 +442,7 @@ export default function PlatformPage() {
         </div>
       </section>
 
-      {/* Continuous Improvement - NEW DETAILED SECTION */}
+      {/* Continuous Improvement */}
       <section id="continuous-improvement" className="py-24 px-4 bg-white scroll-mt-20">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
@@ -447,7 +454,7 @@ export default function PlatformPage() {
               Continuous AI Improvement
             </h2>
             <p className="text-gray-600 text-xl max-w-3xl mx-auto">
-              AI technology evolves rapidly—your models should too. Free baseline updates keep you competitive over 3+ years.
+              AI technology evolves rapidly—your models should too. Baseline updates included to keep you competitive over 3+ years.
             </p>
           </div>
 
@@ -462,20 +469,20 @@ export default function PlatformPage() {
                   {
                     icon: MdSettings,
                     title: "Initial Deployment",
-                    desc: "Custom model trained for your business",
+                    desc: "Custom platform configured for your business",
                     period: "Month 1"
                   },
                   {
                     icon: MdAutorenew,
                     title: "Baseline Updates",
-                    desc: "Free updates as AI technology advances",
+                    desc: "Included updates as AI technology advances",
                     period: "Ongoing",
                     highlighted: true
                   },
                   {
                     icon: MdTrendingUp,
                     title: "Competitive Edge",
-                    desc: "Models remain state-of-the-art over 3+ years",
+                    desc: "Platform remains state-of-the-art over 3+ years",
                     period: "Year 3+"
                   }
                 ].map((item, i) => (
@@ -494,12 +501,12 @@ export default function PlatformPage() {
             </div>
 
             <div className="mt-8 bg-white rounded-2xl p-8 shadow-lg">
-              <h4 className="font-bold text-blue-900 text-xl mb-6">What's Included in Maintenance Contracts</h4>
+              <h4 className="font-bold text-blue-900 text-xl mb-6">What's Included in Support Contracts</h4>
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="flex items-start gap-3">
                   <FaCheck className="w-5 h-5 text-purple-600 mt-1 flex-shrink-0" />
                   <div>
-                    <span className="font-semibold text-gray-900">Model Architecture Updates</span>
+                    <span className="font-semibold text-gray-900">Platform Architecture Updates</span>
                     <p className="text-gray-600 text-sm">As foundation model technology improves, we upgrade your base architecture</p>
                   </div>
                 </div>
@@ -521,7 +528,7 @@ export default function PlatformPage() {
                   <FaCheck className="w-5 h-5 text-purple-600 mt-1 flex-shrink-0" />
                   <div>
                     <span className="font-semibold text-gray-900">Regulatory Updates</span>
-                    <p className="text-gray-600 text-sm">Ensure compliance as regulations evolve (GDPR, AI Act, etc.)</p>
+                    <p className="text-gray-600 text-sm">Ensure compliance as regulations evolve (EU AI Act, GDPR, etc.)</p>
                   </div>
                 </div>
               </div>
@@ -531,7 +538,7 @@ export default function PlatformPage() {
           <div className="bg-blue-900 text-white p-8 rounded-2xl text-center">
             <h4 className="text-2xl font-bold mb-3">Long-Term Investment Protection</h4>
             <p className="text-blue-100 text-lg max-w-2xl mx-auto">
-              Your AI models remain competitive and secure for 3+ years—protecting your investment as the technology landscape evolves.
+              Your AI platform remains competitive and secure for 3+ years—protecting your investment as the technology landscape evolves.
             </p>
           </div>
 
@@ -547,12 +554,12 @@ export default function PlatformPage() {
         </div>
       </section>
 
-      {/* MCP Servers & A2A Framework - NEW DETAILED SECTION */}
+      {/* MCP Servers & A2A Framework */}
       <section id="integration" className="py-24 px-4 bg-gradient-to-b from-gray-50 to-white scroll-mt-20">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <div className="inline-block mb-4">
-              <span className="text-orange-500 font-bold text-sm tracking-widest uppercase">Secured Integration</span>
+              <span className="text-orange-500 font-bold text-sm tracking-widest uppercase">Secure Integration</span>
               <div className="h-1 w-20 bg-gradient-to-r from-orange-500 to-transparent mx-auto mt-2"></div>
             </div>
             <h2 className="text-5xl md:text-6xl font-black text-blue-900 mb-6">
@@ -600,7 +607,7 @@ export default function PlatformPage() {
                 <div className="p-4 bg-green-50 rounded-xl">
                   <h5 className="font-bold text-gray-900 mb-2">The Challenge</h5>
                   <p className="text-gray-700 text-sm">
-                    Most companies will have 5-6 specialized AI tools. Without coordination, you get conflicting answers, duplicated work, and integration chaos.
+                    Most enterprises deploy 5-6 specialized AI tools. Without coordination, you get conflicting answers, duplicated work, and integration chaos.
                   </p>
                 </div>
                 <div className="p-4 bg-green-50 rounded-xl">
@@ -654,7 +661,7 @@ export default function PlatformPage() {
               Platform Architecture
             </h2>
             <p className="text-gray-600 text-xl max-w-2xl mx-auto animate-fade-in">
-              A secure end-to-end pipeline deployed in your environment
+              A secure end-to-end deployment in your environment
             </p>
           </div>
 
@@ -717,7 +724,7 @@ export default function PlatformPage() {
               Built for Regulated Industries
             </h2>
             <p className="text-gray-600 text-xl max-w-2xl mx-auto animate-fade-in">
-              Proven solutions for sectors where data security is non-negotiable
+              Proven solutions for sectors where data sovereignty is non-negotiable
             </p>
           </div>
 
@@ -734,17 +741,22 @@ export default function PlatformPage() {
                 <h3 className="text-xl font-bold text-blue-900 mb-3 group-hover:text-orange-500 transition-colors">
                   {industry.name}
                 </h3>
-                <p className="text-gray-600 leading-relaxed">
-                  Secure AI solutions compliant with industry-specific regulations and data privacy requirements.
+                <p className="text-gray-600 leading-relaxed mb-4">
+                  Private AI platform compliant with industry-specific regulations and data privacy requirements.
                 </p>
+                <div className="pt-3 border-t border-gray-200">
+                  <span className="text-xs font-semibold text-orange-600 uppercase tracking-wide">
+                    {industry.compliance}
+                  </span>
+                </div>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="relative bg-gradient-to-br from-blue-900 via-blue-800 to-slate-900 text-white py-24 px-4 overflow-hidden">
+      {/* CTA Section - Updated */}
+      <section className="relative bg-gradient-to-br from-[#1e3a8a] via-[#1e40af] to-[#3730a3] text-white py-24 px-4 overflow-hidden">
         {/* Animated Background */}
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute w-96 h-96 bg-orange-500/10 rounded-full blur-3xl top-0 right-0 animate-pulse"></div>
@@ -754,24 +766,32 @@ export default function PlatformPage() {
         <div className="max-w-5xl mx-auto relative z-10 text-center animate-fade-in-up">
           <div className="inline-flex items-center gap-3 bg-orange-500/20 px-6 py-3 rounded-full mb-8 border border-orange-500/30">
             <MdShield className="w-6 h-6 text-orange-300" />
-            <span className="text-orange-300 font-semibold">Secure Your AI Journey</span>
+            <span className="text-orange-300 font-semibold">Deploy Private AI</span>
           </div>
 
           <h2 className="text-4xl md:text-5xl font-black mb-6 leading-tight">
-            Build Secure AI Inside Your Environment
+            Build Your AI Platform Inside Your Environment
           </h2>
           <p className="text-xl text-blue-200 max-w-2xl mx-auto mb-10 leading-relaxed">
-            Contact us to discuss your secure AI implementation strategy
+            Schedule a consultation to discuss your private AI deployment strategy
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Link href="/contact">
               <button className="group bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 px-12 py-5 rounded-xl font-bold text-xl transition-all transform hover:scale-105 shadow-2xl hover:shadow-orange-500/50 inline-flex items-center gap-3">
-                Schedule a Security Briefing
+                Schedule Consultation
                 <MdArrowForward className="w-6 h-6 group-hover:translate-x-2 transition-transform" />
               </button>
             </Link>
+            <a href="https://wa.me/447554898543" target="_blank" rel="noopener noreferrer">
+              <button className="border-2 border-white/50 backdrop-blur-sm hover:bg-white hover:text-blue-900 px-12 py-5 rounded-xl font-bold text-xl transition-all hover:scale-105">
+                WhatsApp Us
+              </button>
+            </a>
           </div>
+          <p className="text-blue-300 text-sm mt-6">
+            Or email us at <a href="mailto:inquiries@cyberaiact.com" className="underline hover:text-white">inquiries@cyberaiact.com</a>
+          </p>
         </div>
       </section>
 

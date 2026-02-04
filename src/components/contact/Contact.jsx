@@ -83,8 +83,8 @@ ${formData.message}
     // Encode the message for URL
     const encodedMessage = encodeURIComponent(whatsappMessage);
     
-    // WhatsApp number
-    const whatsappNumber = '447554898543';
+    // WhatsApp business number - REPLACE WITH YOUR BUSINESS NUMBER
+    const whatsappNumber = 'YOUR_BUSINESS_WHATSAPP_NUMBER'; // Replace with actual business number
     
     // Create WhatsApp URL
     const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
@@ -116,7 +116,7 @@ ${formData.message}
     {
       icon: MdBusiness,
       title: "Company Name",
-      details: "Cyberai Technologies Ltd",
+      details: "cyberai Technologies Ltd",
       gradient: "from-blue-500 to-blue-600"
     },
     {
@@ -128,16 +128,16 @@ ${formData.message}
     {
       icon: MdPhone,
       title: "Phone",
-      details: "+44 7554 898543",
+      details: "+447554898543", // REPLACE WITH BUSINESS NUMBER
       gradient: "from-purple-500 to-purple-600",
-      link: "tel:+447554898543"
+      link: "tel:+447554898543" // REPLACE WITH BUSINESS NUMBER
     },
     {
       icon: MdEmail,
       title: "Email",
-      details: "ddattawala@cyberaitechs.com",
+      details: "inquiries@cyberaiact.com",
       gradient: "from-green-500 to-green-600",
-      link: "mailto:ddattawala@cyberaitechs.com"
+      link: "mailto:inquiries@cyberaiact.com"
     },
     {
       icon: MdLanguage,
@@ -154,7 +154,7 @@ ${formData.message}
       title: "WhatsApp Chat",
       description: "Get instant responses via WhatsApp",
       action: "Chat Now",
-      link: "https://wa.me/447554898543",
+      link: "https://wa.me/447554898543", // REPLACE WITH BUSINESS NUMBER
       gradient: "from-green-500 to-green-600",
       featured: true
     },
@@ -171,7 +171,7 @@ ${formData.message}
       title: "Email Us",
       description: "Send us a detailed inquiry",
       action: "Send Email",
-      link: "mailto:ddattawala@cyberaitechs.com",
+      link: "mailto:inquiries@cyberaiact.com",
       gradient: "from-purple-500 to-purple-600"
     },
     {
@@ -179,7 +179,7 @@ ${formData.message}
       title: "LinkedIn",
       description: "Connect with us professionally",
       action: "Connect",
-      link: "https://www.linkedin.com/company/cyberai-tech",
+      link: "https://www.linkedin.com/company/YOUR_COMPANY_VANITY_URL", // REPLACE WITH COMPANY LINKEDIN URL
       gradient: "from-indigo-500 to-indigo-600"
     }
   ];
@@ -195,9 +195,9 @@ ${formData.message}
   ];
 
   const inquiryTypes = [
-    "AI Readiness Assessment",
+    "AI Platform Consultation",
     "Custom AI Development",
-    "AI Security & Governance",
+    "AI Governance & Compliance",
     "General Inquiry",
     "Partnership Opportunity"
   ];
@@ -244,11 +244,11 @@ ${formData.message}
             </div>
 
             <h1 className="text-6xl md:text-7xl font-black mb-6 leading-tight animate-fade-in-up">
-              Contact <span className="bg-gradient-to-r from-orange-400 to-orange-600 bg-clip-text text-transparent">Cyberai</span>
+              Contact <span className="bg-gradient-to-r from-orange-400 to-orange-600 bg-clip-text text-transparent">cyberai</span>
             </h1>
             
             <p className="text-xl md:text-2xl text-blue-100 max-w-3xl mx-auto mb-10 animate-fade-in font-light leading-relaxed">
-              Let's work together to secure your enterprise AI future
+              Let's discuss how private AI can transform your enterprise
             </p>
 
             <div className="grid md:grid-cols-3 gap-6 max-w-3xl mx-auto">
@@ -346,7 +346,7 @@ ${formData.message}
                   Get In Touch
                 </h2>
                 <p className="text-gray-600 text-lg leading-relaxed mb-8">
-                  Ready to transform your enterprise with secure AI? We're here to help you navigate your journey 
+                  Ready to transform your enterprise with private AI? We're here to help you navigate your journey 
                   from assessment to deployment.
                 </p>
               </div>
@@ -386,7 +386,7 @@ ${formData.message}
                 </a>
 
                 <a
-                  href="mailto:ddattawala@cyberaitechs.com"
+                  href="mailto:inquiries@cyberaiact.com"
                   className="group flex items-center justify-center gap-3 bg-white border-2 border-blue-200 hover:border-blue-500 text-blue-900 px-8 py-4 rounded-xl font-bold text-lg transition-all transform hover:scale-105 shadow-lg hover:shadow-xl"
                 >
                   <MdEmail className="w-6 h-6" />
@@ -541,7 +541,7 @@ ${formData.message}
                         name="message"
                         value={formData.message}
                         onChange={handleChange}
-                        placeholder="Tell us about your AI security needs and challenges..."
+                        placeholder="Tell us about your AI and data sovereignty needs..."
                         rows="4"
                         className="w-full px-5 py-4 rounded-xl border-2 border-gray-200 focus:border-orange-500 focus:ring-4 focus:ring-orange-100 outline-none transition-all resize-none font-medium"
                         required
@@ -611,7 +611,7 @@ ${formData.message}
               {
                 step: "04",
                 title: "Partnership",
-                desc: "Begin your secure AI journey with expert guidance",
+                desc: "Begin your private AI journey with expert guidance",
                 icon: FaShieldAlt,
                 gradient: "from-green-500 to-green-600"
               }
@@ -645,10 +645,10 @@ ${formData.message}
 
         <div className="max-w-4xl mx-auto text-center relative z-10 animate-fade-in-up">
           <h2 className="text-4xl md:text-5xl font-black mb-6 leading-tight">
-            Let's Build Secure and Compliant AI Together
+            Let's Build Private and Compliant AI Together
           </h2>
           <p className="text-blue-200 text-xl mb-8 leading-relaxed">
-            Ready to deploy enterprise-grade AI inside your secure environment?
+            Ready to deploy enterprise-grade AI within your secure infrastructure?
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a

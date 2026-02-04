@@ -28,8 +28,8 @@ export default function AboutPage() {
       {/* Navigation */}
       <Navbar />
 
-      {/* Hero Section */}
-      <section id="hero" className="relative bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white py-32 px-4 overflow-hidden">
+      {/* Hero Section - Updated positioning */}
+      <section id="hero" className="relative bg-gradient-to-br from-[#1e3a8a] via-[#1e40af] to-[#3730a3] text-white py-32 px-4 overflow-hidden">
         {/* Animated Background Elements */}
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute w-96 h-96 bg-blue-500/10 rounded-full blur-3xl -top-48 -left-48 animate-pulse"></div>
@@ -39,7 +39,7 @@ export default function AboutPage() {
         <div className="max-w-6xl mx-auto text-center relative z-10">
           <div className="inline-block mb-6 animate-fade-in-down">
             <span className="bg-orange-500/20 text-orange-300 px-4 py-2 rounded-full text-sm font-semibold border border-orange-500/30">
-              Enterprise AI & Cybersecurity
+              Private AI Platform for Regulated Industries
             </span>
           </div>
 
@@ -48,7 +48,7 @@ export default function AboutPage() {
           </h1>
           
           <p className="text-xl md:text-2xl text-blue-200 max-w-3xl mx-auto animate-fade-in font-light leading-relaxed">
-            Built by cybersecurity leaders solving AI's biggest trust gap
+            Building secure AI operating systems for industries where compliance isn't optional
           </p>
         </div>
 
@@ -60,7 +60,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Company Overview Section */}
+      {/* Company Overview Section - Updated */}
       <section id="overview" className="py-24 px-4 scroll-mt-20">
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 gap-16 items-center">
@@ -71,15 +71,15 @@ export default function AboutPage() {
               </div>
 
               <h2 className="text-5xl md:text-6xl font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-900 to-blue-600 leading-tight">
-                Company Overview
+                Your AI Operating System
               </h2>
               
               <p className="text-gray-600 text-lg leading-relaxed">
-                CyberAI Technologies Ltd delivers enterprise-grade AI and cybersecurity solutions designed specifically for today's digital landscape. We specialize in building secure environments for Privatised LLMs (Large Language Models), SLMs (Small Language Models), and GenAI technologies.
+                CyberAI Technologies Ltd is an AI platform company specializing in Private LLMs (Large Language Models), SLMs (Small Language Models), and GenAI technologies deployed on your infrastructure. We're not a traditional SaaS platform—we're your AI layer, custom-built and deployed to meet your exact requirements.
               </p>
               
               <p className="text-gray-600 text-lg leading-relaxed">
-                Our approach is strictly industry-agnostic and vendor-agnostic, allowing us to provide unbiased, best-in-class infrastructure tailored to your specific needs. We pride ourselves on our ability to build robust AI solutions for heavily regulated industries where security and compliance are non-negotiable.
+                Our approach is strictly industry-agnostic and vendor-agnostic, providing unbiased, best-in-class infrastructure with built-in governance for heavily regulated industries. We deliver secure AI solutions where compliance, data sovereignty, and security are non-negotiable.
               </p>
               
               <div className="flex flex-wrap gap-6 pt-4">
@@ -87,13 +87,13 @@ export default function AboutPage() {
                   <div className="bg-orange-500 p-2 rounded-lg group-hover:scale-110 transition-transform">
                     <BiBuildings className="w-6 h-6 text-white" />
                   </div>
-                  <span className="font-bold text-blue-900 text-lg">Enterprise Grade</span>
+                  <span className="font-bold text-blue-900 text-lg">AI Platform</span>
                 </div>
                 <div className="flex items-center space-x-3 bg-gradient-to-r from-blue-50 to-blue-100/50 px-6 py-3 rounded-xl hover:shadow-lg transition-shadow group">
                   <div className="bg-blue-500 p-2 rounded-lg group-hover:scale-110 transition-transform">
                     <MdSecurity className="w-6 h-6 text-white" />
                   </div>
-                  <span className="font-bold text-blue-900 text-lg">Security First</span>
+                  <span className="font-bold text-blue-900 text-lg">Governance Built-In</span>
                 </div>
               </div>
 
@@ -124,7 +124,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Market Opportunity Section - NEW */}
+      {/* Market Opportunity Section */}
       <section id="market" className="bg-gradient-to-b from-gray-50 to-white py-24 px-4 scroll-mt-20">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
@@ -147,7 +147,7 @@ export default function AboutPage() {
               </div>
               <h3 className="text-2xl font-bold text-blue-900 mb-3">Global Reach</h3>
               <p className="text-gray-600">
-                Regulatory requirements span banking, healthcare, and government sectors across all major markets
+                Regulatory requirements span banking, healthcare, and government sectors across UK, EU, and international markets
               </p>
             </div>
 
@@ -157,7 +157,7 @@ export default function AboutPage() {
               </div>
               <h3 className="text-2xl font-bold text-blue-900 mb-3">Proven Technology</h3>
               <p className="text-gray-600">
-                Enterprise AI is no longer experimental—it's an established market with clear compliance needs
+                Enterprise AI is no longer experimental—it's an established market with clear compliance needs and ROI
               </p>
             </div>
 
@@ -175,10 +175,10 @@ export default function AboutPage() {
           <div className="bg-gradient-to-br from-blue-50 to-blue-100/50 border-l-4 border-blue-500 p-10 rounded-r-2xl">
             <h3 className="text-2xl font-bold text-blue-900 mb-4">Why This Matters</h3>
             <p className="text-gray-700 text-lg leading-relaxed mb-4">
-              Organizations investing in CyberAI solutions aren't gambling on emerging technology—they're adopting proven infrastructure that addresses real compliance gaps in an established market.
+              Organizations deploying CyberAI solutions aren't gambling on emerging technology—they're adopting proven infrastructure that addresses real compliance gaps in an established market.
             </p>
             <p className="text-gray-700 text-lg leading-relaxed">
-              The total addressable market for secure, private AI in regulated industries represents a significant opportunity as enterprises recognize the limitations of public AI models for sensitive data.
+              The total addressable market for secure, private AI in regulated industries represents significant opportunity as enterprises recognize the limitations of public AI models for sensitive data.
             </p>
           </div>
 
@@ -194,7 +194,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* AI Risks Section - NEW */}
+      {/* AI Risks Section */}
       <section id="risks" className="py-24 px-4 scroll-mt-20">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
@@ -273,7 +273,7 @@ export default function AboutPage() {
                   <div>
                     <h4 className="font-bold text-xl mb-2">Trained Only on Your Data</h4>
                     <p className="text-blue-200">
-                      Limited parameter models (1B parameters) trained exclusively on your domain data—dramatically reducing hallucinations
+                      Focused models (1B parameters) trained exclusively on your domain data—dramatically reducing hallucinations
                     </p>
                   </div>
                 </div>
@@ -287,7 +287,7 @@ export default function AboutPage() {
                   <div>
                     <h4 className="font-bold text-xl mb-2">Faster, More Accurate Responses</h4>
                     <p className="text-blue-200">
-                      Focused models deliver higher accuracy for your specific use cases versus broad-purpose public LLMs
+                      Domain-specific models deliver higher accuracy for your use cases versus broad-purpose public LLMs
                     </p>
                   </div>
                 </div>
@@ -308,7 +308,7 @@ export default function AboutPage() {
 
             <div className="mt-10 p-6 bg-white/10 rounded-xl border border-white/20">
               <p className="text-blue-100 text-center text-lg">
-                <span className="font-bold text-white">Key Advantage:</span> Our 1-billion parameter models trained on your specific data vastly outperform ChatGPT's broader models for your use cases—with significantly reduced risk of hallucination and bias.
+                <span className="font-bold text-white">Key Advantage:</span> Our 1-billion parameter models trained on your specific data vastly outperform broader models for your use cases—with significantly reduced risk of hallucination and bias.
               </p>
             </div>
           </div>
@@ -318,14 +318,14 @@ export default function AboutPage() {
               onClick={() => scrollToSection('journey')}
               className="group flex items-center gap-2 text-orange-500 font-semibold hover:gap-4 transition-all mx-auto"
             >
-              See Our Customer Journey
+              See Our Deployment Process
               <FaArrowRight className="w-4 h-4" />
             </button>
           </div>
         </div>
       </section>
 
-      {/* Customer Journey Section - NEW */}
+      {/* Customer Journey Section */}
       <section id="journey" className="bg-gradient-to-b from-gray-50 to-white py-24 px-4 scroll-mt-20">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
@@ -334,10 +334,10 @@ export default function AboutPage() {
               <div className="h-1 w-20 bg-gradient-to-r from-orange-500 to-transparent mx-auto mt-2"></div>
             </div>
             <h2 className="text-5xl md:text-6xl font-black text-blue-900 mb-6">
-              Quick AI Model Development<br/>For Your Business
+              Rapid AI Platform Deployment<br/>For Your Business
             </h2>
             <p className="text-gray-600 text-lg max-w-3xl mx-auto">
-              From initial consultation to production deployment, our streamlined process delivers custom AI solutions in 4-12 weeks.
+              From initial consultation to production deployment, our streamlined process delivers custom AI solutions in 90 days.
             </p>
           </div>
 
@@ -420,13 +420,13 @@ export default function AboutPage() {
               <div>
                 <h4 className="font-bold text-blue-900 mb-2">Fast Time to Value</h4>
                 <p className="text-gray-700">
-                  Most projects move from concept to production in 4-12 weeks—dramatically faster than traditional enterprise software implementations.
+                  Most projects move from concept to production in 90 days—dramatically faster than traditional enterprise implementations.
                 </p>
               </div>
               <div>
                 <h4 className="font-bold text-blue-900 mb-2">Built for Your Business</h4>
                 <p className="text-gray-700">
-                  Every model is custom-trained on your data, workflows, and requirements—not a generic solution adapted to your needs.
+                  Every platform deployment is custom-configured with your data, workflows, and requirements—not a generic solution.
                 </p>
               </div>
             </div>
@@ -457,27 +457,27 @@ export default function AboutPage() {
           </h2>
           
           <p className="text-gray-600 text-lg mb-16 max-w-3xl mx-auto animate-fade-in">
-            We combine cutting-edge agentic AI technologies with globally recognised standards and applicable regulatory landscapes.
+            We combine cutting-edge AI technologies with globally recognized standards and regulatory frameworks.
           </p>
           
-          <div className="grid md:grid-cols-3 gap-10 *:shadow-sm">
+          <div className="grid md:grid-cols-3 gap-10">
             {[
               {
                 icon: MdSecurity,
                 title: "Security",
-                desc: "Security is at the core of every architecture we build. We ensure your AI models are protected against adversarial attacks, prompt injection, and unauthorized access from day one.",
+                desc: "Security governance is built into every architecture. We ensure your AI models are protected against adversarial attacks, prompt injection, and unauthorized access from deployment.",
                 gradient: "from-orange-500 to-orange-600"
               },
               {
                 icon: MdVisibility,
                 title: "Privacy",
-                desc: "Data sovereignty is paramount. We design solutions where your data never leaves your environment, ensuring complete privacy for sensitive enterprise information.",
+                desc: "Data sovereignty is paramount. We design solutions where your data never leaves your environment, ensuring complete privacy and control over sensitive enterprise information.",
                 gradient: "from-blue-500 to-blue-600"
               },
               {
                 icon: MdDescription,
                 title: "Compliance",
-                desc: "We navigate complex regulatory landscapes to ensure your AI deployments meet all industry standards, from GDPR to sector-specific financial and healthcare regulations.",
+                desc: "We navigate complex regulatory landscapes to ensure your AI deployments meet all industry standards, from GDPR and EU AI Act to sector-specific regulations.",
                 gradient: "from-purple-500 to-purple-600"
               }
             ].map((item, i) => (
@@ -529,14 +529,15 @@ export default function AboutPage() {
               </div>
               
               <p className="text-gray-800 mb-8 font-bold text-xl leading-relaxed">
-                Public AI models are not secure or compliant for sensitive data.
+                Public AI models cannot meet security and compliance requirements for sensitive data.
               </p>
               
               <div className="space-y-5">
                 {[
                   "High risk of data leakage via public APIs",
-                  "Lack of control over model behavior",
-                  "Regulatory non-compliance for confidential data"
+                  "Limited control over model behavior and outputs",
+                  "Regulatory non-compliance for confidential data",
+                  "Generic models lack industry-specific expertise"
                 ].map((item, i) => (
                   <div 
                     key={i} 
@@ -562,14 +563,15 @@ export default function AboutPage() {
               </div>
               
               <p className="text-gray-800 mb-8 font-bold text-xl leading-relaxed">
-                Privatised LLMs and SLMs running safely inside your environment.
+                Private LLMs and SLMs running securely inside your environment with built-in governance.
               </p>
               
               <div className="space-y-5">
                 {[
-                  "Deployed inside private cloud or on-prem",
+                  "Deployed on your private cloud or on-premises",
                   "Full ownership of data and model weights",
-                  "Bespoke development for specific use cases"
+                  "Custom configuration for specific use cases",
+                  "Industry-trained models with domain expertise"
                 ].map((item, i) => (
                   <div 
                     key={i} 
@@ -599,7 +601,7 @@ export default function AboutPage() {
       </section>
 
       {/* Why CyberAI Technologies Section */}
-      <section id="why-cyberai" className="relative bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white py-24 px-4 overflow-hidden scroll-mt-20">
+      <section id="why-cyberai" className="relative bg-gradient-to-br from-[#1e3a8a] via-[#1e40af] to-[#3730a3] text-white py-24 px-4 overflow-hidden scroll-mt-20">
         {/* Animated Background */}
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute w-96 h-96 bg-orange-500/10 rounded-full blur-3xl top-0 right-0 animate-pulse"></div>
@@ -617,7 +619,7 @@ export default function AboutPage() {
               Why CyberAI Technologies?
             </h2>
             <p className="text-blue-200 text-xl font-light animate-fade-in">
-              We bridge the gap between innovation and security.
+              We bridge the gap between AI innovation and enterprise security requirements.
             </p>
           </div>
           
@@ -625,26 +627,26 @@ export default function AboutPage() {
             {[
               {
                 icon: MdShield,
-                title: "Security-First AI",
-                desc: "Engineering that puts defense and resilience at the forefront of development.",
+                title: "Governance-First AI",
+                desc: "Security and compliance frameworks built into the platform architecture from day one.",
                 color: "from-orange-500 to-orange-600"
               },
               {
                 icon: MdBusiness,
                 title: "Governance Experts",
-                desc: "Deep expertise in AI governance, risk management, and ethical frameworks.",
+                desc: "Deep expertise in AI governance, risk management, and ethical frameworks for regulated industries.",
                 color: "from-blue-500 to-blue-600"
               },
               {
                 icon: MdAccountBalance,
                 title: "Regulated Industries",
-                desc: "Specialized in banking, healthcare, and sectors with strict compliance needs.",
+                desc: "Specialized in banking, healthcare, legal, and government sectors with strict compliance needs.",
                 color: "from-purple-500 to-purple-600"
               },
               {
                 icon: MdLayers,
                 title: "Vendor Agnostic",
-                desc: "Flexible delivery model that adapts to your existing tech stack.",
+                desc: "Flexible platform model that integrates with your existing tech stack and infrastructure.",
                 color: "from-green-500 to-green-600"
               }
             ].map((item, i) => (
@@ -674,7 +676,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* CTA Section */}
+      {/* CTA Section - Updated contact info */}
       <section id="cta" className="py-24 px-4 bg-white scroll-mt-20">
         <div className="max-w-5xl mx-auto">
           <div className="bg-gradient-to-br from-blue-900 via-blue-800 to-slate-900 text-white p-16 rounded-3xl text-center shadow-2xl relative overflow-hidden animate-fade-in-up">
@@ -686,17 +688,27 @@ export default function AboutPage() {
 
             <div className="relative z-10">
               <h2 className="text-4xl md:text-5xl font-black mb-6">
-                Ready to Secure Your AI Future?
+                Ready to Deploy Private AI?
               </h2>
               <p className="text-blue-200 text-xl mb-10 max-w-2xl mx-auto leading-relaxed">
-                Partner with CyberAI for safe, compliant, and powerful AI solutions tailored to your industry.
+                Schedule a consultation to discuss your AI requirements and compliance needs.
               </p>
-              <Link href="/contact">
-                <button className="group bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 px-12 py-5 rounded-xl font-bold text-xl transition-all transform hover:scale-105 shadow-2xl hover:shadow-orange-500/50 inline-flex items-center gap-3">
-                  Get In Touch
-                  <FaArrowRight className="w-5 h-5 group-hover:translate-x-2 transition-transform" />
-                </button>
-              </Link>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link href="/contact">
+                  <button className="group bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 px-12 py-5 rounded-xl font-bold text-xl transition-all transform hover:scale-105 shadow-2xl hover:shadow-orange-500/50 inline-flex items-center gap-3">
+                    Schedule Consultation
+                    <FaArrowRight className="w-5 h-5 group-hover:translate-x-2 transition-transform" />
+                  </button>
+                </Link>
+                <a href="https://wa.me/447554898543" target="_blank" rel="noopener noreferrer">
+                  <button className="border-2 border-white/50 backdrop-blur-sm hover:bg-white hover:text-blue-900 px-12 py-5 rounded-xl font-bold text-xl transition-all hover:scale-105">
+                    WhatsApp Us
+                  </button>
+                </a>
+              </div>
+              <p className="text-blue-300 text-sm mt-6">
+                Or email us at <a href="mailto:inquiries@cyberaiact.com" className="underline hover:text-white">inquiries@cyberaiact.com</a>
+              </p>
             </div>
           </div>
         </div>

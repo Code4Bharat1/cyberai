@@ -14,12 +14,12 @@ export default function Footer() {
       {/* Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none opacity-30">
         <div className="absolute w-96 h-96 bg-orange-500/10 rounded-full blur-3xl -top-48 -left-48 animate-pulse"></div>
-        <div className="absolute w-96 h-96 bg-blue-500/10 rounded-full blur-3xl -bottom-48 -right-48 animate-pulse" style={{animationDelay: '1s'}}></div>
+        <div className="absolute w-96 h-96 bg-blue-500/10 rounded-full blur-3xl -bottom-48 -right-48 animate-pulse" style={{ animationDelay: '1s' }}></div>
       </div>
 
       <div className="max-w-7xl mx-auto px-6 py-12 relative z-10">
         <div className="grid md:grid-cols-4 gap-8 pb-8 border-b border-white/10">
-          
+
           {/* Column 1 - Company Info */}
           <div className="md:col-span-1">
             <Link href="/" className="inline-block mb-4">
@@ -27,7 +27,7 @@ export default function Footer() {
                 <div className="relative">
                   <Image
                     src="/12.png"
-                    alt="CyberAI Logo"
+                    alt="cyberai Logo"
                     width={48}
                     height={48}
                     className="rounded-lg"
@@ -43,19 +43,19 @@ export default function Footer() {
                 </div>
               </div>
             </Link>
-            
+
             <h3 className="text-orange-400 font-semibold text-sm mb-3 leading-snug">
-              Making Cybersecurity & AI<br />Simple and Affordable
+              Private AI Platform for<br />Regulated Industries
             </h3>
-            
+
             <p className="text-gray-400 text-sm leading-relaxed mb-6">
-              Enterprise-grade AI and cybersecurity solutions for regulated industries.
+              Deploy enterprise-grade AI entirely within your secure infrastructure.
             </p>
 
             {/* Social Links */}
             <div className="flex space-x-2">
               {[
-                { icon: FaLinkedin, href: "https://www.linkedin.com/company/cyberaitechs", label: "LinkedIn" },
+                { icon: FaLinkedin, href: "https://www.linkedin.com/company/cyberai-technologies-ltd/", label: "LinkedIn" },
                 { icon: FaTwitter, href: "https://twitter.com/cyberaitechs", label: "Twitter" },
                 { icon: FaGithub, href: "https://github.com/cyberaitechs", label: "GitHub" },
               ].map((social, i) => (
@@ -80,14 +80,14 @@ export default function Footer() {
               {[
                 { name: 'Home', href: '/' },
                 { name: 'About', href: '/about' },
-                { name: 'Privatised LLMs', href: '/privatised-llms' },
+                { name: 'Industries', href: '/industries' },
                 { name: 'Services', href: '/services' },
                 { name: 'Leadership', href: '/leadership' },
                 { name: 'Contact', href: '/contact' }
               ].map((link, i) => (
                 <li key={i}>
-                  <Link 
-                    href={link.href} 
+                  <Link
+                    href={link.href}
                     className="text-gray-400 hover:text-orange-400 transition-colors duration-200 text-sm inline-block"
                   >
                     {link.name}
@@ -111,34 +111,34 @@ export default function Footer() {
                 </div>
               </div>
 
-              <a 
-                href="tel:+447554898543" 
+              <a
+                href="tel:+447554898543"
                 className="flex items-center space-x-3 group"
               >
                 <div className="bg-orange-500/20 p-2 rounded-md group-hover:bg-orange-500 transition-colors">
                   <MdPhone className="w-4 h-4 text-orange-400 group-hover:text-white flex-shrink-0 transition-colors" />
                 </div>
                 <span className="text-gray-400 hover:text-orange-400 transition-colors text-sm">
-                  +44 7554898543
+                  +447554898543
                 </span>
               </a>
 
-              <a 
-                href="mailto:ddattawala@cyberaitechs.com" 
+              <a
+                href="mailto:inquiries@cyberaiact.com"
                 className="flex items-center space-x-3 group"
               >
                 <div className="bg-orange-500/20 p-2 rounded-md group-hover:bg-orange-500 transition-colors">
                   <MdEmail className="w-4 h-4 text-orange-400 group-hover:text-white flex-shrink-0 transition-colors" />
                 </div>
                 <span className="text-gray-400 hover:text-orange-400 transition-colors break-all text-sm">
-                  ddattawala@cyberaitechs.com
+                  inquiries@cyberaiact.com
                 </span>
               </a>
 
-              <a 
-                href="https://www.cyberaitechs.com" 
-                target="_blank" 
-                rel="noopener noreferrer" 
+              <a
+                href="https://www.cyberaitechs.com"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="flex items-center space-x-3 group"
               >
                 <div className="bg-orange-500/20 p-2 rounded-md group-hover:bg-orange-500 transition-colors">
@@ -160,8 +160,8 @@ export default function Footer() {
                 { name: 'Terms of Use', href: '/terms-of-use' }
               ].map((link, i) => (
                 <li key={i}>
-                  <Link 
-                    href={link.href} 
+                  <Link
+                    href={link.href}
                     className="text-gray-400 hover:text-orange-400 transition-colors text-sm inline-block"
                   >
                     {link.name}
@@ -175,20 +175,35 @@ export default function Footer() {
         {/* Disclaimer Section */}
         <div className="py-6 border-b border-white/10">
           <p className="text-xs text-gray-500 leading-relaxed">
-            <span className="font-semibold text-gray-400">* Disclaimer:</span> The content on this website is for informational purposes only and does not constitute professional advice. CyberAI Technologies Ltd makes no guarantees regarding the accuracy or completeness of any information provided. AI outcomes may vary depending on use case and context. We are not liable for any losses resulting from the use of our services or website. Use of this site implies acceptance of our terms and privacy policy.
+            <span className="font-semibold text-gray-400">* Disclaimer:</span> The content on this website is for informational purposes only and does not constitute professional advice. cyberai Technologies Ltd makes no guarantees regarding the accuracy or completeness of any information provided. AI outcomes may vary depending on use case and context. We are not liable for any losses resulting from the use of our services or website. Use of this site implies acceptance of our terms and privacy policy.
           </p>
         </div>
 
         {/* Bottom Bar */}
         <div className="pt-6">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+
             {/* Copyright */}
             <div className="text-gray-400 text-xs text-center md:text-left">
               © {currentYear} CyberAI Technologies Ltd. All Rights Reserved.
             </div>
-            
+
+            {/* Developed By */}
+            <div className="text-gray-400 text-xs text-center">
+              Developed by{" "}
+              <a
+                href="https://www.nexcorealliance.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-orange-400 hover:text-orange-300 transition font-medium"
+              >
+                Nexcore Alliance
+              </a>
+            </div>
+
             {/* Compliance Badges */}
             <div className="flex items-center gap-6">
+
               {/* Security Badge */}
               <div className="flex items-center gap-2">
                 <div className="bg-orange-500/20 p-1.5 rounded">
@@ -199,36 +214,40 @@ export default function Footer() {
 
               {/* Certification Badges */}
               <div className="flex items-center gap-3">
-                {/* GDPR Badge */}
-                <div className="relative group">
-                  <div className="w-10 h-10 rounded-full bg-blue-600 flex items-center justify-center border-2 border-blue-400">
-                    <span className="text-[9px] font-bold text-white text-center leading-tight">
-                      GDPR<br />READY
-                    </span>
-                  </div>
+
+                {/* GDPR */}
+                <div className="w-10 h-10 rounded-full bg-blue-600 flex items-center justify-center border-2 border-blue-400">
+                  <span className="text-[9px] font-bold text-white text-center leading-tight">
+                    GDPR<br />READY
+                  </span>
                 </div>
 
-                {/* ISO 27001 Badge */}
-                <div className="relative group">
-                  <div className="w-10 h-10 rounded-full bg-blue-600 flex items-center justify-center border-2 border-blue-400">
-                    <span className="text-[8px] font-bold text-white text-center leading-tight">
-                      ISO<br />27001
-                    </span>
-                  </div>
+                {/* ISO 27001 */}
+                <div className="w-10 h-10 rounded-full bg-blue-600 flex items-center justify-center border-2 border-blue-400">
+                  <span className="text-[8px] font-bold text-white text-center leading-tight">
+                    ISO<br />27001
+                  </span>
                 </div>
 
-                {/* SOC 2 Badge */}
-                <div className="relative group">
-                  <div className="w-10 h-10 rounded-full bg-blue-600 flex items-center justify-center border-2 border-blue-400">
-                    <span className="text-[9px] font-bold text-white text-center leading-tight">
-                      SOC 2<br />TYPE II
-                    </span>
-                  </div>
+                {/* ISO 42001 */}
+                <div className="w-10 h-10 rounded-full bg-purple-600 flex items-center justify-center border-2 border-purple-400">
+                  <span className="text-[8px] font-bold text-white text-center leading-tight">
+                    ISO<br />42001
+                  </span>
                 </div>
+
+                {/* EU AI Act */}
+                <div className="w-10 h-10 rounded-full bg-indigo-600 flex items-center justify-center border-2 border-indigo-400">
+                  <span className="text-[8px] font-bold text-white text-center leading-tight">
+                    EU<br />AI ACT
+                  </span>
+                </div>
+
               </div>
             </div>
           </div>
         </div>
+
       </div>
 
       <style jsx>{`

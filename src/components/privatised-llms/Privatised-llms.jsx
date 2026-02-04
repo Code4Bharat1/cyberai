@@ -18,6 +18,7 @@ import {
   MdLock
 } from 'react-icons/md';
 import { FaLock, FaServer, FaRobot, FaArrowRight, FaCheck as FaCheckIcon, FaTimes } from 'react-icons/fa';
+import { Scale, BadgeCheck } from 'lucide-react';
 import Navbar from '../navbar/Navbar';
 import Footer from '../Footer/Footer';
 
@@ -38,42 +39,42 @@ export default function PrivatisedLLMsPage() {
   };
 
   const publicLLMIssues = [
-    "Data sent to public cloud",
-    "Not industry-specific",
+    "Data sent to public cloud APIs",
+    "Generic training—not industry-specific",
     "Limited compliance capabilities",
-    "Significant data privacy risks"
+    "Significant data sovereignty risks"
   ];
 
   const privatisedLLMBenefits = [
-    "Runs in secure private cloud or on-prem",
-    "Trained on company & industry data",
-    "Meets regulations (ISO, GDPR, HIPAA)",
-    "Full data control & ownership"
+    "Deployed on your private infrastructure",
+    "Trained on your company & industry data",
+    "Built-in compliance (GDPR, HIPAA, ISO 42001)",
+    "Complete data control & ownership"
   ];
 
   const keyBenefits = [
     {
       icon: MdShield,
-      title: "Data Privacy",
+      title: "Data Sovereignty",
       desc: "Zero data leakage risk. Your intellectual property never leaves your controlled environment.",
       gradient: "from-orange-500 to-orange-600"
     },
     {
       icon: MdVerifiedUser,
-      title: "Compliance",
-      desc: "Adhere to strict industry standards like HIPAA, GDPR, and ISO without compromise.",
+      title: "Compliance Ready",
+      desc: "Built-in governance for GDPR, HIPAA, ISO 42001, and EU AI Act without compromise.",
       gradient: "from-blue-500 to-blue-600"
     },
     {
       icon: MdSpeed,
-      title: "Accuracy",
-      desc: "Higher performance on specialized tasks due to industry-specific fine-tuning.",
+      title: "Higher Accuracy",
+      desc: "Superior performance on specialized tasks through industry-specific training on your data.",
       gradient: "from-purple-500 to-purple-600"
     },
     {
       icon: MdSettingsSuggest,
       title: "Full Control",
-      desc: "Flexibility across architecture and deployment, optimizing for model lifecycle.",
+      desc: "Complete flexibility across architecture, deployment, and model lifecycle management.",
       gradient: "from-green-500 to-green-600"
     }
   ];
@@ -81,26 +82,26 @@ export default function PrivatisedLLMsPage() {
   const developmentProcess = [
     {
       icon: FaServer,
-      title: "Foundation AI Model",
-      desc: "We select the optimal open-source foundation model suited to your architectural needs.",
+      title: "Foundation Model",
+      desc: "Select optimal open-source foundation model suited to your requirements and infrastructure.",
       step: "01"
     },
     {
       icon: MdTune,
-      title: "Fine-Tuning",
-      desc: "The model is trained on your specific industry datasets to ensure relevance and accuracy.",
+      title: "Custom Training",
+      desc: "Fine-tune the model on your specific industry datasets to ensure relevance and accuracy.",
       step: "02"
     },
     {
       icon: FaLock,
       title: "Secure Deployment",
-      desc: "We deploy the solution within your cloud environment, ensuring total data isolation.",
+      desc: "Deploy within your cloud environment or on-premises, ensuring total data isolation.",
       step: "03"
     },
     {
       icon: FaRobot,
       title: "AI Agents",
-      desc: "Integration of agents for automation, compliance checks, fraud detection, and processing.",
+      desc: "Integrate intelligent agents for automation, compliance checks, and domain-specific workflows.",
       step: "04"
     }
   ];
@@ -108,17 +109,17 @@ export default function PrivatisedLLMsPage() {
   const targetAudience = [
     {
       icon: MdBusiness,
-      text: "Heavily regulated industries",
+      text: "Heavily regulated industries requiring compliance",
       gradient: "from-blue-500 to-blue-600"
     },
     {
       icon: MdHealthAndSafety,
-      text: "Enterprises handling sensitive data",
+      text: "Enterprises handling sensitive or confidential data",
       gradient: "from-orange-500 to-orange-600"
     },
     {
       icon: MdGavel,
-      text: "Organisations requiring secure and compliant AI",
+      text: "Organizations requiring secure and auditable AI",
       gradient: "from-purple-500 to-purple-600"
     }
   ];
@@ -128,8 +129,8 @@ export default function PrivatisedLLMsPage() {
       {/* Navigation */}
       <Navbar />
 
-      {/* Hero Section */}
-      <section id="hero" className="relative bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white py-32 px-4 overflow-hidden">
+      {/* Hero Section - Updated positioning */}
+      <section id="hero" className="relative bg-gradient-to-br from-[#1e3a8a] via-[#1e40af] to-[#3730a3] text-white py-32 px-4 overflow-hidden">
         {/* Animated Background Elements */}
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute w-96 h-96 bg-blue-500/10 rounded-full blur-3xl -top-48 -left-48 animate-pulse"></div>
@@ -139,16 +140,16 @@ export default function PrivatisedLLMsPage() {
         <div className="max-w-6xl mx-auto text-center relative z-10">
           <div className="inline-block mb-6 animate-fade-in-down">
             <span className="bg-orange-500/20 text-orange-300 px-4 py-2 rounded-full text-sm font-semibold border border-orange-500/30">
-              Secure AI Infrastructure
+              Private AI Platform Core
             </span>
           </div>
 
           <h1 className="text-6xl md:text-7xl font-black mb-6 leading-tight animate-fade-in-up">
-            <span className="bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent">Privatised</span> LLMs
+            <span className="bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent">Private</span> LLMs & SLMs
           </h1>
           
           <p className="text-xl md:text-2xl text-blue-200 max-w-3xl mx-auto mb-8 animate-fade-in font-light leading-relaxed">
-            Private, secure and compliant AI built inside your environment
+            Secure, compliant AI models deployed entirely within your infrastructure
           </p>
 
           <div className="grid grid-cols-3 gap-6 max-w-2xl mx-auto mt-12">
@@ -161,8 +162,24 @@ export default function PrivatisedLLMsPage() {
               <div className="text-xs text-blue-100">Data Control</div>
             </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20">
-              <div className="text-3xl font-black text-orange-400 mb-1">0</div>
-              <div className="text-xs text-blue-100">Data Leakage</div>
+              <div className="text-3xl font-black text-orange-400 mb-1">90</div>
+              <div className="text-xs text-blue-100">Days Deploy</div>
+            </div>
+          </div>
+
+          {/* Compliance Badges */}
+          <div className="flex justify-center gap-4 mt-8">
+            <div className="bg-white/10 backdrop-blur-sm px-4 py-2 rounded-lg border border-white/20 flex items-center gap-2">
+              <BadgeCheck className="w-4 h-4 text-orange-400" />
+              <span className="text-xs font-semibold">ISO 42001</span>
+            </div>
+            <div className="bg-white/10 backdrop-blur-sm px-4 py-2 rounded-lg border border-white/20 flex items-center gap-2">
+              <Scale className="w-4 h-4 text-orange-400" />
+              <span className="text-xs font-semibold">EU AI Act</span>
+            </div>
+            <div className="bg-white/10 backdrop-blur-sm px-4 py-2 rounded-lg border border-white/20 flex items-center gap-2">
+              <MdShield className="w-4 h-4 text-orange-400" />
+              <span className="text-xs font-semibold">GDPR</span>
             </div>
           </div>
         </div>
@@ -175,22 +192,22 @@ export default function PrivatisedLLMsPage() {
         </div>
       </section>
 
-      {/* What is a Privatised LLM Section */}
+      {/* What is a Private LLM Section */}
       <section id="what-is" className="py-24 px-4 scroll-mt-20">
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 gap-16 items-center">
             <div className="space-y-6 animate-slide-in-left">
               <div className="inline-block">
-                <span className="text-orange-500 font-bold text-sm tracking-widest uppercase">The Solution</span>
+                <span className="text-orange-500 font-bold text-sm tracking-widest uppercase">Platform Foundation</span>
                 <div className="h-1 w-20 bg-gradient-to-r from-orange-500 to-transparent mt-2"></div>
               </div>
 
               <h2 className="text-5xl md:text-6xl font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-900 to-blue-600 leading-tight">
-                What is a Privatised LLM?
+                What is a Private LLM?
               </h2>
               
               <p className="text-gray-600 text-lg leading-relaxed">
-                A privatised Large Language Model (LLM) is a company's own AI model, trained exclusively on its own data and deployed securely within a private cloud or on-premise infrastructure. Unlike public models, it is designed specifically for regulated industries where data sovereignty is critical.
+                A Private Large Language Model (LLM) or Small Language Model (SLM) is your organization's dedicated AI model, trained exclusively on your data and deployed securely within your infrastructure. Unlike public models, it's designed specifically for regulated industries where data sovereignty and compliance are non-negotiable.
               </p>
               
               <div className="space-y-5 pt-4">
@@ -200,7 +217,7 @@ export default function PrivatisedLLMsPage() {
                   </div>
                   <div>
                     <h3 className="font-bold text-blue-900 mb-1 text-lg">Your Data Only</h3>
-                    <p className="text-gray-600">Trained on proprietary information</p>
+                    <p className="text-gray-600">Trained exclusively on your proprietary information and domain expertise</p>
                   </div>
                 </div>
                 
@@ -209,8 +226,18 @@ export default function PrivatisedLLMsPage() {
                     <MdSecurity className="w-6 h-6 text-white" />
                   </div>
                   <div>
-                    <h3 className="font-bold text-blue-900 mb-1 text-lg">Secure Deployment</h3>
-                    <p className="text-gray-600">Private cloud or on-premise</p>
+                    <h3 className="font-bold text-blue-900 mb-1 text-lg">Your Infrastructure</h3>
+                    <p className="text-gray-600">Deployed on your private cloud or on-premises with complete control</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start space-x-4 p-5 rounded-xl bg-gradient-to-r from-purple-50 to-purple-100/50 hover:shadow-lg transition-shadow group">
+                  <div className="bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl p-3 mt-1 group-hover:scale-110 transition-transform shadow-md">
+                    <MdVerifiedUser className="w-6 h-6 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-blue-900 mb-1 text-lg">Built-in Governance</h3>
+                    <p className="text-gray-600">Compliance frameworks integrated from deployment for regulated industries</p>
                   </div>
                 </div>
               </div>
@@ -237,7 +264,7 @@ export default function PrivatisedLLMsPage() {
         </div>
       </section>
 
-      {/* Why Private AI - NEW SECTION */}
+      {/* Why Private AI Section */}
       <section id="why-private" className="py-24 px-4 bg-gradient-to-b from-gray-50 to-white scroll-mt-20">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
@@ -249,7 +276,7 @@ export default function PrivatisedLLMsPage() {
               Why Private AI Matters
             </h2>
             <p className="text-gray-600 text-xl max-w-3xl mx-auto">
-              1 billion parameter models trained on your data dramatically reduce hallucinations and deliver faster, more accurate results than broad-purpose public LLMs
+              1 billion parameter models trained on your data dramatically reduce hallucinations and deliver faster, more accurate results than broad-purpose public LLMs for your specific use cases
             </p>
           </div>
 
@@ -270,7 +297,11 @@ export default function PrivatisedLLMsPage() {
                 </div>
                 <div className="flex items-start gap-2">
                   <FaTimes className="w-4 h-4 text-red-600 mt-1 flex-shrink-0" />
-                  <span className="text-gray-700 text-sm">Data sent to external APIs</span>
+                  <span className="text-gray-700 text-sm">Data sent to external third-party APIs</span>
+                </div>
+                <div className="flex items-start gap-2">
+                  <FaTimes className="w-4 h-4 text-red-600 mt-1 flex-shrink-0" />
+                  <span className="text-gray-700 text-sm">Limited control over model behavior</span>
                 </div>
               </div>
             </div>
@@ -302,7 +333,7 @@ export default function PrivatisedLLMsPage() {
                   </div>
                   <div className="flex items-start gap-2">
                     <FaCheckIcon className="w-4 h-4 text-orange-400 mt-1 flex-shrink-0" />
-                    <span className="text-blue-100 text-sm">Built inside your infrastructure—no API calls</span>
+                    <span className="text-blue-100 text-sm">Built inside your infrastructure—no external API calls</span>
                   </div>
                   <div className="flex items-start gap-2">
                     <FaCheckIcon className="w-4 h-4 text-orange-400 mt-1 flex-shrink-0" />
@@ -316,7 +347,7 @@ export default function PrivatisedLLMsPage() {
           <div className="bg-orange-50 border-l-4 border-orange-500 p-8 rounded-r-2xl">
             <h4 className="text-xl font-bold text-blue-900 mb-3">Key Differentiator</h4>
             <p className="text-gray-700 text-lg">
-              Our 1-billion parameter models trained exclusively on your data vastly outperform ChatGPT's broader models for your specific use cases—with significantly reduced risk of hallucination, bias, and data leakage.
+              Our 1-billion parameter models trained exclusively on your data vastly outperform broader public models for your specific use cases—with significantly reduced risk of hallucination, bias, and data leakage. This focused approach delivers superior accuracy and compliance without the overhead of managing billions of unnecessary parameters.
             </p>
           </div>
 
@@ -332,7 +363,7 @@ export default function PrivatisedLLMsPage() {
         </div>
       </section>
 
-      {/* Public vs Privatised LLM Comparison */}
+      {/* Public vs Private LLM Comparison */}
       <section id="comparison" className="py-24 px-4 bg-white scroll-mt-20">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
@@ -342,7 +373,7 @@ export default function PrivatisedLLMsPage() {
             </div>
 
             <h2 className="text-5xl md:text-6xl font-black text-blue-900 mb-6 animate-fade-in-up">
-              Public vs Privatised LLM
+              Public vs Private LLM
             </h2>
             <p className="text-gray-600 text-lg animate-fade-in">
               Why regulated enterprises choose private infrastructure
@@ -357,7 +388,7 @@ export default function PrivatisedLLMsPage() {
                   <MdClose className="w-8 h-8 text-gray-500" />
                 </div>
                 <h3 className="text-3xl font-black text-gray-700 mb-2">Public LLM</h3>
-                <p className="text-sm text-gray-500 font-medium">Shared (e.g., ChatGPT, Claude)</p>
+                <p className="text-sm text-gray-500 font-medium">Shared Infrastructure (e.g., ChatGPT, Claude)</p>
               </div>
               
               <div className="space-y-4">
@@ -376,7 +407,7 @@ export default function PrivatisedLLMsPage() {
               </div>
             </div>
 
-            {/* Privatised LLM */}
+            {/* Private LLM */}
             <div className="relative bg-gradient-to-br from-blue-900 via-blue-800 to-slate-900 rounded-3xl p-10 text-white overflow-hidden hover:shadow-2xl transition-all duration-500 animate-slide-in-right">
               {/* Animated Background */}
               <div className="absolute inset-0 overflow-hidden">
@@ -393,8 +424,8 @@ export default function PrivatisedLLMsPage() {
                 <div className="bg-green-500 w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg">
                   <MdCheck className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-3xl font-black mb-2">Privatised LLM</h3>
-                <p className="text-sm text-blue-200 font-medium">Dedicated to one organisation</p>
+                <h3 className="text-3xl font-black mb-2">Private LLM/SLM</h3>
+                <p className="text-sm text-blue-200 font-medium">Dedicated to Your Organization</p>
               </div>
               
               <div className="space-y-4 relative z-10">
@@ -439,7 +470,7 @@ export default function PrivatisedLLMsPage() {
               Key Benefits
             </h2>
             <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-              Strategic advantages of owning your AI infrastructure
+              Strategic advantages of deploying AI on your own infrastructure
             </p>
           </div>
 
@@ -464,27 +495,27 @@ export default function PrivatisedLLMsPage() {
               onClick={() => scrollToSection('process')}
               className="group flex items-center gap-2 text-orange-500 font-semibold hover:gap-4 transition-all mx-auto"
             >
-              See Development Process
+              See Deployment Process
               <FaArrowRight className="w-4 h-4" />
             </button>
           </div>
         </div>
       </section>
 
-      {/* How We Develop Section */}
+      {/* How We Deploy Section - Updated timeline */}
       <section id="process" className="py-24 px-4 bg-white scroll-mt-20">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <div className="mb-4">
-              <span className="text-orange-500 font-bold text-sm tracking-widest uppercase">Our Method</span>
+              <span className="text-orange-500 font-bold text-sm tracking-widest uppercase">Our Process</span>
               <div className="h-1 w-20 bg-gradient-to-r from-orange-500 to-transparent mx-auto mt-2"></div>
             </div>
 
             <h2 className="text-5xl md:text-6xl font-black text-blue-900 mb-6">
-              How We Develop Privatised LLMs
+              How We Deploy Private LLMs
             </h2>
             <p className="text-gray-600 text-lg">
-              Our proven process for delivering secure AI solutions in 4-12 weeks
+              Our proven process for delivering secure AI solutions in 90 days
             </p>
           </div>
 
@@ -514,15 +545,15 @@ export default function PrivatisedLLMsPage() {
             </h3>
             <div className="grid md:grid-cols-2 gap-6">
               <div>
-                <h4 className="font-bold text-blue-900 mb-2">4-12 Week Deployment</h4>
+                <h4 className="font-bold text-blue-900 mb-2">90-Day Deployment</h4>
                 <p className="text-gray-700">
-                  From initial consultation to production deployment—dramatically faster than traditional enterprise AI implementations.
+                  From initial consultation to production deployment—dramatically faster than traditional enterprise AI implementations. Your platform is operational in three months.
                 </p>
               </div>
               <div>
-                <h4 className="font-bold text-blue-900 mb-2">Custom-Built for You</h4>
+                <h4 className="font-bold text-blue-900 mb-2">Custom-Configured for You</h4>
                 <p className="text-gray-700">
-                  Every model is trained on your specific data, workflows, and compliance requirements—not a generic solution.
+                  Every deployment is configured with your specific data, workflows, and compliance requirements—a true AI operating system for your organization.
                 </p>
               </div>
             </div>
@@ -556,7 +587,7 @@ export default function PrivatisedLLMsPage() {
 
             <div className="space-y-6 animate-slide-in-right">
               <div className="inline-block">
-                <span className="text-orange-500 font-bold text-sm tracking-widest uppercase">Target Audience</span>
+                <span className="text-orange-500 font-bold text-sm tracking-widest uppercase">Target Sectors</span>
                 <div className="h-1 w-20 bg-gradient-to-r from-orange-500 to-transparent mt-2"></div>
               </div>
 
@@ -565,7 +596,7 @@ export default function PrivatisedLLMsPage() {
               </h2>
               
               <p className="text-gray-600 text-lg leading-relaxed">
-                Our solutions are engineered for organizations that cannot compromise on security or compliance.
+                Our private AI platform is engineered for organizations that cannot compromise on security, compliance, or data sovereignty.
               </p>
               
               <div className="space-y-4 pt-4">
@@ -583,6 +614,12 @@ export default function PrivatisedLLMsPage() {
                 ))}
               </div>
 
+              <div className="bg-blue-50 border-l-4 border-blue-500 p-6 rounded-r-xl">
+                <p className="text-gray-700">
+                  <strong className="text-blue-900">Key Industries:</strong> Banking, Finance, Healthcare, Legal Services, Government, Insurance, and Professional Services where GDPR, HIPAA, ISO 42001, and EU AI Act compliance is mandatory.
+                </p>
+              </div>
+
               <button 
                 onClick={() => scrollToSection('cta')}
                 className="group flex items-center gap-2 text-orange-500 font-semibold hover:gap-4 transition-all mt-6"
@@ -595,7 +632,7 @@ export default function PrivatisedLLMsPage() {
         </div>
       </section>
 
-      {/* Final CTA Section */}
+      {/* Final CTA Section - Updated contact info */}
       <section id="cta" className="py-24 px-4 bg-white scroll-mt-20">
         <div className="max-w-5xl mx-auto">
           <div className="bg-gradient-to-br from-blue-900 via-blue-800 to-slate-900 text-white p-16 rounded-3xl text-center shadow-2xl relative overflow-hidden animate-fade-in-up">
@@ -607,17 +644,27 @@ export default function PrivatisedLLMsPage() {
 
             <div className="relative z-10">
               <h2 className="text-4xl md:text-5xl font-black mb-6">
-                Build Your Own Secure AI
+                Deploy Your Private AI Platform
               </h2>
               <p className="text-blue-200 text-xl mb-10 max-w-2xl mx-auto leading-relaxed">
-                Take control of your data and infrastructure today. Deploy enterprise-grade AI that meets your compliance requirements.
+                Take control of your data and infrastructure. Deploy enterprise-grade AI that meets your compliance requirements in 90 days.
               </p>
-              <Link href="/contact">
-                <button className="group bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 px-12 py-5 rounded-xl font-bold text-xl transition-all transform hover:scale-105 shadow-2xl hover:shadow-orange-500/50 inline-flex items-center gap-3">
-                  Get In Touch
-                  <FaArrowRight className="w-5 h-5 group-hover:translate-x-2 transition-transform" />
-                </button>
-              </Link>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link href="/contact">
+                  <button className="group bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 px-12 py-5 rounded-xl font-bold text-xl transition-all transform hover:scale-105 shadow-2xl hover:shadow-orange-500/50 inline-flex items-center gap-3">
+                    Schedule Consultation
+                    <FaArrowRight className="w-5 h-5 group-hover:translate-x-2 transition-transform" />
+                  </button>
+                </Link>
+                <a href="https://wa.me/BUSINESS_NUMBER" target="_blank" rel="noopener noreferrer">
+                  <button className="border-2 border-white/50 backdrop-blur-sm hover:bg-white hover:text-blue-900 px-12 py-5 rounded-xl font-bold text-xl transition-all hover:scale-105">
+                    WhatsApp Us
+                  </button>
+                </a>
+              </div>
+              <p className="text-blue-300 text-sm mt-6">
+                Or email us at <a href="mailto:inquiries@cyberaiact.com" className="underline hover:text-white">inquiries@cyberaiact.com</a>
+              </p>
             </div>
           </div>
         </div>
