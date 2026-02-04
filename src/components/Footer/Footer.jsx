@@ -3,7 +3,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { MdSecurity, MdLocationOn, MdPhone, MdEmail, MdLanguage } from 'react-icons/md';
-import { FaLinkedin, FaTwitter, FaGithub } from 'react-icons/fa';
+import { FaLinkedin, FaTwitter, FaGithub, FaYoutube } from 'react-icons/fa';
 import Image from 'next/image';
 
 export default function Footer() {
@@ -45,7 +45,7 @@ export default function Footer() {
             </Link>
 
             <h3 className="text-orange-400 font-semibold text-sm mb-3 leading-snug">
-              Private AI Platform for<br />Regulated Industries
+              Your AI. Your data<br />. Your rules
             </h3>
 
             <p className="text-gray-400 text-sm leading-relaxed mb-6">
@@ -55,10 +55,10 @@ export default function Footer() {
             {/* Social Links */}
             <div className="flex space-x-2">
               {[
-                { icon: FaLinkedin, href: "https://www.linkedin.com/company/cyberai-technologies-ltd/", label: "LinkedIn" },
-                { icon: FaTwitter, href: "https://twitter.com/cyberaitechs", label: "Twitter" },
-                { icon: FaGithub, href: "https://github.com/cyberaitechs", label: "GitHub" },
-              ].map((social, i) => (
+                  { icon: FaYoutube, href: "https://www.youtube.com/@cyberaitechs", label: "YouTube" },
+                  { icon: FaLinkedin, href: "https://www.linkedin.com/company/cyberai-technologies-ltd/", label: "LinkedIn" },
+                  { icon: FaGithub, href: "https://github.com/cyberaitechs", label: "GitHub" },
+                ].map((social, i) => (
                 <Link
                   key={i}
                   href={social.href}
@@ -112,26 +112,26 @@ export default function Footer() {
               </div>
 
               <a
-                href="tel:+447554898543"
+                href="tel:+44 7399339964"
                 className="flex items-center space-x-3 group"
               >
                 <div className="bg-orange-500/20 p-2 rounded-md group-hover:bg-orange-500 transition-colors">
                   <MdPhone className="w-4 h-4 text-orange-400 group-hover:text-white flex-shrink-0 transition-colors" />
                 </div>
                 <span className="text-gray-400 hover:text-orange-400 transition-colors text-sm">
-                  +447554898543
+                  +44 7399339964
                 </span>
               </a>
 
               <a
-                href="mailto:inquiries@cyberaiact.com"
+                href="mailto:Enquiries@cyberaitechs.com"
                 className="flex items-center space-x-3 group"
               >
                 <div className="bg-orange-500/20 p-2 rounded-md group-hover:bg-orange-500 transition-colors">
                   <MdEmail className="w-4 h-4 text-orange-400 group-hover:text-white flex-shrink-0 transition-colors" />
                 </div>
                 <span className="text-gray-400 hover:text-orange-400 transition-colors break-all text-sm">
-                  inquiries@cyberaiact.com
+                  Enquiries@cyberaitechs.com
                 </span>
               </a>
 
@@ -156,8 +156,11 @@ export default function Footer() {
             <h4 className="font-bold text-sm mb-4 text-orange-400">Legal</h4>
             <ul className="space-y-2.5">
               {[
-                { name: 'Privacy Policy', href: '/privacy-policy' },
-                { name: 'Terms of Use', href: '/terms-of-use' }
+                { name: 'Terms & Conditions', href: '/terms-of-use' },
+                { name: 'EULA', href: '/eula' },
+                { name: 'Privacy Notice', href: '/privacy-policy' },
+                { name: 'Cookie Notice', href: '/cookie-notice' },
+                { name: 'Cookie Preferences', href: '/cookie-preferences' }
               ].map((link, i) => (
                 <li key={i}>
                   <Link

@@ -203,8 +203,8 @@ export default function LeadershipPage() {
                   <div className="h-1 w-20 bg-gradient-to-r from-orange-500 to-transparent mt-2"></div>
                 </div>
 
-                <h2 className="text-4xl md:text-5xl font-black text-blue-900 mb-6 leading-tight">
-                  About Dr. Dattawala
+                <h2 className="text-4xl md:text-4xl font-black text-blue-900 mb-6 leading-tight">
+                  About Dr. Davar Dattawala
                 </h2>
                 <div className="space-y-4 text-gray-600 text-lg leading-relaxed">
                   <p>

@@ -83,7 +83,7 @@ export default function PrivatisedLLMsPage() {
     {
       icon: FaServer,
       title: "Foundation Model",
-      desc: "Select optimal open-source foundation model suited to your requirements and infrastructure.",
+      desc: "Select optimal  foundation model suited to your requirements and infrastructure.",
       step: "01"
     },
     {
@@ -376,7 +376,7 @@ export default function PrivatisedLLMsPage() {
               Public vs Private LLM
             </h2>
             <p className="text-gray-600 text-lg animate-fade-in">
-              Why regulated enterprises choose private infrastructure
+              Why regulated enterprises need private infrastructure
             </p>
           </div>
 

@@ -1,9 +1,26 @@
 "use client";
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { MdSecurity, MdVisibility, MdDescription, MdShield, MdBusiness, MdAccountBalance, MdLayers, MdTrendingUp, MdSpeed } from 'react-icons/md';
-import { FaCheck, FaTimes, FaArrowRight, FaGlobe, FaChartLine } from 'react-icons/fa';
-import { BiBuildings } from 'react-icons/bi';
+import { 
+  MdSecurity, 
+  MdLightbulb, 
+  MdShield,
+  MdLock,
+  MdVerifiedUser,
+  MdSpeed
+} from 'react-icons/md';
+import { 
+  FaArrowRight, 
+  FaLinkedin, 
+  FaShieldAlt,
+  FaBrain,
+  FaRocket,
+  FaQuoteLeft,
+  FaUserShield,
+  FaLock,
+  FaEye,
+  FaBug
+} from 'react-icons/fa';
 import Navbar from '../navbar/Navbar';
 import Footer from '../Footer/Footer';
 
@@ -23,12 +40,64 @@ export default function AboutPage() {
     }
   };
 
+  const culturalValues = [
+    {
+      number: "1",
+      title: "Customer-Centric Autonomy",
+      description: "We don't believe in one-size-fits-all AI. We empower clients with solutions they can control, adapt and trust.",
+      icon: FaUserShield,
+      color: "from-blue-500 to-blue-600"
+    },
+    {
+      number: "2",
+      title: "Security by Default",
+      description: "We bake cybersecurity, privacy and risk mitigation into every AI pipeline — because without trust, there's no adoption.",
+      icon: FaShieldAlt,
+      color: "from-orange-500 to-orange-600"
+    },
+    {
+      number: "3",
+      title: "Transparency & Accountability",
+      description: "We value explainable AI, clear communication, and ethical practices in everything we build and deploy.",
+      icon: FaEye,
+      color: "from-purple-500 to-purple-600"
+    },
+    {
+      number: "4",
+      title: "Innovation with Purpose",
+      description: "We build what solves real-world problems — not what's trendy. Every model, bot, or system has measurable impact.",
+      icon: FaRocket,
+      color: "from-green-500 to-green-600"
+    },
+    {
+      number: "5",
+      title: "Collaboration over Control",
+      description: "We co-create with clients, partners and our team — believing that true intelligence thrives through diverse perspectives.",
+      icon: FaBrain,
+      color: "from-indigo-500 to-indigo-600"
+    },
+    {
+      number: "6",
+      title: "Continuous Learning",
+      description: "Just like our AI agents, we evolve. We stay curious, challenge assumptions and learn from every deployment.",
+      icon: MdLightbulb,
+      color: "from-yellow-500 to-yellow-600"
+    }
+  ];
+
+  const aiExploits = [
+    { text: "Leak confidential prompts and data", icon: FaLock },
+    { text: "Reveal system instructions", icon: FaEye },
+    { text: "Generate restricted or misleading outputs", icon: MdShield },
+    { text: "Bypass safeguards through crafted injections", icon: FaBug }
+  ];
+
   return (
     <div className="min-h-screen bg-white mt-10">
       {/* Navigation */}
       <Navbar />
 
-      {/* Hero Section - Updated positioning */}
+      {/* Hero Section */}
       <section id="hero" className="relative bg-gradient-to-br from-[#1e3a8a] via-[#1e40af] to-[#3730a3] text-white py-32 px-4 overflow-hidden">
         {/* Animated Background Elements */}
         <div className="absolute inset-0 overflow-hidden">
@@ -39,16 +108,16 @@ export default function AboutPage() {
         <div className="max-w-6xl mx-auto text-center relative z-10">
           <div className="inline-block mb-6 animate-fade-in-down">
             <span className="bg-orange-500/20 text-orange-300 px-4 py-2 rounded-full text-sm font-semibold border border-orange-500/30">
-              Private AI Platform for Regulated Industries
+              Your AI. Your data. Your rules.
             </span>
           </div>
 
           <h1 className="text-6xl md:text-7xl font-black mb-6 leading-tight animate-fade-in-up">
-            About <span className="bg-gradient-to-r from-orange-400 to-orange-600 bg-clip-text text-transparent">CyberAI</span> Technologies
+            About <span className="bg-gradient-to-r from-orange-400 to-orange-600 bg-clip-text text-transparent">CyberAi</span>
           </h1>
           
           <p className="text-xl md:text-2xl text-blue-200 max-w-3xl mx-auto animate-fade-in font-light leading-relaxed">
-            Building secure AI operating systems for industries where compliance isn't optional
+            Built by security experts who understand what's at stake when AI meets enterprise data
           </p>
         </div>
 
@@ -56,630 +125,306 @@ export default function AboutPage() {
         <div className="absolute inset-0 pointer-events-none">
           <MdShield className="absolute w-12 h-12 text-blue-500/20 animate-float" style={{top: '20%', left: '10%', animationDelay: '0s'}} />
           <MdSecurity className="absolute w-10 h-10 text-orange-500/20 animate-float" style={{top: '60%', right: '15%', animationDelay: '1s'}} />
-          <MdBusiness className="absolute w-14 h-14 text-blue-400/20 animate-float" style={{bottom: '20%', left: '20%', animationDelay: '2s'}} />
+          <FaShieldAlt className="absolute w-14 h-14 text-blue-400/20 animate-float" style={{bottom: '20%', left: '20%', animationDelay: '2s'}} />
         </div>
       </section>
 
-      {/* Company Overview Section - Updated */}
-      <section id="overview" className="py-24 px-4 scroll-mt-20">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-16 items-center">
-            <div className="space-y-6 animate-slide-in-left">
-              <div className="inline-block">
-                <span className="text-orange-500 font-bold text-sm tracking-widest uppercase">Who We Are</span>
-                <div className="h-1 w-20 bg-gradient-to-r from-orange-500 to-transparent mt-2"></div>
-              </div>
-
-              <h2 className="text-5xl md:text-6xl font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-900 to-blue-600 leading-tight">
-                Your AI Operating System
-              </h2>
-              
-              <p className="text-gray-600 text-lg leading-relaxed">
-                CyberAI Technologies Ltd is an AI platform company specializing in Private LLMs (Large Language Models), SLMs (Small Language Models), and GenAI technologies deployed on your infrastructure. We're not a traditional SaaS platform—we're your AI layer, custom-built and deployed to meet your exact requirements.
-              </p>
-              
-              <p className="text-gray-600 text-lg leading-relaxed">
-                Our approach is strictly industry-agnostic and vendor-agnostic, providing unbiased, best-in-class infrastructure with built-in governance for heavily regulated industries. We deliver secure AI solutions where compliance, data sovereignty, and security are non-negotiable.
-              </p>
-              
-              <div className="flex flex-wrap gap-6 pt-4">
-                <div className="flex items-center space-x-3 bg-gradient-to-r from-orange-50 to-orange-100/50 px-6 py-3 rounded-xl hover:shadow-lg transition-shadow group">
-                  <div className="bg-orange-500 p-2 rounded-lg group-hover:scale-110 transition-transform">
-                    <BiBuildings className="w-6 h-6 text-white" />
-                  </div>
-                  <span className="font-bold text-blue-900 text-lg">AI Platform</span>
-                </div>
-                <div className="flex items-center space-x-3 bg-gradient-to-r from-blue-50 to-blue-100/50 px-6 py-3 rounded-xl hover:shadow-lg transition-shadow group">
-                  <div className="bg-blue-500 p-2 rounded-lg group-hover:scale-110 transition-transform">
-                    <MdSecurity className="w-6 h-6 text-white" />
-                  </div>
-                  <span className="font-bold text-blue-900 text-lg">Governance Built-In</span>
-                </div>
-              </div>
-
-              <button 
-                onClick={() => scrollToSection('market')}
-                className="group flex items-center gap-2 text-orange-500 font-semibold hover:gap-4 transition-all mt-6"
-              >
-                Explore Market Opportunity
-                <FaArrowRight className="w-4 h-4" />
-              </button>
-            </div>
-            
-            <div className="relative animate-slide-in-right">
-              <div className="absolute inset-0 bg-gradient-to-tr from-blue-500/20 to-orange-500/20 rounded-3xl blur-3xl"></div>
-              <img 
-                src="https://images.unsplash.com/photo-1551434678-e076c223a692?w=800&h=600&fit=crop" 
-                alt="Modern Office with Digital Security"
-                className="rounded-3xl shadow-2xl w-full relative z-10 hover:scale-105 transition-transform duration-500"
-              />
-              <div className="absolute inset-0 bg-gradient-to-tr from-blue-900/30 to-transparent rounded-3xl z-20"></div>
-              <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-30">
-                <div className="bg-white/10 backdrop-blur-md rounded-full p-8 hover:scale-110 transition-transform duration-500">
-                  <MdShield className="w-20 h-20 text-white drop-shadow-2xl" />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Market Opportunity Section */}
-      <section id="market" className="bg-gradient-to-b from-gray-50 to-white py-24 px-4 scroll-mt-20">
+      {/* Our Story Section - NEW */}
+      <section id="story" className="py-24 px-4 scroll-mt-20 bg-gradient-to-b from-slate-900 to-blue-900 text-white">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <div className="mb-4">
-              <span className="text-orange-500 font-bold text-sm tracking-widest uppercase">Market Landscape</span>
+              <span className="text-orange-500 font-bold text-sm tracking-widest uppercase">The Beginning</span>
               <div className="h-1 w-20 bg-gradient-to-r from-orange-500 to-transparent mx-auto mt-2"></div>
             </div>
-            <h2 className="text-5xl md:text-6xl font-black text-blue-900 mb-6">
-              The Global AI Market
+
+            <h2 className="text-5xl md:text-6xl font-black mb-6 leading-tight">
+              Our Story
             </h2>
-            <p className="text-gray-600 text-lg max-w-3xl mx-auto">
-              Enterprise AI adoption is accelerating across regulated industries worldwide, creating unprecedented demand for secure, compliant solutions.
-            </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8 mb-16">
-            <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all border border-gray-100 text-center">
-              <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center mx-auto mb-6">
-                <FaGlobe className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="text-2xl font-bold text-blue-900 mb-3">Global Reach</h3>
-              <p className="text-gray-600">
-                Regulatory requirements span banking, healthcare, and government sectors across UK, EU, and international markets
+          {/* Story Content */}
+          <div className="space-y-8 max-w-4xl mx-auto">
+            <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
+              <p className="text-blue-100 text-lg leading-relaxed mb-6">
+                Our founder understood the unique pressures regulated industries face — he had spent two decades defending them. From ISO 27001 implementations to red-teaming cloud platforms and guiding compliance under PCI DSS, HIPAA, and GDPR — he saw the growing AI wave as both a breakthrough and a risk multiplier.
+              </p>
+              <p className="text-blue-100 text-lg leading-relaxed font-semibold">
+                His vision wasn't just to use AI, but to rebuild it from the ground up — for security, compliance, and enterprise-grade control.
               </p>
             </div>
 
-            <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all border border-gray-100 text-center">
-              <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-orange-600 rounded-xl flex items-center justify-center mx-auto mb-6">
-                <FaChartLine className="w-8 h-8 text-white" />
+            {/* The Realization */}
+            <div className="bg-gradient-to-br from-orange-900/30 to-red-900/30 backdrop-blur-sm rounded-2xl p-8 border border-orange-500/30">
+              <div className="flex items-start gap-4 mb-6">
+                <FaBug className="w-12 h-12 text-orange-400 flex-shrink-0 mt-1" />
+                <div>
+                  <h3 className="text-2xl font-bold text-orange-300 mb-4">The Ethical Hacker's Perspective</h3>
+                  <p className="text-blue-100 text-lg leading-relaxed mb-6">
+                    As an ethical hacker, our founder experienced how seemingly harmless AI tools could be exploited to:
+                  </p>
+                </div>
               </div>
-              <h3 className="text-2xl font-bold text-blue-900 mb-3">Proven Technology</h3>
-              <p className="text-gray-600">
-                Enterprise AI is no longer experimental—it's an established market with clear compliance needs and ROI
-              </p>
-            </div>
 
-            <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all border border-gray-100 text-center">
-              <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl flex items-center justify-center mx-auto mb-6">
-                <MdTrendingUp className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="text-2xl font-bold text-blue-900 mb-3">Growing Demand</h3>
-              <p className="text-gray-600">
-                Increasing recognition that public AI models cannot meet enterprise security and privacy requirements
-              </p>
-            </div>
-          </div>
-
-          <div className="bg-gradient-to-br from-blue-50 to-blue-100/50 border-l-4 border-blue-500 p-10 rounded-r-2xl">
-            <h3 className="text-2xl font-bold text-blue-900 mb-4">Why This Matters</h3>
-            <p className="text-gray-700 text-lg leading-relaxed mb-4">
-              Organizations deploying CyberAI solutions aren't gambling on emerging technology—they're adopting proven infrastructure that addresses real compliance gaps in an established market.
-            </p>
-            <p className="text-gray-700 text-lg leading-relaxed">
-              The total addressable market for secure, private AI in regulated industries represents significant opportunity as enterprises recognize the limitations of public AI models for sensitive data.
-            </p>
-          </div>
-
-          <div className="text-center mt-12">
-            <button 
-              onClick={() => scrollToSection('risks')}
-              className="group flex items-center gap-2 text-orange-500 font-semibold hover:gap-4 transition-all mx-auto"
-            >
-              Learn About AI Risks We Mitigate
-              <FaArrowRight className="w-4 h-4" />
-            </button>
-          </div>
-        </div>
-      </section>
-
-      {/* AI Risks Section */}
-      <section id="risks" className="py-24 px-4 scroll-mt-20">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
-            <div className="mb-4">
-              <span className="text-orange-500 font-bold text-sm tracking-widest uppercase">Risk Management</span>
-              <div className="h-1 w-20 bg-gradient-to-r from-orange-500 to-transparent mx-auto mt-2"></div>
-            </div>
-            <h2 className="text-5xl md:text-6xl font-black text-blue-900 mb-6">
-              AI Risks Beyond the Obvious
-            </h2>
-            <p className="text-gray-600 text-lg max-w-3xl mx-auto">
-              While hallucinations and bias dominate headlines, enterprise AI faces deeper challenges. Drawing from the MIT AI Risk Repository, we address the full spectrum of AI risks.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-10 mb-16">
-            {/* Common Concerns */}
-            <div className="bg-gradient-to-br from-red-50 to-red-100/50 border-2 border-red-200 rounded-2xl p-8">
-              <h3 className="text-2xl font-bold text-red-700 mb-6">Common AI Risks</h3>
-              <div className="space-y-4">
-                {[
-                  "Hallucinations and factual inaccuracies",
-                  "Bias in training data and outputs",
-                  "Prompt injection attacks",
-                  "Data leakage through APIs"
-                ].map((item, i) => (
-                  <div key={i} className="flex items-start space-x-3 bg-white/70 p-4 rounded-xl">
-                    <FaTimes className="w-5 h-5 text-red-600 mt-1 flex-shrink-0" />
-                    <span className="text-gray-700 font-medium">{item}</span>
+              <div className="grid md:grid-cols-2 gap-4 mb-6">
+                {aiExploits.map((exploit, i) => (
+                  <div 
+                    key={i}
+                    className="flex items-start gap-3 bg-black/20 p-4 rounded-xl backdrop-blur-sm"
+                  >
+                    <exploit.icon className="w-6 h-6 text-orange-400 flex-shrink-0 mt-1" />
+                    <span className="text-blue-100 leading-relaxed">{exploit.text}</span>
                   </div>
                 ))}
               </div>
+
+              <p className="text-blue-100 text-lg leading-relaxed italic">
+                It wasn't the intelligence of the models that concerned him — it was their exploitability, opacity, and the loss of data control for businesses in finance, healthcare, defense and other regulated industries.
+              </p>
             </div>
 
-            {/* Deeper Risks */}
-            <div className="bg-gradient-to-br from-orange-50 to-orange-100/50 border-2 border-orange-200 rounded-2xl p-8">
-              <h3 className="text-2xl font-bold text-orange-700 mb-6">Enterprise-Critical Risks</h3>
-              <div className="space-y-4">
-                {[
-                  "Model weight theft and IP loss",
-                  "Adversarial attacks on production systems",
-                  "Regulatory non-compliance exposure",
-                  "Supply chain vulnerabilities"
-                ].map((item, i) => (
-                  <div key={i} className="flex items-start space-x-3 bg-white/70 p-4 rounded-xl">
-                    <MdShield className="w-5 h-5 text-orange-600 mt-1 flex-shrink-0" />
-                    <span className="text-gray-700 font-medium">{item}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-
-          {/* How We Mitigate */}
-          <div className="bg-gradient-to-br from-blue-900 to-slate-900 text-white p-12 rounded-3xl">
-            <h3 className="text-3xl font-bold mb-8 text-center">How CyberAI Private Models Mitigate These Risks</h3>
-            
-            <div className="grid md:grid-cols-2 gap-8">
-              <div className="space-y-6">
-                <div className="flex items-start space-x-4">
-                  <div className="bg-orange-500 rounded-full p-3 mt-1 flex-shrink-0">
-                    <FaCheck className="w-5 h-5 text-white" />
-                  </div>
-                  <div>
-                    <h4 className="font-bold text-xl mb-2">Built Inside Your Environment</h4>
-                    <p className="text-blue-200">
-                      Models deployed on-premises or in your private cloud—never exposed to public APIs or third-party access
-                    </p>
-                  </div>
-                </div>
-
-                <div className="flex items-start space-x-4">
-                  <div className="bg-orange-500 rounded-full p-3 mt-1 flex-shrink-0">
-                    <FaCheck className="w-5 h-5 text-white" />
-                  </div>
-                  <div>
-                    <h4 className="font-bold text-xl mb-2">Trained Only on Your Data</h4>
-                    <p className="text-blue-200">
-                      Focused models (1B parameters) trained exclusively on your domain data—dramatically reducing hallucinations
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="space-y-6">
-                <div className="flex items-start space-x-4">
-                  <div className="bg-orange-500 rounded-full p-3 mt-1 flex-shrink-0">
-                    <FaCheck className="w-5 h-5 text-white" />
-                  </div>
-                  <div>
-                    <h4 className="font-bold text-xl mb-2">Faster, More Accurate Responses</h4>
-                    <p className="text-blue-200">
-                      Domain-specific models deliver higher accuracy for your use cases versus broad-purpose public LLMs
-                    </p>
-                  </div>
-                </div>
-
-                <div className="flex items-start space-x-4">
-                  <div className="bg-orange-500 rounded-full p-3 mt-1 flex-shrink-0">
-                    <FaCheck className="w-5 h-5 text-white" />
-                  </div>
-                  <div>
-                    <h4 className="font-bold text-xl mb-2">Complete Auditability</h4>
-                    <p className="text-blue-200">
-                      Full transparency into model behavior, training data, and decision-making processes for compliance
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="mt-10 p-6 bg-white/10 rounded-xl border border-white/20">
-              <p className="text-blue-100 text-center text-lg">
-                <span className="font-bold text-white">Key Advantage:</span> Our 1-billion parameter models trained on your specific data vastly outperform broader models for your use cases—with significantly reduced risk of hallucination and bias.
+            {/* The Birth */}
+            <div className="bg-gradient-to-r from-blue-900/50 to-purple-900/50 backdrop-blur-sm rounded-2xl p-10 border border-blue-500/30 text-center">
+              <FaRocket className="w-16 h-16 text-orange-400 mx-auto mb-6" />
+              <p className="text-2xl md:text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-orange-600 mb-4">
+                That's when the idea for CyberAi Technologies Ltd was born.
               </p>
             </div>
           </div>
 
-          <div className="text-center mt-12">
-            <button 
-              onClick={() => scrollToSection('journey')}
-              className="group flex items-center gap-2 text-orange-500 font-semibold hover:gap-4 transition-all mx-auto"
-            >
-              See Our Deployment Process
-              <FaArrowRight className="w-4 h-4" />
-            </button>
+          {/* Tagline Section */}
+          <div className="mt-16 max-w-5xl mx-auto">
+            <div className="bg-gradient-to-br from-orange-500/20 to-orange-600/20 backdrop-blur-sm rounded-3xl p-12 border-2 border-orange-500/40">
+              <div className="text-center mb-8">
+                <h3 className="text-4xl md:text-5xl font-black mb-4 text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-orange-600">
+                  Your AI. Your Data. Your Rules.
+                </h3>
+                <p className="text-blue-100 text-xl leading-relaxed">
+                  CyberAi's tagline isn't marketing fluff — it's a philosophy born from ethical hacking, real-world risk, and deep industry knowledge.
+                </p>
+              </div>
+
+              <div className="grid md:grid-cols-3 gap-6 mb-8">
+                <div className="bg-black/20 backdrop-blur-sm rounded-xl p-6 text-center">
+                  <div className="text-2xl font-bold text-orange-400 mb-2">Unleashable</div>
+                  <div className="text-sm text-blue-200">but not uncontrollable</div>
+                </div>
+                <div className="bg-black/20 backdrop-blur-sm rounded-xl p-6 text-center">
+                  <div className="text-2xl font-bold text-orange-400 mb-2">Intelligent</div>
+                  <div className="text-sm text-blue-200">but also interpretable</div>
+                </div>
+                <div className="bg-black/20 backdrop-blur-sm rounded-xl p-6 text-center">
+                  <div className="text-2xl font-bold text-orange-400 mb-2">Powerful</div>
+                  <div className="text-sm text-blue-200">but provably safe</div>
+                </div>
+              </div>
+
+              <p className="text-blue-100 text-center italic text-lg">
+                From security to strategy, from exploit to innovation — CyberAi exists to make enterprise AI truly yours.
+              </p>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Customer Journey Section */}
-      <section id="journey" className="bg-gradient-to-b from-gray-50 to-white py-24 px-4 scroll-mt-20">
+      {/* Vision Section */}
+      <section id="vision" className="py-24 px-4 bg-gradient-to-b from-gray-50 to-white scroll-mt-20">
+        <div className="max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-12 items-start">
+            {/* Vision */}
+            <div className="bg-gradient-to-br from-blue-50 to-blue-100/50 rounded-3xl p-10 border-2 border-blue-200 hover:shadow-2xl transition-all duration-500">
+              <div className="flex items-center gap-4 mb-6">
+                <div className="bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl p-4">
+                  <FaRocket className="w-8 h-8 text-white" />
+                </div>
+                <h2 className="text-4xl font-black text-blue-900">Vision</h2>
+              </div>
+              <p className="text-gray-700 text-lg leading-relaxed">
+                To democratize intelligent automation by building secure, autonomous AI solutions that empower every organization to own their AI journey — on their terms, with their data and under their control.
+              </p>
+            </div>
+
+            {/* Mission */}
+            <div className="bg-gradient-to-br from-orange-50 to-orange-100/50 rounded-3xl p-10 border-2 border-orange-200 hover:shadow-2xl transition-all duration-500">
+              <div className="flex items-center gap-4 mb-6">
+                <div className="bg-gradient-to-br from-orange-500 to-orange-600 rounded-xl p-4">
+                  <MdShield className="w-8 h-8 text-white" />
+                </div>
+                <h2 className="text-4xl font-black text-blue-900">Mission</h2>
+              </div>
+              <p className="text-gray-700 text-lg leading-relaxed mb-4">
+                At CyberAi Technologies Ltd, our mission is to make AI:
+              </p>
+              <ul className="space-y-3">
+                <li className="flex items-start gap-3">
+                  <div className="bg-orange-500 rounded-full p-1 mt-1">
+                    <MdVerifiedUser className="w-4 h-4 text-white" />
+                  </div>
+                  <span className="text-gray-700">
+                    <span className="font-bold text-blue-900">Accessible</span> to businesses of all sizes through agentic, scalable solutions
+                  </span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <div className="bg-orange-500 rounded-full p-1 mt-1">
+                    <MdLock className="w-4 h-4 text-white" />
+                  </div>
+                  <span className="text-gray-700">
+                    <span className="font-bold text-blue-900">Secure by design,</span> with strong data privacy and ethical safeguards
+                  </span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <div className="bg-orange-500 rounded-full p-1 mt-1">
+                    <MdSpeed className="w-4 h-4 text-white" />
+                  </div>
+                  <span className="text-gray-700">
+                    <span className="font-bold text-blue-900">Customizable and compliant</span> for real-world workflows, across industries
+                  </span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          {/* How We Achieve This */}
+          <div className="mt-12 bg-white rounded-2xl p-10 shadow-lg border border-gray-100">
+            <h3 className="text-2xl font-bold text-blue-900 mb-6">We achieve this by delivering AI that:</h3>
+            <div className="grid md:grid-cols-3 gap-6">
+              <div className="flex items-start gap-3">
+                <div className="bg-blue-100 rounded-full p-2 mt-1">
+                  <MdVerifiedUser className="w-5 h-5 text-blue-600" />
+                </div>
+                <span className="text-gray-700">Works across platforms and vendors</span>
+              </div>
+              <div className="flex items-start gap-3">
+                <div className="bg-blue-100 rounded-full p-2 mt-1">
+                  <MdVerifiedUser className="w-5 h-5 text-blue-600" />
+                </div>
+                <span className="text-gray-700">Embeds into existing business operations</span>
+              </div>
+              <div className="flex items-start gap-3">
+                <div className="bg-blue-100 rounded-full p-2 mt-1">
+                  <MdVerifiedUser className="w-5 h-5 text-blue-600" />
+                </div>
+                <span className="text-gray-700">Respects data sovereignty and industry-specific regulations</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Cultural Values Section - NEW */}
+      <section id="values" className="py-24 px-4 bg-gradient-to-b from-white to-gray-50 scroll-mt-20">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <div className="mb-4">
-              <span className="text-orange-500 font-bold text-sm tracking-widest uppercase">How We Work</span>
+              <span className="text-orange-500 font-bold text-sm tracking-widest uppercase">What Drives Us</span>
               <div className="h-1 w-20 bg-gradient-to-r from-orange-500 to-transparent mx-auto mt-2"></div>
             </div>
+
             <h2 className="text-5xl md:text-6xl font-black text-blue-900 mb-6">
-              Rapid AI Platform Deployment<br/>For Your Business
+              Cultural Values
             </h2>
             <p className="text-gray-600 text-lg max-w-3xl mx-auto">
-              From initial consultation to production deployment, our streamlined process delivers custom AI solutions in 90 days.
+              The principles that guide everything we build and every decision we make
             </p>
           </div>
 
-          {/* Visual Journey Timeline */}
-          <div className="relative">
-            {/* Connection Line */}
-            <div className="hidden md:block absolute top-24 left-0 right-0 h-1 bg-gradient-to-r from-orange-200 via-orange-400 to-orange-600 z-0"></div>
-            
-            <div className="grid md:grid-cols-6 gap-6 relative z-10">
-              {[
-                {
-                  phase: "Phase 1",
-                  title: "Discovery",
-                  desc: "Business case & requirements",
-                  icon: MdDescription,
-                  time: "Week 1"
-                },
-                {
-                  phase: "Phase 2",
-                  title: "Development",
-                  desc: "Model training & fine-tuning",
-                  icon: MdLayers,
-                  time: "4-12 weeks"
-                },
-                {
-                  phase: "Phase 3",
-                  title: "Deployment",
-                  desc: "Install in your environment",
-                  icon: MdShield,
-                  time: "Week 1"
-                },
-                {
-                  phase: "Phase 4",
-                  title: "Testing",
-                  desc: "Validation within your infrastructure",
-                  icon: MdVisibility,
-                  time: "2-4 weeks"
-                },
-                {
-                  phase: "Phase 5",
-                  title: "Go-Live",
-                  desc: "Production deployment",
-                  icon: MdSpeed,
-                  time: "Week 1"
-                },
-                {
-                  phase: "Phase 6",
-                  title: "Support",
-                  desc: "Ongoing maintenance & updates",
-                  icon: MdSecurity,
-                  time: "Continuous"
-                }
-              ].map((item, i) => (
-                <div key={i} className="text-center group">
-                  <div className="relative mb-6">
-                    <div className="w-20 h-20 bg-gradient-to-br from-orange-500 to-orange-600 rounded-full flex items-center justify-center mx-auto shadow-xl group-hover:scale-110 transition-transform duration-500">
-                      <item.icon className="w-10 h-10 text-white" />
-                    </div>
-                    <div className="absolute -top-3 -right-3 bg-blue-900 text-white text-xs font-bold px-2 py-1 rounded-full">
-                      {i + 1}
-                    </div>
-                  </div>
-                  <div className="bg-white p-4 rounded-xl shadow-md hover:shadow-xl transition-shadow border border-gray-100">
-                    <div className="text-orange-500 font-bold text-xs uppercase mb-2">{item.phase}</div>
-                    <h3 className="text-lg font-bold text-blue-900 mb-2">{item.title}</h3>
-                    <p className="text-gray-600 text-sm mb-3">{item.desc}</p>
-                    <div className="text-orange-600 font-semibold text-xs">{item.time}</div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          <div className="mt-16 bg-gradient-to-br from-orange-50 to-orange-100/50 border-l-4 border-orange-500 p-10 rounded-r-2xl">
-            <h3 className="text-2xl font-bold text-blue-900 mb-4 flex items-center gap-3">
-              <MdSpeed className="w-8 h-8 text-orange-500" />
-              Speed & Customization Advantage
-            </h3>
-            <div className="grid md:grid-cols-2 gap-6">
-              <div>
-                <h4 className="font-bold text-blue-900 mb-2">Fast Time to Value</h4>
-                <p className="text-gray-700">
-                  Most projects move from concept to production in 90 days—dramatically faster than traditional enterprise implementations.
-                </p>
-              </div>
-              <div>
-                <h4 className="font-bold text-blue-900 mb-2">Built for Your Business</h4>
-                <p className="text-gray-700">
-                  Every platform deployment is custom-configured with your data, workflows, and requirements—not a generic solution.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div className="text-center mt-12">
-            <button 
-              onClick={() => scrollToSection('approach')}
-              className="group flex items-center gap-2 text-orange-500 font-semibold hover:gap-4 transition-all mx-auto"
-            >
-              Learn About Our Approach
-              <FaArrowRight className="w-4 h-4" />
-            </button>
-          </div>
-        </div>
-      </section>
-
-      {/* Our Approach Section */}
-      <section id="approach" className="py-24 px-4 scroll-mt-20">
-        <div className="max-w-6xl mx-auto text-center">
-          <div className="mb-4 animate-fade-in">
-            <span className="text-orange-500 font-bold text-sm tracking-widest uppercase">Our Philosophy</span>
-            <div className="h-1 w-20 bg-gradient-to-r from-orange-500 to-transparent mx-auto mt-2"></div>
-          </div>
-
-          <h2 className="text-5xl md:text-6xl font-black text-blue-900 mb-6 animate-fade-in-up">
-            Our Approach
-          </h2>
-          
-          <p className="text-gray-600 text-lg mb-16 max-w-3xl mx-auto animate-fade-in">
-            We combine cutting-edge AI technologies with globally recognized standards and regulatory frameworks.
-          </p>
-          
-          <div className="grid md:grid-cols-3 gap-10">
-            {[
-              {
-                icon: MdSecurity,
-                title: "Security",
-                desc: "Security governance is built into every architecture. We ensure your AI models are protected against adversarial attacks, prompt injection, and unauthorized access from deployment.",
-                gradient: "from-orange-500 to-orange-600"
-              },
-              {
-                icon: MdVisibility,
-                title: "Privacy",
-                desc: "Data sovereignty is paramount. We design solutions where your data never leaves your environment, ensuring complete privacy and control over sensitive enterprise information.",
-                gradient: "from-blue-500 to-blue-600"
-              },
-              {
-                icon: MdDescription,
-                title: "Compliance",
-                desc: "We navigate complex regulatory landscapes to ensure your AI deployments meet all industry standards, from GDPR and EU AI Act to sector-specific regulations.",
-                gradient: "from-purple-500 to-purple-600"
-              }
-            ].map((item, i) => (
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {culturalValues.map((value, i) => (
               <div 
-                key={i} 
-                className="group bg-white p-10 rounded-3xl shadow-md hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 text-left border border-gray-100 animate-fade-in-up"
-                style={{animationDelay: `${i * 0.1}s`}}
+                key={i}
+                className="group bg-white rounded-2xl p-8 shadow-md hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-gray-100"
               >
-                <div className={`bg-gradient-to-br ${item.gradient} w-16 h-16 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500 shadow-lg`}>
-                  <item.icon className="w-9 h-9 text-white" />
+                <div className="flex items-start gap-4 mb-4">
+                  <div className={`bg-gradient-to-br ${value.color} rounded-xl p-3 group-hover:scale-110 transition-transform duration-500 shadow-lg`}>
+                    <value.icon className="w-7 h-7 text-white" />
+                  </div>
+                  <div className="text-4xl font-black text-gray-200">
+                    {value.number}
+                  </div>
                 </div>
-                <h3 className="text-2xl font-bold text-blue-900 mb-4">{item.title}</h3>
-                <p className="text-gray-600 leading-relaxed text-base">{item.desc}</p>
+                <h3 className="text-xl font-bold text-blue-900 mb-3">
+                  {value.title}
+                </h3>
+                <p className="text-gray-600 leading-relaxed">
+                  {value.description}
+                </p>
               </div>
             ))}
           </div>
-
-          <button 
-            onClick={() => scrollToSection('problem-solution')}
-            className="group mt-12 flex items-center gap-2 text-orange-500 font-semibold hover:gap-4 transition-all mx-auto"
-          >
-            See How We Solve Problems
-            <FaArrowRight className="w-4 h-4" />
-          </button>
         </div>
       </section>
 
-      {/* Problem vs Solution Section */}
-      <section id="problem-solution" className="bg-gradient-to-b from-gray-50 to-white py-24 px-4 scroll-mt-20">
+      {/* About Dr. Dattawala Section - SIMPLIFIED */}
+      <section id="founder" className="py-24 px-4 bg-gradient-to-b from-gray-50 to-white scroll-mt-20">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
+          <div className="text-center mb-12">
             <div className="mb-4">
-              <span className="text-orange-500 font-bold text-sm tracking-widest uppercase">The Challenge</span>
+              <span className="text-orange-500 font-bold text-sm tracking-widest uppercase">Leadership</span>
               <div className="h-1 w-20 bg-gradient-to-r from-orange-500 to-transparent mx-auto mt-2"></div>
             </div>
+
             <h2 className="text-5xl md:text-6xl font-black text-blue-900 mb-6">
-              Problem vs Solution
+              About Dr. Dattawala
             </h2>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-10">
-            {/* The Problem */}
-            <div className="bg-gradient-to-br from-red-50 to-red-100/50 border-2 border-red-200 rounded-3xl p-10 hover:shadow-2xl transition-all duration-500 hover:-translate-y-1 animate-slide-in-left">
-              <div className="flex items-center space-x-4 mb-8">
-                <div className="bg-red-500 rounded-full p-4 shadow-lg">
-                  <FaTimes className="w-8 h-8 text-white" />
+          <div className="max-w-4xl mx-auto">
+            <div className="bg-white rounded-3xl shadow-2xl overflow-hidden border-2 border-gray-100">
+              <div className="grid md:grid-cols-5 gap-0">
+                {/* Left Column - Photo */}
+                <div className="md:col-span-2 relative bg-gray-200 h-96 md:h-auto">
+                  <div className="absolute inset-0 bg-gradient-to-t from-blue-900/50 to-transparent z-10"></div>
+                  <img
+                    src="/dr.jpg"
+                    alt="Dr. Davar Dattawala"
+                    className="w-full h-full object-cover"
+                  />
                 </div>
-                <h3 className="text-3xl font-black text-red-700">The Problem</h3>
-              </div>
-              
-              <p className="text-gray-800 mb-8 font-bold text-xl leading-relaxed">
-                Public AI models cannot meet security and compliance requirements for sensitive data.
-              </p>
-              
-              <div className="space-y-5">
-                {[
-                  "High risk of data leakage via public APIs",
-                  "Limited control over model behavior and outputs",
-                  "Regulatory non-compliance for confidential data",
-                  "Generic models lack industry-specific expertise"
-                ].map((item, i) => (
-                  <div 
-                    key={i} 
-                    className="flex items-start space-x-4 bg-white/70 p-4 rounded-xl animate-fade-in-up"
-                    style={{animationDelay: `${i * 0.1}s`}}
-                  >
-                    <div className="bg-red-100 rounded-full p-2 mt-0.5">
-                      <FaTimes className="w-4 h-4 text-red-600" />
+
+                {/* Right Column - Info */}
+                <div className="md:col-span-3 p-10">
+                  <h3 className="text-3xl font-black text-blue-900 mb-2">
+                    Dr. Davar Dattawala
+                  </h3>
+                  <p className="text-orange-500 font-bold mb-6 text-lg">
+                    Founder & Chief Technology Officer
+                  </p>
+
+                  <div className="space-y-4 mb-8">
+                    <div className="flex items-center gap-3 text-gray-600">
+                      <MdSecurity className="w-5 h-5 text-blue-500" />
+                      <span>London, United Kingdom</span>
                     </div>
-                    <span className="text-gray-700 font-medium leading-relaxed">{item}</span>
                   </div>
-                ))}
+
+                  <p className="text-gray-700 text-lg leading-relaxed mb-8">
+                    Dr. Davar Dattawala is a curious AI practitioner and Cybersecurity leader with over 21 years of global experience spanning the UK, Americas, Middle East and Southeast Asia. His career has been defined by securing some of the world's most complex enterprise environments across banking, telecommunications and government sectors. He is an award winning professional with a published thesis in international magazine.
+                  </p>
+
+                  <div className="pt-6 border-t border-gray-200">
+                    <Link
+                      href="https://www.linkedin.com/company/cyberai-technologies-ltd/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-3 text-blue-600 hover:text-blue-700 group"
+                    >
+                      <FaLinkedin className="w-6 h-6" />
+                      <span className="font-semibold group-hover:underline">
+                        Connect on LinkedIn
+                      </span>
+                    </Link>
+                  </div>
+                </div>
               </div>
             </div>
-
-            {/* Our Solution */}
-            <div className="bg-gradient-to-br from-blue-50 to-blue-100/50 border-2 border-blue-200 rounded-3xl p-10 hover:shadow-2xl transition-all duration-500 hover:-translate-y-1 animate-slide-in-right">
-              <div className="flex items-center space-x-4 mb-8">
-                <div className="bg-blue-500 rounded-full p-4 shadow-lg">
-                  <FaCheck className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-3xl font-black text-blue-700">Our Solution</h3>
-              </div>
-              
-              <p className="text-gray-800 mb-8 font-bold text-xl leading-relaxed">
-                Private LLMs and SLMs running securely inside your environment with built-in governance.
-              </p>
-              
-              <div className="space-y-5">
-                {[
-                  "Deployed on your private cloud or on-premises",
-                  "Full ownership of data and model weights",
-                  "Custom configuration for specific use cases",
-                  "Industry-trained models with domain expertise"
-                ].map((item, i) => (
-                  <div 
-                    key={i} 
-                    className="flex items-start space-x-4 bg-white/70 p-4 rounded-xl animate-fade-in-up"
-                    style={{animationDelay: `${i * 0.1}s`}}
-                  >
-                    <div className="bg-blue-100 rounded-full p-2 mt-0.5">
-                      <FaCheck className="w-4 h-4 text-blue-600" />
-                    </div>
-                    <span className="text-gray-700 font-medium leading-relaxed">{item}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-
-          <div className="text-center mt-12">
-            <button 
-              onClick={() => scrollToSection('why-cyberai')}
-              className="group flex items-center gap-2 text-orange-500 font-semibold hover:gap-4 transition-all mx-auto"
-            >
-              Discover Why Choose CyberAI
-              <FaArrowRight className="w-4 h-4" />
-            </button>
           </div>
         </div>
       </section>
 
-      {/* Why CyberAI Technologies Section */}
-      <section id="why-cyberai" className="relative bg-gradient-to-br from-[#1e3a8a] via-[#1e40af] to-[#3730a3] text-white py-24 px-4 overflow-hidden scroll-mt-20">
-        {/* Animated Background */}
-        <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute w-96 h-96 bg-orange-500/10 rounded-full blur-3xl top-0 right-0 animate-pulse"></div>
-          <div className="absolute w-96 h-96 bg-blue-500/10 rounded-full blur-3xl bottom-0 left-0 animate-pulse" style={{animationDelay: '1s'}}></div>
-        </div>
-
-        <div className="max-w-6xl mx-auto relative z-10">
-          <div className="text-center mb-16">
-            <div className="mb-4">
-              <span className="text-orange-300 font-bold text-sm tracking-widest uppercase">Our Advantage</span>
-              <div className="h-1 w-20 bg-gradient-to-r from-orange-500 to-transparent mx-auto mt-2"></div>
-            </div>
-
-            <h2 className="text-5xl md:text-6xl font-black mb-6 animate-fade-in-up">
-              Why CyberAI Technologies?
-            </h2>
-            <p className="text-blue-200 text-xl font-light animate-fade-in">
-              We bridge the gap between AI innovation and enterprise security requirements.
-            </p>
-          </div>
-          
-          <div className="grid md:grid-cols-4 gap-8">
-            {[
-              {
-                icon: MdShield,
-                title: "Governance-First AI",
-                desc: "Security and compliance frameworks built into the platform architecture from day one.",
-                color: "from-orange-500 to-orange-600"
-              },
-              {
-                icon: MdBusiness,
-                title: "Governance Experts",
-                desc: "Deep expertise in AI governance, risk management, and ethical frameworks for regulated industries.",
-                color: "from-blue-500 to-blue-600"
-              },
-              {
-                icon: MdAccountBalance,
-                title: "Regulated Industries",
-                desc: "Specialized in banking, healthcare, legal, and government sectors with strict compliance needs.",
-                color: "from-purple-500 to-purple-600"
-              },
-              {
-                icon: MdLayers,
-                title: "Vendor Agnostic",
-                desc: "Flexible platform model that integrates with your existing tech stack and infrastructure.",
-                color: "from-green-500 to-green-600"
-              }
-            ].map((item, i) => (
-              <div 
-                key={i} 
-                className="text-center group animate-fade-in-up"
-                style={{animationDelay: `${i * 0.1}s`}}
-              >
-                <div className={`bg-gradient-to-br ${item.color} w-24 h-24 rounded-2xl flex items-center justify-center mx-auto mb-6 transition-all duration-500 transform group-hover:scale-110 group-hover:rotate-3 shadow-2xl`}>
-                  <item.icon className="w-12 h-12 text-white" />
-                </div>
-                <h3 className="text-2xl font-bold mb-4">{item.title}</h3>
-                <p className="text-blue-200 leading-relaxed">{item.desc}</p>
-              </div>
-            ))}
-          </div>
-
-          <div className="text-center mt-16">
-            <button 
-              onClick={() => scrollToSection('cta')}
-              className="group flex items-center gap-2 text-orange-300 font-semibold hover:gap-4 transition-all mx-auto text-lg"
-            >
-              Get Started With Us
-              <FaArrowRight className="w-5 h-5" />
-            </button>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section - Updated contact info */}
+      {/* CTA Section */}
       <section id="cta" className="py-24 px-4 bg-white scroll-mt-20">
         <div className="max-w-5xl mx-auto">
-          <div className="bg-gradient-to-br from-blue-900 via-blue-800 to-slate-900 text-white p-16 rounded-3xl text-center shadow-2xl relative overflow-hidden animate-fade-in-up">
+          <div className="bg-gradient-to-br from-blue-900 via-blue-800 to-slate-900 text-white p-16 rounded-3xl text-center shadow-2xl relative overflow-hidden">
             {/* Animated Background */}
             <div className="absolute inset-0 overflow-hidden">
               <div className="absolute w-96 h-96 bg-orange-500/10 rounded-full blur-3xl top-0 right-0 animate-pulse"></div>
@@ -688,10 +433,10 @@ export default function AboutPage() {
 
             <div className="relative z-10">
               <h2 className="text-4xl md:text-5xl font-black mb-6">
-                Ready to Deploy Private AI?
+                Ready to Own Your AI Journey?
               </h2>
               <p className="text-blue-200 text-xl mb-10 max-w-2xl mx-auto leading-relaxed">
-                Schedule a consultation to discuss your AI requirements and compliance needs.
+                Schedule a consultation to discuss how CyberAi can help you build secure, compliant AI solutions on your terms.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link href="/contact">
@@ -700,14 +445,14 @@ export default function AboutPage() {
                     <FaArrowRight className="w-5 h-5 group-hover:translate-x-2 transition-transform" />
                   </button>
                 </Link>
-                <a href="https://wa.me/447554898543" target="_blank" rel="noopener noreferrer">
+                <a href="https://wa.me/447399339964" target="_blank" rel="noopener noreferrer">
                   <button className="border-2 border-white/50 backdrop-blur-sm hover:bg-white hover:text-blue-900 px-12 py-5 rounded-xl font-bold text-xl transition-all hover:scale-105">
                     WhatsApp Us
                   </button>
                 </a>
               </div>
               <p className="text-blue-300 text-sm mt-6">
-                Or email us at <a href="mailto:inquiries@cyberaiact.com" className="underline hover:text-white">inquiries@cyberaiact.com</a>
+                Or email us at <a href="mailto:Enquiries@cyberaitechs.com" className="underline hover:text-white">Enquiries@cyberaitechs.com</a>
               </p>
             </div>
           </div>
@@ -745,28 +490,6 @@ export default function AboutPage() {
           }
         }
         
-        @keyframes slide-in-left {
-          from {
-            opacity: 0;
-            transform: translateX(-50px);
-          }
-          to {
-            opacity: 1;
-            transform: translateX(0);
-          }
-        }
-        
-        @keyframes slide-in-right {
-          from {
-            opacity: 0;
-            transform: translateX(50px);
-          }
-          to {
-            opacity: 1;
-            transform: translateX(0);
-          }
-        }
-        
         @keyframes float {
           0%, 100% {
             transform: translateY(0px) rotate(0deg);
@@ -786,14 +509,6 @@ export default function AboutPage() {
         
         .animate-fade-in-down {
           animation: fade-in-down 0.8s ease-out;
-        }
-        
-        .animate-slide-in-left {
-          animation: slide-in-left 0.8s ease-out;
-        }
-        
-        .animate-slide-in-right {
-          animation: slide-in-right 0.8s ease-out;
         }
         
         .animate-float {
