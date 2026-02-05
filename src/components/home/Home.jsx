@@ -638,7 +638,6 @@ export default function CyberAILandingPage() {
       </section>
 
       {/* Footer Component */}
-      <Footer />
 
       <style jsx>{`
         @keyframes fade-in {
