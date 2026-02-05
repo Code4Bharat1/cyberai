@@ -157,7 +157,7 @@ export default function Footer() {
             <ul className="space-y-2.5">
               {[
                 { name: 'Terms & Conditions', href: '/terms-of-use' },
-                { name: 'EULA', href: '/eula' },
+                { name: 'EULA', href: '/eula' },  
                 { name: 'Privacy Notice', href: '/privacy-policy' },
                 { name: 'Cookie Notice', href: '/cookie-notice' },
                 { name: 'Cookie Preferences', href: '/cookie-preferences' }
