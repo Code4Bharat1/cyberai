@@ -338,7 +338,7 @@ export default function AboutPage() {
                   <div className={`bg-gradient-to-br ${value.color} rounded-xl p-3 group-hover:scale-110 transition-transform duration-500 shadow-lg`}>
                     <value.icon className="w-7 h-7 text-white" />
                   </div>
-                  <div className="text-4xl font-black text-gray-200">
+                  <div className="text-4xl font-black text-gray-600">
                     {value.number}
                   </div>
                 </div>

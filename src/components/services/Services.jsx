@@ -351,63 +351,7 @@ export default function ServicesPage() {
       </section>
 
       {/* Service Journey - Customer Onboarding - Updated timeline */}
-      <section className="py-20 px-4 bg-white">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
-            <div className="mb-4">
-              <span className="text-orange-500 font-bold text-sm tracking-widest uppercase">Our Approach</span>
-              <div className="h-1 w-20 bg-gradient-to-r from-orange-500 to-transparent mx-auto mt-2"></div>
-            </div>
-            <h2 className="text-5xl md:text-6xl font-black text-blue-900 mb-6">
-              Rapid AI Platform Deployment<br/>For Your Business
-            </h2>
-            <p className="text-gray-600 text-xl max-w-3xl mx-auto">
-              From initial consultation to production deployment in 90 days—complete AI lifecycle support
-            </p>
-          </div>
-
-          {/* Visual Journey Diagram */}
-          <div className="relative mb-16">
-            {/* Connection Line */}
-            <div className="hidden md:block absolute top-1/2 left-0 right-0 h-1 bg-gradient-to-r from-blue-200 via-orange-400 to-purple-600 transform -translate-y-1/2 z-0"></div>
-            
-            <div className="grid md:grid-cols-6 gap-4 relative z-10">
-              {[
-                { icon: MdAssessment, title: "Discovery", desc: "Requirements & business case", time: "Week 1", phase: "Phase 1" },
-                { icon: MdArchitecture, title: "Configuration", desc: "Platform setup", time: "4-12 weeks", phase: "Phase 2" },
-                { icon: MdCloud, title: "Deployment", desc: "In your environment", time: "Week 1", phase: "Phase 3" },
-                { icon: MdVerifiedUser, title: "Testing", desc: "Validation & security", time: "2-4 weeks", phase: "Phase 4" },
-                { icon: MdTrendingUp, title: "Go-Live", desc: "Production deployment", time: "Week 1", phase: "Phase 5" },
-                { icon: MdMonitor, title: "Support", desc: "Ongoing optimization", time: "Continuous", phase: "Phase 6" }
-              ].map((stage, i) => (
-                <div key={i} className="text-center group">
-                  <div className="relative mb-4">
-                    <div className="w-20 h-20 bg-gradient-to-br from-orange-500 to-orange-600 rounded-full flex items-center justify-center mx-auto shadow-xl group-hover:scale-110 transition-transform duration-500">
-                      <stage.icon className="w-10 h-10 text-white" />
-                    </div>
-                    <div className="absolute -top-2 -right-2 bg-blue-900 text-white text-xs font-bold px-2 py-1 rounded-full">
-                      {i + 1}
-                    </div>
-                  </div>
-                  <div className="bg-white p-3 rounded-xl shadow-md border border-gray-100 group-hover:shadow-xl transition-shadow">
-                    <div className="text-xs text-orange-600 font-bold mb-1">{stage.phase}</div>
-                    <h4 className="text-sm font-bold text-blue-900 mb-1">{stage.title}</h4>
-                    <p className="text-xs text-gray-600 mb-2">{stage.desc}</p>
-                    <div className="text-orange-600 font-semibold text-xs">{stage.time}</div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          <div className="bg-gradient-to-br from-orange-50 to-orange-100/50 rounded-2xl p-8 text-center border-l-4 border-orange-500">
-            <h4 className="text-xl font-bold text-blue-900 mb-3">Speed & Customization Advantage</h4>
-            <p className="text-gray-700 text-lg max-w-3xl mx-auto">
-              <span className="font-bold text-orange-600">90 days</span> from concept to production—dramatically faster than traditional enterprise AI. Every platform deployment is custom-configured for your specific workflows and compliance requirements.
-            </p>
-          </div>
-        </div>
-      </section>
+      
 
       {/* Core Services Grid */}
       <section id="services" className="py-24 px-4 bg-gradient-to-b from-gray-50 to-white scroll-mt-20">
@@ -1195,7 +1139,7 @@ export default function ServicesPage() {
               </a>
             </div>
             <p className="text-blue-300 text-sm mt-6">
-              Or email us at <a href="mailto:inquiries@cyberaiact.com" className="underline hover:text-white">inquiries@cyberaiact.com</a>
+              Or email us at <a href="mailto:Enquiries@cyberaitechs.com" className="underline hover:text-white">Enquiries@cyberaitechs.com</a>
             </p>
           </div>
         </div>

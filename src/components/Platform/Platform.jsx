@@ -790,7 +790,7 @@ export default function PlatformPage() {
             </a>
           </div>
           <p className="text-blue-300 text-sm mt-6">
-            Or email us at <a href="mailto:inquiries@cyberaiact.com" className="underline hover:text-white">inquiries@cyberaiact.com</a>
+            Or email us at <a href="mailto:Enquiries@cyberaitechs.com" className="underline hover:text-white">Enquiries@cyberaitechs.com</a>
           </p>
         </div>
       </section>

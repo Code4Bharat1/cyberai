@@ -84,7 +84,7 @@ ${formData.message}
     const encodedMessage = encodeURIComponent(whatsappMessage);
     
     // WhatsApp business number - REPLACE WITH YOUR BUSINESS NUMBER
-    const whatsappNumber = 'YOUR_BUSINESS_WHATSAPP_NUMBER'; // Replace with actual business number
+    const whatsappNumber = '447399339964'; // Replace with actual business number
     
     // Create WhatsApp URL
     const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
@@ -128,9 +128,9 @@ ${formData.message}
     {
       icon: MdPhone,
       title: "Phone",
-      details: "+447554898543", // REPLACE WITH BUSINESS NUMBER
+      details: "447399339964", // REPLACE WITH BUSINESS NUMBER
       gradient: "from-purple-500 to-purple-600",
-      link: "tel:+447554898543" // REPLACE WITH BUSINESS NUMBER
+      link: "tel:447399339964" // REPLACE WITH BUSINESS NUMBER
     },
     {
       icon: MdEmail,
@@ -154,7 +154,7 @@ ${formData.message}
       title: "WhatsApp Chat",
       description: "Get instant responses via WhatsApp",
       action: "Chat Now",
-      link: "https://wa.me/447554898543", // REPLACE WITH BUSINESS NUMBER
+      link: "https://wa.me/+447399339964", // REPLACE WITH BUSINESS NUMBER
       gradient: "from-green-500 to-green-600",
       featured: true
     },
@@ -375,7 +375,7 @@ ${formData.message}
               {/* Quick Actions */}
               <div className="space-y-4 pt-4">
                 <a
-                  href="https://wa.me/447554898543"
+                  href="https://wa.me/447399339964"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="group flex items-center justify-center gap-3 bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all transform hover:scale-105 shadow-xl hover:shadow-2xl hover:shadow-green-500/50"
@@ -652,7 +652,7 @@ ${formData.message}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="https://wa.me/447554898543"
+              href="https://wa.me/447399339964"
               target="_blank"
               rel="noopener noreferrer"
               className="group bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 px-10 py-4 rounded-xl font-bold text-lg transition-all transform hover:scale-105 shadow-2xl hover:shadow-green-500/50 inline-flex items-center justify-center gap-3"

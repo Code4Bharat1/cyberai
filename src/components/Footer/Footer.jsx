@@ -45,7 +45,7 @@ export default function Footer() {
             </Link>
 
             <h3 className="text-orange-400 font-semibold text-sm mb-3 leading-snug">
-              Your AI. Your data<br />. Your rules
+              Your Ai . Your data . Your rules
             </h3>
 
             <p className="text-gray-400 text-sm leading-relaxed mb-6">
@@ -84,7 +84,7 @@ export default function Footer() {
                 { name: 'About', href: '/about' },
                 { name: 'Industries', href: '/industries' },
                 { name: 'Services', href: '/services' },
-                { name: 'Leadership', href: '/leadership' },
+                // { name: 'Leadership', href: '/leadership' },
                 { name: 'Contact', href: '/contact' }
               ].map((link, i) => (
                 <li key={i}>

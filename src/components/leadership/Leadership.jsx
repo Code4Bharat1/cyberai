@@ -60,7 +60,7 @@ export default function LeadershipPage() {
       icon: FaRocket
     },
     {
-      metric: "6",
+      metric: "5",
       label: "Global Regions",
       icon: FaGlobe
     },
