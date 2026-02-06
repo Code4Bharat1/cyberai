@@ -3,7 +3,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { MdSecurity, MdLocationOn, MdPhone, MdEmail, MdLanguage } from 'react-icons/md';
-import { FaLinkedin, FaTwitter, FaGithub, FaYoutube } from 'react-icons/fa';
+import { FaLinkedin, FaTwitter, FaGithub, FaYoutube, FaInstagram, FaFacebook } from 'react-icons/fa';
 import Image from 'next/image';
 
 export default function Footer() {
@@ -54,23 +54,25 @@ export default function Footer() {
 
             {/* Social Links */}
             <div className="flex space-x-2">
-              {[
-                  { icon: FaYoutube, href: "https://www.youtube.com/@cyberaitechs", label: "YouTube" },
-                  { icon: FaLinkedin, href: "https://www.linkedin.com/company/cyberai-technologies-ltd/", label: "LinkedIn" },
-                  { icon: FaGithub, href: "https://github.com/cyberaitechs", label: "GitHub" },
-                ].map((social, i) => (
-                <Link
-                  key={i}
-                  href={social.href}
-                  aria-label={social.label}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="bg-white/5 hover:bg-orange-500 p-2.5 rounded-lg transition-all duration-300 hover:scale-110 group"
-                >
-                  <social.icon className="w-4 h-4 text-gray-400 group-hover:text-white transition-colors" />
-                </Link>
-              ))}
-            </div>
+  {[
+    { icon: FaYoutube, href: "https://www.youtube.com/@cyberaitechs", label: "YouTube" },
+    { icon: FaLinkedin, href: "https://www.linkedin.com/company/cyberai-technologies-ltd/", label: "LinkedIn" },
+    { icon: FaGithub, href: "https://github.com/CyberAi-Technologies", label: "GitHub" },
+    { icon: FaInstagram, href: "https://www.instagram.com/cyberaitechnologies?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==", label: "Instagram" },
+    { icon: FaFacebook, href: "https://www.facebook.com/profile.php?id=61584836352544", label: "Facebook" },
+  ].map((social, i) => (
+    <Link
+      key={i}
+      href={social.href}
+      aria-label={social.label}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="bg-white/5 hover:bg-orange-500 p-2.5 rounded-lg transition-all duration-300 hover:scale-110 group"
+    >
+      <social.icon className="w-4 h-4 text-gray-400 group-hover:text-white transition-colors" />
+    </Link>
+  ))}
+</div>
           </div>
 
           {/* Column 2 - Quick Links */}
