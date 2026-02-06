@@ -139,7 +139,7 @@ export default function CyberAILandingPage() {
             </div> */}
 
             <h2 className="text-4xl md:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-900 to-blue-600 leading-tight">
-              Enterprise Grade Ai, Built for Data Sovereignty 
+              Enterprise Grade Ai, Built for Data Sovereignty
             </h2>
 
             <p className="text-gray-600 text-lg leading-relaxed">
@@ -542,9 +542,9 @@ export default function CyberAILandingPage() {
           </div>
         </div>
       </section>
-        
 
-            <section className="py-20 px-4 bg-gradient-to-b from-gray-50 to-white">
+
+      <section className="py-20 px-4 bg-gradient-to-b from-gray-50 to-white">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <div className="mb-4">
@@ -552,7 +552,7 @@ export default function CyberAILandingPage() {
               <div className="h-1 w-20 bg-gradient-to-r from-orange-500 to-transparent mx-auto mt-2"></div>
             </div>
             <h2 className="text-4xl md:text-5xl font-black text-blue-900 mb-6">
-              Quick AI Model Development<br/>For Your Business
+              Quick AI Model Development<br />For Your Business
             </h2>
             <p className="text-gray-600 text-lg max-w-3xl mx-auto">
               From initial consultation to production deployment, our streamlined process delivers custom AI solutions in 4-12 weeks.
@@ -563,55 +563,55 @@ export default function CyberAILandingPage() {
           <div className="relative mb-16">
             {/* Horizontal Orange Line */}
             <div className="hidden md:block absolute top-[60px] left-0 right-0 h-1 bg-gradient-to-r from-orange-500 via-orange-500 to-orange-500 z-0"></div>
-            
+
             <div className="grid md:grid-cols-6 gap-6 relative z-10">
               {[
-                { 
-                  icon: MdAssessment, 
+                {
+                  icon: MdAssessment,
                   number: "1",
-                  phase: "PHASE 1", 
-                  title: "Discovery", 
-                  desc: "Business case & requirements", 
+                  phase: "PHASE 1",
+                  title: "Discovery",
+                  desc: "Business case & requirements",
                   time: "Week 1"
                 },
-                { 
-                  icon: MdArchitecture, 
+                {
+                  icon: MdArchitecture,
                   number: "2",
-                  phase: "PHASE 2", 
-                  title: "Development", 
-                  desc: "Model training & fine-tuning", 
+                  phase: "PHASE 2",
+                  title: "Development",
+                  desc: "Model training & fine-tuning",
                   time: "4-12 weeks"
                 },
-                { 
-                  icon: MdCloud, 
+                {
+                  icon: MdCloud,
                   number: "3",
-                  phase: "PHASE 3", 
-                  title: "Deployment", 
-                  desc: "Install in your environment", 
+                  phase: "PHASE 3",
+                  title: "Deployment",
+                  desc: "Install in your environment",
                   time: "Week 1"
                 },
-                { 
-                  icon: MdVerifiedUser, 
+                {
+                  icon: MdVerifiedUser,
                   number: "4",
-                  phase: "PHASE 4", 
-                  title: "Testing", 
-                  desc: "Validation within your infrastructure", 
+                  phase: "PHASE 4",
+                  title: "Testing",
+                  desc: "Validation within your infrastructure",
                   time: "2-4 weeks"
                 },
-                { 
-                  icon: MdTrendingUp, 
+                {
+                  icon: MdTrendingUp,
                   number: "5",
-                  phase: "PHASE 5", 
-                  title: "Go-Live", 
-                  desc: "Production deployment", 
+                  phase: "PHASE 5",
+                  title: "Go-Live",
+                  desc: "Production deployment",
                   time: "Week 1"
                 },
-                { 
-                  icon: MdMonitor, 
+                {
+                  icon: MdMonitor,
                   number: "6",
-                  phase: "PHASE 6", 
-                  title: "Support", 
-                  desc: "Ongoing maintenance & updates", 
+                  phase: "PHASE 6",
+                  title: "Support",
+                  desc: "Ongoing maintenance & updates",
                   time: "Continuous"
                 }
               ].map((stage, i) => (
@@ -626,7 +626,7 @@ export default function CyberAILandingPage() {
                       {stage.number}
                     </div>
                   </div>
-                  
+
                   {/* Card */}
                   <div className="bg-white p-6 rounded-xl shadow-md border border-gray-100 group-hover:shadow-xl transition-all hover:-translate-y-1 min-h-[160px] flex flex-col">
                     <div className="text-xs text-orange-600 font-bold mb-2 uppercase tracking-wide">{stage.phase}</div>
@@ -647,7 +647,7 @@ export default function CyberAILandingPage() {
               </div>
               <h3 className="text-2xl font-black text-blue-900">Speed & Customization Advantage</h3>
             </div>
-            
+
             <div className="grid md:grid-cols-2 gap-8">
               <div>
                 <h4 className="text-lg font-bold text-blue-900 mb-3">Fast Time to Value</h4>
@@ -655,7 +655,7 @@ export default function CyberAILandingPage() {
                   Most projects move from concept to production in <span className="font-bold text-orange-600">4-12 weeks</span>—dramatically faster than traditional enterprise software implementations.
                 </p>
               </div>
-              
+
               <div>
                 <h4 className="text-lg font-bold text-blue-900 mb-3">Built for Your Business</h4>
                 <p className="text-gray-700 leading-relaxed">
@@ -684,21 +684,21 @@ export default function CyberAILandingPage() {
 
           <div className="grid md:grid-cols-3 gap-8 mb-16">
             {[
-              { 
-                icon: Building2, 
-                title: "Banking & Finance", 
+              {
+                icon: Building2,
+                title: "Banking & Finance",
                 gradient: "from-blue-500 to-blue-600",
                 features: ["Trading analysis", "Risk assessment", "Fraud detection", "Regulatory compliance"]
               },
-              { 
-                icon: Cpu, 
-                title: "Healthcare", 
+              {
+                icon: Cpu,
+                title: "Healthcare",
                 gradient: "from-orange-500 to-orange-600",
                 features: ["Diagnostic support", "Patient data privacy", "Clinical workflows", "HIPAA compliance"]
               },
-              { 
-                icon: Globe, 
-                title: "Government & Justice", 
+              {
+                icon: Globe,
+                title: "Government & Justice",
                 gradient: "from-purple-500 to-purple-600",
                 features: ["Document processing", "Security clearance", "Air-gapped systems", "Classified data handling"]
               }
