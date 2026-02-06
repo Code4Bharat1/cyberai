@@ -5,6 +5,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import Navbar from '../navbar/Navbar';
 import Footer from '../Footer/Footer';
+import { MdArchitecture, MdAssessment, MdCloud, MdMonitor, MdTrendingUp, MdVerifiedUser } from 'react-icons/md';
 
 
 export default function CyberAILandingPage() {
@@ -132,17 +133,17 @@ export default function CyberAILandingPage() {
       <section id="about" className="py-20 px-4 relative scroll-mt-20">
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center">
           <div className="space-y-6 animate-slide-in-left">
-            <div className="inline-block">
+            {/* <div className="inline-block">
               <span className="text-orange-500 font-bold text-sm tracking-widest uppercase">About CyberAI</span>
               <div className="h-1 w-20 bg-gradient-to-r from-orange-500 to-transparent mt-2"></div>
-            </div>
+            </div> */}
 
             <h2 className="text-4xl md:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-900 to-blue-600 leading-tight">
-              Enterprise-Grade AI, Built for Security
+              Enterprise Grade Ai, Built for Data Sovereignty 
             </h2>
 
             <p className="text-gray-600 text-lg leading-relaxed">
-              CyberAI Technologies positions itself as an enterprise  platform that puts Industry AI on your desktop and mobile. From idea to value in 90 days with exceptional ROI.
+              CyberAI Technologies positions itself as an enterprise product platform that puts Industry AI on your desktop and mobile. From idea to value in 90 days with exceptional ROI.
             </p>
 
             <div className="bg-gradient-to-br from-orange-50 to-orange-100/50 border-l-4 border-orange-500 p-6 rounded-r-xl shadow-lg hover:shadow-xl transition-shadow">
@@ -159,13 +160,13 @@ export default function CyberAILandingPage() {
               </div>
             </div>
 
-            <button
+            {/* <button
               onClick={() => scrollToSection('solutions')}
               className="group flex items-center gap-2 text-orange-500 font-semibold hover:gap-4 transition-all"
             >
               Explore Our Solutions
               <ArrowRight className="w-5 h-5" />
-            </button>
+            </button> */}
           </div>
 
           <div className="relative animate-slide-in-right">
@@ -181,7 +182,7 @@ export default function CyberAILandingPage() {
       </section>
 
       {/* Strategic Focus Areas */}
-      <section id="solutions" className="bg-gradient-to-b from-gray-50 to-white py-20 px-4 scroll-mt-20">
+      {/* <section id="solutions" className="bg-gradient-to-b from-gray-50 to-white py-20 px-4 scroll-mt-20">
         <div className="max-w-6xl mx-auto text-center">
           <div className="mb-4 animate-fade-in">
             <span className="text-orange-500 font-bold text-sm tracking-widest uppercase">Our Focus</span>
@@ -221,7 +222,7 @@ export default function CyberAILandingPage() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Why Privatised LLMs */}
       <section id="privatised-llms" className="py-20 px-4 scroll-mt-20">
@@ -323,7 +324,7 @@ export default function CyberAILandingPage() {
       </section>
 
       {/* Case Studies Section */}
-      <section id="case-studies" className="bg-gradient-to-b from-gray-50 to-white py-20 px-4 scroll-mt-20">
+      {/* <section id="case-studies" className="bg-gradient-to-b from-gray-50 to-white py-20 px-4 scroll-mt-20">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <span className="text-orange-500 font-bold text-sm tracking-widest uppercase">Proven Results</span>
@@ -411,7 +412,7 @@ export default function CyberAILandingPage() {
             </button>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Developing Private AI - Timeline Style */}
       <section id="process" className="py-20 px-4 scroll-mt-20">
@@ -537,6 +538,186 @@ export default function CyberAILandingPage() {
                   <span className="text-gray-700">Privacy & Adversarial Testing</span>
                 </li>
               </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+        <section className="py-20 px-4 bg-white">
+              <div className="max-w-6xl mx-auto">
+                <div className="text-center mb-16">
+                  <div className="mb-4">
+                    <span className="text-orange-500 font-bold text-sm tracking-widest uppercase">Our Approach</span>
+                    <div className="h-1 w-20 bg-gradient-to-r from-orange-500 to-transparent mx-auto mt-2"></div>
+                  </div>
+                  <h2 className="text-5xl md:text-6xl font-black text-blue-900 mb-6">
+                    Rapid AI Platform Deployment<br/>For Your Business
+                  </h2>
+                  <p className="text-gray-600 text-xl max-w-3xl mx-auto">
+                    From initial consultation to production deployment in 90 days—complete AI lifecycle support
+                  </p>
+                </div>
+      
+                {/* Visual Journey Diagram */}
+                <div className="relative mb-16">
+                  {/* Connection Line */}
+                  <div className="hidden md:block absolute top-1/2 left-0 right-0 h-1 bg-gradient-to-r from-blue-200 via-orange-400 to-purple-600 transform -translate-y-1/2 z-0"></div>
+                  
+                  <div className="grid md:grid-cols-6 gap-4 relative z-10">
+                    {[
+                      { icon: MdAssessment, title: "Discovery", desc: "Requirements & business case", time: "Week 1", phase: "Phase 1" },
+                      { icon: MdArchitecture, title: "Configuration", desc: "Platform setup", time: "4-12 weeks", phase: "Phase 2" },
+                      { icon: MdCloud, title: "Deployment", desc: "In your environment", time: "Week 1", phase: "Phase 3" },
+                      { icon: MdVerifiedUser, title: "Testing", desc: "Validation & security", time: "2-4 weeks", phase: "Phase 4" },
+                      { icon: MdTrendingUp, title: "Go-Live", desc: "Production deployment", time: "Week 1", phase: "Phase 5" },
+                      { icon: MdMonitor, title: "Support", desc: "Ongoing optimization", time: "Continuous", phase: "Phase 6" }
+                    ].map((stage, i) => (
+                      <div key={i} className="text-center group">
+                        <div className="relative mb-4">
+                          <div className="w-20 h-20 bg-gradient-to-br from-orange-500 to-orange-600 rounded-full flex items-center justify-center mx-auto shadow-xl group-hover:scale-110 transition-transform duration-500">
+                            <stage.icon className="w-10 h-10 text-white" />
+                          </div>
+                          <div className="absolute -top-2 -right-2 bg-blue-900 text-white text-xs font-bold px-2 py-1 rounded-full">
+                            {i + 1}
+                          </div>
+                        </div>
+                        <div className="bg-white p-3 rounded-xl shadow-md border border-gray-100 group-hover:shadow-xl transition-shadow">
+                          <div className="text-xs text-orange-600 font-bold mb-1">{stage.phase}</div>
+                          <h4 className="text-sm font-bold text-blue-900 mb-1">{stage.title}</h4>
+                          <p className="text-xs text-gray-600 mb-2">{stage.desc}</p>
+                          <div className="text-orange-600 font-semibold text-xs">{stage.time}</div>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+      
+                <div className="bg-gradient-to-br from-orange-50 to-orange-100/50 rounded-2xl p-8 text-center border-l-4 border-orange-500">
+                  <h4 className="text-xl font-bold text-blue-900 mb-3">Speed & Customization Advantage</h4>
+                  <p className="text-gray-700 text-lg max-w-3xl mx-auto">
+                    <span className="font-bold text-orange-600">90 days</span> from concept to production—dramatically faster than traditional enterprise AI. Every platform deployment is custom-configured for your specific workflows and compliance requirements.
+                  </p>
+                </div>
+              </div>
+            </section>
+
+            <section className="py-20 px-4 bg-gradient-to-b from-gray-50 to-white">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-16">
+            <div className="mb-4">
+              <span className="text-orange-500 font-bold text-sm tracking-widest uppercase">How We Work</span>
+              <div className="h-1 w-20 bg-gradient-to-r from-orange-500 to-transparent mx-auto mt-2"></div>
+            </div>
+            <h2 className="text-4xl md:text-5xl font-black text-blue-900 mb-6">
+              Quick AI Model Development<br/>For Your Business
+            </h2>
+            <p className="text-gray-600 text-lg max-w-3xl mx-auto">
+              From initial consultation to production deployment, our streamlined process delivers custom AI solutions in 4-12 weeks.
+            </p>
+          </div>
+
+          {/* Process Timeline */}
+          <div className="relative mb-16">
+            {/* Horizontal Orange Line */}
+            <div className="hidden md:block absolute top-[60px] left-0 right-0 h-1 bg-gradient-to-r from-orange-500 via-orange-500 to-orange-500 z-0"></div>
+            
+            <div className="grid md:grid-cols-6 gap-6 relative z-10">
+              {[
+                { 
+                  icon: MdAssessment, 
+                  number: "1",
+                  phase: "PHASE 1", 
+                  title: "Discovery", 
+                  desc: "Business case & requirements", 
+                  time: "Week 1"
+                },
+                { 
+                  icon: MdArchitecture, 
+                  number: "2",
+                  phase: "PHASE 2", 
+                  title: "Development", 
+                  desc: "Model training & fine-tuning", 
+                  time: "4-12 weeks"
+                },
+                { 
+                  icon: MdCloud, 
+                  number: "3",
+                  phase: "PHASE 3", 
+                  title: "Deployment", 
+                  desc: "Install in your environment", 
+                  time: "Week 1"
+                },
+                { 
+                  icon: MdVerifiedUser, 
+                  number: "4",
+                  phase: "PHASE 4", 
+                  title: "Testing", 
+                  desc: "Validation within your infrastructure", 
+                  time: "2-4 weeks"
+                },
+                { 
+                  icon: MdTrendingUp, 
+                  number: "5",
+                  phase: "PHASE 5", 
+                  title: "Go-Live", 
+                  desc: "Production deployment", 
+                  time: "Week 1"
+                },
+                { 
+                  icon: MdMonitor, 
+                  number: "6",
+                  phase: "PHASE 6", 
+                  title: "Support", 
+                  desc: "Ongoing maintenance & updates", 
+                  time: "Continuous"
+                }
+              ].map((stage, i) => (
+                <div key={i} className="text-center group">
+                  <div className="relative mb-6">
+                    {/* Circle with Icon */}
+                    <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-orange-600 rounded-full flex items-center justify-center mx-auto shadow-lg group-hover:scale-110 transition-transform duration-300 relative z-10">
+                      <stage.icon className="w-8 h-8 text-white" />
+                    </div>
+                    {/* Number Badge */}
+                    <div className="absolute -top-1 left-1/2 transform -translate-x-1/2 -translate-y-2 bg-blue-900 text-white text-xs font-bold w-6 h-6 rounded-full flex items-center justify-center shadow-md z-20">
+                      {stage.number}
+                    </div>
+                  </div>
+                  
+                  {/* Card */}
+                  <div className="bg-white p-6 rounded-xl shadow-md border border-gray-100 group-hover:shadow-xl transition-all hover:-translate-y-1 min-h-[160px] flex flex-col">
+                    <div className="text-xs text-orange-600 font-bold mb-2 uppercase tracking-wide">{stage.phase}</div>
+                    <h4 className="text-lg font-bold text-blue-900 mb-2">{stage.title}</h4>
+                    <p className="text-sm text-gray-600 mb-3 flex-grow">{stage.desc}</p>
+                    <div className="text-orange-600 font-bold text-sm">{stage.time}</div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Speed & Customization Advantage */}
+          <div className="bg-gradient-to-br from-blue-50 to-white rounded-2xl p-10 border-l-4 border-orange-500 shadow-lg">
+            <div className="flex items-start gap-4 mb-6">
+              <div className="bg-orange-500 p-3 rounded-lg flex-shrink-0">
+                <Zap className="w-6 h-6 text-white" />
+              </div>
+              <h3 className="text-2xl font-black text-blue-900">Speed & Customization Advantage</h3>
+            </div>
+            
+            <div className="grid md:grid-cols-2 gap-8">
+              <div>
+                <h4 className="text-lg font-bold text-blue-900 mb-3">Fast Time to Value</h4>
+                <p className="text-gray-700 leading-relaxed">
+                  Most projects move from concept to production in <span className="font-bold text-orange-600">4-12 weeks</span>—dramatically faster than traditional enterprise software implementations.
+                </p>
+              </div>
+              
+              <div>
+                <h4 className="text-lg font-bold text-blue-900 mb-3">Built for Your Business</h4>
+                <p className="text-gray-700 leading-relaxed">
+                  Every model is custom-trained on your data, workflows, and requirements—not a generic solution adapted to your needs.
+                </p>
+              </div>
             </div>
           </div>
         </div>

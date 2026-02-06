@@ -83,7 +83,7 @@ export default function PrivatisedLLMsPage() {
     {
       icon: FaServer,
       title: "Foundation Model",
-      desc: "Select optimal  foundation model suited to your requirements and infrastructure.",
+      desc: "Select optimal Ai LLM or SLM foundation model suited to your requirements and infrastructure.",
       step: "01"
     },
     {
@@ -242,13 +242,13 @@ export default function PrivatisedLLMsPage() {
                 </div>
               </div>
 
-              <button 
+              {/* <button 
                 onClick={() => scrollToSection('why-private')}
                 className="group flex items-center gap-2 text-orange-500 font-semibold hover:gap-4 transition-all mt-6"
               >
                 Why Choose Private AI
                 <FaArrowRight className="w-4 h-4" />
-              </button>
+              </button> */}
             </div>
             
             <div className="relative animate-slide-in-right">
@@ -351,7 +351,7 @@ export default function PrivatisedLLMsPage() {
             </p>
           </div>
 
-          <div className="text-center mt-12">
+          {/* <div className="text-center mt-12">
             <button 
               onClick={() => scrollToSection('comparison')}
               className="group flex items-center gap-2 text-orange-500 font-semibold hover:gap-4 transition-all mx-auto"
@@ -359,7 +359,7 @@ export default function PrivatisedLLMsPage() {
               Compare with Public LLMs
               <FaArrowRight className="w-4 h-4" />
             </button>
-          </div>
+          </div> */}
         </div>
       </section>
 
@@ -445,7 +445,7 @@ export default function PrivatisedLLMsPage() {
             </div>
           </div>
 
-          <div className="text-center mt-12">
+          {/* <div className="text-center mt-12">
             <button 
               onClick={() => scrollToSection('benefits')}
               className="group flex items-center gap-2 text-orange-500 font-semibold hover:gap-4 transition-all mx-auto"
@@ -453,7 +453,7 @@ export default function PrivatisedLLMsPage() {
               Explore Key Benefits
               <FaArrowRight className="w-4 h-4" />
             </button>
-          </div>
+          </div> */}
         </div>
       </section>
 
@@ -656,7 +656,7 @@ export default function PrivatisedLLMsPage() {
                     <FaArrowRight className="w-5 h-5 group-hover:translate-x-2 transition-transform" />
                   </button>
                 </Link>
-                <a href="https://wa.me/BUSINESS_NUMBER" target="_blank" rel="noopener noreferrer">
+                <a href="https://wa.me/+447399339964" target="_blank" rel="noopener noreferrer">
                   <button className="border-2 border-white/50 backdrop-blur-sm hover:bg-white hover:text-blue-900 px-12 py-5 rounded-xl font-bold text-xl transition-all hover:scale-105">
                     WhatsApp Us
                   </button>
