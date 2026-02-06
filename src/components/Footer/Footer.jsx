@@ -35,7 +35,7 @@ export default function Footer() {
                 </div>
                 <div className="flex flex-col">
                   <span className="text-xl font-bold text-white">
-                    CyberAI
+                    CyberAi
                   </span>
                   <span className="text-xs text-gray-400">
                     Technologies Ltd

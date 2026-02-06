@@ -116,7 +116,7 @@ ${formData.message}
     {
       icon: MdBusiness,
       title: "Company Name",
-      details: "cyberai Technologies Ltd",
+      details: "Cyberai Technologies Ltd",
       gradient: "from-blue-500 to-blue-600"
     },
     {
@@ -135,9 +135,9 @@ ${formData.message}
     {
       icon: MdEmail,
       title: "Email",
-      details: "inquiries@cyberaiact.com",
+      details: "Enquiries@cyberaitechs.com",
       gradient: "from-green-500 to-green-600",
-      link: "mailto:inquiries@cyberaiact.com"
+      link: "mailto:Enquiries@cyberaitechs.com"
     },
     {
       icon: MdLanguage,
@@ -171,7 +171,7 @@ ${formData.message}
       title: "Email Us",
       description: "Send us a detailed inquiry",
       action: "Send Email",
-      link: "mailto:inquiries@cyberaiact.com",
+      link: "mailto:Enquiries@cyberaitechs.com",
       gradient: "from-purple-500 to-purple-600"
     },
     {
@@ -179,7 +179,7 @@ ${formData.message}
       title: "LinkedIn",
       description: "Connect with us professionally",
       action: "Connect",
-      link: "https://www.linkedin.com/company/YOUR_COMPANY_VANITY_URL", // REPLACE WITH COMPANY LINKEDIN URL
+      link: "https://www.linkedin.com/company/cyberai-technologies-ltd/", // REPLACE WITH COMPANY LINKEDIN URL
       gradient: "from-indigo-500 to-indigo-600"
     }
   ];
@@ -212,7 +212,7 @@ ${formData.message}
     {
       icon: FaGlobe,
       title: "Global Coverage",
-      value: "6 Regions",
+      value: "5 Regions",
       description: "Supporting clients across UK, Europe, Americas, Middle East, and Asia"
     },
     {
@@ -244,7 +244,7 @@ ${formData.message}
             </div>
 
             <h1 className="text-6xl md:text-7xl font-black mb-6 leading-tight animate-fade-in-up">
-              Contact <span className="bg-gradient-to-r from-orange-400 to-orange-600 bg-clip-text text-transparent">cyberai</span>
+              Contact <span className="bg-gradient-to-r from-orange-400 to-orange-600 bg-clip-text text-transparent">Cyberai</span>
             </h1>
             
             <p className="text-xl md:text-2xl text-blue-100 max-w-3xl mx-auto mb-10 animate-fade-in font-light leading-relaxed">
@@ -386,7 +386,7 @@ ${formData.message}
                 </a>
 
                 <a
-                  href="mailto:inquiries@cyberaiact.com"
+                  href="mailto:Enquiries@cyberaitechs.com"
                   className="group flex items-center justify-center gap-3 bg-white border-2 border-blue-200 hover:border-blue-500 text-blue-900 px-8 py-4 rounded-xl font-bold text-lg transition-all transform hover:scale-105 shadow-lg hover:shadow-xl"
                 >
                   <MdEmail className="w-6 h-6" />

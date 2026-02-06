@@ -319,8 +319,8 @@ export default function TermsOfUsePage() {
                     </div>
                     <div>
                       <p className="font-bold text-blue-900">Email:</p>
-                      <a href="mailto:ddattawala@cyberaitechs.com" className="text-blue-600 hover:text-blue-700 font-medium">
-                        ddattawala@cyberaitechs.com
+                      <a href="mailto:Enquiries@cyberaitechs.com" className="text-blue-600 hover:text-blue-700 font-medium">
+                        Enquiries@cyberaitechs.com
                       </a>
                     </div>
                   </div>
@@ -331,8 +331,8 @@ export default function TermsOfUsePage() {
                     </div>
                     <div>
                       <p className="font-bold text-blue-900">Phone:</p>
-                      <a href="tel:+447554898543" className="text-gray-700 hover:text-blue-600">
-                        +44 7554898543
+                      <a href="tel:+44 7399339964" className="text-gray-700 hover:text-blue-600">
+                        +44 7399339964
                       </a>
                     </div>
                   </div>

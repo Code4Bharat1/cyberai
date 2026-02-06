@@ -207,10 +207,10 @@ export default function EULAPage() {
                 <div>
                   <p className="text-sm font-semibold text-gray-700 mb-1">Email</p>
                   <a 
-                    href="mailto:ddattawala@cyberaitechs.com" 
+                    href="mailto:Enquiries@cyberaitechs.com" 
                     className="text-[#EB7100] hover:text-[#1848A0] text-sm transition-colors"
                   >
-                    ddattawala@cyberaitechs.com
+                    Enquiries@cyberaitechs.com
                   </a>
                 </div>
               </div>
