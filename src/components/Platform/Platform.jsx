@@ -160,7 +160,7 @@ export default function PlatformPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-white mt-10">
+    <div className="min-h-screen bg-white mt-10 select-none">
       {/* Navigation */}
       <Navbar />
 
@@ -360,79 +360,7 @@ export default function PlatformPage() {
       </section>
 
       {/* Data Sovereignty */}
-      <section id="data-sovereignty" className="py-10 px-4 bg-gradient-to-b from-gray-50 to-white scroll-mt-20">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
-            <div className="inline-block mb-4">
-              <span className="text-orange-500 font-bold text-sm tracking-widest uppercase">Data Control</span>
-              <div className="h-1 w-20 bg-gradient-to-r from-orange-500 to-transparent mx-auto mt-2"></div>
-            </div>
-            <h2 className="text-5xl md:text-6xl font-black text-blue-900 mb-6">
-              Data Under Your Control
-            </h2>
-            <p className="text-gray-600 text-xl max-w-3xl mx-auto">
-              Addressing the industry's #1 concern: complete data sovereignty with end-to-end auditability
-            </p>
-          </div>
-
-          {/* Visual Flow Diagram */}
-          <div className="bg-gradient-to-br from-orange-50 to-orange-100/50 rounded-3xl p-12 mb-12 border-2 border-orange-200">
-            <div className="grid md:grid-cols-4 gap-6 mb-8">
-              {[
-                { icon: MdStorage, title: "Your Data", desc: "Stays in your infrastructure" },
-                { icon: MdLock, title: "Your Models", desc: "Trained exclusively on your data" },
-                { icon: MdVerifiedUser, title: "Your Control", desc: "Full audit trails & transparency" },
-                { icon: MdShield, title: "Your Compliance", desc: "Meet all regulatory requirements" }
-              ].map((item, i) => (
-                <div key={i} className="bg-white rounded-2xl p-6 shadow-lg text-center">
-                  <item.icon className="w-12 h-12 text-orange-600 mx-auto mb-3" />
-                  <h4 className="font-bold text-blue-900 mb-2">{item.title}</h4>
-                  <p className="text-gray-600 text-sm">{item.desc}</p>
-                </div>
-              ))}
-            </div>
-
-            <div className="bg-white rounded-2xl p-8 shadow-lg">
-              <h4 className="font-bold text-blue-900 text-xl mb-6 text-center">What This Means For You</h4>
-              <div className="space-y-4">
-                <div className="flex items-start gap-4 p-4 bg-orange-50 rounded-xl">
-                  <MdCheckCircle className="w-6 h-6 text-orange-600 mt-1 flex-shrink-0" />
-                  <div>
-                    <h5 className="font-bold text-gray-900 mb-1">Never Leaves Your Environment</h5>
-                    <p className="text-gray-700">Your sensitive data is never transmitted to external APIs or third-party servers. Models are trained and deployed entirely within your infrastructure—on-premises or in your private cloud.</p>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-4 p-4 bg-orange-50 rounded-xl">
-                  <MdCheckCircle className="w-6 h-6 text-orange-600 mt-1 flex-shrink-0" />
-                  <div>
-                    <h5 className="font-bold text-gray-900 mb-1">Complete Transparency</h5>
-                    <p className="text-gray-700">Every data point, every training decision, every model output is fully auditable. You can trace exactly how your AI arrived at any conclusion—critical for compliance and regulatory requirements.</p>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-4 p-4 bg-orange-50 rounded-xl">
-                  <MdCheckCircle className="w-6 h-6 text-orange-600 mt-1 flex-shrink-0" />
-                  <div>
-                    <h5 className="font-bold text-gray-900 mb-1">Regulatory Compliance Built-In</h5>
-                    <p className="text-gray-700">Meet GDPR, EU AI Act, ISO 42001, and industry-specific requirements by design. Your data governance policies are enforced at the infrastructure level—not as an afterthought.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* <div className="text-center">
-            <button 
-              onClick={() => scrollToSection('continuous-improvement')}
-              className="group flex items-center gap-2 text-orange-500 font-semibold hover:gap-4 transition-all mx-auto"
-            >
-              Discover Continuous Improvement
-              <FaArrowRight className="w-4 h-4" />
-            </button>
-          </div> */}
-        </div>
-      </section>
+      
 
       {/* Continuous Improvement */}
       <section id="continuous-improvement" className="py-10 px-4 bg-white scroll-mt-20">

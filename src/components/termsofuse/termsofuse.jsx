@@ -61,7 +61,7 @@ export default function TermsOfUsePage() {
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white select-none">
       {/* Navigation */}
       <Navbar />
 

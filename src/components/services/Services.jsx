@@ -231,7 +231,7 @@ export default function ServicesPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-white mt-10">
+    <div className="min-h-screen bg-white mt-10 select-none">
       {/* Navigation */}
       <Navbar />
 
@@ -474,72 +474,7 @@ export default function ServicesPage() {
       </section>
 
       {/* Data Sovereignty - DETAILED SECTION */}
-      <section id="data-sovereignty" className="py-10 px-4 bg-gradient-to-b from-gray-50 to-white scroll-mt-20">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
-            <div className="mb-4">
-              <span className="text-orange-500 font-bold text-sm tracking-widest uppercase">Data Control</span>
-              <div className="h-1 w-20 bg-gradient-to-r from-orange-500 to-transparent mx-auto mt-2"></div>
-            </div>
-            <h2 className="text-5xl md:text-6xl font-black text-blue-900 mb-6">
-              Data Under Your Control
-            </h2>
-            <p className="text-gray-600 text-xl max-w-3xl mx-auto">
-              Industry's #1 concern: complete sovereignty with end-to-end auditability
-            </p>
-          </div>
-
-          <div className="bg-gradient-to-br from-orange-50 to-orange-100/50 rounded-3xl p-12 border-2 border-orange-200">
-            <div className="grid md:grid-cols-4 gap-6 mb-8">
-              {[
-                { icon: MdStorage, title: "Your Data", desc: "Stays in your infrastructure" },
-                { icon: MdLock, title: "Your Models", desc: "Trained only on your data" },
-                { icon: MdVerifiedUser, title: "Your Control", desc: "Full audit trails" },
-                { icon: FaShieldAlt, title: "Your Compliance", desc: "Meet all regulations" }
-              ].map((item, i) => (
-                <div key={i} className="bg-white rounded-2xl p-6 shadow-lg text-center hover:shadow-2xl transition-shadow">
-                  <item.icon className="w-12 h-12 text-orange-600 mx-auto mb-3" />
-                  <h4 className="font-bold text-blue-900 mb-2">{item.title}</h4>
-                  <p className="text-gray-600 text-sm">{item.desc}</p>
-                </div>
-              ))}
-            </div>
-
-            <div className="bg-white rounded-2xl p-8 shadow-lg">
-              <h4 className="font-bold text-blue-900 text-xl mb-6 text-center">What This Means</h4>
-              <div className="space-y-4">
-                {[
-                  { title: "Never Leaves Your Environment", desc: "Models trained and deployed entirely within your infrastructure" },
-                  { title: "Complete Transparency", desc: "Every data point and decision fully auditable for compliance" },
-                  { title: "Regulatory Compliance Built-In", desc: "GDPR, HIPAA, ISO 42001, EU AI Act enforced at infrastructure level" }
-                ].map((item, i) => (
-                  <div key={i} className="flex items-start gap-4 p-4 bg-orange-50 rounded-xl">
-                    <MdCheckCircle className="w-6 h-6 text-orange-600 mt-1 flex-shrink-0" />
-                    <div>
-                      <h5 className="font-bold text-gray-900 mb-1">{item.title}</h5>
-                      <p className="text-gray-700">{item.desc}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-
-          <div className="mt-8 bg-gradient-to-r from-orange-900 to-orange-800 rounded-2xl p-8 text-white">
-            <div className="flex items-start gap-4">
-              <FaDatabase className="w-12 h-12 text-orange-300 flex-shrink-0 mt-1" />
-              <div>
-                <h4 className="text-2xl font-bold mb-3">The Trust Gap in AI</h4>
-                <p className="text-orange-100 text-lg leading-relaxed">
-                  Most AI solutions require sending your data to external platforms. This creates risk, compliance challenges, 
-                  and lack of control. Our approach keeps everything in your environment—giving you complete sovereignty while 
-                  maintaining cutting-edge AI capabilities.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+     
 
       {/* Continuous Improvement - DETAILED SECTION */}
       <section id="continuous-improvement" className="py-10 px-4 bg-white scroll-mt-20">

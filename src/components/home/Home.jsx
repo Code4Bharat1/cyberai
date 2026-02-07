@@ -148,7 +148,7 @@ export default function CyberAILandingPage() {
   ];
   
   return (
-    <div className="min-h-screen bg-white overflow-hidden">
+    <div className="min-h-screen bg-white overflow-hidden select-none">
       {/* Navbar Component */}
       <Navbar />
 

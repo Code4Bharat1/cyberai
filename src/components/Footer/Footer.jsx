@@ -10,7 +10,7 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-gradient-to-br from-[#0a1628] via-[#152a4a] to-[#0a1628] text-white relative overflow-hidden">
+    <footer className="bg-gradient-to-br from-[#0a1628] via-[#152a4a] to-[#0a1628] text-white relative overflow-hidden select-none">
       {/* Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none opacity-30">
         <div className="absolute w-96 h-96 bg-orange-500/10 rounded-full blur-3xl -top-48 -left-48 animate-pulse"></div>

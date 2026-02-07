@@ -83,7 +83,7 @@ export default function EULAPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
+    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white select-none">
       <Navbar />
 
       {/* Hero Section */}

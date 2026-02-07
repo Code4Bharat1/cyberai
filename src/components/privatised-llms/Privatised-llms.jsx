@@ -125,7 +125,7 @@ export default function PrivatisedLLMsPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-white mt-10">
+    <div className="min-h-screen bg-white mt-10 select-none">
       {/* Navigation */}
       <Navbar />
 
