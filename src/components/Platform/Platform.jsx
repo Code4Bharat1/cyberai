@@ -212,7 +212,7 @@ export default function PlatformPage() {
       </section>
 
       {/* Introduction Section - Updated */}
-      <section className="py-20 px-4 bg-white scroll-mt-20">
+      <section className="py-10 px-4 bg-white scroll-mt-20">
         <div className="max-w-4xl mx-auto animate-fade-in-up">
           <div className="text-center">
             <div className="inline-block mb-4">
@@ -231,7 +231,7 @@ export default function PlatformPage() {
       </section>
 
       {/* Core Platform Capabilities */}
-      <section id="capabilities" className="py-20 px-4 bg-gradient-to-b from-gray-50 to-white scroll-mt-20">
+      <section id="capabilities" className="py-10 px-4 bg-gradient-to-b from-gray-50 to-white scroll-mt-20">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <div className="inline-block mb-4">
@@ -275,7 +275,7 @@ export default function PlatformPage() {
       </section>
 
       {/* Build Your Own AI OS */}
-      <section id="ai-os" className="py-24 px-4 bg-white scroll-mt-20">
+      <section id="ai-os" className="py-10 px-4 bg-white scroll-mt-20">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <div className="inline-block mb-4">
@@ -355,20 +355,12 @@ export default function PlatformPage() {
             </div>
           </div>
 
-          <div className="text-center">
-            <button 
-              onClick={() => scrollToSection('data-sovereignty')}
-              className="group flex items-center gap-2 text-orange-500 font-semibold hover:gap-4 transition-all mx-auto"
-            >
-              Learn About Data Sovereignty
-              <FaArrowRight className="w-4 h-4" />
-            </button>
-          </div>
+          
         </div>
       </section>
 
       {/* Data Sovereignty */}
-      <section id="data-sovereignty" className="py-24 px-4 bg-gradient-to-b from-gray-50 to-white scroll-mt-20">
+      <section id="data-sovereignty" className="py-10 px-4 bg-gradient-to-b from-gray-50 to-white scroll-mt-20">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <div className="inline-block mb-4">
@@ -430,7 +422,7 @@ export default function PlatformPage() {
             </div>
           </div>
 
-          <div className="text-center">
+          {/* <div className="text-center">
             <button 
               onClick={() => scrollToSection('continuous-improvement')}
               className="group flex items-center gap-2 text-orange-500 font-semibold hover:gap-4 transition-all mx-auto"
@@ -438,12 +430,12 @@ export default function PlatformPage() {
               Discover Continuous Improvement
               <FaArrowRight className="w-4 h-4" />
             </button>
-          </div>
+          </div> */}
         </div>
       </section>
 
       {/* Continuous Improvement */}
-      <section id="continuous-improvement" className="py-24 px-4 bg-white scroll-mt-20">
+      <section id="continuous-improvement" className="py-10 px-4 bg-white scroll-mt-20">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <div className="inline-block mb-4">
@@ -542,7 +534,7 @@ export default function PlatformPage() {
             </p>
           </div>
 
-          <div className="text-center mt-12">
+          {/* <div className="text-center mt-12">
             <button 
               onClick={() => scrollToSection('integration')}
               className="group flex items-center gap-2 text-orange-500 font-semibold hover:gap-4 transition-all mx-auto"
@@ -550,12 +542,12 @@ export default function PlatformPage() {
               Learn About Integration & A2A
               <FaArrowRight className="w-4 h-4" />
             </button>
-          </div>
+          </div> */}
         </div>
       </section>
 
       {/* MCP Servers & A2A Framework */}
-      <section id="integration" className="py-24 px-4 bg-gradient-to-b from-gray-50 to-white scroll-mt-20">
+      <section id="integration" className="py-10 px-4 bg-gradient-to-b from-gray-50 to-white scroll-mt-20">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <div className="inline-block mb-4">
@@ -649,7 +641,7 @@ export default function PlatformPage() {
       </section>
 
       {/* Platform Architecture */}
-      <section className="py-20 px-4 bg-white scroll-mt-20">
+      <section className="py-10 px-4 bg-white scroll-mt-20">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <div className="inline-block mb-4">

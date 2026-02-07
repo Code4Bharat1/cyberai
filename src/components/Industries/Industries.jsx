@@ -459,7 +459,7 @@ export default function IndustriesPage() {
       </section>
 
       {/* Introduction Section */}
-      <section className="py-20 px-4 bg-white">
+      <section className="py-10 px-4 bg-white">
         <div className="max-w-4xl mx-auto text-center animate-fade-in-up">
           <div className="inline-block mb-4">
             <span className="text-[#EB7100] font-bold text-sm tracking-widest uppercase">AI Platform for Regulated Industries</span>
@@ -505,7 +505,7 @@ export default function IndustriesPage() {
       </section>
 
       {/* Industries Overview Grid */}
-      <section id="industries" className="py-20 px-4 bg-gradient-to-b from-gray-50 to-white scroll-mt-20">
+      <section id="industries" className="py-10 px-4 bg-gradient-to-b from-gray-50 to-white scroll-mt-20">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <div className="inline-block mb-4">
@@ -592,7 +592,7 @@ export default function IndustriesPage() {
         <section 
           key={industry.id} 
           id={industry.id} 
-          className={`py-24 px-4 scroll-mt-20 ${idx % 2 === 0 ? 'bg-white' : 'bg-gradient-to-b from-gray-50 to-white'}`}
+          className={`py-10 px-4 scroll-mt-20 ${idx % 2 === 0 ? 'bg-white' : 'bg-gradient-to-b from-gray-50 to-white'}`}
         >
           <div className="max-w-6xl mx-auto">
             {/* Industry Header */}
@@ -661,7 +661,7 @@ export default function IndustriesPage() {
       ))}
 
       {/* Common Challenges Section */}
-      <section className="py-24 px-4 bg-white">
+      <section className="py-10 px-4 bg-white">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <div className="inline-block mb-4">
@@ -696,7 +696,7 @@ export default function IndustriesPage() {
       </section>
 
       {/* Why CyberAi for Regulated Industries */}
-      <section className="py-24 px-4 bg-gradient-to-b from-gray-50 to-white">
+      <section className="py-10 px-4 bg-gradient-to-b from-gray-50 to-white">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <div className="inline-block mb-4">
@@ -755,7 +755,7 @@ export default function IndustriesPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="relative bg-gradient-to-br from-[#1848A0] via-[#1848A0]/90 to-slate-900 text-white py-24 px-4 overflow-hidden">
+      <section className="relative bg-gradient-to-br from-[#1848A0] via-[#1848A0]/90 to-slate-900 text-white py-10 px-4 overflow-hidden">
         {/* Animated Background */}
         <div className="absolute inset-0 overflow-hidden" aria-hidden="true">
           <div className="absolute w-96 h-96 bg-[#EB7100]/10 rounded-full blur-3xl top-0 right-0 animate-pulse"></div>

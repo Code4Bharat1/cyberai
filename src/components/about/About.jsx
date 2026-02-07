@@ -312,7 +312,7 @@ export default function AboutPage() {
       </section>
 
       {/* Cultural Values Section - NEW */}
-      <section id="values" className="py-24 px-4 bg-gradient-to-b from-white to-gray-50 scroll-mt-20">
+      <section id="values" className="py-10 px-4 bg-gradient-to-b from-white to-gray-50 scroll-mt-20">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <div className="mb-4">
@@ -355,7 +355,7 @@ export default function AboutPage() {
       </section>
 
       {/* About Dr. Dattawala Section - SIMPLIFIED */}
-      <section id="founder" className="py-24 px-4 bg-gradient-to-b from-gray-50 to-white scroll-mt-20">
+      <section id="founder" className="py-10 px-4 bg-gradient-to-b from-gray-50 to-white scroll-mt-20">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
             <div className="mb-4">
@@ -422,7 +422,7 @@ export default function AboutPage() {
       </section>
 
       {/* CTA Section */}
-      <section id="cta" className="py-24 px-4 bg-white scroll-mt-20">
+      <section id="cta" className="py-10 px-4 bg-white scroll-mt-20">
         <div className="max-w-5xl mx-auto">
           <div className="bg-gradient-to-br from-blue-900 via-blue-800 to-slate-900 text-white p-16 rounded-3xl text-center shadow-2xl relative overflow-hidden">
             {/* Animated Background */}

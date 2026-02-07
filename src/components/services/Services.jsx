@@ -299,7 +299,7 @@ export default function ServicesPage() {
       </section>
 
       {/* Market Opportunity Section */}
-      <section className="py-20 px-4 bg-gradient-to-b from-white to-gray-50">
+      <section className="py-10 px-4 bg-gradient-to-b from-white to-gray-50">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <div className="mb-4">
@@ -354,7 +354,7 @@ export default function ServicesPage() {
       
 
       {/* Core Services Grid */}
-      <section id="services" className="py-24 px-4 bg-gradient-to-b from-gray-50 to-white scroll-mt-20">
+      <section id="services" className="py-10 px-4 bg-gradient-to-b from-gray-50 to-white scroll-mt-20">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <div className="mb-4 animate-fade-in">
@@ -399,7 +399,7 @@ export default function ServicesPage() {
       </section>
 
       {/* AI Platform Deployment - DETAILED SECTION */}
-      <section id="ai-os" className="py-24 px-4 bg-white scroll-mt-20">
+      <section id="ai-os" className="py-10 px-4 bg-white scroll-mt-20">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <div className="mb-4">
@@ -474,7 +474,7 @@ export default function ServicesPage() {
       </section>
 
       {/* Data Sovereignty - DETAILED SECTION */}
-      <section id="data-sovereignty" className="py-24 px-4 bg-gradient-to-b from-gray-50 to-white scroll-mt-20">
+      <section id="data-sovereignty" className="py-10 px-4 bg-gradient-to-b from-gray-50 to-white scroll-mt-20">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <div className="mb-4">
@@ -542,7 +542,7 @@ export default function ServicesPage() {
       </section>
 
       {/* Continuous Improvement - DETAILED SECTION */}
-      <section id="continuous-improvement" className="py-24 px-4 bg-white scroll-mt-20">
+      <section id="continuous-improvement" className="py-10 px-4 bg-white scroll-mt-20">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <div className="mb-4">
@@ -612,7 +612,7 @@ export default function ServicesPage() {
       </section>
 
       {/* MCP Servers & A2A Framework - DETAILED SECTION */}
-      <section id="integration" className="py-24 px-4 bg-gradient-to-b from-gray-50 to-white scroll-mt-20">
+      <section id="integration" className="py-10 px-4 bg-gradient-to-b from-gray-50 to-white scroll-mt-20">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <div className="mb-4">
@@ -693,7 +693,7 @@ export default function ServicesPage() {
       </section>
 
       {/* AI Risk Management - SECTION with updated compliance */}
-      <section id="ai-risks" className="py-24 px-4 bg-white scroll-mt-20">
+      <section id="ai-risks" className="py-10 px-4 bg-white scroll-mt-20">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <div className="mb-4">
@@ -764,7 +764,7 @@ export default function ServicesPage() {
       </section>
 
       {/* AI Readiness Assessment */}
-      <section id="readiness" className="py-24 px-4 bg-gradient-to-b from-gray-50 to-white scroll-mt-20">
+      <section id="readiness" className="py-10 px-4 bg-gradient-to-b from-gray-50 to-white scroll-mt-20">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <div className="mb-4">
@@ -827,7 +827,7 @@ export default function ServicesPage() {
       </section>
 
       {/* AI Red Teaming Section */}
-      <section id="red-teaming" className="py-24 px-4 bg-white scroll-mt-20">
+      <section id="red-teaming" className="py-10 px-4 bg-white scroll-mt-20">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <div className="mb-4">
@@ -921,7 +921,7 @@ export default function ServicesPage() {
       </section>
 
       {/* How We Orchestrate Enterprise AI - VISUAL SECTION */}
-      <section className="py-24 px-4 bg-gradient-to-b from-gray-50 to-white">
+      <section className="py-10 px-4 bg-gradient-to-b from-gray-50 to-white">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <div className="mb-4">
@@ -1047,7 +1047,7 @@ export default function ServicesPage() {
       </section>
 
       {/* Why Choose Our Services */}
-      <section className="py-24 px-4 bg-white">
+      <section className="py-10 px-4 bg-white">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <div className="mb-4">

@@ -273,7 +273,7 @@ ${formData.message}
       </section>
 
       {/* Contact Methods Section */}
-      <section className="py-20 px-4 bg-gradient-to-b from-white to-gray-50">
+      <section className="py-10 px-4 bg-gradient-to-b from-white to-gray-50">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
             <div className="inline-block mb-4">
@@ -331,7 +331,7 @@ ${formData.message}
       </section>
 
       {/* Main Contact Section */}
-      <section id="contact-form" className="py-20 px-4 bg-white scroll-mt-20">
+      <section id="contact-form" className="py-10 px-4 bg-white scroll-mt-20">
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 gap-16">
             {/* Left Column - Contact Information */}
@@ -570,7 +570,7 @@ ${formData.message}
       </section>
 
       {/* What to Expect Section */}
-      <section className="py-20 px-4 bg-gradient-to-b from-gray-50 to-white">
+      <section className="py-10 px-4 bg-gradient-to-b from-gray-50 to-white">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
             <div className="inline-block mb-4">

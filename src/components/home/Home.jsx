@@ -251,7 +251,7 @@ export default function CyberAILandingPage() {
           </div>
         </div>
       </section> */}
-      <section id="data-sovereignty" className="py-24 px-4 bg-gradient-to-b from-gray-50 to-white scroll-mt-20">
+      <section id="data-sovereignty" className="py-10 px-4 bg-gradient-to-b from-gray-50 to-white scroll-mt-10">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <div className="inline-block mb-4">
@@ -325,7 +325,7 @@ export default function CyberAILandingPage() {
         </div>
       </section>
       {/* Enterprise AI Section */}
-      <section id="about" className="py-20 px-4 relative scroll-mt-20">
+      <section id="about" className="py-10 px-4 relative scroll-mt-20">
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center">
           <div className="space-y-6 animate-slide-in-left">
             {/* <div className="inline-block">
@@ -419,7 +419,7 @@ export default function CyberAILandingPage() {
         </div>
       </section> */}
 
-        <section className="py-20 px-4 bg-gradient-to-b from-gray-50 to-white">
+        <section className="py-10 px-4 bg-gradient-to-b from-gray-50 to-white">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <div className="mb-4">
@@ -541,6 +541,7 @@ export default function CyberAILandingPage() {
           </div>
         </div>
       </section>
+
       <section id="hero" className="relative bg-gradient-to-br from-[#1e3a8a] via-[#1e40af] to-[#3730a3] text-white py-32 px-4 overflow-hidden">
         {/* Animated Background Elements */}
         <div className="absolute inset-0 overflow-hidden">
@@ -604,7 +605,7 @@ export default function CyberAILandingPage() {
       </section>
 
       {/* Why Privatised LLMs */}
-      <section id="privatised-llms" className="py-20 px-4 scroll-mt-20">
+      <section id="privatised-llms" className="py-10 px-4 scroll-mt-20">
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-16">
           <div className="space-y-6 animate-slide-in-left">
             <div>
@@ -702,7 +703,7 @@ export default function CyberAILandingPage() {
         </div>
       </section>
         {/* Public vs Private LLM Comparison */}
-            <section id="comparison" className="py-24 px-4 bg-white scroll-mt-20">
+            <section id="comparison" className="py-10 px-4 bg-white scroll-mt-20">
               <div className="max-w-6xl mx-auto">
                 <div className="text-center mb-16">
                   <div className="mb-4 animate-fade-in">
@@ -796,7 +797,7 @@ export default function CyberAILandingPage() {
             </section>
 
  {/* How We Deploy Section - Updated timeline */}
-      <section id="process" className="py-24 px-4 bg-white scroll-mt-20">
+      <section id="process" className="py-10 px-4 bg-white scroll-mt-20">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <div className="mb-4">
@@ -856,7 +857,7 @@ export default function CyberAILandingPage() {
         </div>
       </section>
 
-       <section className="py-20 px-4 bg-gradient-to-b from-gray-50 to-white scroll-mt-20">
+       <section className="py-10 px-4 bg-gradient-to-b from-gray-50 to-white scroll-mt-20">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <div className="inline-block mb-4">
