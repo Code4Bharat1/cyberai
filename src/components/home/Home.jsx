@@ -1,11 +1,12 @@
 "use client";
 import React, { useState, useEffect } from 'react';
-import { Shield, Lock, Eye, Users, Brain, Code, Target, Zap, Database, UserCheck, Building2, Cpu, Globe, CheckCircle, ArrowRight, TrendingUp, Clock, X } from 'lucide-react';
+import { Shield, Lock, Eye, Users, Brain, Code, Target, Zap, Database, UserCheck, Building2, Cpu, Globe, CheckCircle, ArrowRight, TrendingUp, Clock, X, BadgeCheck, Scale, Briefcase } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
 import Navbar from '../navbar/Navbar';
 import Footer from '../Footer/Footer';
-import { MdArchitecture, MdAssessment, MdCloud, MdMonitor, MdTrendingUp, MdVerifiedUser } from 'react-icons/md';
+import { MdAccountBalance, MdArchitecture, MdAssessment, MdAutorenew, MdBusiness, MdCheck, MdCheckCircle, MdClose, MdCloud, MdDeviceHub, MdHealthAndSafety, MdLock, MdMonitor, MdSecurity, MdShield, MdStorage, MdTrendingUp, MdTune, MdVerifiedUser } from 'react-icons/md';
+import { FaArrowRight, FaLock, FaRobot, FaServer } from 'react-icons/fa';
 
 
 export default function CyberAILandingPage() {
@@ -23,7 +24,129 @@ export default function CyberAILandingPage() {
       element.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
   };
+  const industries = [
+    {
+      name: "Banking & Financial Services",
+      icon: MdAccountBalance,
+      color: "from-blue-500 to-blue-700",
+      compliance: "FCA, PRA, MiFID II"
+    },
+    {
+      name: "Healthcare & Life Sciences",
+      icon: MdHealthAndSafety,
+      color: "from-emerald-500 to-emerald-700",
+      compliance: "HIPAA, NHS DSP Toolkit"
+    },
+    {
+      name: "Government & Public Sector",
+      icon: MdBusiness,
+      color: "from-purple-500 to-purple-700",
+      compliance: "Government Security Classification"
+    },
+    {
+      name: "Legal Services",
+      icon: Scale,
+      color: "from-indigo-500 to-indigo-700",
+      compliance: "SRA, Law Society Standards"
+    },
+    {
+      name: "Insurance",
+      icon: MdShield,
+      color: "from-cyan-500 to-cyan-700",
+      compliance: "FCA, Solvency II"
+    },
+    {
+      name: "Professional Services",
+      icon: Briefcase,
+      color: "from-orange-500 to-orange-700",
+      compliance: "Sector-Specific Standards"
+    }
+  ];
+    const developmentProcess = [
+      {
+        icon: FaServer,
+        title: "Foundation Model",
+        desc: "Select optimal Ai LLM or SLM foundation model suited to your requirements and infrastructure.",
+        step: "01"
+      },
+      {
+        icon: MdTune,
+        title: "Custom Training",
+        desc: "Fine-tune the model on your specific industry datasets to ensure relevance and accuracy.",
+        step: "02"
+      },
+      {
+        icon: FaLock,
+        title: "Secure Deployment",
+        desc: "Deploy within your cloud environment or on-premises, ensuring total data isolation.",
+        step: "03"
+      },
+      {
+        icon: FaRobot,
+        title: "AI Agents",
+        desc: "Integrate intelligent agents for automation, compliance checks, and domain-specific workflows.",
+        step: "04"
+      }
+    ];
+  
+  const coreCapabilities = [
+    {
+      icon: MdCloud,
+      title: "Build Your Own AI Operating System",
+      desc: "Deploy a complete AI platform in your environment that grows organically—enabling agent workflows and automation on top of your base system.",
+      gradient: "from-blue-500 to-blue-600",
+      link: "ai-os"
+    },
+    {
+      icon: MdLock,
+      title: "Data Under Your Control",
+      desc: "End-to-end data sovereignty with complete auditability and transparency—your data never leaves your infrastructure.",
+      gradient: "from-orange-500 to-orange-600",
+      link: "data-sovereignty"
+    },
+    {
+      icon: MdAutorenew,
+      title: "Continuous AI Improvement",
+      desc: "Baseline updates included as AI technology matures—ensuring your models remain competitive over 3+ year timeframes.",
+      gradient: "from-purple-500 to-purple-600",
+      link: "continuous-improvement"
+    },
+    {
+      icon: MdDeviceHub,
+      title: "MCP Servers & A2A Framework",
+      desc: "Agent-to-Agent communication framework for coordinating multiple AI systems—single unified output from diverse tools.",
+      gradient: "from-green-500 to-green-600",
+      link: "integration"
+    },
+    {
+      icon: MdShield,
+      title: "AI Governance Built-In",
+      desc: "Comprehensive governance frameworks aligned with ISO 42001, EU AI Act, GDPR, and sector-specific regulations.",
+      gradient: "from-pink-500 to-pink-600",
+      link: "governance"
+    },
+    {
+      icon: MdSecurity,
+      title: "Security by Design",
+      desc: "Governance controls embedded across the entire AI lifecycle, from data ingestion to deployment.",
+      gradient: "from-indigo-500 to-indigo-600",
+      link: "security"
+    }
+  ];
+  const publicLLMIssues = [
+    "Data sent to public cloud APIs",
+    "Generic training—not industry-specific",
+    "Limited compliance capabilities",
+    "Significant data sovereignty risks"
+  ];
 
+  const privatisedLLMBenefits = [
+    "Deployed on your private infrastructure",
+    "Trained on your company & industry data",
+    "Built-in compliance (GDPR, HIPAA, ISO 42001)",
+    "Complete data control & ownership"
+  ];
+  
   return (
     <div className="min-h-screen bg-white overflow-hidden">
       {/* Navbar Component */}
@@ -49,7 +172,7 @@ export default function CyberAILandingPage() {
           </h1>
 
           <p className="text-xl md:text-2xl text-blue-100 mb-10 max-w-3xl mx-auto animate-fade-in font-light leading-relaxed">
-            Enterprise-grade AI and cybersecurity solutions designed specifically for heavily regulated industries. From idea to value in 90 days with exceptional ROI.
+            Enterprise-grade AI  solutions designed specifically for heavily regulated industries. From idea to value in 90 days with exceptional ROI.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
@@ -103,7 +226,7 @@ export default function CyberAILandingPage() {
       </section>
 
       {/* Trust Badges Section */}
-      <section className="py-12 px-4 bg-gray-50 border-y border-gray-200">
+      {/* <section className="py-12 px-4 bg-gray-50 border-y border-gray-200">
         <div className="max-w-6xl mx-auto">
           <p className="text-center text-gray-600 font-semibold mb-8 text-sm uppercase tracking-wide">
             Trusted by Leading Organizations in Regulated Industries
@@ -127,8 +250,80 @@ export default function CyberAILandingPage() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
+      <section id="data-sovereignty" className="py-24 px-4 bg-gradient-to-b from-gray-50 to-white scroll-mt-20">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-16">
+            <div className="inline-block mb-4">
+              <span className="text-orange-500 font-bold text-sm tracking-widest uppercase">Data Control</span>
+              <div className="h-1 w-20 bg-gradient-to-r from-orange-500 to-transparent mx-auto mt-2"></div>
+            </div>
+            <h2 className="text-5xl md:text-6xl font-black text-blue-900 mb-6">
+              Data Under Your Control
+            </h2>
+            <p className="text-gray-600 text-xl max-w-3xl mx-auto">
+              Addressing the industry's #1 concern: complete data sovereignty with end-to-end auditability
+            </p>
+          </div>
 
+          {/* Visual Flow Diagram */}
+          <div className="bg-gradient-to-br from-orange-50 to-orange-100/50 rounded-3xl p-12 mb-12 border-2 border-orange-200">
+            <div className="grid md:grid-cols-4 gap-6 mb-8">
+              {[
+                { icon: MdStorage, title: "Your Data", desc: "Stays in your infrastructure" },
+                { icon: MdLock, title: "Your Models", desc: "Trained exclusively on your data" },
+                { icon: MdVerifiedUser, title: "Your Control", desc: "Full audit trails & transparency" },
+                { icon: MdShield, title: "Your Compliance", desc: "Meet all regulatory requirements" }
+              ].map((item, i) => (
+                <div key={i} className="bg-white rounded-2xl p-6 shadow-lg text-center">
+                  <item.icon className="w-12 h-12 text-orange-600 mx-auto mb-3" />
+                  <h4 className="font-bold text-blue-900 mb-2">{item.title}</h4>
+                  <p className="text-gray-600 text-sm">{item.desc}</p>
+                </div>
+              ))}
+            </div>
+
+            <div className="bg-white rounded-2xl p-8 shadow-lg">
+              <h4 className="font-bold text-blue-900 text-xl mb-6 text-center">What This Means For You</h4>
+              <div className="space-y-4">
+                <div className="flex items-start gap-4 p-4 bg-orange-50 rounded-xl">
+                  <MdCheckCircle className="w-6 h-6 text-orange-600 mt-1 flex-shrink-0" />
+                  <div>
+                    <h5 className="font-bold text-gray-900 mb-1">Never Leaves Your Environment</h5>
+                    <p className="text-gray-700">Your sensitive data is never transmitted to external APIs or third-party servers. Models are trained and deployed entirely within your infrastructure—on-premises or in your private cloud.</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-4 p-4 bg-orange-50 rounded-xl">
+                  <MdCheckCircle className="w-6 h-6 text-orange-600 mt-1 flex-shrink-0" />
+                  <div>
+                    <h5 className="font-bold text-gray-900 mb-1">Complete Transparency</h5>
+                    <p className="text-gray-700">Every data point, every training decision, every model output is fully auditable. You can trace exactly how your AI arrived at any conclusion—critical for compliance and regulatory requirements.</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-4 p-4 bg-orange-50 rounded-xl">
+                  <MdCheckCircle className="w-6 h-6 text-orange-600 mt-1 flex-shrink-0" />
+                  <div>
+                    <h5 className="font-bold text-gray-900 mb-1">Regulatory Compliance Built-In</h5>
+                    <p className="text-gray-700">Meet GDPR, EU AI Act, ISO 42001, and industry-specific requirements by design. Your data governance policies are enforced at the infrastructure level—not as an afterthought.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* <div className="text-center">
+            <button
+              onClick={() => scrollToSection('continuous-improvement')}
+              className="group flex items-center gap-2 text-orange-500 font-semibold hover:gap-4 transition-all mx-auto"
+            >
+              Discover Continuous Improvement
+              <FaArrowRight className="w-4 h-4" />
+            </button>
+          </div> */}
+        </div>
+      </section>
       {/* Enterprise AI Section */}
       <section id="about" className="py-20 px-4 relative scroll-mt-20">
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center">
@@ -224,327 +419,7 @@ export default function CyberAILandingPage() {
         </div>
       </section> */}
 
-      {/* Why Privatised LLMs */}
-      <section id="privatised-llms" className="py-20 px-4 scroll-mt-20">
-        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-16">
-          <div className="space-y-6 animate-slide-in-left">
-            <div>
-              <span className="text-orange-500 font-bold text-sm tracking-widest uppercase">Our Solution</span>
-              <div className="h-1 w-20 bg-gradient-to-r from-orange-500 to-transparent mt-2"></div>
-            </div>
-
-            <h2 className="text-4xl md:text-5xl font-black text-blue-900 leading-tight">
-              Why Privatised LLMs?
-            </h2>
-
-            <p className="text-gray-600 text-lg leading-relaxed">
-              Deploy secure, industry-specific AI agents that operate entirely within your controlled environment, ensuring maximum privacy and compliance.
-            </p>
-
-            <div className="space-y-4">
-              {[
-                { title: "Data Privacy", desc: "Your data never leaves your secure environment", icon: Lock },
-                { title: "Regulatory Compliance", desc: "Meets GDPR, HIPAA, and sector-specific requirements", icon: CheckCircle },
-                { title: "Industry Accuracy", desc: "Fine-tuned on your proprietary data and workflows", icon: Target },
-                { title: "Full Control", desc: "Complete ownership, hosting, and customization", icon: Shield }
-              ].map((item, i) => (
-                <div
-                  key={i}
-                  className="flex items-start space-x-4 p-5 rounded-xl hover:bg-blue-50 transition-colors group animate-fade-in-up"
-                  style={{ animationDelay: `${i * 0.1}s` }}
-                >
-                  <div className="bg-gradient-to-br from-orange-500 to-orange-600 rounded-full p-2.5 mt-1 group-hover:scale-110 transition-transform shadow-md flex-shrink-0">
-                    <item.icon className="w-5 h-5 text-white" />
-                  </div>
-                  <div>
-                    <h4 className="font-bold text-blue-900 text-lg mb-1">{item.title}</h4>
-                    <p className="text-gray-600">{item.desc}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-
-            <button
-              onClick={() => scrollToSection('process')}
-              className="group flex items-center gap-2 text-orange-500 font-semibold hover:gap-4 transition-all mt-6"
-            >
-              See Our Process
-              <ArrowRight className="w-5 h-5" />
-            </button>
-          </div>
-
-          <div className="p-10 rounded-3xl animate-slide-in-right">
-            <h3 className="text-3xl font-black text-blue-900 mb-8">Public vs Privatised</h3>
-
-            <div className="space-y-6">
-              <div className="bg-white p-6 rounded-2xl border-l-4 border-red-500 shadow-lg hover:shadow-xl transition-shadow group">
-                <div className="flex items-center gap-3 mb-3">
-                  <div className="w-3 h-3 bg-red-500 rounded-full group-hover:scale-125 transition-transform"></div>
-                  <h4 className="font-bold text-red-700 text-lg">Public LLMs</h4>
-                </div>
-                <ul className="text-gray-700 text-sm leading-relaxed space-y-2">
-                  <li className="flex items-start gap-2">
-                    <X className="w-4 h-4 text-red-500 mt-0.5 flex-shrink-0" />
-                    <span>Limited control over data security</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <X className="w-4 h-4 text-red-500 mt-0.5 flex-shrink-0" />
-                    <span>Significant compliance risks</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <X className="w-4 h-4 text-red-500 mt-0.5 flex-shrink-0" />
-                    <span>Potential data exposure concerns</span>
-                  </li>
-                </ul>
-              </div>
-
-              <div className="bg-white p-6 rounded-2xl border-l-4 border-green-500 shadow-lg hover:shadow-xl transition-shadow group">
-                <div className="flex items-center gap-3 mb-3">
-                  <div className="w-3 h-3 bg-green-500 rounded-full group-hover:scale-125 transition-transform"></div>
-                  <h4 className="font-bold text-green-700 text-lg">Privatised LLMs</h4>
-                </div>
-                <ul className="text-gray-700 text-sm leading-relaxed space-y-2">
-                  <li className="flex items-start gap-2">
-                    <CheckCircle className="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0" />
-                    <span>Complete data control and security</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <CheckCircle className="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0" />
-                    <span>Industry-specific domain expertise</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <CheckCircle className="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0" />
-                    <span>Full regulatory compliance</span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Case Studies Section */}
-      {/* <section id="case-studies" className="bg-gradient-to-b from-gray-50 to-white py-20 px-4 scroll-mt-20">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
-            <span className="text-orange-500 font-bold text-sm tracking-widest uppercase">Proven Results</span>
-            <div className="h-1 w-20 bg-gradient-to-r from-orange-500 to-transparent mx-auto mt-2"></div>
-            <h2 className="text-4xl md:text-5xl font-black text-blue-900 mt-6 mb-4">
-              Real-World Impact
-            </h2>
-            <p className="text-gray-600 text-lg max-w-3xl mx-auto">
-              Industry-specific case studies demonstrating measurable results for enterprise leaders
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            {[
-              {
-                industry: "Banking & Finance",
-                company: "Global Investment Bank",
-                challenge: "Regulatory compliance for AI-driven trading analysis",
-                solution: "Private LLM with real-time risk assessment",
-                results: ["40% faster compliance reviews", "Zero data breaches", "15% cost reduction"],
-                icon: Building2,
-                gradient: "from-blue-500 to-blue-600"
-              },
-              {
-                industry: "Healthcare",
-                company: "Regional Hospital Network",
-                challenge: "Patient data privacy in diagnostic AI",
-                solution: "HIPAA-compliant private AI deployment",
-                results: ["30% faster diagnoses", "100% HIPAA compliance", "Improved patient outcomes"],
-                icon: Cpu,
-                gradient: "from-orange-500 to-orange-600"
-              },
-              {
-                industry: "Government",
-                company: "Federal Agency",
-                challenge: "Secure document processing at scale",
-                solution: "Air-gapped AI system with custom training",
-                results: ["60% efficiency gain", "Enhanced security", "Cost savings of $2M/year"],
-                icon: Globe,
-                gradient: "from-purple-500 to-purple-600"
-              }
-            ].map((study, i) => (
-              <div key={i} className="bg-white rounded-2xl shadow-xl p-8 hover:shadow-2xl transition-all border border-gray-100 animate-fade-in-up group" style={{ animationDelay: `${i * 0.1}s` }}>
-                <div className={`w-12 h-12 bg-gradient-to-br ${study.gradient} rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform`}>
-                  <study.icon className="w-6 h-6 text-white" />
-                </div>
-                <div className="mb-4">
-                  <span className="text-sm font-semibold text-orange-500 uppercase tracking-wide">{study.industry}</span>
-                  <h3 className="text-xl font-bold text-blue-900 mt-2 mb-3">{study.company}</h3>
-                </div>
-                
-                <div className="space-y-4 mb-6">
-                  <div>
-                    <h4 className="font-bold text-gray-900 mb-1 text-sm">Challenge</h4>
-                    <p className="text-gray-600 text-sm">{study.challenge}</p>
-                  </div>
-                  <div>
-                    <h4 className="font-bold text-gray-900 mb-1 text-sm">Solution</h4>
-                    <p className="text-gray-600 text-sm">{study.solution}</p>
-                  </div>
-                </div>
-
-                <div className="border-t border-gray-200 pt-4">
-                  <h4 className="font-bold text-gray-900 mb-3 text-sm">Results</h4>
-                  <ul className="space-y-2">
-                    {study.results.map((result, idx) => (
-                      <li key={idx} className="flex items-start gap-2 text-sm text-gray-700">
-                        <CheckCircle className="w-4 h-4 text-green-600 mt-0.5 flex-shrink-0" />
-                        <span>{result}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          <div className="text-center mt-12">
-            <button
-              onClick={() => scrollToSection('contact')}
-              className="group inline-flex items-center gap-2 text-orange-500 font-semibold hover:gap-4 transition-all text-lg"
-            >
-              See how we can help your organization
-              <ArrowRight className="w-5 h-5" />
-            </button>
-          </div>
-        </div>
-      </section> */}
-
-      {/* Developing Private AI - Timeline Style */}
-      <section id="process" className="py-20 px-4 scroll-mt-20">
-        <div className="max-w-6xl mx-auto text-center">
-          <div className="mb-4">
-            <span className="text-orange-500 font-bold text-sm tracking-widest uppercase">Our Process</span>
-            <div className="h-1 w-20 bg-gradient-to-r from-orange-500 to-transparent mx-auto mt-2"></div>
-          </div>
-
-          <h2 className="text-4xl md:text-5xl font-black text-blue-900 mb-6">
-            Developing Your Private AI
-          </h2>
-          <p className="text-gray-600 text-lg mb-12 max-w-2xl mx-auto">
-            A proven 4-step process to deploy enterprise-grade AI in 90 days
-          </p>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {[
-              { icon: Database, title: "Foundation Model", desc: "Choose the best pre-built open-source model tailored to your needs", step: "01" },
-              { icon: Target, title: "Fine-Tuning", desc: "Trained on your security protocols and industry-specific norms", step: "02" },
-              { icon: Lock, title: "Deployment", desc: "Secure testing and validation within your controlled environment", step: "03" },
-              { icon: Zap, title: "AI Agents", desc: "Targeted workflows automating tasks with 10x productivity gains", step: "04" }
-            ].map((item, i) => (
-              <div
-                key={i}
-                className="relative bg-white p-8 rounded-2xl text-left border-t-4 border-orange-500 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 group animate-fade-in-up shadow-lg"
-                style={{ animationDelay: `${i * 0.15}s` }}
-              >
-                <div className="absolute -top-6 left-8 bg-gradient-to-br from-orange-500 to-orange-600 text-white font-black text-xl w-12 h-12 rounded-full flex items-center justify-center shadow-lg">
-                  {item.step}
-                </div>
-                <item.icon className="w-12 h-12 text-orange-500 mb-6 mt-4 group-hover:scale-110 transition-transform" />
-                <h3 className="font-bold text-blue-900 mb-3 text-lg">{item.title}</h3>
-                <p className="text-gray-600 leading-relaxed text-sm">{item.desc}</p>
-              </div>
-            ))}
-          </div>
-
-          <button
-            onClick={() => scrollToSection('services')}
-            className="group mt-12 flex items-center gap-2 text-orange-500 font-semibold hover:gap-4 transition-all mx-auto text-lg"
-          >
-            View All Services
-            <ArrowRight className="w-5 h-5" />
-          </button>
-        </div>
-      </section>
-
-      {/* Services Grid - Reorganized */}
-      <section id="services" className="bg-gradient-to-b from-gray-50 to-white py-20 px-4 scroll-mt-20">
-        <div className="max-w-6xl mx-auto text-center">
-          <div className="mb-4">
-            <span className="text-orange-500 font-bold text-sm tracking-widest uppercase">Our Services</span>
-            <div className="h-1 w-20 bg-gradient-to-r from-orange-500 to-transparent mx-auto mt-2"></div>
-          </div>
-
-          <h2 className="text-4xl md:text-5xl font-black text-blue-900 mb-6">
-            End-to-End Solutions
-          </h2>
-          <p className="text-gray-600 text-lg mb-12 max-w-2xl mx-auto">
-            Comprehensive services covering strategy, implementation, and security
-          </p>
-
-          <div className="grid md:grid-cols-3 gap-10 mb-16">
-            <div className="bg-white p-8 rounded-2xl border-2 border-blue-500/20 hover:border-blue-500 transition-all hover:shadow-xl group">
-              <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform shadow-lg">
-                <Target className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="font-bold text-blue-900 text-xl mb-4">Strategy & Planning</h3>
-              <ul className="space-y-3 text-left">
-                <li className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-blue-500 mt-0.5 flex-shrink-0" />
-                  <span className="text-gray-700">AI Strategy & Adoption Roadmap</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-blue-500 mt-0.5 flex-shrink-0" />
-                  <span className="text-gray-700">AI Governance Frameworks</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-blue-500 mt-0.5 flex-shrink-0" />
-                  <span className="text-gray-700">Training & Change Management</span>
-                </li>
-              </ul>
-            </div>
-
-            <div className="bg-white p-8 rounded-2xl border-2 border-orange-500/20 hover:border-orange-500 transition-all hover:shadow-xl group">
-              <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-orange-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform shadow-lg">
-                <Code className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="font-bold text-blue-900 text-xl mb-4">Development</h3>
-              <ul className="space-y-3 text-left">
-                <li className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-orange-500 mt-0.5 flex-shrink-0" />
-                  <span className="text-gray-700">Custom Model Development</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-orange-500 mt-0.5 flex-shrink-0" />
-                  <span className="text-gray-700">Data Engineering & Pipelines</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-orange-500 mt-0.5 flex-shrink-0" />
-                  <span className="text-gray-700">Agentic AI Workflows</span>
-                </li>
-              </ul>
-            </div>
-
-            <div className="bg-white p-8 rounded-2xl border-2 border-purple-500/20 hover:border-purple-500 transition-all hover:shadow-xl group">
-              <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform shadow-lg">
-                <Shield className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="font-bold text-blue-900 text-xl mb-4">Security & Testing</h3>
-              <ul className="space-y-3 text-left">
-                <li className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-purple-500 mt-0.5 flex-shrink-0" />
-                  <span className="text-gray-700">AI Red Teaming</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-purple-500 mt-0.5 flex-shrink-0" />
-                  <span className="text-gray-700">Advanced Simulation & Testing</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-purple-500 mt-0.5 flex-shrink-0" />
-                  <span className="text-gray-700">Privacy & Adversarial Testing</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-
-      <section className="py-20 px-4 bg-gradient-to-b from-gray-50 to-white">
+        <section className="py-20 px-4 bg-gradient-to-b from-gray-50 to-white">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <div className="mb-4">
@@ -666,63 +541,466 @@ export default function CyberAILandingPage() {
           </div>
         </div>
       </section>
+      <section id="hero" className="relative bg-gradient-to-br from-[#1e3a8a] via-[#1e40af] to-[#3730a3] text-white py-32 px-4 overflow-hidden">
+        {/* Animated Background Elements */}
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute w-96 h-96 bg-blue-500/10 rounded-full blur-3xl -top-48 -left-48 animate-pulse"></div>
+          <div className="absolute w-96 h-96 bg-orange-500/10 rounded-full blur-3xl -bottom-48 -right-48 animate-pulse" style={{animationDelay: '1s'}}></div>
+        </div>
 
-      {/* Industries Section */}
-      <section id="industries" className="py-20 px-4 scroll-mt-20">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-4">
-            <span className="text-orange-500 font-bold text-sm tracking-widest uppercase">Who We Serve</span>
-            <div className="h-1 w-20 bg-gradient-to-r from-orange-500 to-transparent mx-auto mt-2"></div>
+        <div className="max-w-6xl mx-auto text-center relative z-10">
+          <div className="inline-block mb-6 animate-fade-in-down">
+            <span className="bg-orange-500/20 text-orange-300 px-4 py-2 rounded-full text-sm font-semibold border border-orange-500/30">
+              Private AI Platform Core
+            </span>
           </div>
 
-          <h2 className="text-4xl md:text-5xl font-black text-blue-900 mb-6 text-center">
-            Industries We Serve
-          </h2>
-          <p className="text-gray-600 text-lg mb-12 text-center max-w-3xl mx-auto">
-            Delivering transformative AI solutions for heavily regulated industries where privacy and compliance are paramount.
+          <h1 className="text-6xl md:text-7xl font-black mb-6 leading-tight animate-fade-in-up">
+            <span className="bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent">Private</span> LLMs & SLMs
+          </h1>
+          
+          <p className="text-xl md:text-2xl text-blue-200 max-w-3xl mx-auto mb-8 animate-fade-in font-light leading-relaxed">
+            Secure, compliant AI models deployed entirely within your infrastructure
           </p>
 
-          <div className="grid md:grid-cols-3 gap-8 mb-16">
-            {[
-              {
-                icon: Building2,
-                title: "Banking & Finance",
-                gradient: "from-blue-500 to-blue-600",
-                features: ["Trading analysis", "Risk assessment", "Fraud detection", "Regulatory compliance"]
-              },
-              {
-                icon: Cpu,
-                title: "Healthcare",
-                gradient: "from-orange-500 to-orange-600",
-                features: ["Diagnostic support", "Patient data privacy", "Clinical workflows", "HIPAA compliance"]
-              },
-              {
-                icon: Globe,
-                title: "Government & Justice",
-                gradient: "from-purple-500 to-purple-600",
-                features: ["Document processing", "Security clearance", "Air-gapped systems", "Classified data handling"]
-              }
-            ].map((item, i) => (
-              <div
-                key={i}
-                className="group bg-gradient-to-br from-gray-50 to-white p-8 rounded-3xl text-center border-2 border-gray-100 hover:border-transparent hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 animate-fade-in-up"
-                style={{ animationDelay: `${i * 0.1}s` }}
-              >
-                <div className={`bg-gradient-to-br ${item.gradient} w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-500 shadow-lg`}>
-                  <item.icon className="w-8 h-8 text-white" />
+          <div className="grid grid-cols-3 gap-6 max-w-2xl mx-auto mt-12">
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20">
+              <div className="text-3xl font-black text-orange-400 mb-1">1B</div>
+              <div className="text-xs text-blue-100">Parameters</div>
+            </div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20">
+              <div className="text-3xl font-black text-orange-400 mb-1">100%</div>
+              <div className="text-xs text-blue-100">Data Control</div>
+            </div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20">
+              <div className="text-3xl font-black text-orange-400 mb-1">90</div>
+              <div className="text-xs text-blue-100">Days Deploy</div>
+            </div>
+          </div>
+
+          {/* Compliance Badges */}
+          <div className="flex justify-center gap-4 mt-8">
+            <div className="bg-white/10 backdrop-blur-sm px-4 py-2 rounded-lg border border-white/20 flex items-center gap-2">
+              <BadgeCheck className="w-4 h-4 text-orange-400" />
+              <span className="text-xs font-semibold">ISO 42001</span>
+            </div>
+            <div className="bg-white/10 backdrop-blur-sm px-4 py-2 rounded-lg border border-white/20 flex items-center gap-2">
+              <Scale className="w-4 h-4 text-orange-400" />
+              <span className="text-xs font-semibold">EU AI Act</span>
+            </div>
+            <div className="bg-white/10 backdrop-blur-sm px-4 py-2 rounded-lg border border-white/20 flex items-center gap-2">
+              <MdShield className="w-4 h-4 text-orange-400" />
+              <span className="text-xs font-semibold">GDPR</span>
+            </div>
+          </div>
+        </div>
+
+        {/* Floating Icons Animation */}
+        <div className="absolute inset-0 pointer-events-none">
+          <MdShield className="absolute w-12 h-12 text-blue-500/20 animate-float" style={{top: '20%', left: '10%', animationDelay: '0s'}} />
+          <FaLock className="absolute w-10 h-10 text-orange-500/20 animate-float" style={{top: '60%', right: '15%', animationDelay: '1s'}} />
+          <FaServer className="absolute w-14 h-14 text-blue-400/20 animate-float" style={{bottom: '20%', left: '20%', animationDelay: '2s'}} />
+        </div>
+      </section>
+
+      {/* Why Privatised LLMs */}
+      <section id="privatised-llms" className="py-20 px-4 scroll-mt-20">
+        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-16">
+          <div className="space-y-6 animate-slide-in-left">
+            <div>
+              <span className="text-orange-500 font-bold text-sm tracking-widest uppercase">THE SOLUTION </span>
+              <div className="h-1 w-20 bg-gradient-to-r from-orange-500 to-transparent mt-2"></div>
+            </div>
+
+            <h2 className="text-4xl md:text-5xl font-black text-blue-900 leading-tight">
+              Why Privatised LLMs?
+            </h2>
+
+            <p className="text-gray-600 text-lg leading-relaxed">
+              Deploy secure, industry-specific AI agents that operate entirely within your controlled environment, ensuring maximum privacy and compliance.
+            </p>
+
+            <div className="space-y-4">
+              {[
+                { title: "Data Privacy", desc: "Your data never leaves your secure environment", icon: Lock },
+                { title: "Regulatory Compliance", desc: "Meets GDPR, HIPAA, and sector-specific requirements", icon: CheckCircle },
+                { title: "Industry Accuracy", desc: "Fine-tuned on your proprietary data and workflows", icon: Target },
+                { title: "Full Control", desc: "Complete ownership, hosting, and customization", icon: Shield }
+              ].map((item, i) => (
+                <div
+                  key={i}
+                  className="flex items-start space-x-4 p-5 rounded-xl hover:bg-blue-50 transition-colors group animate-fade-in-up"
+                  style={{ animationDelay: `${i * 0.1}s` }}
+                >
+                  <div className="bg-gradient-to-br from-orange-500 to-orange-600 rounded-full p-2.5 mt-1 group-hover:scale-110 transition-transform shadow-md flex-shrink-0">
+                    <item.icon className="w-5 h-5 text-white" />
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-blue-900 text-lg mb-1">{item.title}</h4>
+                    <p className="text-gray-600">{item.desc}</p>
+                  </div>
                 </div>
-                <h3 className="font-bold text-blue-900 text-2xl mb-4">{item.title}</h3>
-                <ul className="text-left space-y-2">
-                  {item.features.map((feature, idx) => (
-                    <li key={idx} className="flex items-start gap-2 text-gray-600">
-                      <CheckCircle className="w-4 h-4 text-orange-500 mt-0.5 flex-shrink-0" />
-                      <span className="text-sm">{feature}</span>
-                    </li>
-                  ))}
+              ))}
+            </div>
+
+            <button
+              onClick={() => scrollToSection('process')}
+              className="group flex items-center gap-2 text-orange-500 font-semibold hover:gap-4 transition-all mt-6"
+            >
+              See Our Process
+              <ArrowRight className="w-5 h-5" />
+            </button>
+          </div>
+
+          <div className="p-10 rounded-3xl animate-slide-in-right">
+            <h3 className="text-3xl font-black text-blue-900 mb-8">Public vs Privatised</h3>
+
+            <div className="space-y-6">
+              <div className="bg-white p-6 rounded-2xl border-l-4 border-red-500 shadow-lg hover:shadow-xl transition-shadow group">
+                <div className="flex items-center gap-3 mb-3">
+                  <div className="w-3 h-3 bg-red-500 rounded-full group-hover:scale-125 transition-transform"></div>
+                  <h4 className="font-bold text-red-700 text-lg">Public LLMs</h4>
+                </div>
+                <ul className="text-gray-700 text-sm leading-relaxed space-y-2">
+                  <li className="flex items-start gap-2">
+                    <X className="w-4 h-4 text-red-500 mt-0.5 flex-shrink-0" />
+                    <span>Limited control over data security</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <X className="w-4 h-4 text-red-500 mt-0.5 flex-shrink-0" />
+                    <span>Significant compliance risks</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <X className="w-4 h-4 text-red-500 mt-0.5 flex-shrink-0" />
+                    <span>Potential data exposure concerns</span>
+                  </li>
                 </ul>
+              </div>
+
+              <div className="bg-white p-6 rounded-2xl border-l-4 border-green-500 shadow-lg hover:shadow-xl transition-shadow group">
+                <div className="flex items-center gap-3 mb-3">
+                  <div className="w-3 h-3 bg-green-500 rounded-full group-hover:scale-125 transition-transform"></div>
+                  <h4 className="font-bold text-green-700 text-lg">Privatised LLMs</h4>
+                </div>
+                <ul className="text-gray-700 text-sm leading-relaxed space-y-2">
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0" />
+                    <span>Complete data control and security</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0" />
+                    <span>Industry-specific domain expertise</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0" />
+                    <span>Full regulatory compliance</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+        {/* Public vs Private LLM Comparison */}
+            <section id="comparison" className="py-24 px-4 bg-white scroll-mt-20">
+              <div className="max-w-6xl mx-auto">
+                <div className="text-center mb-16">
+                  <div className="mb-4 animate-fade-in">
+                    <span className="text-orange-500 font-bold text-sm tracking-widest uppercase">The Difference</span>
+                    <div className="h-1 w-20 bg-gradient-to-r from-orange-500 to-transparent mx-auto mt-2"></div>
+                  </div>
+      
+                  <h2 className="text-5xl md:text-6xl font-black text-blue-900 mb-6 animate-fade-in-up">
+                    Public vs Private LLM
+                  </h2>
+                  <p className="text-gray-600 text-lg animate-fade-in">
+                    Why regulated enterprises need private infrastructure
+                  </p>
+                </div>
+      
+                <div className="grid md:grid-cols-2 gap-10 *:shadow-sm">
+                  {/* Public LLM */}
+                  <div className="bg-white rounded-3xl p-10 border-2 border-gray-200 hover:shadow-xl transition-all duration-500 animate-slide-in-left">
+                    <div className="text-center mb-8">
+                      <div className="bg-gray-100 w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                        <MdClose className="w-8 h-8 text-gray-500" />
+                      </div>
+                      <h3 className="text-3xl font-black text-gray-700 mb-2">Public LLM</h3>
+                      <p className="text-sm text-gray-500 font-medium">Shared Infrastructure (e.g., ChatGPT, Claude)</p>
+                    </div>
+                    
+                    <div className="space-y-4">
+                      {publicLLMIssues.map((issue, i) => (
+                        <div 
+                          key={i} 
+                          className="flex items-start space-x-4 p-4 rounded-xl bg-red-50 animate-fade-in-up"
+                          style={{animationDelay: `${i * 0.1}s`}}
+                        >
+                          <div className="bg-red-100 rounded-full p-2 mt-0.5">
+                            <MdClose className="w-5 h-5 text-red-600" />
+                          </div>
+                          <span className="text-gray-700 font-medium leading-relaxed">{issue}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+      
+                  {/* Private LLM */}
+                  <div className="relative bg-gradient-to-br from-blue-900 via-blue-800 to-slate-900 rounded-3xl p-10 text-white overflow-hidden hover:shadow-2xl transition-all duration-500 animate-slide-in-right">
+                    {/* Animated Background */}
+                    <div className="absolute inset-0 overflow-hidden">
+                      <div className="absolute w-64 h-64 bg-orange-500/10 rounded-full blur-3xl top-0 right-0 animate-pulse"></div>
+                    </div>
+      
+                    <div className="absolute top-6 right-6 z-20">
+                      <span className="bg-gradient-to-r from-orange-500 to-orange-600 text-white text-xs font-bold px-4 py-2 rounded-full shadow-lg">
+                        RECOMMENDED
+                      </span>
+                    </div>
+                    
+                    <div className="text-center mb-8 relative z-10">
+                      <div className="bg-green-500 w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg">
+                        <MdCheck className="w-8 h-8 text-white" />
+                      </div>
+                      <h3 className="text-3xl font-black mb-2">Private LLM/SLM</h3>
+                      <p className="text-sm text-blue-200 font-medium">Dedicated to Your Organization</p>
+                    </div>
+                    
+                    <div className="space-y-4 relative z-10">
+                      {privatisedLLMBenefits.map((benefit, i) => (
+                        <div 
+                          key={i} 
+                          className="flex items-start space-x-4 p-4 rounded-xl bg-white/10 backdrop-blur-sm hover:bg-white/20 transition-all animate-fade-in-up"
+                          style={{animationDelay: `${i * 0.1}s`}}
+                        >
+                          <div className="bg-green-500 rounded-full p-2 mt-0.5 shadow-md">
+                            <MdCheck className="w-5 h-5 text-white" />
+                          </div>
+                          <span className="text-white font-medium leading-relaxed">{benefit}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+      
+                {/* <div className="text-center mt-12">
+                  <button 
+                    onClick={() => scrollToSection('benefits')}
+                    className="group flex items-center gap-2 text-orange-500 font-semibold hover:gap-4 transition-all mx-auto"
+                  >
+                    Explore Key Benefits
+                    <FaArrowRight className="w-4 h-4" />
+                  </button>
+                </div> */}
+              </div>
+            </section>
+
+ {/* How We Deploy Section - Updated timeline */}
+      <section id="process" className="py-24 px-4 bg-white scroll-mt-20">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-16">
+            <div className="mb-4">
+              <span className="text-orange-500 font-bold text-sm tracking-widest uppercase">Our Process</span>
+              <div className="h-1 w-20 bg-gradient-to-r from-orange-500 to-transparent mx-auto mt-2"></div>
+            </div>
+
+            <h2 className="text-5xl md:text-6xl font-black text-blue-900 mb-6">
+              How We Deploy Private LLMs
+            </h2>
+            <p className="text-gray-600 text-lg">
+              Our proven process for delivering secure AI solutions in 90 days
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-4 gap-10 *:shadow-sm">
+            {developmentProcess.map((step, i) => (
+              <div 
+                key={i} 
+                className="relative bg-white rounded-2xl p-8 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 group animate-fade-in-up border-t-4 border-orange-500"
+                style={{animationDelay: `${i * 0.1}s`}}
+              >
+                <div className="absolute -top-6 left-8 bg-gradient-to-br from-orange-500 to-orange-600 text-white font-black text-2xl w-12 h-12 rounded-full flex items-center justify-center shadow-lg">
+                  {step.step}
+                </div>
+                <div className="bg-blue-100 w-14 h-14 rounded-xl flex items-center justify-center mb-6 mt-4 group-hover:scale-110 transition-transform">
+                  <step.icon className="w-7 h-7 text-blue-600" />
+                </div>
+                <h3 className="text-xl font-bold text-blue-900 mb-3">{step.title}</h3>
+                <p className="text-gray-600 leading-relaxed">{step.desc}</p>
               </div>
             ))}
           </div>
+
+          <div className="mt-16 bg-gradient-to-br from-orange-50 to-orange-100/50 border-l-4 border-orange-500 p-10 rounded-r-2xl">
+            <h3 className="text-2xl font-bold text-blue-900 mb-4 flex items-center gap-3">
+              <MdTrendingUp className="w-8 h-8 text-orange-500" />
+              Fast Time to Value
+            </h3>
+            <div className="grid md:grid-cols-2 gap-6">
+              <div>
+                <h4 className="font-bold text-blue-900 mb-2">90-Day Deployment</h4>
+                <p className="text-gray-700">
+                  From initial consultation to production deployment—dramatically faster than traditional enterprise AI implementations. Your platform is operational in three months.
+                </p>
+              </div>
+              <div>
+                <h4 className="font-bold text-blue-900 mb-2">Custom-Configured for You</h4>
+                <p className="text-gray-700">
+                  Every deployment is configured with your specific data, workflows, and compliance requirements—a true AI operating system for your organization.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          
+        </div>
+      </section>
+
+       <section className="py-20 px-4 bg-gradient-to-b from-gray-50 to-white scroll-mt-20">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-16">
+            <div className="inline-block mb-4">
+              <span className="text-orange-500 font-bold text-sm tracking-widest uppercase">Trusted by Industries</span>
+              <div className="h-1 w-20 bg-gradient-to-r from-orange-500 to-transparent mx-auto mt-2"></div>
+            </div>
+
+            <h2 className="text-5xl md:text-6xl font-black text-blue-900 mb-6 animate-fade-in-up">
+              Built for Regulated Industries
+            </h2>
+            <p className="text-gray-600 text-xl max-w-2xl mx-auto animate-fade-in">
+              Proven solutions for sectors where data sovereignty is non-negotiable
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {industries.map((industry, i) => (
+              <div
+                key={i}
+                className="group bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 border-2 border-gray-100 hover:border-transparent hover:-translate-y-2 animate-fade-in-up"
+                style={{animationDelay: `${i * 0.05}s`}}
+              >
+                <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${industry.color} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform shadow-lg`}>
+                  <industry.icon className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-blue-900 mb-3 group-hover:text-orange-500 transition-colors">
+                  {industry.name}
+                </h3>
+                <p className="text-gray-600 leading-relaxed mb-4">
+                  Private AI platform compliant with industry-specific regulations and data privacy requirements.
+                </p>
+                <div className="pt-3 border-t border-gray-200">
+                  <span className="text-xs font-semibold text-orange-600 uppercase tracking-wide">
+                    {industry.compliance}
+                  </span>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+      {/* Case Studies Section */}
+      {/* <section id="case-studies" className="bg-gradient-to-b from-gray-50 to-white py-20 px-4 scroll-mt-20">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-16">
+            <span className="text-orange-500 font-bold text-sm tracking-widest uppercase">Proven Results</span>
+            <div className="h-1 w-20 bg-gradient-to-r from-orange-500 to-transparent mx-auto mt-2"></div>
+            <h2 className="text-4xl md:text-5xl font-black text-blue-900 mt-6 mb-4">
+              Real-World Impact
+            </h2>
+            <p className="text-gray-600 text-lg max-w-3xl mx-auto">
+              Industry-specific case studies demonstrating measurable results for enterprise leaders
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {[
+              {
+                industry: "Banking & Finance",
+                company: "Global Investment Bank",
+                challenge: "Regulatory compliance for AI-driven trading analysis",
+                solution: "Private LLM with real-time risk assessment",
+                results: ["40% faster compliance reviews", "Zero data breaches", "15% cost reduction"],
+                icon: Building2,
+                gradient: "from-blue-500 to-blue-600"
+              },
+              {
+                industry: "Healthcare",
+                company: "Regional Hospital Network",
+                challenge: "Patient data privacy in diagnostic AI",
+                solution: "HIPAA-compliant private AI deployment",
+                results: ["30% faster diagnoses", "100% HIPAA compliance", "Improved patient outcomes"],
+                icon: Cpu,
+                gradient: "from-orange-500 to-orange-600"
+              },
+              {
+                industry: "Government",
+                company: "Federal Agency",
+                challenge: "Secure document processing at scale",
+                solution: "Air-gapped AI system with custom training",
+                results: ["60% efficiency gain", "Enhanced security", "Cost savings of $2M/year"],
+                icon: Globe,
+                gradient: "from-purple-500 to-purple-600"
+              }
+            ].map((study, i) => (
+              <div key={i} className="bg-white rounded-2xl shadow-xl p-8 hover:shadow-2xl transition-all border border-gray-100 animate-fade-in-up group" style={{ animationDelay: `${i * 0.1}s` }}>
+                <div className={`w-12 h-12 bg-gradient-to-br ${study.gradient} rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform`}>
+                  <study.icon className="w-6 h-6 text-white" />
+                </div>
+                <div className="mb-4">
+                  <span className="text-sm font-semibold text-orange-500 uppercase tracking-wide">{study.industry}</span>
+                  <h3 className="text-xl font-bold text-blue-900 mt-2 mb-3">{study.company}</h3>
+                </div>
+                
+                <div className="space-y-4 mb-6">
+                  <div>
+                    <h4 className="font-bold text-gray-900 mb-1 text-sm">Challenge</h4>
+                    <p className="text-gray-600 text-sm">{study.challenge}</p>
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-gray-900 mb-1 text-sm">Solution</h4>
+                    <p className="text-gray-600 text-sm">{study.solution}</p>
+                  </div>
+                </div>
+
+                <div className="border-t border-gray-200 pt-4">
+                  <h4 className="font-bold text-gray-900 mb-3 text-sm">Results</h4>
+                  <ul className="space-y-2">
+                    {study.results.map((result, idx) => (
+                      <li key={idx} className="flex items-start gap-2 text-sm text-gray-700">
+                        <CheckCircle className="w-4 h-4 text-green-600 mt-0.5 flex-shrink-0" />
+                        <span>{result}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="text-center mt-12">
+            <button
+              onClick={() => scrollToSection('contact')}
+              className="group inline-flex items-center gap-2 text-orange-500 font-semibold hover:gap-4 transition-all text-lg"
+            >
+              See how we can help your organization
+              <ArrowRight className="w-5 h-5" />
+            </button>
+          </div>
+        </div>
+      </section> */}
+
+      {/* Developing Private AI - Timeline Style */}
+     
+
+      {/* Services Grid - Reorganized */}
+    
+
+
+    
+
+      {/* Industries Section */}
+      <section id="industries" className="py-20 px-4 scroll-mt-20">
+       
 
           {/* CTA Section */}
           <div id="contact" className="scroll-mt-20 relative bg-gradient-to-br from-blue-900 via-blue-800 to-slate-900 text-white p-12 md:p-16 rounded-3xl text-center overflow-hidden shadow-2xl animate-fade-in-up">
@@ -732,9 +1010,9 @@ export default function CyberAILandingPage() {
             </div>
 
             <div className="relative z-10">
-              <h3 className="text-3xl md:text-4xl font-black mb-4">Ready to Secure Your AI?</h3>
+              <h3 className="text-3xl md:text-4xl font-black mb-4">Build Secure AI Inside Your Environment</h3>
               <p className="text-blue-200 text-lg md:text-xl mb-8 max-w-2xl mx-auto leading-relaxed">
-                Get started with a comprehensive AI Readiness Assessment tailored to your industry.
+               Contact us to discuss your secure AI implementation strategy
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link href="/contact">
@@ -759,7 +1037,6 @@ export default function CyberAILandingPage() {
               </div>
             </div>
           </div>
-        </div>
       </section>
 
       {/* Footer Component */}

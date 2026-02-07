@@ -23,9 +23,9 @@ export default function Navbar() {
 
   const navLinks = [
     { name: 'Home', href: '/' },
-    { name: 'About', href: '/about' },
     { name: 'Our approach', href: '/platform' },
     { name: 'Services', href: '/services' },
+    { name: 'About', href: '/about' },
   ];
 
   const isActive = (href) => pathname === href;
@@ -40,34 +40,34 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
-          <Link
-            href="/"
-            className="flex items-center space-x-4 group"
-          >
-            {/* PART 1: LOGO */}
-            <div className="relative flex items-center justify-center">
-              <div className="absolute inset-0 rounded-xl blur-md group-hover:blur-lg transition-all"></div>
+         <Link
+  href="/"
+  className="flex items-center space-x-4 group"
+>
+  {/* PART 1: LOGO */}
+  <div className="relative flex items-center justify-center">
+    <div className="absolute inset-0 rounded-xl blur-md group-hover:blur-lg transition-all"></div>
 
-              <Image
-                src="/11.png"
-                alt="CyberAI Logo"
-                width={100}
-                height={80}
-                className="relative z-10 rounded-xl"
-              />
-            </div>
+    <Image
+      src="/11.png"
+      alt="CyberAI Logo"
+      width={100}
+      height={80}
+      className="relative z-10 rounded-xl"
+    />
+  </div>
 
-            {/* PART 2: TEXT - Using correct brand colors */}
-            {/* <div className="flex flex-col leading-tight">
-              <span className="text-2xl font-extrabold bg-gradient-to-r from-[#1848A0] to-[#1848A0]/80 bg-clip-text text-transparent group-hover:from-[#EB7100] group-hover:to-[#EB7100]/80 transition-all duration-300">
-                CyberAi
-              </span>
+  {/* PART 2: TAGLINE */}
+  <div className="flex flex-col justify-center leading-tight">
+    <span className="text-sm md:text-base font-semibold text-gray-700 group-hover:text-[#EB7100] transition-colors duration-300">
+      Your AI. Your Data.
+    </span>
+    <span className="text-xs md:text-sm font-medium text-gray-500 group-hover:text-gray-700 transition-colors duration-300">
+      Your Rules
+    </span>
+  </div>
+</Link>
 
-              <span className="text-sm font-medium text-gray-500 group-hover:text-gray-700 transition">
-                Technologies Ltd
-              </span>
-            </div> */}
-          </Link>
 
 
           {/* Desktop Navigation */}
